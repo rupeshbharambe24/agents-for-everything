@@ -1,0 +1,3444 @@
+{
+  "name": "Agents for Everything Registry",
+  "id": "afe/registry",
+  "version": "1.0.0",
+  "description": "Open A2A discovery registry indexing 571 composable agents (569 verified), 22 teams, 12 recipes, and 36 MCP servers.",
+  "capabilities": {
+    "streaming": true,
+    "stateTransitionHistory": true
+  },
+  "discovery": {
+    "catalog": "registry/catalog.json",
+    "a2aIndex": "registry/a2a-index.json",
+    "verifiedIndex": "registry/verified-index.json",
+    "compatibilityGraph": "registry/compatibility-graph.json"
+  },
+  "skills": [
+    {
+      "id": "browser/booking-agent",
+      "name": "Booking Assistant",
+      "description": "Finds availability and prepares bookings (tables, appointments, tickets); the user confirms.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/checkout-assistant",
+      "name": "Checkout Assistant",
+      "description": "Compares carts, applies valid coupons, prepares checkout and stops before payment.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/page-change-monitor",
+      "name": "Page Change Monitor",
+      "description": "Compares page snapshots for price, stock, or policy changes and emits concise diffs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/secure-login-helper",
+      "name": "Secure Login Helper",
+      "description": "Handles sign-in flows by delegating credentials to the user's password manager; never sees or stores secrets.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/site-crawler",
+      "name": "Site Crawler",
+      "description": "Crawls allowed paths on a site respecting robots.txt to build a clean sitemap and page index.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/tab-organizer",
+      "name": "Tab & Reading Organizer",
+      "description": "Summarizes and groups open tabs, saves them to a reading list.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/web-archiver",
+      "name": "Web Archiver",
+      "description": "Saves pages as PDF/WARC with metadata for records and evidence.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/web-form-filler",
+      "name": "Web Form Filler",
+      "description": "Populates web form fields from validated JSON and always stops before final submit for confirmation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/web-navigator",
+      "name": "Browser Operator",
+      "description": "Completes multi-step web tasks safely using accessibility trees and screenshots with injection guards.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/web-scraper",
+      "name": "Web Scraper",
+      "description": "Extracts structured records from public pages into JSON while respecting robots.txt and rate limits.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/web-tester",
+      "name": "Web App Tester",
+      "description": "Walks through staging web flows, generates Playwright checks, and captures bug reports.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "browser/web-to-api",
+      "name": "Website-to-Tool Converter",
+      "description": "Learns a website's workflows and exposes them as callable tools / MCP endpoints.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/app-automator",
+      "name": "App Automator",
+      "description": "Automates desktop apps cleanly using OS accessibility APIs (AppleScript, UI Automation, AT-SPI).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/clipboard-assistant",
+      "name": "Clipboard Transformer",
+      "description": "Transforms whatever is copied (reformat, translate, extract, clean).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/desktop-operator",
+      "name": "Desktop Operator",
+      "description": "Operates native desktop apps via screenshots, mouse, and keyboard with approval gates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/macro-recorder",
+      "name": "Teach-by-Showing Recorder",
+      "description": "Watches the user do a task once and turns it into a reusable, parameterized workflow.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/mobile-operator",
+      "name": "Mobile Operator",
+      "description": "Drives Android/iOS apps on devices or emulators for tasks and testing.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/notification-triager",
+      "name": "Notification Triager",
+      "description": "Filters and batches OS/app notifications into a digest, surfacing only urgent ones.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/rpa-bridge",
+      "name": "Legacy App Bridge",
+      "description": "Automates legacy apps with no API (green screens, old desktop software), replacing brittle RPA scripts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/settings-configurator",
+      "name": "Settings Configurator",
+      "description": "Changes OS and app settings safely with a before/after record and rollback.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "computer-use/shell-operator",
+      "name": "Shell Operator",
+      "description": "Prepares and runs scoped terminal commands in a sandbox, requiring approval for state changes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/archive-backup",
+      "name": "Archive & Backup Agent",
+      "description": "Backs up, versions and applies retention rules to files.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/doc-classifier",
+      "name": "Document Classifier",
+      "description": "Identifies document type (invoice, contract, ID, bank statement, resume) for routing.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/doc-comparer",
+      "name": "Document Comparer",
+      "description": "Generates redline diffs and plain-language summaries between two document versions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/doc-generator",
+      "name": "Document Generator",
+      "description": "Populates document templates with validated structured data into clean Markdown/DOCX.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/doc-redactor",
+      "name": "Document Redactor",
+      "description": "Permanently removes sensitive PII spans from documents prior to external sharing.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/document-parser",
+      "name": "Document Parser",
+      "description": "Converts rich documents and scans into clean Markdown with preserved headings and sections.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/duplicate-finder",
+      "name": "Duplicate Finder",
+      "description": "Finds duplicate and near-duplicate files and photos and proposes cleanup.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/e-signature-prep",
+      "name": "E-Signature Preparer",
+      "description": "Prepares documents for signing (fields, signer order) and stops before sending.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/file-finder",
+      "name": "File Finder",
+      "description": "Finds local or indexed files from natural descriptions, timestamps, and keywords.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/file-organizer",
+      "name": "File Organizer",
+      "description": "Classifies files by extension/topic and produces a dry-run move plan before touching disk.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/format-converter",
+      "name": "Format Converter",
+      "description": "Plans and converts files across Markdown, CSV, JSON, DOCX, and PDF safely.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/invoice-receipt-parser",
+      "name": "Invoice & Receipt Parser",
+      "description": "Extracts vendor, date, line items, GST/VAT tax, and total from invoices and verifies the math.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/long-doc-navigator",
+      "name": "Long Document Navigator",
+      "description": "Navigates lengthy manuals, regulations, or annual reports with page-level Q&A.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/metadata-tagger",
+      "name": "Metadata Tagger",
+      "description": "Auto-tags files with topics, people, dates and projects.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/pdf-form-filler",
+      "name": "PDF Form Filler",
+      "description": "Populates fillable PDF form fields from validated JSON without submitting autonomously.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/slide-deck-builder",
+      "name": "Slide Deck Builder",
+      "description": "Transforms outlines or reports into structured presentation slides and speaker notes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/spreadsheet-agent",
+      "name": "Spreadsheet Agent",
+      "description": "Computes totals, averages, and filtered summaries across tabular spreadsheet data.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "documents/table-extractor",
+      "name": "Table Extractor",
+      "description": "Extracts Markdown, CSV, or raw text tables into structured row dictionaries.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "integration/api-caller",
+      "name": "API Caller",
+      "description": "Prepares and invokes REST/GraphQL API requests from OpenAPI specs with approval for writes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "integration/data-sync",
+      "name": "Data Sync Agent",
+      "description": "Keeps records in sync between apps (CRM \u2194 sheet \u2194 database) and resolves conflicts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "integration/email-to-action",
+      "name": "Email-to-Action",
+      "description": "Parses inbound emails into structured actions, tickets or records.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "integration/field-mapper",
+      "name": "Field Mapper",
+      "description": "Maps fields between two systems' schemas with transformation rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "integration/mcp-server-generator",
+      "name": "MCP Server Generator",
+      "description": "Scaffolds a typed afe/v1 MCP server wrapper from an OpenAPI spec or CLI.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "integration/notification-dispatcher",
+      "name": "Notification Dispatcher",
+      "description": "Routes alerts to email, chat, or SMS respecting quiet hours and user approval.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "integration/webhook-handler",
+      "name": "Event Handler",
+      "description": "Classifies incoming webhooks and dispatches the appropriate downstream agent.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "integration/workflow-builder",
+      "name": "Workflow Builder",
+      "description": "Converts plain-language automation goals into structured afe/v1 team or DAG specs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "physical/drone-mission-planner",
+      "name": "Drone Mission Planner",
+      "description": "Plans survey and inspection flights within airspace rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "physical/energy-optimizer",
+      "name": "Home/Building Energy Optimizer",
+      "description": "Schedules appliances and HVAC to cut cost and carbon using tariffs and weather.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "physical/robot-task-planner",
+      "name": "Robot Task Planner",
+      "description": "Turns instructions into safe robot action plans (ROS 2) with workspace constraints.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "physical/sensor-monitor",
+      "name": "Sensor Monitor",
+      "description": "Watches IoT telemetry, detects anomalies and alerts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "physical/smart-home-controller",
+      "name": "Smart Home Controller",
+      "description": "Controls lights, climate, and locks via Home Assistant/Matter with confirmation on security devices.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "physical/vehicle-diagnostics",
+      "name": "Vehicle Diagnostics",
+      "description": "Explains OBD-II fault codes, likely causes and urgency.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ai-engineering/automl-trainer",
+      "name": "AutoML Trainer",
+      "description": "Trains and tunes baseline models on tabular data and reports results honestly.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ai-engineering/feature-engineer",
+      "name": "Feature Engineer",
+      "description": "Proposes and tests features for a predictive model.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ai-engineering/finetune-data-curator",
+      "name": "Fine-tune Data Curator",
+      "description": "Builds and cleans fine-tuning datasets: dedupe, quality filters, format.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ai-engineering/model-evaluator",
+      "name": "Model Evaluator",
+      "description": "Metrics, error analysis and fairness slices for ML models.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ai-engineering/model-monitor",
+      "name": "Model Monitor",
+      "description": "Tracks drift and performance of production models and alerts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ai-engineering/paper-to-code",
+      "name": "Paper Implementer",
+      "description": "Implements the method from an ML paper and reproduces a key result.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ai-engineering/prompt-engineer",
+      "name": "Prompt Engineer",
+      "description": "Drafts and refines structured system prompts measured against eval fixtures.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ai-engineering/rag-builder",
+      "name": "RAG Builder",
+      "description": "Configures chunking, hybrid retrieval, and reranking parameters tuned against eval recall.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/api-client-generator",
+      "name": "SDK Generator",
+      "description": "Generates typed client SDKs from OpenAPI/GraphQL specs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/app-builder",
+      "name": "App Prototyper",
+      "description": "Scaffolds and wires a working full-stack prototype from a product spec.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/bug-fixer",
+      "name": "Bug Fixer",
+      "description": "Diagnoses bugs from stack traces, proposes a patch, adds regression tests, and verifies review.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/ci-fixer",
+      "name": "CI Fixer",
+      "description": "Diagnoses failing CI workflow logs and proposes minimal patches.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/code-explainer",
+      "name": "Code Explainer",
+      "description": "Explains source files line-by-line or at system-architecture level for newcomers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/code-generator",
+      "name": "Feature Implementer",
+      "description": "Implements scoped features from a spec and pairs them with unit tests.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/code-reviewer",
+      "name": "Code Reviewer",
+      "description": "Reviews code diffs for bugs, security risks, bare excepts, and maintainability issues.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/codebase-qa",
+      "name": "Codebase Q&A",
+      "description": "Answers questions about a repository with exact file citations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/db-schema-designer",
+      "name": "Database Schema Designer",
+      "description": "Designs schemas and migrations from requirements.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/dependency-updater",
+      "name": "Dependency Updater",
+      "description": "Upgrades dependencies safely, summarizes changelogs, and fixes breaking API changes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/doc-writer",
+      "name": "Code Documentation Writer",
+      "description": "Generates docstrings, READMEs, and API reference docs directly from source code.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/frontend-builder",
+      "name": "Frontend Builder",
+      "description": "Builds accessible UI components and pages from specs or design tokens.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/i18n-agent",
+      "name": "Internationalization Agent",
+      "description": "Extracts strings, manages translation files, flags layout issues.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/issue-triager",
+      "name": "Issue Triager",
+      "description": "Labels, deduplicates, and prioritizes repository issues and asks for missing repro steps.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/legacy-modernizer",
+      "name": "Legacy Modernizer",
+      "description": "Documents and modernizes legacy code (COBOL, VB6, PL/SQL).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/migration-agent",
+      "name": "Migration Agent",
+      "description": "Framework and language migrations (JS \u2192 TS, Java 8 \u2192 21, React class \u2192 hooks).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/performance-optimizer",
+      "name": "Performance Optimizer",
+      "description": "Profiles code and optimizes hot paths with benchmarks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/pr-describer",
+      "name": "PR & Commit Writer",
+      "description": "Generates structured PR summaries, conventional commit messages, and changelog bullets from diffs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/refactorer",
+      "name": "Refactorer",
+      "description": "Performs behaviour-preserving code refactors verified by existing tests.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/scaffolder",
+      "name": "Project Scaffolder",
+      "description": "Generates new project boilerplate, CI configs, and linting setups cleanly.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/snippet-helper",
+      "name": "Regex/SQL/Shell Helper",
+      "description": "Writes and explains regexes, SQL queries and shell one-liners with tests.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "coding/test-writer",
+      "name": "Test Writer",
+      "description": "Generates targeted unit and edge-case tests for functions and APIs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/ab-test-analyst",
+      "name": "Experiment Analyst",
+      "description": "Analyzes A/B tests: significance, effect size, guardrail metrics.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/anomaly-detector",
+      "name": "Anomaly Detector",
+      "description": "Detects statistical outliers in numeric time series using mean and standard deviation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/chart-maker",
+      "name": "Chart Maker",
+      "description": "Selects appropriate chart encodings and emits Vega-Lite/chart specs with captions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/dashboard-builder",
+      "name": "Dashboard Builder",
+      "description": "Builds dashboards from KPI definitions (Metabase, Superset, Streamlit, HTML).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/data-analyst",
+      "name": "Data Analyst",
+      "description": "Cleans datasets, computes descriptive statistics, and drafts plain-language insights.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/data-catalog-documenter",
+      "name": "Data Catalog Documenter",
+      "description": "Documents tables and columns, infers lineage and owners.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/data-cleaner",
+      "name": "Data Cleaner",
+      "description": "Trims strings, removes duplicates, and flags missing values with a deterministic change log.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/data-labeler",
+      "name": "Data Labeler",
+      "description": "Labels datasets against guidelines and routes low-confidence rows for human review.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/data-quality-monitor",
+      "name": "Data Quality Monitor",
+      "description": "Tests freshness, volume, schema and distribution drift.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/etl-builder",
+      "name": "Pipeline Builder",
+      "description": "Designs and writes data pipelines (dbt, Airflow, Dagster).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/forecaster",
+      "name": "Forecaster",
+      "description": "Generates baseline time-series forecasts with confidence bands and assumptions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/metric-explainer",
+      "name": "Metric Explainer",
+      "description": "Drills into dimension slices to explain why a KPI moved week-over-week.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/schema-mapper",
+      "name": "Schema Mapper",
+      "description": "Maps source table columns to target schemas with explicit transformation rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/synthetic-data-generator",
+      "name": "Synthetic Data Generator",
+      "description": "Creates privacy-safe synthetic datasets that keep statistical properties.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "data/text-to-sql",
+      "name": "Text-to-SQL",
+      "description": "Converts natural-language questions into safe read-only SELECT queries against a schema.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/alert-triager",
+      "name": "Alert Triager",
+      "description": "Deduplicates and prioritizes noisy alerts by blast radius and SLO burn.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/cloud-cost-optimizer",
+      "name": "Cloud Cost Optimizer",
+      "description": "Identifies idle or oversized cloud resources and calculates monthly savings.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/config-drift-detector",
+      "name": "Config Drift Detector",
+      "description": "Finds differences between declared and actual infrastructure.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/containerizer",
+      "name": "Containerizer",
+      "description": "Writes Dockerfiles and compose files for an app, minimal and secure.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/db-admin",
+      "name": "Database Assistant",
+      "description": "Query tuning, index advice, backup and health checks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/deploy-agent",
+      "name": "Release Agent",
+      "description": "Runs releases with canary checks and automatic rollback.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/iac-generator",
+      "name": "Infrastructure-as-Code Writer",
+      "description": "Generates Terraform, Pulumi, or Kubernetes manifests with least-privilege checks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/incident-responder",
+      "name": "Incident Responder",
+      "description": "Correlates alerts, metrics, and recent deploys; suggests mitigations and runs approved runbooks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/k8s-operator",
+      "name": "Kubernetes Assistant",
+      "description": "Diagnoses cluster problems and runs safe kubectl operations with approval.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/log-analyzer",
+      "name": "Log Analyzer",
+      "description": "Clusters errors and warnings in application logs and highlights root causes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/postmortem-writer",
+      "name": "Postmortem Writer",
+      "description": "Drafts blameless incident postmortems with timelines, root causes, and preventive tasks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/runbook-executor",
+      "name": "Runbook Executor",
+      "description": "Executes written runbooks step by step with checks and approvals.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "devops/uptime-monitor",
+      "name": "Uptime Monitor",
+      "description": "Synthetic checks and status-page updates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "it-support/access-request-handler",
+      "name": "Access Request Handler",
+      "description": "Processes access requests with the right approvers and provisions after approval.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "it-support/account-recovery-guide",
+      "name": "Account Recovery Guide",
+      "description": "Guides users through official self-service recovery flows; never handles passwords.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "it-support/asset-inventory",
+      "name": "IT Asset Inventory",
+      "description": "Keeps hardware/software inventory current and flags end-of-life items.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "it-support/device-setup-guide",
+      "name": "Device Setup Guide",
+      "description": "Step-by-step device provisioning and onboarding checklists.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "it-support/helpdesk-agent",
+      "name": "IT Helpdesk Agent",
+      "description": "Troubleshoots first-line IT requests using KB docs and creates structured tickets when stuck.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "it-support/license-manager",
+      "name": "Software Licence Manager",
+      "description": "Tracks licence usage and suggests seats to reclaim.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/access-reviewer",
+      "name": "Access Reviewer",
+      "description": "Reviews permissions for least privilege and flags unusual access.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/pentest-assistant",
+      "name": "Pentest Assistant",
+      "description": "For authorized engagements only: scope-checked recon, test planning and report writing.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/phishing-analyzer",
+      "name": "Phishing Analyzer",
+      "description": "Analyzes suspicious email headers, links, and urgency lures for phishing indicators.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/sbom-auditor",
+      "name": "SBOM & Licence Auditor",
+      "description": "Builds software bills of materials and flags licence and supply-chain risk.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/secret-scanner",
+      "name": "Secret Scanner",
+      "description": "Scans repository text for leaked API keys, tokens, and private keys and guides rotation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/secure-code-reviewer",
+      "name": "Secure Code Reviewer",
+      "description": "Identifies security flaws (injection, hardcoded creds, insecure deserialization) in code diffs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/security-awareness-trainer",
+      "name": "Security Awareness Trainer",
+      "description": "Creates training content and quizzes tailored to current threats.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/security-compliance-auditor",
+      "name": "Security Compliance Auditor",
+      "description": "Maps controls and evidence to ISO 27001, SOC 2, PCI DSS and local regulator frameworks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/security-incident-reporter",
+      "name": "Security Incident Reporter",
+      "description": "Writes incident reports in the format regulators require (e.g. CERT-In style timelines).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/siem-analyst",
+      "name": "SOC Analyst",
+      "description": "Investigates alerts, queries the SIEM, builds a timeline and recommends response.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/threat-intel-summarizer",
+      "name": "Threat Intel Briefer",
+      "description": "Turns threat feeds into briefings mapped to MITRE ATT&CK and your assets.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "security/vuln-triager",
+      "name": "Vulnerability Triager",
+      "description": "Prioritizes scanner CVEs by reachability, exploitability, and asset exposure.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/announcement-writer",
+      "name": "Announcement Writer",
+      "description": "Writes internal announcements in the right tone for the audience.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/business-messaging-bot",
+      "name": "WhatsApp/SMS Business Agent",
+      "description": "Handles opted-in customer messaging over WhatsApp/SMS with templates and human handoff.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/chat-summarizer",
+      "name": "Chat Summarizer",
+      "description": "Summarizes Slack, Teams, WhatsApp, or Discord threads with decisions and open asks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/contact-manager",
+      "name": "Contact Manager",
+      "description": "Deduplicates contacts and enriches them from email signatures.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/email-drafter",
+      "name": "Email Drafter",
+      "description": "Drafts context-matched email replies and saves them as drafts without sending autonomously.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/follow-up-tracker",
+      "name": "Follow-up Tracker",
+      "description": "Tracks sent email threads awaiting replies and prepares polite follow-up drafts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/inbox-triager",
+      "name": "Inbox Triager",
+      "description": "Sorts, prioritizes, and labels emails; surfaces urgent threads and reply-needed items.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/newsletter-digest",
+      "name": "Newsletter Digest",
+      "description": "Merges multiple incoming newsletters into one structured daily or weekly digest.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/tone-checker",
+      "name": "Tone Checker",
+      "description": "Flags messages that may read as rude, unclear or risky before sending.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "communication/unsubscribe-cleaner",
+      "name": "Unsubscribe Cleaner",
+      "description": "Finds unwanted mailing lists and unsubscribes after the user approves the list.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/blog-writer",
+      "name": "Blog Writer",
+      "description": "Researches, outlines, and drafts source-backed articles tuned for readability.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/content-repurposer",
+      "name": "Content Repurposer",
+      "description": "Transforms one source asset into blog posts, newsletter snippets, and social threads.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/copywriter",
+      "name": "Copywriter",
+      "description": "Writes landing-page, product, and campaign copy in multiple clear variants.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/editor",
+      "name": "Editor",
+      "description": "Performs structural and clarity editing with tracked suggestions and rationale.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/grant-writer",
+      "name": "Grant Writer",
+      "description": "Drafts grant and funding proposals against the funder's criteria.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/localizer",
+      "name": "Localizer",
+      "description": "Adapts content culturally for a market (idioms, examples, units, references), beyond translation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/newsletter-writer",
+      "name": "Newsletter Writer",
+      "description": "Writes recurring newsletters from curated links and updates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/press-release-writer",
+      "name": "Press Release Writer",
+      "description": "Writes press releases in standard format with quotes and boilerplate.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/script-writer",
+      "name": "Script Writer",
+      "description": "Video, podcast and presentation scripts with timing cues.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/seo-optimizer",
+      "name": "On-page SEO Optimizer",
+      "description": "Improves headings, keyword coverage, metadata, and internal linking structure.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/social-post-writer",
+      "name": "Social Post Writer",
+      "description": "Adapts topics or articles into platform-ready posts and threads.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/speech-writer",
+      "name": "Speech Writer",
+      "description": "Writes speeches for a speaker, occasion and duration.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/storyteller",
+      "name": "Storyteller",
+      "description": "Fiction, children's stories and narratives with consistent characters.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/style-matcher",
+      "name": "Personal Style Matcher",
+      "description": "Learns an author's writing style from their own samples and drafts in it.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "content/technical-writer",
+      "name": "Technical Writer",
+      "description": "Writes user guides, tutorials, runbooks, and how-to docs from product specs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/accounts-payable",
+      "name": "Accounts Payable Agent",
+      "description": "Matches parsed invoices against PO/receipt totals and prepares an approval queue (no autonomous payment).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/accounts-receivable",
+      "name": "Collections Assistant",
+      "description": "Drafts polite payment reminders and tracks promises to pay.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/audit-assistant",
+      "name": "Audit Assistant",
+      "description": "Sampling, evidence requests and workpaper drafts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/bank-reconciler",
+      "name": "Bank Reconciler",
+      "description": "Matches bank statement lines to accounting ledger entries and surfaces unmatched exceptions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/budget-variance-analyst",
+      "name": "Budget Variance Analyst",
+      "description": "Explains budget versus actual differences.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/cash-flow-forecaster",
+      "name": "Cash Flow Forecaster",
+      "description": "13-week cash forecast from receivables, payables and history.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/earnings-call-analyzer",
+      "name": "Earnings Call Analyzer",
+      "description": "Summarizes earnings calls and filings and compares guidance with prior quarters.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/expense-auditor",
+      "name": "Expense Auditor",
+      "description": "Audits expense claims for duplicate receipts, policy cap breaches, and missing fields.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/financial-report-writer",
+      "name": "Financial Report Writer",
+      "description": "Writes management commentary and board finance narratives.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/financial-statement-analyzer",
+      "name": "Financial Statement Analyzer",
+      "description": "Computes key profitability, liquidity, and leverage ratios from financial statements.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/payroll-checker",
+      "name": "Payroll Checker",
+      "description": "Checks payroll runs for anomalies before approval.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/spend-analyzer",
+      "name": "Spend Analyzer",
+      "description": "Classifies spend by category and supplier and finds savings.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/tax-doc-organizer",
+      "name": "Tax Document Organizer",
+      "description": "Collects and organizes tax documents and builds a checklist (no tax advice).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "finance/transaction-categorizer",
+      "name": "Transaction Categorizer",
+      "description": "Classifies bank/card transactions into chart-of-accounts categories with confidence.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/candidate-sourcer",
+      "name": "Candidate Sourcer",
+      "description": "Finds candidates from public professional sources and drafts outreach.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/employee-survey-analyst",
+      "name": "Employee Survey Analyst",
+      "description": "Themes and drivers from engagement surveys.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/exit-interview-analyst",
+      "name": "Exit Interview Analyst",
+      "description": "Finds attrition themes from exit interviews.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/hr-policy-qa",
+      "name": "HR Policy Assistant",
+      "description": "Answers employee policy questions (leave, benefits, travel) with citations to official handbooks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/interview-kit-builder",
+      "name": "Interview Kit Builder",
+      "description": "Structured interview questions and scorecards for a role.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/interview-scheduler",
+      "name": "Interview Scheduler",
+      "description": "Coordinates interview panels and candidate availability.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/jd-writer",
+      "name": "Job Description Writer",
+      "description": "Writes clear, structured, inclusive job descriptions from role requirements.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/learning-path-designer",
+      "name": "Learning Path Designer",
+      "description": "Builds role-based learning paths from skills gaps.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/offer-letter-generator",
+      "name": "Offer Letter Generator",
+      "description": "Generates offer letters from approved templates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/onboarding-buddy",
+      "name": "Onboarding Buddy",
+      "description": "Guides new hires through 30-60-90 checklists, tools setup, and internal FAQs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/performance-review-helper",
+      "name": "Performance Review Helper",
+      "description": "Synthesizes feedback and goals into a balanced review draft.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hr/resume-screener",
+      "name": "Resume Screener",
+      "description": "Scores candidate summaries transparently against explicit rubric criteria for human review.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/case-summarizer",
+      "name": "Judgment Summarizer",
+      "description": "Summarizes judgments into facts, issues, holdings and reasoning.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/compliance-monitor",
+      "name": "Regulatory Change Monitor",
+      "description": "Tracks regulatory notices across jurisdictions and maps updates to internal obligations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/contract-analyzer",
+      "name": "Contract Analyzer",
+      "description": "Extracts key clauses (indemnity, auto-renewal, IP, liability cap) and flags deviations from a playbook.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/contract-drafter",
+      "name": "Contract Drafter",
+      "description": "Drafts contracts from approved templates and term sheets.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/ediscovery-reviewer",
+      "name": "E-discovery Reviewer",
+      "description": "Tags documents for relevance and privilege for human review.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/legal-researcher",
+      "name": "Legal Researcher",
+      "description": "Finds statutes and case law with verified citations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/nda-reviewer",
+      "name": "NDA Reviewer",
+      "description": "Triages incoming NDAs against standard mutual confidentiality playbooks (accept/redline/escalate).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/obligation-tracker",
+      "name": "Obligation Tracker",
+      "description": "Extracts deadlines and obligations from contracts into a calendar.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/policy-writer",
+      "name": "Policy Writer",
+      "description": "Drafts internal policies from regulations and company context.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/privacy-impact-assessor",
+      "name": "Privacy Impact Assessor",
+      "description": "Drafts DPIAs for new systems under GDPR / DPDP Act.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/redline-negotiator",
+      "name": "Redline Negotiator",
+      "description": "Proposes counter-redlines with reasons based on the playbook.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/terms-simplifier",
+      "name": "Terms Simplifier",
+      "description": "Translates dense terms of service and privacy policies into plain-language risk bullets.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "legal/trademark-checker",
+      "name": "Trademark Checker",
+      "description": "Searches trademark databases for conflicts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/ad-creative-generator",
+      "name": "Ad Creative Generator",
+      "description": "Produces platform-sized ad copy variants and image prompt briefs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/audience-segmenter",
+      "name": "Audience Segmenter",
+      "description": "Clusters customers into actionable segments with descriptions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/brand-monitor",
+      "name": "Brand Monitor",
+      "description": "Tracks brand mentions and sentiment trends across public web and news sources.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/campaign-planner",
+      "name": "Campaign Planner",
+      "description": "Turns marketing goals and budgets into channel plans, messaging, and schedules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/competitor-ad-tracker",
+      "name": "Competitor Ad Tracker",
+      "description": "Tracks competitors' ads and messaging changes in public ad libraries.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/email-marketing-agent",
+      "name": "Email Marketing Agent",
+      "description": "Builds segments and sequences and tests subject lines.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/geo-optimizer",
+      "name": "AI-Search (GEO) Optimizer",
+      "description": "Optimizes content so AI answer engines find and cite it.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/influencer-scout",
+      "name": "Influencer Scout",
+      "description": "Finds relevant creators and checks audience fit and brand safety.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/keyword-researcher",
+      "name": "Keyword Researcher",
+      "description": "Clusters target keywords by search intent, relevance, and content opportunity.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/landing-page-builder",
+      "name": "Landing Page Builder",
+      "description": "Builds landing pages with copy, layout and analytics.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/marketing-reporter",
+      "name": "Marketing Reporter",
+      "description": "Weekly performance narrative across analytics and ad platforms.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/review-responder",
+      "name": "Review Responder",
+      "description": "Drafts empathetic brand-voice replies to customer reviews and escalates severe complaints.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/seo-auditor",
+      "name": "SEO Auditor",
+      "description": "Audits crawled site structure for metadata, broken links, and prioritized technical SEO fixes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "marketing/social-media-manager",
+      "name": "Social Media Manager",
+      "description": "Plans, schedules and posts content and drafts replies, with approval before posting.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "meetings/action-item-extractor",
+      "name": "Action Item Extractor",
+      "description": "Pulls concrete tasks with owners and due dates from meeting notes, transcripts, or chats.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "meetings/agenda-builder",
+      "name": "Agenda Builder",
+      "description": "Builds a time-boxed agenda from goals and pre-reads.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "meetings/calendar-optimizer",
+      "name": "Calendar Optimizer",
+      "description": "Protects focus time, groups meetings and flags conflicts and overload.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "meetings/live-meeting-copilot",
+      "name": "Live Meeting Copilot",
+      "description": "Answers questions and fetches facts during a meeting, privately to the user.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "meetings/meeting-follow-up",
+      "name": "Meeting Follow-up",
+      "description": "Drafts post-meeting recap emails and tracks assigned commitments.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "meetings/meeting-notetaker",
+      "name": "Meeting Notetaker",
+      "description": "Transcribes meetings and produces structured summaries with decisions and risks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "meetings/meeting-prep",
+      "name": "Meeting Prep Brief",
+      "description": "Compiles pre-meeting briefs on attendees, prior threads, open items, and suggested agenda.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "meetings/meeting-scheduler",
+      "name": "Meeting Scheduler",
+      "description": "Finds conflict-free meeting slots across calendars and prepares invites for approval.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/decision-logger",
+      "name": "Decision Logger",
+      "description": "Records decisions with context and rationale from meetings and chats.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/okr-tracker",
+      "name": "OKR Tracker",
+      "description": "Tracks objectives and key results and prompts owners for updates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/process-miner",
+      "name": "Process Miner",
+      "description": "Finds bottlenecks and rework from event logs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/product-feedback-prioritizer",
+      "name": "Product Feedback Prioritizer",
+      "description": "Clusters feedback and scores ideas (RICE) to draft a roadmap.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/project-manager",
+      "name": "Project Manager",
+      "description": "Builds milestone plans, tracks task progress, and surfaces schedule slippage risks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/requirements-analyst",
+      "name": "Requirements Analyst",
+      "description": "Transforms stakeholder notes into PRDs, user stories, and testable acceptance criteria.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/risk-register-keeper",
+      "name": "Risk Register Keeper",
+      "description": "Maintains a risk register and reminds owners about mitigations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/sop-writer",
+      "name": "SOP Writer",
+      "description": "Converts process recordings, transcripts, or notes into clear step-by-step SOPs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/status-reporter",
+      "name": "Status Reporter",
+      "description": "Compiles weekly executive status digests across issue trackers, repos, and team chat.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "operations/vendor-manager",
+      "name": "Vendor Manager",
+      "description": "Tracks vendor contracts, renewals and SLAs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/account-researcher",
+      "name": "Account Researcher",
+      "description": "Builds pre-call briefs summarizing company priorities, leadership, and recent news.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/crm-updater",
+      "name": "CRM Updater",
+      "description": "Extracts call/meeting takeaways into structured CRM field updates gated by approval.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/inbound-qualifier",
+      "name": "Inbound Lead Qualifier",
+      "description": "Chats with inbound leads, qualifies them and books meetings.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/lead-enricher",
+      "name": "Lead Enricher",
+      "description": "Adds public firmographics, industry, and recent news to lead records.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/lead-finder",
+      "name": "Lead Finder",
+      "description": "Identifies target companies matching an ideal customer profile from public sources.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/lead-scorer",
+      "name": "Lead Scorer",
+      "description": "Scores leads transparently by ICP fit and intent signals with reasons.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/outreach-personalizer",
+      "name": "Outreach Personalizer",
+      "description": "Drafts tailored outreach email sequences grounded in verified account research (draft only).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/pipeline-forecaster",
+      "name": "Pipeline Forecaster",
+      "description": "Forecasts revenue from pipeline with risk flags per deal.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/proposal-generator",
+      "name": "Proposal Generator",
+      "description": "Assembles tailored proposals and statements of work from templates and discovery notes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/quote-builder",
+      "name": "Quote Builder",
+      "description": "Builds quotes using price books and discount rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/rfp-responder",
+      "name": "RFP & Questionnaire Responder",
+      "description": "Drafts answers to RFPs and security questionnaires from an approved KB, flagging gaps.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/sales-call-analyzer",
+      "name": "Sales Call Analyzer",
+      "description": "Summarizes calls, extracts objections and next steps, gives coaching tips.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "sales/sales-roleplay-coach",
+      "name": "Sales Roleplay Coach",
+      "description": "Simulates buyers for practice and scores the conversation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "strategy/board-pack-preparer",
+      "name": "Board Pack Preparer",
+      "description": "Assembles board packs from department inputs with an executive summary.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "strategy/business-plan-writer",
+      "name": "Business Plan Writer",
+      "description": "Drafts business plans with market, model and financial sections.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "strategy/decision-analyst",
+      "name": "Decision Analyst",
+      "description": "Structured decisions: options, weighted criteria, pre-mortem, recommendation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "strategy/investor-update-writer",
+      "name": "Investor Update Writer",
+      "description": "Monthly investor updates from metrics and highlights.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "strategy/pitch-deck-builder",
+      "name": "Pitch Deck Builder",
+      "description": "Builds investor decks with story, market and metrics.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "strategy/strategy-analyst",
+      "name": "Strategy Analyst",
+      "description": "SWOT, Porter's five forces and scenario analysis with evidence.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "supply-chain/customs-doc-preparer",
+      "name": "Customs Document Preparer",
+      "description": "Suggests HS codes and prepares commercial invoices and packing lists.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "supply-chain/demand-forecaster",
+      "name": "Demand Forecaster",
+      "description": "Forecasts demand by SKU and location with seasonality and events.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "supply-chain/inventory-optimizer",
+      "name": "Inventory Optimizer",
+      "description": "Sets reorder points and safety stock.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "supply-chain/purchase-order-agent",
+      "name": "Purchase Order Agent",
+      "description": "Creates POs from approved requisitions and matches confirmations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "supply-chain/route-optimizer",
+      "name": "Route Optimizer",
+      "description": "Plans delivery routes with time windows and capacity.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "supply-chain/shipment-tracker",
+      "name": "Shipment Tracker",
+      "description": "Multi-carrier tracking with exception alerts and customer updates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "supply-chain/supplier-risk-monitor",
+      "name": "Supplier Risk Monitor",
+      "description": "Watches news, financial and geopolitical risk for key suppliers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "supply-chain/supplier-sourcer",
+      "name": "Supplier Sourcer",
+      "description": "Finds and compares suppliers by capability, certification and price.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/churn-risk-predictor",
+      "name": "Churn Risk Predictor",
+      "description": "Predicts accounts at risk and suggests save actions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/customer-onboarding-guide",
+      "name": "Customer Onboarding Guide",
+      "description": "Guides new customers through setup with in-app tips and check-ins.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/escalation-detector",
+      "name": "Escalation Detector",
+      "description": "Detects customer frustration, churn signals, legal threats, or safety issues for escalation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/kb-writer",
+      "name": "Knowledge Base Writer",
+      "description": "Converts resolved support tickets into clean KB articles and highlights missing docs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/order-status-agent",
+      "name": "Order Status Agent",
+      "description": "Queries order and shipment tracking APIs and explains status clearly to customers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/reply-drafter",
+      "name": "Reply Drafter",
+      "description": "Drafts KB-grounded support replies for human agents to review and send.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/returns-refunds-agent",
+      "name": "Returns & Refunds Agent",
+      "description": "Checks return eligibility and prepares refunds; refunds need human approval.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/support-chatbot",
+      "name": "Support Assistant",
+      "description": "Answers customer questions from KB docs with citations and flags handoffs when uncertain.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/support-qa-auditor",
+      "name": "Support QA Auditor",
+      "description": "Scores support conversations against a quality rubric.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/ticket-triager",
+      "name": "Ticket Triager",
+      "description": "Classifies, prioritizes, and routes incoming support tickets cleanly.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "support/voice-of-customer",
+      "name": "Voice of Customer Analyst",
+      "description": "Clusters themes across support tickets, reviews, and calls with quantified counts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "evaluation/benchmark-runner",
+      "name": "Benchmark Runner",
+      "description": "Runs public benchmarks (tool use, web tasks, coding) against agents and publishes results.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "evaluation/feedback-collector",
+      "name": "Feedback Collector",
+      "description": "Turns user thumbs-down and corrections into new eval cases.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "evaluation/llm-judge",
+      "name": "LLM Judge",
+      "description": "Scores outputs against a rubric with calibrated, explained verdicts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "evaluation/regression-runner",
+      "name": "Regression Runner",
+      "description": "Runs eval suites across code or prompt edits and compares pass rates against baselines.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "evaluation/test-case-generator",
+      "name": "Test Case Generator",
+      "description": "Synthesizes normal, edge, and adversarial JSONL eval cases from an agent manifest and schemas.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "evaluation/trace-analyzer",
+      "name": "Trace Analyzer",
+      "description": "Mines production traces to find and cluster failure patterns; explains why an agent failed.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/age-safety-filter",
+      "name": "Age-Appropriate Filter",
+      "description": "Applies child-safe content rules for apps used by minors.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/audit-logger",
+      "name": "Audit Logger",
+      "description": "Records structured, PII-safe audit trail entries for agent actions and approvals.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/bias-auditor",
+      "name": "Bias Auditor",
+      "description": "Tests outputs for unequal treatment using counterfactual inputs (swap names, gender, region).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/content-moderator",
+      "name": "Content Moderator",
+      "description": "Classifies text against configurable safety and policy categories.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/data-residency-guard",
+      "name": "Data Residency Guard",
+      "description": "Routes data only to models and regions allowed by policy (e.g. data must stay in-country).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/decision-explainer",
+      "name": "Decision Explainer",
+      "description": "Produces plain-language reasons for an agent's decision, for regulated contexts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/hallucination-checker",
+      "name": "Grounding Checker",
+      "description": "Checks each claim in an answer against provided sources and flags unsupported statements.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/pii-redactor",
+      "name": "PII Redactor",
+      "description": "Detects and masks personal data (emails, phones, Aadhaar, PAN, SSN, card numbers) reversibly.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/policy-enforcer",
+      "name": "Action Policy Enforcer",
+      "description": "Evaluates proposed tool actions against allow/deny/approve rules before execution.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/prompt-injection-detector",
+      "name": "Injection Detector",
+      "description": "Scans untrusted content (web pages, emails, files, speech transcripts) for hidden prompt-injection instructions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/red-teamer",
+      "name": "Red Teamer",
+      "description": "Probes target agents with adversarial prompt-injection and jailbreak test cases.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "guardrails/secrets-guard",
+      "name": "Secrets Guard",
+      "description": "Detects and masks API keys, private keys, and tokens before they enter prompts or logs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/entity-resolver",
+      "name": "Entity Resolver",
+      "description": "Merges duplicate people, companies or products across sources.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/knowledge-graph-builder",
+      "name": "Knowledge Graph Builder",
+      "description": "Extracts entities and typed relationships from documents into structured graph nodes and edges.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/knowledge-ingestor",
+      "name": "Knowledge Ingestor",
+      "description": "Parses, chunks, and prepares documents for hybrid keyword + vector indexing with metadata.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/memory-gardener",
+      "name": "Memory Gardener",
+      "description": "Consolidates, expires and resolves contradictions in long-term memory.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/memory-retriever",
+      "name": "Memory Retriever",
+      "description": "Recalls relevant memories for the current task, ranked and deduplicated.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/memory-writer",
+      "name": "Memory Writer",
+      "description": "Extracts durable user preferences, facts, and decisions without creating duplicates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/ontology-designer",
+      "name": "Ontology Designer",
+      "description": "Proposes taxonomies, tag sets and schemas for a domain or corpus.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/profile-builder",
+      "name": "Preference Profiler",
+      "description": "Builds a user preference profile with visible, editable, consent-based controls.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/session-summarizer",
+      "name": "Session Summarizer",
+      "description": "Writes end-of-session summaries and open follow-up items so the next session resumes cleanly.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "memory/wiki-maintainer",
+      "name": "Wiki Maintainer",
+      "description": "Keeps an internal wiki current: finds stale pages, drafts updates from new sources.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/agent-builder",
+      "name": "Agent Factory",
+      "description": "Generates spec-compliant afe/v1 agent scaffolds from plain-language descriptions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/budget-guard",
+      "name": "Cost & Rate Guard",
+      "description": "Tracks tokens, spend, and execution limits; returns allow, throttle, or stop.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/clarifier",
+      "name": "Clarifier",
+      "description": "Detects ambiguous or under-specified requests and asks the fewest clarifying questions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/context-manager",
+      "name": "Context Compressor",
+      "description": "Summarizes and prunes long conversation histories to fit token budgets cleanly.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/critic",
+      "name": "Critic / Reflector",
+      "description": "Reviews another agent's output against a rubric and returns specific, actionable fixes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/debate-moderator",
+      "name": "Debate / Consensus",
+      "description": "Runs several agents with different viewpoints and synthesizes a judged answer.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/error-recovery",
+      "name": "Retry & Recovery",
+      "description": "Diagnoses transient tool timeouts or schema failures and recommends safe recovery actions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/handoff-coordinator",
+      "name": "Handoff Coordinator",
+      "description": "Transfers conversation state cleanly between specialist agents with structured context packets.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/human-approval-gate",
+      "name": "Human-in-the-Loop Gate",
+      "description": "Pauses a workflow before risky steps, displays a clear summary/diff, and records approve/reject decisions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/model-selector",
+      "name": "Model Selector",
+      "description": "Chooses the right model per subtask by cost, latency, quality and data-residency rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/progress-reporter",
+      "name": "Progress Reporter",
+      "description": "Turns long-running job state into short human-readable status updates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/prompt-optimizer",
+      "name": "Prompt Optimizer",
+      "description": "Improves an agent's prompt automatically using eval results (DSPy-style optimization).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/router",
+      "name": "Intent Router",
+      "description": "Classifies a user request and selects the best matching agent or team with extracted arguments.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/scheduler",
+      "name": "Job Scheduler",
+      "description": "Schedules recurring cron or event-driven agent runs with retry policies.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/supervisor",
+      "name": "Supervisor / Orchestrator",
+      "description": "Executes a plan by delegating steps to worker agents, tracks state, and re-plans when a step fails.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/task-planner",
+      "name": "Task Planner",
+      "description": "Breaks a goal into ordered, dependency-aware steps with success criteria and estimated cost.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/tool-selector",
+      "name": "Tool Selector",
+      "description": "Selects the minimal set of MCP servers needed for a task from the registry.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "orchestration/verifier",
+      "name": "Output Verifier",
+      "description": "Checks outputs against required fields, formats, regex rules, and cross-field constraints.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "agriculture/agri-scheme-finder",
+      "name": "Agri Scheme Finder",
+      "description": "Finds subsidy and insurance schemes a farmer is eligible for and the documents needed.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "agriculture/crop-doctor",
+      "name": "Crop Doctor",
+      "description": "Identifies likely pests and diseases from photos and gives advisory in the farmer's language.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "agriculture/farm-record-keeper",
+      "name": "Farm Record Keeper",
+      "description": "Voice logging of inputs, costs and yields.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "agriculture/farm-weather-advisor",
+      "name": "Farm Weather Advisor",
+      "description": "Turns forecasts into farm actions (sow, spray, irrigate, harvest).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "agriculture/market-price-advisor",
+      "name": "Market Price Informer",
+      "description": "Local market and commodity prices and trends.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "agriculture/soil-report-explainer",
+      "name": "Soil Report Explainer",
+      "description": "Explains soil test cards and fertilizer recommendations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/aml-alert-investigator",
+      "name": "AML Alert Investigator",
+      "description": "Investigates transaction-monitoring alerts, compiles context, and drafts narrative summaries for AML analysts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/bank-statement-analyzer",
+      "name": "Bank Statement Analyzer",
+      "description": "Parses statement lines into income, recurring expenses, EMIs, and cheque/NACH bounces.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/banking-voice-assistant",
+      "name": "Vernacular Banking Assistant",
+      "description": "Voice-first help for balances, FAQs and services in local languages, authenticated through the bank's own systems.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/cashflow-lending-analyst",
+      "name": "Cash-flow Lending Analyst",
+      "description": "Assesses small-business credit from consented GST, bank and accounting data (e.g. via Account Aggregator).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/collections-assistant",
+      "name": "Fair Collections Assistant",
+      "description": "Compliant, respectful repayment reminders within regulator fair-practice rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/credit-memo-drafter",
+      "name": "Credit Appraisal Drafter",
+      "description": "Analyzes financials and bureau data into a credit appraisal note for the credit officer.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/dispute-chargeback-handler",
+      "name": "Dispute & Chargeback Handler",
+      "description": "Collects evidence and drafts responses for card and payment disputes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/financial-literacy-guide",
+      "name": "Financial Literacy Guide",
+      "description": "Explains banking, digital payments, insurance and government schemes simply, in local languages.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/fraud-signal-explainer",
+      "name": "Fraud Signal Explainer",
+      "description": "Explains transaction risk signals and flags mule/scam indicators for human fraud analysts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/grievance-redressal",
+      "name": "Grievance Redressal Agent",
+      "description": "Classifies complaints, tracks turnaround times, drafts responses and prepares escalation files.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/kyc-onboarding",
+      "name": "KYC Onboarding Agent",
+      "description": "Extracts and cross-checks KYC applicant records and flags mismatches for a human compliance officer.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/loan-application-assistant",
+      "name": "Loan Application Assistant",
+      "description": "Guides applicants in their language, checks completeness and explains products and charges.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/model-risk-validator",
+      "name": "AI Model Risk Validator",
+      "description": "Checks AI/ML models for documentation, performance, fairness, drift and explainability under model-risk policy.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/regulatory-circular-tracker",
+      "name": "Regulatory Circular Tracker",
+      "description": "Tracks central bank circulars and regulatory notices and maps impacted internal processes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/regulatory-return-preparer",
+      "name": "Regulatory Return Preparer",
+      "description": "Prepares and validates regulatory returns against taxonomy and validation rules (e.g. XBRL).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/sanctions-screener",
+      "name": "Sanctions & PEP Screener",
+      "description": "Transliteration-aware fuzzy name screening against sanctions/PEP lists with explained matches for officer review.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "banking/scam-message-checker",
+      "name": "Scam Message Checker",
+      "description": "Consumers forward a suspicious SMS, call script or payment request and get a risk verdict with what to do.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/cart-recovery",
+      "name": "Cart Recovery Agent",
+      "description": "Personalized, consented abandoned-cart messages.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/catalog-enricher",
+      "name": "Catalog Enricher",
+      "description": "Fills missing SKU attributes from specs/images and normalizes catalog taxonomy.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/marketplace-sync",
+      "name": "Marketplace Sync",
+      "description": "Keeps listings, stock and prices in sync across marketplaces and the web store.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/order-fraud-screener",
+      "name": "Order Fraud Screener",
+      "description": "Scores orders for fraud risk with reasons for manual review.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/pricing-monitor",
+      "name": "Pricing Monitor",
+      "description": "Tracks competitor prices and suggests repricing within rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/product-listing-writer",
+      "name": "Product Listing Writer",
+      "description": "Generates structured marketplace titles, bullet points, descriptions, and attributes from product specs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/recommendation-agent",
+      "name": "Recommendation Agent",
+      "description": "Personalized product recommendations with explanations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/review-analyzer",
+      "name": "Review Analyzer",
+      "description": "Product review insights: what customers love, hate and request.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/shopping-concierge",
+      "name": "Shopping Concierge",
+      "description": "Conversational product discovery on a store's own catalog.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/size-fit-advisor",
+      "name": "Size & Fit Advisor",
+      "description": "Size recommendations from measurements, brand charts and reviews.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "ecommerce/visual-product-search",
+      "name": "Visual Product Search",
+      "description": "Find similar products from a photo.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "energy/energy-auditor",
+      "name": "Building Energy Auditor",
+      "description": "Finds efficiency improvements from bills and building data.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "energy/load-forecaster",
+      "name": "Grid Load Forecaster",
+      "description": "Short-term load forecasting for utilities.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "energy/outage-communicator",
+      "name": "Outage Communicator",
+      "description": "Customer outage notices and ETAs from grid data.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "energy/solar-sizing-advisor",
+      "name": "Solar Sizing Advisor",
+      "description": "Estimates rooftop solar size, cost and payback.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "energy/utility-bill-analyzer",
+      "name": "Utility Bill Analyzer",
+      "description": "Explains bills, spots errors and tariff savings.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "gaming/game-master",
+      "name": "Tabletop Game Master",
+      "description": "Runs tabletop RPG sessions with rules and story continuity.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "gaming/game-tester",
+      "name": "Game Playtester",
+      "description": "Plays builds to find bugs, softlocks and balance problems.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "gaming/level-generator",
+      "name": "Level Generator",
+      "description": "Procedural level and quest generation within design rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "gaming/npc-agent",
+      "name": "NPC Agent",
+      "description": "Dynamic non-player character dialogue with memory, personality and game-rule constraints.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "government/citizen-services-assistant",
+      "name": "Citizen Services Assistant",
+      "description": "Explains services, eligibility and required documents, by voice in local languages.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "government/gov-form-assistant",
+      "name": "Government Form Assistant",
+      "description": "Helps fill government forms step by step; the citizen submits.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "government/grievance-filer",
+      "name": "Public Grievance Filer",
+      "description": "Drafts and tracks public grievances on official portals.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "government/legislation-tracker",
+      "name": "Legislation Tracker",
+      "description": "Tracks bills and gazette notifications by topic.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "government/public-consultation-analyzer",
+      "name": "Public Consultation Analyzer",
+      "description": "Summarizes and themes public comments on draft policies.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "government/rti-drafter",
+      "name": "RTI / FOI Request Drafter",
+      "description": "Drafts right-to-information requests.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "government/scheme-eligibility-checker",
+      "name": "Scheme Eligibility Checker",
+      "description": "Checks which government schemes a person qualifies for.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "government/tender-analyzer",
+      "name": "Tender Analyzer",
+      "description": "Extracts eligibility, scope, deadlines and documents from tender documents.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "healthcare/appointment-manager",
+      "name": "Appointment Manager",
+      "description": "Scheduling, reminders and waitlist backfill to reduce no-shows.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "healthcare/clinical-coder",
+      "name": "Clinical Coding Assistant",
+      "description": "Suggests ICD/CPT codes with evidence from the note.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "healthcare/clinical-trial-matcher",
+      "name": "Clinical Trial Matcher",
+      "description": "Matches patient profiles to trial eligibility criteria.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "healthcare/discharge-simplifier",
+      "name": "Discharge Instructions Simplifier",
+      "description": "Rewrites discharge instructions in plain language and the patient's language.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "healthcare/medical-evidence-agent",
+      "name": "Medical Evidence Summarizer",
+      "description": "Evidence summaries from guidelines and literature with citations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "healthcare/medical-scribe",
+      "name": "Ambient Medical Scribe",
+      "description": "Turns a consented doctor\u2013patient conversation into a structured clinical note (SOAP) for the clinician to approve.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "healthcare/patient-intake",
+      "name": "Patient Intake Agent",
+      "description": "Pre-visit questionnaires by voice or chat in the patient's language.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "healthcare/prior-authorization",
+      "name": "Prior Authorization Agent",
+      "description": "Assembles clinical evidence and fills payer forms for review.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hospitality/hotel-concierge",
+      "name": "Guest Concierge",
+      "description": "Answers guest requests and gives local recommendations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hospitality/housekeeping-optimizer",
+      "name": "Housekeeping Optimizer",
+      "description": "Plans housekeeping by check-outs and priorities.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hospitality/menu-engineer",
+      "name": "Menu Engineer",
+      "description": "Menu costing, pricing and appealing descriptions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "hospitality/reservation-agent",
+      "name": "Reservation Agent",
+      "description": "Takes table and room bookings by phone, chat or WhatsApp.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "insurance/claims-adjuster-assistant",
+      "name": "Claims Adjuster Assistant",
+      "description": "Damage assessment, coverage check against the policy and fraud indicators for the adjuster.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "insurance/claims-intake",
+      "name": "Claims Intake (FNOL)",
+      "description": "Takes first notice of loss by chat or voice with photos and documents into a complete claim file.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "insurance/policy-comparer",
+      "name": "Policy Comparer",
+      "description": "Side-by-side comparison of coverage, exclusions and price.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "insurance/policy-explainer",
+      "name": "Policy Explainer",
+      "description": "Plain-language Q&A about what a policy does and does not cover.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "insurance/renewal-agent",
+      "name": "Renewal Agent",
+      "description": "Renewal reminders and coverage-change summaries.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "insurance/underwriting-assistant",
+      "name": "Underwriting Assistant",
+      "description": "Summarizes submissions and risk factors for underwriters.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "manufacturing/ehs-incident-agent",
+      "name": "Safety Incident Agent",
+      "description": "Captures safety incidents and near misses and drafts investigation reports.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "manufacturing/maintenance-copilot",
+      "name": "Technician Copilot",
+      "description": "Hands-free voice Q&A over manuals and maintenance history for technicians.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "manufacturing/predictive-maintenance",
+      "name": "Predictive Maintenance Agent",
+      "description": "Predicts equipment failure from sensor data and schedules maintenance.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "manufacturing/production-scheduler",
+      "name": "Production Scheduler",
+      "description": "Schedules jobs across machines given orders and constraints.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "manufacturing/quality-inspector",
+      "name": "Line Quality Inspector",
+      "description": "Visual defect detection on production lines with defect logging and root-cause notes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "manufacturing/work-instruction-writer",
+      "name": "Work Instruction Writer",
+      "description": "Step-by-step work instructions from videos, CAD notes and experts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "real-estate/lease-abstractor",
+      "name": "Lease Abstractor",
+      "description": "Extracts rent, term, escalations, options and obligations from leases.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "real-estate/listing-writer",
+      "name": "Property Listing Writer",
+      "description": "Listing descriptions from photos and property details.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "real-estate/maintenance-request-agent",
+      "name": "Maintenance Request Agent",
+      "description": "Triage of tenant requests with photos and dispatch to vendors.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "real-estate/property-doc-checker",
+      "name": "Property Document Checker",
+      "description": "Checklist review of title and approval documents for missing items.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "real-estate/property-search-assistant",
+      "name": "Property Search Assistant",
+      "description": "Finds and shortlists properties by needs and commute.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "real-estate/property-valuator",
+      "name": "Property Valuation Estimator",
+      "description": "Comparable-sales based value ranges with assumptions shown.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "real-estate/tenant-screening-assistant",
+      "name": "Tenant Screening Assistant",
+      "description": "Applies the landlord's written, fair-housing-compliant criteria and documents reasons; human decides.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/experiment-designer",
+      "name": "Experiment Designer",
+      "description": "Designs experiments: variables, controls, sample size, analysis plan.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/lab-notebook",
+      "name": "Voice Lab Notebook",
+      "description": "Hands-free logging of experiments.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/lab-protocol-writer",
+      "name": "Lab Protocol Writer",
+      "description": "Writes clear, reproducible protocols.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/materials-literature-miner",
+      "name": "Literature Data Miner",
+      "description": "Extracts properties and measurements from many papers into a dataset.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/paper-reader",
+      "name": "Paper Reader",
+      "description": "Extracts hypotheses, experimental methods, metrics, and limitations from scientific papers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/peer-review-assistant",
+      "name": "Peer Review Assistant",
+      "description": "Checks manuscripts against reporting checklists and drafts reviewer notes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/proof-assistant",
+      "name": "Formal Proof Assistant",
+      "description": "Helps write and check formal proofs (Lean).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/results-to-manuscript",
+      "name": "Manuscript Drafter",
+      "description": "Drafts paper sections from results and notes, with references.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "science/simulation-setup",
+      "name": "Simulation Setup Agent",
+      "description": "Configures simulation runs (CFD, FEA, molecular) from specifications.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/citation-manager",
+      "name": "Citation Manager",
+      "description": "Formats references, finds DOIs and checks every citation exists.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/comparison-analyst",
+      "name": "Comparison Analyst",
+      "description": "Scores options X vs Y vs Z against weighted criteria with transparent trade-offs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/competitive-analyst",
+      "name": "Competitive Analyst",
+      "description": "Builds competitor profiles and pricing/feature comparison matrices.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/deep-researcher",
+      "name": "Deep Researcher",
+      "description": "Plans research questions, searches iteratively, reads sources, fact-checks, and writes a cited report.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/due-diligence",
+      "name": "Due Diligence Analyst",
+      "description": "Background checks on companies and vendors from public sources (filings, litigation, news).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/fact-checker",
+      "name": "Fact Checker",
+      "description": "Verifies discrete claims against web or retrieved sources and outputs verdicts with evidence.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/hypothesis-generator",
+      "name": "Hypothesis Generator",
+      "description": "Proposes testable hypotheses from data or literature.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/interview-synthesizer",
+      "name": "User Research Synthesizer",
+      "description": "Synthesizes user interview transcripts into insights, pain points, and quotes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/literature-reviewer",
+      "name": "Literature Reviewer",
+      "description": "Conducts structured PRISMA-style screening, extraction, and synthesis across academic papers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/market-researcher",
+      "name": "Market Researcher",
+      "description": "Synthesizes market sizing, segments, trends, and explicit assumptions with sources.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/policy-analyst",
+      "name": "Policy Analyst",
+      "description": "Analyzes a regulation or policy proposal: who it affects and how.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/report-writer",
+      "name": "Report Writer",
+      "description": "Turns research findings into structured Markdown reports with executive summaries and references.",
+      "verificationBadge": "unverified"
+    },
+    {
+      "id": "research/source-reader",
+      "name": "Source Reader",
+      "description": "Reads one URL or document deeply and extracts key points, facts, and quotes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/survey-analyst",
+      "name": "Survey Analyst",
+      "description": "Codes open-ended survey answers into themes with counts and representative quotes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "research/trend-spotter",
+      "name": "Trend Spotter",
+      "description": "Detects emerging trends across news, social media, papers and patents.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/academic-search",
+      "name": "Academic Searcher",
+      "description": "Queries arXiv, PubMed, Semantic Scholar, and OpenAlex for papers and citations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/answer-engine",
+      "name": "Answer Engine",
+      "description": "Searches web sources, reads content, and synthesizes a direct cited answer.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/company-lookup",
+      "name": "Company Lookup",
+      "description": "Public firmographic data about companies (size, sector, filings, news).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/dataset-finder",
+      "name": "Dataset Finder",
+      "description": "Finds public datasets with licence and quality notes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/enterprise-search",
+      "name": "Enterprise Search",
+      "description": "Federated search across Drive, email, chat, and wiki respecting per-user ACLs.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/local-search",
+      "name": "Local Places Finder",
+      "description": "Finds places with hours, ratings and directions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/multimodal-search",
+      "name": "Multimodal Searcher",
+      "description": "Searches a media library by text, image or audio.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/news-monitor",
+      "name": "News Monitor",
+      "description": "Tracks watchlist topics across news wires and compiles change alerts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/patent-search",
+      "name": "Patent Searcher",
+      "description": "Prior-art search across patent databases.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/query-rewriter",
+      "name": "Query Rewriter",
+      "description": "Expands, decomposes, and translates queries to maximize search recall.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/rag-qa",
+      "name": "Document Q&A",
+      "description": "Answers questions over private documents with citations and refuses when unsupported.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/reranker",
+      "name": "Reranker",
+      "description": "Reorders candidate search passages by true semantic relevance to the query.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/semantic-search",
+      "name": "Hybrid Searcher",
+      "description": "Hybrid keyword + vector search over private document corpora with top-k ranking.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/source-credibility",
+      "name": "Source Credibility Scorer",
+      "description": "Evaluates URLs for primary-source authority, freshness, and bias signals.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "search/web-search",
+      "name": "Web Searcher",
+      "description": "Runs queries on search APIs, deduplicates URLs, and ranks results with snippets.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/argument-mapper",
+      "name": "Argument Mapper",
+      "description": "Maps claims, premises, evidence and logical fallacies in a text.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/classifier",
+      "name": "Text Classifier",
+      "description": "Zero/few-shot classification of text into any custom label set with confidence.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/entity-extractor",
+      "name": "Entity Extractor",
+      "description": "Extracts named entities (people, organizations, dates, amounts, emails) from unstructured text.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/explainer",
+      "name": "Concept Explainer",
+      "description": "Explains technical or domain concepts at a target reading level with examples.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/glossary-builder",
+      "name": "Glossary Builder",
+      "description": "Builds term lists and definitions from a corpus.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/proofreader",
+      "name": "Proofreader",
+      "description": "Fixes whitespace, grammar, spelling, and consistency issues with tracked corrections.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/question-generator",
+      "name": "Q&A Generator",
+      "description": "Generates FAQs and question-answer pairs from content.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/rewriter",
+      "name": "Rewriter",
+      "description": "Adapts tone, length, reading level, or audience while preserving original facts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/sentiment-analyzer",
+      "name": "Sentiment Analyzer",
+      "description": "Scores sentiment polarity, emotion, and aspect-level opinions in text.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/structured-extractor",
+      "name": "Structured Extractor",
+      "description": "Turns unstructured text or speech transcripts into normalized JSON matching a target schema.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/style-guide-enforcer",
+      "name": "Brand Voice Enforcer",
+      "description": "Checks and fixes text against brand voice and terminology rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/summarizer",
+      "name": "Summarizer",
+      "description": "Summarizes any length of content in a chosen style (TL;DR, bullets, executive) with key points.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/text-comparer",
+      "name": "Semantic Diff",
+      "description": "Compares two text versions and explains concrete changes in meaning.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/title-generator",
+      "name": "Title & Headline Generator",
+      "description": "Generates titles, headlines and subject lines.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/topic-tagger",
+      "name": "Keyword & Topic Tagger",
+      "description": "Extracts top keywords, domain topics, and tags from any document.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/translator",
+      "name": "Translator",
+      "description": "Context-aware translation preserving formatting and glossaries across 100+ languages including Indic.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "text/transliterator",
+      "name": "Transliterator",
+      "description": "Converts between scripts (e.g. Devanagari \u2194 Latin) without translating.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "community/community-moderator",
+      "name": "Community Moderator",
+      "description": "Applies community rules in Discord, forums and groups; escalates edge cases.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "community/community-qa-bot",
+      "name": "Community Q&A Bot",
+      "description": "Answers recurring questions from docs and past threads.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "community/event-organizer",
+      "name": "Meetup Organizer",
+      "description": "RSVPs, reminders, venue logistics and follow-ups for community events.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "community/misinformation-flagger",
+      "name": "Misinformation Flagger",
+      "description": "Flags likely false claims with context and sources.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "community/volunteer-coordinator",
+      "name": "Volunteer Coordinator",
+      "description": "Matches volunteers to shifts and sends reminders.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/3d-asset-generator",
+      "name": "3D Asset Generator",
+      "description": "Generates 3D models from text or images (glTF).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/brand-kit-designer",
+      "name": "Brand Kit Designer",
+      "description": "Logo concepts, colour palettes and type pairings with usage rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/comic-creator",
+      "name": "Comic Creator",
+      "description": "Comic strips with consistent characters.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/game-designer",
+      "name": "Game Design Assistant",
+      "description": "Mechanics, levels, economy and narrative design documents.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/interior-visualizer",
+      "name": "Interior Design Visualizer",
+      "description": "Restyles room photos and suggests furniture layouts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/meme-generator",
+      "name": "Meme Generator",
+      "description": "Meme and reaction images from a topic.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/photo-organizer",
+      "name": "Photo Organizer & Enhancer",
+      "description": "Sorts, culls blurry/duplicate shots and auto-enhances photos.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/storyboard-artist",
+      "name": "Storyboard Artist",
+      "description": "Turns scripts into storyboard frames with shot notes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/thumbnail-designer",
+      "name": "Thumbnail Designer",
+      "description": "Eye-catching thumbnails and cover images.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "creative/wardrobe-stylist",
+      "name": "Wardrobe Stylist",
+      "description": "Outfit suggestions from photos of your own wardrobe.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/course-builder",
+      "name": "Course Builder",
+      "description": "Builds a course: modules, lessons, assessments, resources.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/exam-prep-coach",
+      "name": "Exam Prep Coach",
+      "description": "Practice questions, weak-area tracking and mock tests.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/flashcard-maker",
+      "name": "Flashcard Maker",
+      "description": "Extracts atomic concepts into Anki-ready spaced-repetition question/answer flashcards.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/grader",
+      "name": "Feedback Grader",
+      "description": "Rubric-based feedback on essays, answers and code.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/kids-learning-companion",
+      "name": "Kids Learning Companion",
+      "description": "Age-appropriate learning games and stories with parental controls.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/language-partner",
+      "name": "Language Partner",
+      "description": "Conversation practice by voice or text with gentle corrections.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/lesson-planner",
+      "name": "Lesson Planner",
+      "description": "Lesson plans aligned to curriculum outcomes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/math-solver",
+      "name": "Math Solver",
+      "description": "Step-by-step solutions checked with a computer algebra system.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/quiz-generator",
+      "name": "Quiz Generator",
+      "description": "Builds diagnostic multiple-choice and short-answer quizzes with answer keys from study material.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/research-mentor",
+      "name": "Research Mentor",
+      "description": "Guides students through choosing a question, method and writing.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/study-planner",
+      "name": "Study Planner",
+      "description": "Exam-oriented study schedule with spaced revision.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "education/tutor",
+      "name": "Socratic Tutor",
+      "description": "Guides learners with progressive Socratic questions and hints without spoiling final answers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/bill-subscription-manager",
+      "name": "Bills & Subscriptions Manager",
+      "description": "Tracks recurring bills and subscriptions, flags due dates, and guides cancellation steps.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/cooking-assistant",
+      "name": "Hands-free Cooking Assistant",
+      "description": "Step-by-step cooking by voice, with timers and substitutions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/digital-declutterer",
+      "name": "Digital Declutterer",
+      "description": "Cleans up photos, files and inbox with a reviewable plan.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/event-planner",
+      "name": "Event Planner",
+      "description": "Plans parties and weddings: checklist, budget, vendors, timeline.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/gift-advisor",
+      "name": "Gift Advisor",
+      "description": "Gift ideas by person, occasion and budget.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/home-inventory",
+      "name": "Home Inventory",
+      "description": "Catalogues belongings from photos for insurance and moving.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/home-maintenance",
+      "name": "Home Maintenance Planner",
+      "description": "Maintenance schedules and help finding service providers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/meal-planner",
+      "name": "Meal Planner",
+      "description": "Weekly meal plans and grocery lists by diet, budget and pantry.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/parenting-helper",
+      "name": "Family Organizer",
+      "description": "Family schedules, school messages, activity ideas.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/personal-doc-vault",
+      "name": "Personal Document Vault",
+      "description": "Organizes personal documents (IDs, warranties, policies) with encryption and expiry reminders.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/personal-finance-tracker",
+      "name": "Personal Finance Tracker",
+      "description": "Categorizes personal statements into monthly spending and budget insights (no investment advice).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/pet-care-helper",
+      "name": "Pet Care Helper",
+      "description": "Vaccination and care reminders, general pet information.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/price-tracker",
+      "name": "Price Tracker",
+      "description": "Watches prices and alerts on drops.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "personal/shopping-assistant",
+      "name": "Shopping Assistant",
+      "description": "Researches and compares products against criteria and stops strictly before checkout.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/daily-briefer",
+      "name": "Daily Briefer",
+      "description": "Assembles a morning brief from calendar events, top tasks, urgent mail, and weather.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/focus-guardian",
+      "name": "Focus Guardian",
+      "description": "Blocks distractions and batches notifications during focus time.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/habit-coach",
+      "name": "Habit Coach",
+      "description": "Helps build habits with tracking, nudges and reflection.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/journal-companion",
+      "name": "Journal Companion",
+      "description": "Private, local-first reflective prompts and mood trends.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/note-organizer",
+      "name": "Second Brain Organizer",
+      "description": "Automatically tags, links, and files Markdown/Obsidian/Notion notes.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/personal-knowledge-qa",
+      "name": "Personal Knowledge Q&A",
+      "description": "Answers questions across personal notes, mail, and saved files with citations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/reading-list-curator",
+      "name": "Reading List Curator",
+      "description": "Saves, summarizes and prioritizes articles to read.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/reminder-agent",
+      "name": "Reminder Agent",
+      "description": "Parses natural-language time, place, and context reminders into structured schedules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/task-manager",
+      "name": "Task Manager",
+      "description": "Captures tasks from notes, chat, or voice, prioritizes them, and structures a daily plan.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "productivity/weekly-review",
+      "name": "Weekly Review Coach",
+      "description": "Guides a weekly review of tasks, goals and calendar.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "travel/flight-hotel-searcher",
+      "name": "Flight & Hotel Searcher",
+      "description": "Compares options on price, timing and flexibility; stops before booking.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "travel/flight-tracker",
+      "name": "Flight Tracker",
+      "description": "Delay and gate alerts with rebooking options.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "travel/local-guide",
+      "name": "On-trip Local Guide",
+      "description": "Nearby recommendations, translation and directions on the go.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "travel/travel-doc-checker",
+      "name": "Travel Document Checker",
+      "description": "Visa, passport validity and entry rules from official sources.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "travel/trip-expense-reporter",
+      "name": "Trip Expense Reporter",
+      "description": "Turns travel receipts into an expense report.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "travel/trip-planner",
+      "name": "Trip Planner",
+      "description": "Builds day-by-day travel itineraries aligned with budget, pace, transit time, and interests.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "wellness/fitness-coach",
+      "name": "Fitness Coach",
+      "description": "Workout plans that adapt to progress and equipment.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "wellness/health-record-organizer",
+      "name": "Health Record Organizer",
+      "description": "Collects reports into a timeline and summary to share with doctors.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "wellness/lab-report-explainer",
+      "name": "Lab Report Explainer",
+      "description": "Explains lab results in plain language and suggests questions for the doctor.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "wellness/medication-reminder",
+      "name": "Medication Reminder",
+      "description": "Dose schedules, refill alerts and interaction information from authoritative databases.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "wellness/nutrition-coach",
+      "name": "Nutrition Coach",
+      "description": "Food logging from photos and nutrition guidance.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "wellness/sleep-coach",
+      "name": "Sleep Coach",
+      "description": "Sleep habit guidance from wearable data.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "wellness/symptom-navigator",
+      "name": "Symptom Navigator",
+      "description": "Asks structured questions and suggests the right level of care (self-care, doctor, emergency).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "wellness/wellbeing-companion",
+      "name": "Wellbeing Companion",
+      "description": "Supportive check-ins and evidence-based exercises (e.g. CBT-style); not therapy; crisis lines always available.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "accessibility/accessibility-auditor",
+      "name": "Accessibility Auditor",
+      "description": "Checks HTML/UI attributes against WCAG contrast, alt-text, and landmark rules.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "accessibility/alt-text-writer",
+      "name": "Alt-Text Writer",
+      "description": "Writes concise, context-aware alt text for images on websites and documents.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "accessibility/document-remediator",
+      "name": "Document Remediator",
+      "description": "Makes PDFs and documents accessible (tags, reading order, headings, contrast).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "accessibility/easy-read-simplifier",
+      "name": "Easy-Read Simplifier",
+      "description": "Rewrites dense text into short plain-language sentences for cognitive accessibility.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "accessibility/live-captioner",
+      "name": "Live Captioner",
+      "description": "Streams low-latency live captions for meetings, lectures, and events.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "accessibility/screen-narrator",
+      "name": "Screen Narrator",
+      "description": "Describes active UI screens aloud for blind and low-vision navigation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "accessibility/sign-language-interpreter",
+      "name": "Sign Language Interpreter",
+      "description": "Research-grade sign language to text and text to sign avatar.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "accessibility/voice-control-navigator",
+      "name": "Voice Control Navigator",
+      "description": "Hands-free control of apps and the OS by voice.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "audio/audio-classifier",
+      "name": "Sound Event Classifier",
+      "description": "Detects sounds such as alarms, glass breaking, coughing, machinery faults.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "audio/audio-cleaner",
+      "name": "Audio Cleaner",
+      "description": "Prepares noise-reduction, echo-cancellation, and loudness-normalization DSP plans.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "audio/audio-search",
+      "name": "Audio Moment Search",
+      "description": "Finds moments in hours of audio by meaning (\"where did they discuss pricing?\").",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "audio/audiobook-producer",
+      "name": "Audiobook Producer",
+      "description": "Turns a manuscript into a multi-voice audiobook with chapter files.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "audio/music-composer",
+      "name": "Music Composer",
+      "description": "Generates music or jingles from a brief, with licence-safe output.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "audio/music-tagger",
+      "name": "Music Tagger",
+      "description": "Tags genre, mood, tempo and key for music libraries.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "audio/podcast-producer",
+      "name": "Podcast Producer",
+      "description": "Produces transcripts, chapters, silence cuts, and show notes from raw podcast audio.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "audio/sound-effect-generator",
+      "name": "SFX Generator",
+      "description": "Generates sound effects from descriptions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/clip-generator",
+      "name": "Short Clip Generator",
+      "description": "Selects high-engagement highlight segments and timestamps for short-form clips.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/dubbing-agent",
+      "name": "Dubbing Agent",
+      "description": "Translates and re-voices video, optionally with lip-sync.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/lecture-to-notes",
+      "name": "Lecture to Notes",
+      "description": "Turns lectures into structured notes, slides index and a quiz.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/live-stream-monitor",
+      "name": "Live Stream Monitor",
+      "description": "Watches live streams for events, highlights or policy violations.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/video-captioner",
+      "name": "Subtitle Generator",
+      "description": "Generates and translates timed SRT/VTT subtitle tracks for videos.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/video-editor",
+      "name": "Transcript-based Editor",
+      "description": "Edits video by editing the transcript or by instruction (cut, reorder, add b-roll).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/video-generator",
+      "name": "Video Generator",
+      "description": "Text- or image-to-video generation.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/video-search",
+      "name": "Video Moment Search",
+      "description": "Finds moments in a video library by spoken or visual content.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "video/video-summarizer",
+      "name": "Video Summarizer",
+      "description": "Summarizes long videos into timestamped chapters and key takeaways.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/chart-reader",
+      "name": "Chart Reader",
+      "description": "Extracts tabular data series from bar, line, and pie chart images.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/diagram-to-code",
+      "name": "Diagram Digitizer",
+      "description": "Converts whiteboard sketches and flowcharts into Mermaid, draw.io or structured data.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/face-plate-anonymizer",
+      "name": "Face & Plate Anonymizer",
+      "description": "Identifies faces, license plates, and screens to blur for privacy compliance.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/id-document-reader",
+      "name": "ID Document Reader",
+      "description": "Extracts identity card fields for consented KYC workflows with quality checks.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/image-captioner",
+      "name": "Image Captioner",
+      "description": "Generates concise accessibility and editorial captions for images.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/image-editor",
+      "name": "Image Editor",
+      "description": "Performs scoped image edits (background removal, crop, inpaint) from instructions.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/image-generator",
+      "name": "Image Generator",
+      "description": "Builds art-directed text-to-image briefs and invokes image generation MCP servers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/image-restorer",
+      "name": "Image Restorer",
+      "description": "Upscales, denoises and restores old or low-quality photos.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/image-similarity",
+      "name": "Similar Image Finder",
+      "description": "Reverse image search and near-duplicate detection in a library.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/object-detector",
+      "name": "Object Detector & Counter",
+      "description": "Detects and counts target object classes with bounding box metadata.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/ocr",
+      "name": "Text Extractor (OCR)",
+      "description": "Extracts printed and handwritten text with layout blocks from images and scans.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/scene-safety-monitor",
+      "name": "Scene Safety Monitor",
+      "description": "Detects hazards in camera feeds (fire, smoke, missing PPE, falls) with privacy settings.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/screenshot-understander",
+      "name": "Screen Parser",
+      "description": "Converts UI screenshots into a structured tree of buttons, inputs, and coordinates.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/synthetic-media-detector",
+      "name": "AI-Image Detector",
+      "description": "Estimates whether an image was AI-generated or manipulated, with evidence.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/ui-to-code",
+      "name": "Design to Code",
+      "description": "Converts UI screenshots or wireframes into accessible HTML/React components.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/visual-inspector",
+      "name": "Visual Defect Inspector",
+      "description": "Compares items against a reference to find defects (generic; see manufacturing for line use).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "vision/visual-qa",
+      "name": "Visual Q&A",
+      "description": "Answers targeted questions about any image or diagram.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/consented-voice-cloner",
+      "name": "Consented Voice Builder",
+      "description": "Creates a custom voice only after verified consent from the speaker, and watermarks output.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/dictation-editor",
+      "name": "Smart Dictation",
+      "description": "Supports hands-free dictation with inline editing commands like 'delete last sentence'.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/emotion-detector",
+      "name": "Voice Emotion Detector",
+      "description": "Detects tone, stress and emotion in speech (e.g. for support quality).",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/ivr-designer",
+      "name": "Conversational IVR",
+      "description": "Designs and runs natural-language phone menus to replace \"press 1\" trees.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/live-interpreter",
+      "name": "Live Interpreter",
+      "description": "Two-way real-time speech translation across languages.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/phone-call-agent",
+      "name": "Phone Call Agent",
+      "description": "Inbound/outbound telephony assistant for bookings and reminders with mandatory AI disclosure.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/pronunciation-coach",
+      "name": "Pronunciation Coach",
+      "description": "Scores pronunciation and fluency and gives targeted feedback.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/realtime-voice-assistant",
+      "name": "Real-time Voice Assistant",
+      "description": "Full-duplex speech assistant with low latency, interruption handling, and tool dispatch.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/speaker-diarizer",
+      "name": "Speaker Diarizer",
+      "description": "Labels speaker turns and timestamps in multi-speaker audio transcripts.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/speaker-verifier",
+      "name": "Speaker Verifier",
+      "description": "Consent-based speaker verification with anti-spoofing and synthetic-voice detection.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/speech-to-text",
+      "name": "Transcriber",
+      "description": "Batch or streaming speech recognition with punctuation, language detection, and code-switching.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/text-to-speech",
+      "name": "Narrator",
+      "description": "Natural speech synthesis from text with locale, speed, and tone control.",
+      "verificationBadge": "unverified"
+    },
+    {
+      "id": "voice/voice-command",
+      "name": "Voice Command Interpreter",
+      "description": "Maps spoken commands to structured app actions or function calls.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/voice-form-filler",
+      "name": "Voice-to-Form Filler",
+      "description": "Listens to natural speech, maps answers to typed form fields, checks gaps, and confirms before submit.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/voice-note-summarizer",
+      "name": "Voice Note Processor",
+      "description": "Converts voice memos into structured notes, tasks, and follow-up reminders.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/voice-search",
+      "name": "Voice Search",
+      "description": "Converts spoken questions into search queries and speaks concise cited answers.",
+      "verificationBadge": "verified"
+    },
+    {
+      "id": "voice/wake-word-intent",
+      "name": "On-device Wake Word & Intent",
+      "description": "Small on-device keyword spotting and intent detection for low-power devices.",
+      "verificationBadge": "verified"
+    }
+  ]
+}

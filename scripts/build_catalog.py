@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "packages" / "core-python" / "src"))
 
+from agents_for_everything.exporters import build_a2a_card  # noqa: E402
 from agents_for_everything.manifest import (  # noqa: E402
     check_schema_compatibility,
     discover_agents,
@@ -17,6 +18,7 @@ from agents_for_everything.manifest import (  # noqa: E402
     discover_recipes,
     discover_teams,
 )
+from agents_for_everything.verify import verify_agent_dir  # noqa: E402
 
 
 def main() -> int:
@@ -29,11 +31,59 @@ def main() -> int:
     registry_dir = ROOT / "registry"
     registry_dir.mkdir(parents=True, exist_ok=True)
 
+    lb_md_path = ROOT / "evals" / "leaderboard.md"
+    lb_by_id: dict[str, tuple[int, int, float]] = {}
+    if lb_md_path.exists():
+        for line in lb_md_path.read_text(encoding="utf-8").splitlines():
+            if not line.startswith("| `"):
+                continue
+            cols = [c.strip() for c in line.strip("|").split("|")]
+            if len(cols) >= 6 and "/" in cols[4]:
+                aid_key = cols[0].strip("`")
+                p_str, t_str = cols[4].split("/", 1)
+                passed_n, total_n = int(p_str), int(t_str)
+                rate_f = round(passed_n / total_n, 4) if total_n else 1.0
+                lb_by_id[aid_key] = (passed_n, total_n, rate_f)
+
+    verified_records: dict[str, dict] = {}
+    a2a_cards: list[dict] = []
+    for aid, m in agents.items():
+        if m.directory is None:
+            continue
+        in_s = json.loads((m.directory / m.input_schema_path).read_text(encoding="utf-8"))
+        out_s = json.loads((m.directory / m.output_schema_path).read_text(encoding="utf-8"))
+        rec = verify_agent_dir(m.directory, ROOT, run_evals=False)
+        lb_row = lb_by_id.get(aid)
+        eval_passed, eval_total, eval_rate = lb_row if lb_row else (0, 0, 1.0)
+        target_rate = float(m.eval_targets.get("pass_rate", 0.9))
+        is_verified = rec.verified and (not lb_row or (eval_passed == eval_total and eval_rate >= target_rate))
+        badge = "verified" if is_verified else "unverified"
+        verified_records[aid] = {
+            "agent_id": aid,
+            "verified": is_verified,
+            "badge": badge,
+            "safety_level": m.safety_level,
+            "safety_reviewed": rec.safety_reviewed,
+            "maturity": m.maturity,
+            "eval_passed": eval_passed,
+            "eval_total": eval_total,
+            "eval_pass_rate": eval_rate,
+            "digest": rec.digest,
+        }
+        card = build_a2a_card(m, in_s, out_s)
+        card["metadata"]["verificationBadge"] = badge
+        card["metadata"]["digest"] = rec.digest
+        card["url"] = f"agents/{m.family}/{m.category}/{aid.split('/', 1)[1]}/"
+        a2a_cards.append(card)
+
+    verified_total = sum(1 for v in verified_records.values() if v["verified"])
+
     # 1. Build registry/catalog.json
     catalog_data = {
         "apiVersion": "afe/v1",
         "counts": {
             "agents": len(agents),
+            "verified_agents": verified_total,
             "teams": len(teams),
             "recipes": len(recipes),
             "mcp_servers": len(servers),
@@ -51,6 +101,9 @@ def main() -> int:
                 "pattern": m.pattern,
                 "autonomy": m.autonomy,
                 "safety_level": m.safety_level,
+                "verified": verified_records.get(m.id, {}).get("verified", False),
+                "badge": verified_records.get(m.id, {}).get("badge", "unverified"),
+                "digest": verified_records.get(m.id, {}).get("digest", ""),
                 "summary": m.summary,
                 "tools": {"required": m.required_tools, "optional": m.optional_tools},
                 "uses_agents": m.uses_agents,
@@ -96,6 +149,63 @@ def main() -> int:
     }
     (registry_dir / "catalog.json").write_text(json.dumps(catalog_data, indent=2), encoding="utf-8")
 
+    # 1b. Build Open A2A Discovery Registry & Verified Badge Index
+    (registry_dir / "a2a-index.json").write_text(
+        json.dumps(
+            {
+                "apiVersion": "afe/v1",
+                "protocol": "a2a",
+                "total": len(a2a_cards),
+                "verified": verified_total,
+                "cards": a2a_cards,
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    (registry_dir / "verified-index.json").write_text(
+        json.dumps(
+            {
+                "apiVersion": "afe/v1",
+                "verified_count": verified_total,
+                "total_count": len(verified_records),
+                "agents": verified_records,
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    well_known_dir = registry_dir / ".well-known"
+    well_known_dir.mkdir(parents=True, exist_ok=True)
+    (well_known_dir / "agent.json").write_text(
+        json.dumps(
+            {
+                "name": "Agents for Everything Registry",
+                "id": "afe/registry",
+                "version": "1.0.0",
+                "description": f"Open A2A discovery registry indexing {len(agents)} composable agents ({verified_total} verified), {len(teams)} teams, {len(recipes)} recipes, and {len(servers)} MCP servers.",
+                "capabilities": {"streaming": True, "stateTransitionHistory": True},
+                "discovery": {
+                    "catalog": "registry/catalog.json",
+                    "a2aIndex": "registry/a2a-index.json",
+                    "verifiedIndex": "registry/verified-index.json",
+                    "compatibilityGraph": "registry/compatibility-graph.json",
+                },
+                "skills": [
+                    {
+                        "id": card["id"],
+                        "name": card["name"],
+                        "description": card["description"],
+                        "verificationBadge": card["metadata"]["verificationBadge"],
+                    }
+                    for card in a2a_cards
+                ],
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
     # 2. Build registry/compatibility-graph.json
     schemas: dict[str, tuple[dict, dict]] = {}
     for aid, m in agents.items():
@@ -128,21 +238,23 @@ def main() -> int:
         "",
         "> Auto-generated from `agent.yaml`, `team.yaml`, `recipe.yaml`, and `server.yaml` manifests via `scripts/build_catalog.py`.",
         "",
-        f"- **Agents:** {len(agents)}",
+        f"- **Agents:** {len(agents)} ({verified_total} verified)",
         f"- **Teams:** {len(teams)}",
         f"- **Recipes:** {len(recipes)}",
         f"- **MCP Servers:** {len(servers)}",
         f"- **Direct Compatible Edges:** {len(edges)}",
+        "- **A2A Discovery Index:** [`registry/a2a-index.json`](registry/a2a-index.json) · [`registry/.well-known/agent.json`](registry/.well-known/agent.json)",
         "",
         "## Agents",
         "",
-        "| ID | Name | Family / Category | Tier | Maturity | Priority | Safety | Summary |",
-        "|---|---|---|---|---|---|---|---|",
+        "| ID | Name | Family / Category | Tier | Maturity | Verified | Priority | Safety | Summary |",
+        "|---|---|---|---|---|---|---|---|---|",
     ]
     for m in agents.values():
         rel = m.directory.relative_to(ROOT) if m.directory else ""
+        badge = verified_records.get(m.id, {}).get("badge", "unverified")
         lines.append(
-            f"| [`{m.id}`]({rel}/README.md) | {m.name} | `{m.family}/{m.category}` | {m.tier} | `{m.maturity}` | {m.priority} | {m.safety_level} | {m.summary} |"
+            f"| [`{m.id}`]({rel}/README.md) | {m.name} | `{m.family}/{m.category}` | {m.tier} | `{m.maturity}` | `{badge}` | {m.priority} | {m.safety_level} | {m.summary} |"
         )
 
     lines.extend([
