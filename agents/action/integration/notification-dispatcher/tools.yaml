@@ -1,0 +1,11 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/email
+    required: true
+    permissions: ["read"]
+    scope: declared
+  - id: afe/chat
+    required: true
+    permissions: ["read"]
+    scope: declared

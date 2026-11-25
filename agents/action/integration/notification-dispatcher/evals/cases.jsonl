@@ -1,0 +1,10 @@
+{"id": "noti-01", "input": {"input": "Sample notification-dispatcher request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "noti-02", "input": {"input": "Sample notification-dispatcher request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "noti-03", "input": {"input": "Sample notification-dispatcher request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "noti-04", "input": {"input": "Sample notification-dispatcher request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "noti-05", "input": {"input": "Sample notification-dispatcher request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "noti-06", "input": {"input": "Sample notification-dispatcher request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "noti-07", "input": {"input": "Sample notification-dispatcher request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "noti-08", "input": {"input": "Sample notification-dispatcher request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "noti-09", "input": {"input": "Sample notification-dispatcher request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "noti-10", "input": {"input": "Sample notification-dispatcher request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}
