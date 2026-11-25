@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: insurance/claims-adjuster-assistant
+  name: "Claims Adjuster Assistant"
+  version: 0.1.0
+  family: industries
+  category: insurance
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["claims", "industries", "insurance", "on-prem", "regulated"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Damage assessment, coverage check against the policy and fraud indicators for the adjuster."
+  purpose: "Damage assessment, coverage check against the policy and fraud indicators for the adjuster."
+  pattern: orchestrator-workers
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["vision", "text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["industry", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use", "vision"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b", "open-weights-70b", "local-onprem"]
+  tools:
+    required: ["afe/documents"]
+    optional: []
+  uses_agents: ["documents/document-parser", "vision/ocr"]
+  memory: session
+  safety:
+    level: S4
+    side_effects: ["high-stakes-action-requires-human-signoff"]
+    approval_required_for: ["human_officer_signoff"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]
