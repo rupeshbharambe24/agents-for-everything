@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: personal/digital-declutterer
+  name: "Digital Declutterer"
+  version: 0.1.0
+  family: life
+  category: personal
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["digital", "life", "personal"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Cleans up photos, files and inbox with a reviewable plan."
+  purpose: "Cleans up photos, files and inbox with a reviewable plan."
+  pattern: orchestrator-workers
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["vision", "text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["consumer", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use", "vision"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b"]
+  tools:
+    required: ["afe/filesystem", "afe/email"]
+    optional: []
+  uses_agents: ["text/structured-extractor", "search/web-search"]
+  memory: session
+  safety:
+    level: S2
+    side_effects: ["draft-or-local-write"]
+    approval_required_for: ["confirm_write"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en", "hi", "ta", "te", "bn", "mr"]
