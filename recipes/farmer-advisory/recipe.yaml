@@ -1,0 +1,29 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: farmer-advisory
+  name: Farmer Voice & Photo Advisory
+  version: 0.1.0
+  maturity: prototype
+  priority: P2
+  tags: [agriculture, voice, indic, low-bandwidth, weather, mandi]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Low-bandwidth photo and voice crop diagnostics, hyperlocal farm weather timing, and mandi price advisory in local languages.
+  problem: Smallholder farmers need timely crop pest identification, spray/harvest weather windows, and local market prices over low bandwidth and voice.
+  solution: Composes crop-doctor, farm-weather-advisor, market-price-advisor, and text-to-speech.
+  agents:
+    - agriculture/crop-doctor
+    - agriculture/farm-weather-advisor
+    - agriculture/market-price-advisor
+    - voice/text-to-speech
+  teams: []
+  mcp_servers:
+    - afe/http
+    - afe/tts
+  entrypoint: app.py
+  safety:
+    level: S1
+  evals:
+    suite: tests/test_recipe.py
