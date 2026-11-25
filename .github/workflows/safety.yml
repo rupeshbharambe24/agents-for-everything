@@ -22,8 +22,11 @@ jobs:
           agents = discover_agents(Path("."))
           errs = []
           for aid, m in agents.items():
-              if m.safety_level in {"S3", "S4"} and not m.approval_required_for:
-                  errs.append(f"{aid}: {m.safety_level} agent must declare approval_required_for")
+              if m.safety_level in {"S3", "S4"}:
+                  if not m.approval_required_for:
+                      errs.append(f"{aid}: {m.safety_level} agent must declare approval_required_for")
+                  if m.directory is None or not (m.directory / "SAFETY_REVIEW.md").exists():
+                      errs.append(f"{aid}: {m.safety_level} agent must include SAFETY_REVIEW.md")
           if errs:
               raise SystemExit("\n".join(errs))
           print(f"Safety metadata verified across {len(agents)} agents.")

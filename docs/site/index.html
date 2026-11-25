@@ -3,27 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Agents for Everything — Catalog & Compatibility Explorer</title>
+  <title>Agents for Everything — Interactive Catalog & Compatibility Explorer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
     <div>
       <h1>Agents for Everything</h1>
-      <p class="subtitle">Searchable catalog, safety tiers, eval pass rates, and schema compatibility graph</p>
+      <p class="subtitle">Interactive catalog, safety tiers, eval pass rates, teams, recipes, and schema compatibility graph</p>
     </div>
     <div id="stats" class="stats">Loading catalog...</div>
   </header>
 
+  <nav class="tabs" id="viewTabs">
+    <button class="tab active" data-view="agents">Agents</button>
+    <button class="tab" data-view="teams">Teams</button>
+    <button class="tab" data-view="recipes">Recipes</button>
+    <button class="tab" data-view="mcp">MCP Servers</button>
+  </nav>
+
   <main class="layout">
     <section class="panel">
-      <div class="controls">
-        <input id="search" type="search" placeholder="Search agents (e.g. voice, invoice, sql, pii, kyc)..." />
+      <div class="controls" id="agentControls">
+        <input id="search" type="search" placeholder="Search 571+ agents, tags, categories, tools..." />
         <select id="family"><option value="">All Families</option></select>
+        <select id="category"><option value="">All Categories</option></select>
         <select id="priority">
           <option value="">All Priorities</option>
           <option value="P0">P0</option>
           <option value="P1">P1</option>
+          <option value="P2">P2</option>
         </select>
         <select id="safety">
           <option value="">All Safety Tiers</option>
@@ -35,8 +44,10 @@
         </select>
         <select id="maturity">
           <option value="">All Maturities</option>
+          <option value="stable">stable</option>
           <option value="beta">beta</option>
           <option value="prototype">prototype</option>
+          <option value="spec">spec</option>
         </select>
       </div>
       <div id="resultsCount" class="count"></div>
@@ -45,7 +56,7 @@
 
     <aside class="inspector" id="inspector">
       <h2>Compatibility & Inspector</h2>
-      <p class="muted">Select any agent card to inspect its dependencies, compatible upstream/downstream edges, eval score, and CLI commands.</p>
+      <p class="muted">Select any item card to inspect its dependencies, compatible upstream/downstream edges, eval score, and CLI commands.</p>
     </aside>
   </main>
 

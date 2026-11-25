@@ -1,26 +1,50 @@
 (() => {
-  const data = window.AFE_SITE_DATA || { catalog: { agents: [], teams: [], recipes: [], counts: {} }, graph: { edges: [] }, leaderboard: [] };
+  const data = window.AFE_SITE_DATA || {
+    catalog: { agents: [], teams: [], recipes: [], mcp_servers: [], counts: {} },
+    graph: { edges: [] },
+    leaderboard: [],
+  };
   const agents = data.catalog.agents || [];
+  const teams = data.catalog.teams || [];
+  const recipes = data.catalog.recipes || [];
+  const servers = data.catalog.mcp_servers || [];
   const edges = data.graph.edges || [];
+  const agentMap = Object.fromEntries(agents.map((a) => [a.id, a]));
   const lbMap = Object.fromEntries((data.leaderboard || []).map((r) => [r.agent_id, r]));
 
   const statsEl = document.getElementById("stats");
   const counts = data.catalog.counts || {};
   statsEl.innerHTML = [
     `Agents: ${counts.agents ?? agents.length}`,
-    `Teams: ${counts.teams ?? 0}`,
-    `Recipes: ${counts.recipes ?? 0}`,
-    `MCP Servers: ${counts.mcp_servers ?? 0}`,
+    `Teams: ${counts.teams ?? teams.length}`,
+    `Recipes: ${counts.recipes ?? recipes.length}`,
+    `MCP Servers: ${counts.mcp_servers ?? servers.length}`,
     `Compat Edges: ${edges.length}`,
   ].map((s) => `<span class="stat-pill">${s}</span>`).join("");
 
   const famSelect = document.getElementById("family");
+  const catSelect = document.getElementById("category");
   [...new Set(agents.map((a) => a.family))].sort().forEach((f) => {
     const opt = document.createElement("option");
     opt.value = f;
     opt.textContent = f;
     famSelect.appendChild(opt);
   });
+  function populateCategories() {
+    const fam = famSelect.value;
+    const prev = catSelect.value;
+    catSelect.innerHTML = '<option value="">All Categories</option>';
+    [...new Set(agents.filter((a) => !fam || a.family === fam).map((a) => a.category))]
+      .sort()
+      .forEach((c) => {
+        const opt = document.createElement("option");
+        opt.value = c;
+        opt.textContent = c;
+        catSelect.appendChild(opt);
+      });
+    if ([...catSelect.options].some((o) => o.value === prev)) catSelect.value = prev;
+  }
+  populateCategories();
 
   const searchEl = document.getElementById("search");
   const prioEl = document.getElementById("priority");
@@ -29,13 +53,15 @@
   const listEl = document.getElementById("agentList");
   const countEl = document.getElementById("resultsCount");
   const inspEl = document.getElementById("inspector");
+  const tabs = document.querySelectorAll("#viewTabs .tab");
+  let activeView = "agents";
   let selectedId = null;
 
-  function renderInspector(agent) {
+  function renderAgentInspector(agent) {
     selectedId = agent.id;
     const lb = lbMap[agent.id];
-    const incoming = edges.filter((e) => e.to === agent.id).slice(0, 12);
-    const outgoing = edges.filter((e) => e.from === agent.id).slice(0, 12);
+    const incoming = edges.filter((e) => e.to === agent.id).slice(0, 14);
+    const outgoing = edges.filter((e) => e.from === agent.id).slice(0, 14);
     inspEl.innerHTML = `
       <h2>${agent.name}</h2>
       <div class="card-id">${agent.id}</div>
@@ -45,62 +71,133 @@
         <span class="badge">${agent.priority}</span>
         <span class="badge ${agent.maturity}">${agent.maturity}</span>
         <span class="badge">${agent.safety_level}</span>
-        <span class="badge">${agent.autonomy}</span>
+        <span class="badge">${agent.autonomy || "L1"}</span>
       </div>
       ${lb ? `<p class="muted">Eval pass rate: <strong>${Math.round(lb.pass_rate * 100)}%</strong> (${lb.passed}/${lb.cases})</p>` : ""}
+      <p class="muted"><strong>Tools:</strong> ${((agent.tools && agent.tools.required) || []).join(", ") || "None (pure compute)"}<br/><strong>Locales:</strong> ${(agent.locales || ["en"]).join(", ")}</p>
       <h3>CLI Usage</h3>
       <pre>afe add ${agent.id}\nafe test ${agent.id}\nafe export ${agent.id} --as skill</pre>
       <h3>Composes (uses_agents)</h3>
-      <ul class="edge-list">${(agent.uses_agents || []).length ? agent.uses_agents.map((u) => `<li><code>${u}</code></li>`).join("") : "<li>None (atomic)</li>"}</ul>
+      <ul class="edge-list">${(agent.uses_agents || []).length ? agent.uses_agents.map((u) => `<li><button class="edge-jump" data-agent="${u}">${u}</button></li>`).join("") : "<li>None (atomic)</li>"}</ul>
       <h3>Compatible Upstream (${incoming.length})</h3>
-      <ul class="edge-list">${incoming.length ? incoming.map((e) => `<li><code>${e.from}</code></li>`).join("") : "<li>None matched</li>"}</ul>
+      <ul class="edge-list">${incoming.length ? incoming.map((e) => `<li><button class="edge-jump" data-agent="${e.from}">${e.from}</button></li>`).join("") : "<li>None matched</li>"}</ul>
       <h3>Compatible Downstream (${outgoing.length})</h3>
-      <ul class="edge-list">${outgoing.length ? outgoing.map((e) => `<li><code>${e.to}</code></li>`).join("") : "<li>None matched</li>"}</ul>
+      <ul class="edge-list">${outgoing.length ? outgoing.map((e) => `<li><button class="edge-jump" data-agent="${e.to}">${e.to}</button></li>`).join("") : "<li>None matched</li>"}</ul>
     `;
+    inspEl.querySelectorAll(".edge-jump").forEach((btn) => {
+      btn.onclick = () => {
+        const target = agentMap[btn.dataset.agent];
+        if (target) {
+          renderAgentInspector(target);
+          render();
+        }
+      };
+    });
   }
 
   function render() {
     const q = searchEl.value.toLowerCase().trim();
-    const fam = famSelect.value;
-    const prio = prioEl.value;
-    const saf = safetyEl.value;
-    const mat = matEl.value;
-
-    const filtered = agents.filter((a) => {
-      if (fam && a.family !== fam) return false;
-      if (prio && a.priority !== prio) return false;
-      if (saf && a.safety_level !== saf) return false;
-      if (mat && a.maturity !== mat) return false;
-      if (!q) return true;
-      const hay = `${a.id} ${a.name} ${a.summary} ${(a.tags || []).join(" ")}`.toLowerCase();
-      return q.split(/\s+/).every((t) => hay.includes(t));
+    const showAgentFilters = activeView === "agents";
+    [famSelect, catSelect, prioEl, safetyEl, matEl].forEach((el) => {
+      el.style.display = showAgentFilters ? "" : "none";
     });
 
-    countEl.textContent = `Showing ${filtered.length} of ${agents.length} agents`;
     listEl.innerHTML = "";
-    filtered.forEach((a) => {
-      const card = document.createElement("div");
-      card.className = "card" + (a.id === selectedId ? " active" : "");
-      card.innerHTML = `
-        <div class="card-title">${a.name}</div>
-        <div class="card-id">${a.id}</div>
-        <div class="badges">
-          <span class="badge">${a.priority}</span>
-          <span class="badge ${a.maturity}">${a.maturity}</span>
-          <span class="badge">${a.safety_level}</span>
-          <span class="badge">${a.tier}</span>
-        </div>
-        <div class="card-summary">${a.summary}</div>
-      `;
-      card.onclick = () => {
-        renderInspector(a);
-        render();
-      };
-      listEl.appendChild(card);
-    });
+    if (activeView === "agents") {
+      const fam = famSelect.value;
+      const cat = catSelect.value;
+      const prio = prioEl.value;
+      const saf = safetyEl.value;
+      const mat = matEl.value;
+      const filtered = agents.filter((a) => {
+        if (fam && a.family !== fam) return false;
+        if (cat && a.category !== cat) return false;
+        if (prio && a.priority !== prio) return false;
+        if (saf && a.safety_level !== saf) return false;
+        if (mat && a.maturity !== mat) return false;
+        if (!q) return true;
+        const hay = `${a.id} ${a.name} ${a.family} ${a.category} ${a.summary} ${(a.tags || []).join(" ")}`.toLowerCase();
+        return q.split(/\s+/).every((t) => hay.includes(t));
+      });
+      countEl.textContent = `Showing ${filtered.length} of ${agents.length} agents`;
+      filtered.forEach((a) => {
+        const card = document.createElement("div");
+        card.className = "card" + (a.id === selectedId ? " active" : "");
+        card.innerHTML = `
+          <div class="card-title">${a.name}</div>
+          <div class="card-id">${a.id}</div>
+          <div class="badges">
+            <span class="badge">${a.priority}</span>
+            <span class="badge ${a.maturity}">${a.maturity}</span>
+            <span class="badge">${a.safety_level}</span>
+            <span class="badge">${a.tier}</span>
+          </div>
+          <div class="card-summary">${a.summary}</div>
+        `;
+        card.onclick = () => { renderAgentInspector(a); render(); };
+        listEl.appendChild(card);
+      });
+    } else if (activeView === "teams") {
+      const filtered = teams.filter((t) => !q || `${t.id} ${t.name} ${t.summary} ${(t.members || []).join(" ")}`.toLowerCase().includes(q));
+      countEl.textContent = `Showing ${filtered.length} of ${teams.length} teams`;
+      filtered.forEach((t) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <div class="card-title">${t.name}</div>
+          <div class="card-id">teams/${t.id}</div>
+          <div class="badges"><span class="badge">${t.priority}</span><span class="badge">${t.pattern}</span><span class="badge">${(t.members || []).length} members</span></div>
+          <div class="card-summary">${t.summary}</div>
+        `;
+        card.onclick = () => {
+          inspEl.innerHTML = `<h2>${t.name}</h2><div class="card-id">teams/${t.id}</div><p class="muted">${t.summary}</p><h3>Members</h3><ul class="edge-list">${(t.members || []).map((m) => `<li><code>${m}</code></li>`).join("")}</ul><pre>afe graph ${t.id}</pre>`;
+        };
+        listEl.appendChild(card);
+      });
+    } else if (activeView === "recipes") {
+      const filtered = recipes.filter((r) => !q || `${r.id} ${r.name} ${r.summary}`.toLowerCase().includes(q));
+      countEl.textContent = `Showing ${filtered.length} of ${recipes.length} recipes`;
+      filtered.forEach((r) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <div class="card-title">${r.name}</div>
+          <div class="card-id">recipes/${r.id}</div>
+          <div class="badges"><span class="badge">${r.priority}</span><span class="badge">${(r.agents || []).length} agents</span></div>
+          <div class="card-summary">${r.summary}</div>
+        `;
+        card.onclick = () => {
+          inspEl.innerHTML = `<h2>${r.name}</h2><div class="card-id">recipes/${r.id}</div><p class="muted">${r.summary}</p><h3>Agents Used</h3><ul class="edge-list">${(r.agents || []).map((a) => `<li><code>${a}</code></li>`).join("")}</ul>`;
+        };
+        listEl.appendChild(card);
+      });
+    } else {
+      const filtered = servers.filter((s) => !q || `${s.id} ${s.name} ${s.summary}`.toLowerCase().includes(q));
+      countEl.textContent = `Showing ${filtered.length} of ${servers.length} MCP servers`;
+      filtered.forEach((s) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <div class="card-title">${s.name}</div>
+          <div class="card-id">${s.id}</div>
+          <div class="badges"><span class="badge">${s.transport}</span></div>
+          <div class="card-summary">${s.summary}</div>
+        `;
+        listEl.appendChild(card);
+      });
+    }
   }
 
-  [searchEl, famSelect, prioEl, safetyEl, matEl].forEach((el) => el.addEventListener("input", render));
-  if (agents.length) renderInspector(agents[0]);
+  tabs.forEach((t) => {
+    t.onclick = () => {
+      tabs.forEach((b) => b.classList.remove("active"));
+      t.classList.add("active");
+      activeView = t.dataset.view;
+      render();
+    };
+  });
+  famSelect.addEventListener("change", () => { populateCategories(); render(); });
+  [searchEl, catSelect, prioEl, safetyEl, matEl].forEach((el) => el.addEventListener("input", render));
+  if (agents.length) renderAgentInspector(agents[0]);
   render();
 })();
