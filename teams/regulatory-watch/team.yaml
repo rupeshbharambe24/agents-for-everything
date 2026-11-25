@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: regulatory-watch
+  name: Regulatory Watch & Impact Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P2
+  tags: ["regulatory", "compliance", "banking", "legal"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Monitors regulator circulars and policy proposals, assesses compliance impact, and prepares action briefings."
+  pattern: prompt-chaining
+  entry: banking/regulatory-circular-tracker
+  members:
+    - banking/regulatory-circular-tracker
+    - legal/compliance-monitor
+    - research/policy-analyst
+    - research/report-writer
+  graph:
+    - [regulatory-circular-tracker, compliance-monitor]
+    - [compliance-monitor, policy-analyst]
+    - [policy-analyst, report-writer]
+  approvals: ["compliance-monitor"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S1
+  evals:
+    suite: evals/eval.yaml
