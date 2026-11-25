@@ -1,0 +1,34 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: incident-war-room
+  name: Incident War Room Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["incident", "war", "room"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Triages alerts, correlates logs, prepares runbook mitigations behind approval, and drafts postmortem."
+  pattern: orchestrator-workers
+  entry: devops/alert-triager
+  members:
+    - devops/alert-triager
+    - devops/log-analyzer
+    - devops/incident-responder
+    - orchestration/human-approval-gate
+    - devops/postmortem-writer
+  graph:
+    - [alert-triager, log-analyzer]
+    - [log-analyzer, incident-responder]
+    - [incident-responder, human-approval-gate]
+    - [human-approval-gate, postmortem-writer]
+  approvals: ["incident-responder", "human-approval-gate"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S3
+  evals:
+    suite: evals/eval.yaml
