@@ -1,0 +1,33 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: ai-receptionist
+  name: AI Receptionist
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: [voice, support, booking, telephony]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Phone and messaging receptionist that answers FAQs from KB and proposes appointment slots.
+  problem: Small clinics and businesses miss inbound calls and booking messages after hours.
+  solution: Composes phone-call-agent, business-messaging-bot, rag-qa, and meeting-scheduler with clear AI disclosure.
+  agents:
+    - voice/phone-call-agent
+    - communication/business-messaging-bot
+    - search/rag-qa
+    - meetings/meeting-scheduler
+  teams:
+    - voice-concierge
+  mcp_servers:
+    - afe/telephony
+    - afe/chat
+    - afe/vector-store
+    - afe/calendar
+  entrypoint: app.py
+  safety:
+    level: S3
+    approval_required_for: [send_invite]
+  evals:
+    suite: tests/test_recipe.py
