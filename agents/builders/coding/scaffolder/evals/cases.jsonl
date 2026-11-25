@@ -1,0 +1,10 @@
+{"id": "scaf-01", "input": {"input": "Sample scaffolder request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-02", "input": {"input": "Sample scaffolder request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-03", "input": {"input": "Sample scaffolder request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-04", "input": {"input": "Sample scaffolder request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-05", "input": {"input": "Sample scaffolder request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-06", "input": {"input": "Sample scaffolder request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-07", "input": {"input": "Sample scaffolder request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-08", "input": {"input": "Sample scaffolder request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-09", "input": {"input": "Sample scaffolder request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "scaf-10", "input": {"input": "Sample scaffolder request #10"}, "expected": {}, "expect_non_empty": ["result"]}

@@ -1,0 +1,10 @@
+{"id": "fron-01", "input": {"input": "Sample frontend-builder request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-02", "input": {"input": "Sample frontend-builder request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-03", "input": {"input": "Sample frontend-builder request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-04", "input": {"input": "Sample frontend-builder request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-05", "input": {"input": "Sample frontend-builder request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-06", "input": {"input": "Sample frontend-builder request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-07", "input": {"input": "Sample frontend-builder request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-08", "input": {"input": "Sample frontend-builder request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-09", "input": {"input": "Sample frontend-builder request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fron-10", "input": {"input": "Sample frontend-builder request #10"}, "expected": {}, "expect_non_empty": ["result"]}

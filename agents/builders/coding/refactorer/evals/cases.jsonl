@@ -1,0 +1,10 @@
+{"id": "refa-01", "input": {"input": "Sample refactorer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-02", "input": {"input": "Sample refactorer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-03", "input": {"input": "Sample refactorer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-04", "input": {"input": "Sample refactorer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-05", "input": {"input": "Sample refactorer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-06", "input": {"input": "Sample refactorer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-07", "input": {"input": "Sample refactorer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-08", "input": {"input": "Sample refactorer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-09", "input": {"input": "Sample refactorer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "refa-10", "input": {"input": "Sample refactorer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

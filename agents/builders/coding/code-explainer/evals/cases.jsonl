@@ -1,0 +1,10 @@
+{"id": "code-01", "input": {"input": "Sample code-explainer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-02", "input": {"input": "Sample code-explainer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-03", "input": {"input": "Sample code-explainer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-04", "input": {"input": "Sample code-explainer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-05", "input": {"input": "Sample code-explainer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-06", "input": {"input": "Sample code-explainer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-07", "input": {"input": "Sample code-explainer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-08", "input": {"input": "Sample code-explainer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-09", "input": {"input": "Sample code-explainer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "code-10", "input": {"input": "Sample code-explainer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

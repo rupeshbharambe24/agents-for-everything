@@ -1,0 +1,10 @@
+{"id": "depe-01", "input": {"input": "Sample dependency-updater request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-02", "input": {"input": "Sample dependency-updater request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-03", "input": {"input": "Sample dependency-updater request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-04", "input": {"input": "Sample dependency-updater request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-05", "input": {"input": "Sample dependency-updater request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-06", "input": {"input": "Sample dependency-updater request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-07", "input": {"input": "Sample dependency-updater request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-08", "input": {"input": "Sample dependency-updater request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-09", "input": {"input": "Sample dependency-updater request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "depe-10", "input": {"input": "Sample dependency-updater request #10"}, "expected": {}, "expect_non_empty": ["result"]}

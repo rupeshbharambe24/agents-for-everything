@@ -1,0 +1,10 @@
+{"id": "ci-f-01", "input": {"input": "Sample ci-fixer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-02", "input": {"input": "Sample ci-fixer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-03", "input": {"input": "Sample ci-fixer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-04", "input": {"input": "Sample ci-fixer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-05", "input": {"input": "Sample ci-fixer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-06", "input": {"input": "Sample ci-fixer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-07", "input": {"input": "Sample ci-fixer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-08", "input": {"input": "Sample ci-fixer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-09", "input": {"input": "Sample ci-fixer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ci-f-10", "input": {"input": "Sample ci-fixer request #10"}, "expected": {}, "expect_non_empty": ["result"]}
