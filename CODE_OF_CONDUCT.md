@@ -23,3 +23,7 @@ Examples of unacceptable behavior:
 ## Enforcement
 
 Project maintainers are responsible for clarifying and enforcing standards of acceptable behavior and may remove, edit, or reject contributions or comments that are not aligned with this Code of Conduct. Report unacceptable behavior to the repository maintainer via `rupeshbharambe2004@gmail.com`.
+
+## Attribution
+
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1, available at <https://www.contributor-covenant.org/version/2/1/code_of_conduct.html>.

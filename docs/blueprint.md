@@ -9,7 +9,8 @@
 | **CLI** | `agents-for-everything`, with the short alias `afe` |
 | **Spec prefix** | `afe` (used only in schema IDs, e.g. `afe/v1`; not a public brand) |
 | **Document** | Master blueprint: research, full agent catalog, spec standard, repo structure, roadmap |
-| **Version** | 0.1 (draft) |
+| **Version** | 0.1 (draft) · catalog in sync with the repo's 571 `agent.yaml` manifests |
+| **Live repo** | [github.com/rupeshbharambe24/agents-for-everything](https://github.com/rupeshbharambe24/agents-for-everything) |
 | **Date** | 25 November 2026 |
 | **License (proposed)** | Apache-2.0 |
 
@@ -483,7 +484,7 @@ afe graph voice/voice-form-filler           # show composition tree
 | Categories | 54 |
 | Teams (multi-agent compositions) | 22 |
 | Recipes (end-to-end products) | 12 |
-| Atomic / composite agents | 343 / 228 |
+| Atomic / composite agents | 341 / 230 |
 | P0 (MVP) / P1 / P2 | 66 / 170 / 335 |
 | Safety S0 / S1 / S2 / S3 / S4 | 140 / 244 / 107 / 46 / 34 |
 
@@ -855,7 +856,7 @@ Agents that do things: operate browsers and computers, handle files, call APIs, 
 | `doc-classifier` | Document Classifier | Identifies document type (invoice, contract, ID, payslip, bank statement) and routes it | file → type + confidence | documents | A | S1 | P1 |
 | `doc-comparer` | Document Comparer | Redline comparison of two versions with a plain-language summary of changes | doc A + doc B → redline + summary | documents | A | S1 | P1 |
 | `pdf-form-filler` | PDF Form Filler | Fills fillable and flat PDF forms from data | PDF + data → filled PDF | documents | A | S2 | P1 |
-| `doc-redactor` | Document Redactor | Permanently redacts sensitive data in PDFs and images (true removal, not black boxes over text) | doc + rules → redacted doc | documents, pii-redactor | A | S2 | P1 |
+| `doc-redactor` | Document Redactor | Permanently redacts sensitive data in PDFs and images (true removal, not black boxes over text) | doc + rules → redacted doc | documents, pii-redactor | C | S2 | P1 |
 | `long-doc-navigator` | Long Document Navigator | Q&A and navigation in very long documents (manuals, annual reports, regulations) | doc + question → answer + page refs | documents, vector-store | C | S1 | P1 |
 | `duplicate-finder` | Duplicate Finder | Finds duplicate and near-duplicate files and photos and proposes cleanup | folder → duplicate groups | filesystem | A | S1 | P2 |
 | `metadata-tagger` | Metadata Tagger | Auto-tags files with topics, people, dates and projects | files → tags | filesystem | A | S2 | P2 |
@@ -1096,7 +1097,7 @@ Agents for the jobs every organization does: communicate, meet, write, market, s
 |---|---|---|---|---|---|---|---|
 | `support-chatbot` | Support Assistant | Answers customer questions from the KB and policies with citations; hands off to humans cleanly | question → answer or handoff | rag-qa | C | S1 | P0 |
 | `ticket-triager` | Ticket Triager | Classifies, prioritizes and routes tickets; detects duplicates | ticket → category + priority + queue | ticketing | A | S2 | P0 |
-| `reply-drafter` | Reply Drafter | Drafts grounded replies for human agents to send | ticket + KB → draft | rag-qa | A | S2 | P0 |
+| `reply-drafter` | Reply Drafter | Drafts grounded replies for human agents to send | ticket + KB → draft | rag-qa | C | S2 | P0 |
 | `kb-writer` | Knowledge Base Writer | Turns resolved tickets into KB articles and finds gaps in the KB | tickets → articles + gaps | KB | C | S2 | P1 |
 | `escalation-detector` | Escalation Detector | Detects anger, churn risk, legal threats or safety issues and escalates | conversation → flags | — | A | S1 | P1 |
 | `order-status-agent` | Order Status Agent | Looks up orders, shipping and refunds through APIs and explains status | customer + order → status | order APIs | A | S1 | P1 |

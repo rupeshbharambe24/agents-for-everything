@@ -1,124 +1,146 @@
-# Agents for Everything (`agents-for-everything`)
+<div align="center">
 
-> **One agent for every real-world task. Snap them together like typed Lego blocks to build anything.**
+# 🤖 Agents for Everything
 
-[![Agents](https://img.shields.io/badge/Agents-571-2563eb?style=flat-square)](CATALOG.md)
-[![Verified](https://img.shields.io/badge/Verified-571%2F571-10b981?style=flat-square)](registry/verified-index.json)
-[![Categories](https://img.shields.io/badge/Categories-54-0d9488?style=flat-square)](#browse-all-8-families--54-categories)
-[![Teams](https://img.shields.io/badge/Teams-22-7c3aed?style=flat-square)](#22-ready-made-multi-agent-teams)
-[![Recipes](https://img.shields.io/badge/Recipes-12-db2777?style=flat-square)](#12-end-to-end-product-recipes)
-[![MCP Servers](https://img.shields.io/badge/MCP%20Servers-36-ea580c?style=flat-square)](#mcp-servers-a2a-registry-local-on-prem--spec-v2)
-[![Evals](https://img.shields.io/badge/Offline%20Evals-8350%2F8350%20Passing-16a34a?style=flat-square)](evals/leaderboard.md)
-[![Spec](https://img.shields.io/badge/Spec-afe%2Fv1%20%2B%20v2-475569?style=flat-square)](spec/v2/SPEC.md)
-[![License](https://img.shields.io/badge/License-Apache--2.0-f59e0b?style=flat-square)](LICENSE)
+### One agent for every real-world task. Snap them together to build anything.
 
-[**Full Catalog**](CATALOG.md) · [**A2A Discovery Index**](registry/a2a-index.json) · [**Interactive Explorer**](docs/site/index.html) · [**Master Blueprint**](BLUEPRINT.md) · [**Eval Leaderboard**](evals/leaderboard.md) · [**Industry Packs**](agents/industries/README.md) · [**Local & On-Prem**](profiles/README.md) · [**Security Policy**](SECURITY.md)
+An open-source, framework-agnostic library of **571 single-purpose AI agents** with typed contracts, safety levels and tests,<br/>
+plus **22 multi-agent teams**, **12 runnable product recipes** and **36 MCP tool servers**.
+
+[![Agents](https://img.shields.io/badge/agents-571-2563eb?style=for-the-badge)](CATALOG.md)
+[![Categories](https://img.shields.io/badge/categories-54-0d9488?style=for-the-badge)](#-browse-all-8-families)
+[![Teams](https://img.shields.io/badge/teams-22-7c3aed?style=for-the-badge)](#-ready-made-teams)
+[![Recipes](https://img.shields.io/badge/recipes-12-db2777?style=for-the-badge)](#-product-recipes)
+[![MCP servers](https://img.shields.io/badge/MCP_servers-36-ea580c?style=for-the-badge)](CATALOG.md#mcp-servers)
+
+[![Validate](https://img.shields.io/github/actions/workflow/status/rupeshbharambe24/agents-for-everything/validate.yml?branch=main&label=validate&style=flat-square)](https://github.com/rupeshbharambe24/agents-for-everything/actions/workflows/validate.yml)
+[![Evals](https://img.shields.io/github/actions/workflow/status/rupeshbharambe24/agents-for-everything/evals.yml?branch=main&label=evals&style=flat-square)](https://github.com/rupeshbharambe24/agents-for-everything/actions/workflows/evals.yml)
+[![Offline evals](https://img.shields.io/badge/offline_evals-8%2C350_passing-16a34a?style=flat-square)](evals/leaderboard.md)
+[![Spec](https://img.shields.io/badge/spec-afe%2Fv1_%2B_v2-475569?style=flat-square)](spec/SPEC.md)
+[![License](https://img.shields.io/badge/license-Apache--2.0-f59e0b?style=flat-square)](LICENSE)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4?style=flat-square)](CONTRIBUTING.md)
+[![Stars](https://img.shields.io/github/stars/rupeshbharambe24/agents-for-everything?style=flat-square)](https://github.com/rupeshbharambe24/agents-for-everything/stargazers)
+
+**[🔎 Live explorer](https://rupeshbharambe24.github.io/agents-for-everything/)** ·
+**[📖 Full catalog](CATALOG.md)** ·
+**[🚀 Quick start](#-quick-start)** ·
+**[🗺️ Blueprint](BLUEPRINT.md)** ·
+**[🤝 Contribute](#-contributing)**
+
+</div>
 
 ---
 
-`agents-for-everything` is an open-source, framework-agnostic, spec-first library of **571 single-purpose (atomic) and composite AI agents** across **54 categories**, **22 multi-agent teams**, **12 runnable product recipes**, and **36 MCP tool server contracts**. Every agent ships typed JSON Schema contracts (`afe://types/*`), explicit safety tiers (`S0`–`S4`), automated evals, local/on-prem open-weights support, and portable exports (`SKILL.md`, A2A Agent Cards, MCP wrappers, LangGraph, Claude/Codex subagents, CrewAI, Google ADK, OpenAI Agents SDK, Microsoft Agent Framework, and Mastra).
+## ✨ Why Agents for Everything?
+
+Building an AI product usually means writing the same agents again and again: a transcriber, an extractor, a form filler, a guardrail. This repo gives you each of those as a **ready, tested building block**.
+
+| | |
+|---|---|
+| 🧱 **One agent, one job** | Every agent does a single task well: `speech-to-text`, `pii-redactor`, `invoice-receipt-parser`, `web-form-filler`… |
+| 🔌 **Typed contracts** | Every agent declares JSON Schema input and output, so agents snap together without glue code. |
+| 🛡️ **Safe by default** | Every agent has a safety level (S0–S4). Anything that sends, pays or deletes needs human approval. |
+| 🧪 **Tested** | Every agent ships with eval cases (10–50 each, 8,350 in total) and a rubric. CI runs them on every change. |
+| 🌍 **Model- and framework-agnostic** | Run on any model, including local open-weights models via Ollama. Export to Agent Skills, A2A cards, MCP servers, LangGraph and more. |
+| 📦 **Take only what you need** | `afe add voice/speech-to-text` copies one agent (and what it depends on) into your project, shadcn/ui-style. |
 
 ---
 
-## Architecture at a Glance
+## 🧱 How it fits together
 
 ```mermaid
 flowchart LR
-    U["Your App / CLI / Voice / Web UI"] --> A["Atomic Agents (348)<br/>e.g. speech-to-text, structured-extractor, ocr"]
-    A --> C["Composite Agents (223)<br/>e.g. voice-form-filler, deep-researcher"]
-    C --> T["Multi-Agent Teams (22)<br/>team.yaml directed workflows"]
-    T --> R["Runnable Recipes (12)<br/>end-to-end product blueprints"]
-    A & C <--> MCP["36 MCP Tool Servers<br/>browser, stt, tts, sql, git, compliance-reg"]
-    A & C --> G["S0-S4 Safety & HITL Gates<br/>PII masking + budget caps"]
-    C --> EXP["Portable Exports<br/>A2A Cards / SKILL.md / Subagents / 7 Frameworks"]
+    U["🧑‍💻 Your app, CLI,<br/>voice or web UI"] --> A["🧩 Atomic agents (341)<br/>speech-to-text, ocr,<br/>structured-extractor…"]
+    A --> C["🔗 Composite agents (230)<br/>voice-form-filler,<br/>deep-researcher…"]
+    C --> T["👥 Teams (22)<br/>multi-agent workflows"]
+    T --> R["🍳 Recipes (12)<br/>end-to-end products"]
+    A & C <--> M[("🧰 36 MCP servers<br/>browser, stt, sql, git…")]
+    A & C --> G{{"🛡️ Safety levels S0–S4<br/>human approval gates"}}
 ```
 
 ---
 
-## Quick Interactive Finder: What Do You Want to Build?
+## 🔎 Find agents for your use case
 
 <details>
-<summary><b>1. Voice-Powered Search, Dictation & Multilingual Form Filling</b> — speech in, validated structured JSON & filled forms out</summary>
+<summary><b>🎙️ Voice: fill forms, search and dictate by voice, in many languages</b></summary>
 
-- **Core agents:** [`voice/speech-to-text`](agents/perception/voice/speech-to-text/README.md) -> [`text/structured-extractor`](agents/information/text/structured-extractor/README.md) -> [`orchestration/verifier`](agents/core/orchestration/verifier/README.md) -> [`voice/text-to-speech`](agents/perception/voice/text-to-speech/README.md) -> [`browser/web-form-filler`](agents/action/browser/web-form-filler/README.md) -> [`orchestration/human-approval-gate`](agents/core/orchestration/human-approval-gate/README.md)
-- **Ready-made composite & search:** [`voice/voice-form-filler`](agents/perception/voice/voice-form-filler/README.md), [`voice/voice-search`](agents/perception/voice/voice-search/README.md), [`voice/realtime-voice-assistant`](agents/perception/voice/realtime-voice-assistant/README.md)
-- **Runnable recipe:** [`recipes/voice-form-filling`](recipes/voice-form-filling/README.md) & [`recipes/accessible-web`](recipes/accessible-web/README.md)
-- **Shared Indic dataset:** [`evals/datasets/multilingual_form_utterances.jsonl`](evals/datasets/multilingual_form_utterances.jsonl) (`en-IN`, `hi-IN`, `mr-IN`, `ta-IN`, `te-IN`, `bn-IN`, `gu-IN`, `kn-IN`, `ml-IN`, `pa-IN`)
-
-```bash
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli test voice/voice-form-filler
-```
+- **Ready-made:** [`voice/voice-form-filler`](agents/perception/voice/voice-form-filler/README.md) · [`voice/voice-search`](agents/perception/voice/voice-search/README.md) · [`voice/realtime-voice-assistant`](agents/perception/voice/realtime-voice-assistant/README.md)
+- **Building blocks:** [`voice/speech-to-text`](agents/perception/voice/speech-to-text/README.md) → [`text/structured-extractor`](agents/information/text/structured-extractor/README.md) → [`orchestration/verifier`](agents/core/orchestration/verifier/README.md) → [`browser/web-form-filler`](agents/action/browser/web-form-filler/README.md) → [`orchestration/human-approval-gate`](agents/core/orchestration/human-approval-gate/README.md)
+- **Recipe:** [`recipes/voice-form-filling`](recipes/voice-form-filling/README.md) (with a local web UI) · [`recipes/accessible-web`](recipes/accessible-web/README.md)
 
 </details>
 
 <details>
-<summary><b>2. Cited Deep Research, Enterprise Search & Private Doc Q&A</b> — grounded answers with hallucination checks</summary>
+<summary><b>📚 Research: cited reports, document Q&A, fact checking</b></summary>
 
-- **Core agents:** [`search/web-search`](agents/information/search/web-search/README.md), [`search/rag-qa`](agents/information/search/rag-qa/README.md), [`research/deep-researcher`](agents/information/research/deep-researcher/README.md), [`research/fact-checker`](agents/information/research/fact-checker/README.md), [`guardrails/hallucination-checker`](agents/core/guardrails/hallucination-checker/README.md)
-- **Ready-made teams:** [`teams/research-team`](teams/research-team/README.md), [`teams/regulatory-watch`](teams/regulatory-watch/README.md)
-- **Runnable recipes:** [`recipes/deep-research-app`](recipes/deep-research-app/README.md), [`recipes/chat-with-your-docs`](recipes/chat-with-your-docs/README.md)
-
-```bash
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli graph research-team
-```
+- **Agents:** [`research/deep-researcher`](agents/information/research/deep-researcher/README.md) · [`search/rag-qa`](agents/information/search/rag-qa/README.md) · [`search/answer-engine`](agents/information/search/answer-engine/README.md) · [`research/fact-checker`](agents/information/research/fact-checker/README.md) · [`guardrails/hallucination-checker`](agents/core/guardrails/hallucination-checker/README.md)
+- **Teams:** [`research-team`](teams/research-team/README.md) · [`regulatory-watch`](teams/regulatory-watch/README.md)
+- **Recipes:** [`deep-research-app`](recipes/deep-research-app/README.md) · [`chat-with-your-docs`](recipes/chat-with-your-docs/README.md)
 
 </details>
 
 <details>
-<summary><b>3. Browser, Desktop & Safe Shell Automation</b> — Playwright navigation, non-submitting forms, and sandboxed commands</summary>
+<summary><b>🌐 Automation: browsers, desktops and shells, with approval gates</b></summary>
 
-- **Browser:** [`browser/web-navigator`](agents/action/browser/web-navigator/README.md) (`S3`), [`browser/web-form-filler`](agents/action/browser/web-form-filler/README.md) (`S2`, never auto-submits), [`browser/web-scraper`](agents/action/browser/web-scraper/README.md) (`S1`, respects `robots.txt`), [`browser/web-tester`](agents/action/browser/web-tester/README.md)
-- **OS / Shell:** [`computer-use/shell-operator`](agents/action/computer-use/shell-operator/README.md), [`computer-use/desktop-operator`](agents/action/computer-use/desktop-operator/README.md), [`computer-use/app-automator`](agents/action/computer-use/app-automator/README.md)
-- **QA workflow:** [`teams/web-qa-team`](teams/web-qa-team/README.md) -> [`recipes/ai-qa-engineer`](recipes/ai-qa-engineer/README.md)
-
-</details>
-
-<details>
-<summary><b>4. Software Engineering, DevOps, Data & Security</b> — code generation, tests, PR review, SQL & CVE triage</summary>
-
-- **Coding & DevOps:** [`coding/code-generator`](agents/builders/coding/code-generator/README.md), [`coding/bug-fixer`](agents/builders/coding/bug-fixer/README.md), [`coding/test-writer`](agents/builders/coding/test-writer/README.md), [`devops/log-analyzer`](agents/builders/devops/log-analyzer/README.md), [`devops/incident-responder`](agents/builders/devops/incident-responder/README.md)
-- **Data & Security:** [`data/text-to-sql`](agents/builders/data/text-to-sql/README.md), [`data/data-analyst`](agents/builders/data/data-analyst/README.md), [`security/secret-scanner`](agents/builders/security/secret-scanner/README.md), [`security/vuln-triager`](agents/builders/security/vuln-triager/README.md)
-- **Ready-made teams:** [`teams/software-squad`](teams/software-squad/README.md), [`teams/bug-squash`](teams/bug-squash/README.md), [`teams/incident-war-room`](teams/incident-war-room/README.md), [`teams/data-insights`](teams/data-insights/README.md)
+- **Browser:** [`browser/web-navigator`](agents/action/browser/web-navigator/README.md) · [`browser/web-form-filler`](agents/action/browser/web-form-filler/README.md) (never auto-submits) · [`browser/web-scraper`](agents/action/browser/web-scraper/README.md) (respects `robots.txt`) · [`browser/web-tester`](agents/action/browser/web-tester/README.md)
+- **Computer use:** [`computer-use/shell-operator`](agents/action/computer-use/shell-operator/README.md) · [`computer-use/desktop-operator`](agents/action/computer-use/desktop-operator/README.md) · [`computer-use/app-automator`](agents/action/computer-use/app-automator/README.md)
+- **Team → recipe:** [`web-qa-team`](teams/web-qa-team/README.md) → [`ai-qa-engineer`](recipes/ai-qa-engineer/README.md)
 
 </details>
 
 <details>
-<summary><b>5. Regulated Industries, Local On-Prem & Vernacular India Packs</b> — Banking, Healthcare, Gov, Agriculture & Legal</summary>
+<summary><b>💻 Software, data and security: code, tests, SQL, incident response</b></summary>
 
-- **Industry directory:** [All 12 Industry Packs (`agents/industries/`)](agents/industries/README.md) — **91 vertical agents** reusing horizontal voice, document, and guardrail building blocks.
-- **Vernacular & low-bandwidth recipes:** [`recipes/vernacular-banking-helpline`](recipes/vernacular-banking-helpline/README.md), [`recipes/farmer-advisory`](recipes/farmer-advisory/README.md), [`recipes/regulatory-intelligence`](recipes/regulatory-intelligence/README.md)
-- **On-prem deployment:** [`profiles/regulated-airgapped.yaml`](profiles/regulated-airgapped.yaml) & [Local/On-Prem Guide](docs/guides/local-onprem.md) (`ollama` / local `llama3.3:70b` / `qwen2.5:14b`)
+- **Coding:** [`coding/code-generator`](agents/builders/coding/code-generator/README.md) · [`coding/bug-fixer`](agents/builders/coding/bug-fixer/README.md) · [`coding/test-writer`](agents/builders/coding/test-writer/README.md) · [`coding/code-reviewer`](agents/builders/coding/code-reviewer/README.md)
+- **Data and ops:** [`data/text-to-sql`](agents/builders/data/text-to-sql/README.md) · [`data/data-analyst`](agents/builders/data/data-analyst/README.md) · [`devops/log-analyzer`](agents/builders/devops/log-analyzer/README.md) · [`devops/incident-responder`](agents/builders/devops/incident-responder/README.md)
+- **Security:** [`security/secret-scanner`](agents/builders/security/secret-scanner/README.md) · [`security/vuln-triager`](agents/builders/security/vuln-triager/README.md) · [`security/phishing-analyzer`](agents/builders/security/phishing-analyzer/README.md)
+- **Teams:** [`software-squad`](teams/software-squad/README.md) · [`bug-squash`](teams/bug-squash/README.md) · [`incident-war-room`](teams/incident-war-room/README.md) · [`data-insights`](teams/data-insights/README.md)
+
+</details>
+
+<details>
+<summary><b>💼 Business: inbox, meetings, support, sales, finance</b></summary>
+
+- **Productivity:** [`communication/inbox-triager`](agents/business/communication/inbox-triager/README.md) · [`meetings/meeting-notetaker`](agents/business/meetings/meeting-notetaker/README.md) · [`productivity/task-manager`](agents/life/productivity/task-manager/README.md)
+- **Customer-facing:** [`support/support-chatbot`](agents/business/support/support-chatbot/README.md) · [`support/ticket-triager`](agents/business/support/ticket-triager/README.md) · [`sales/outreach-personalizer`](agents/business/sales/outreach-personalizer/README.md)
+- **Back office:** [`documents/invoice-receipt-parser`](agents/action/documents/invoice-receipt-parser/README.md) · [`finance/accounts-payable`](agents/business/finance/accounts-payable/README.md) · [`legal/contract-analyzer`](agents/business/legal/contract-analyzer/README.md)
+- **Teams:** [`inbox-zero`](teams/inbox-zero/README.md) · [`meeting-to-done`](teams/meeting-to-done/README.md) · [`support-desk`](teams/support-desk/README.md) · [`sdr-team`](teams/sdr-team/README.md)
+
+</details>
+
+<details>
+<summary><b>🏦 Regulated industries: banking, insurance, healthcare, government, on-prem</b></summary>
+
+- **12 industry packs, 91 agents:** [industry packs overview](agents/industries/README.md)
+- **Highlights:** [`banking/kyc-onboarding`](agents/industries/banking/kyc-onboarding/README.md) · [`banking/aml-alert-investigator`](agents/industries/banking/aml-alert-investigator/README.md) · [`healthcare/medical-scribe`](agents/industries/healthcare/medical-scribe/README.md) · [`insurance/claims-intake`](agents/industries/insurance/claims-intake/README.md) · [`government/citizen-services-assistant`](agents/industries/government/citizen-services-assistant/README.md)
+- **Run fully on-prem:** [`profiles/regulated-airgapped.yaml`](profiles/regulated-airgapped.yaml) · [local and on-prem guide](docs/guides/local-onprem.md)
 
 </details>
 
 ---
 
-## Try It in 30 Seconds
+## 🚀 Quick start
 
-<details open>
-<summary><b>Option A — CLI (Zero API Keys Required: Offline Deterministic Mode)</b></summary>
+**Requirements:** Python 3.10+ and [uv](https://docs.astral.sh/uv/). No API keys needed: agents run in an offline, deterministic mode until you connect a model.
 
 ```bash
-# 1. Validate all 571 agents, 22 teams, 12 recipes, 36 MCP servers & links
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli validate
-
-# 2. Search across categories & safety tiers
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli search "kyc" --safety S4
-
-# 3. Inspect any agent & inspect team workflow schema compatibility
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli info voice/voice-form-filler
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli graph hiring-pipeline
-
-# 4. Run an agent locally or copy it shadcn/ui-style into your own repo
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli run text/summarizer \
-  --input '{"text":"Agents for Everything provides composable single-purpose AI agents."}'
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli add voice/voice-form-filler --dest ./my-app/agents
+git clone https://github.com/rupeshbharambe24/agents-for-everything.git
+cd agents-for-everything
+uv sync --all-packages          # installs the core runtime and the `afe` CLI
 ```
 
-</details>
+```bash
+uv run afe search "fill a form by voice"            # find agents
+uv run afe info voice/voice-form-filler             # see contract, tools, safety level
+uv run afe run text/summarizer --input '{"text": "Agents for Everything gives you composable agents. Each one does a single job."}'
+uv run afe test voice/voice-form-filler             # run its eval cases
+uv run afe graph research-team                      # show a team's workflow
+uv run afe add voice/voice-form-filler --dest ../my-app/agents   # copy it into your project
+```
 
 <details>
-<summary><b>Option B — Python SDK (`uv sync` / `pip`) & Local Ollama</b></summary>
+<summary><b>🐍 Use it from Python</b></summary>
 
 ```python
 from agents_for_everything import AgentRunner, RunContext
@@ -126,8 +148,8 @@ from agents_for_everything import AgentRunner, RunContext
 runner = AgentRunner()
 result = runner.run(
     "text/summarizer",
-    {"text": "Single-purpose agents compose via typed JSON schemas."},
-    context=RunContext(provider_name="ollama", model="qwen2.5:14b"),  # or "auto"
+    {"text": "Single-purpose agents compose through typed JSON schemas."},
+    context=RunContext(provider_name="ollama", model="qwen2.5:14b"),  # or leave out for offline mode
 )
 print(result.output)
 ```
@@ -135,7 +157,29 @@ print(result.output)
 </details>
 
 <details>
-<summary><b>Option C — TypeScript / Node.js (`v22.6+` / `v26+`) & Adapters</b></summary>
+<summary><b>📦 Export agents to other ecosystems</b></summary>
+
+```bash
+uv run afe export voice/speech-to-text --as skill --out ./exports      # Agent Skill (SKILL.md)
+uv run afe export voice/speech-to-text --as a2a --out ./exports        # A2A Agent Card
+uv run afe export voice/speech-to-text --as mcp-server --out ./exports
+uv run afe export --all --as subagent --out ./exports/subagents        # coding-assistant subagents
+```
+
+</details>
+
+<details>
+<summary><b>🖥️ Browse the catalog locally</b></summary>
+
+```bash
+python3 -m http.server 4173 --directory docs/site
+# open http://127.0.0.1:4173 to search and filter all 571 agents
+```
+
+</details>
+
+<details>
+<summary><b>🟦 TypeScript (Node 22.6+)</b></summary>
 
 ```bash
 node --test packages/core-typescript/tests/*.test.ts packages/adapters/tests/*.test.ts
@@ -143,212 +187,261 @@ node --test packages/core-typescript/tests/*.test.ts packages/adapters/tests/*.t
 
 </details>
 
+---
+
+## 📂 Browse all 8 families
+
+| Family | Agents | Categories |
+|---|---:|---|
+| 🧭 **Core** | 46 | [Orchestration](agents/core/orchestration/README.md) · [Memory](agents/core/memory/README.md) · [Guardrails](agents/core/guardrails/README.md) · [Evaluation](agents/core/evaluation/README.md) |
+| 🎙️ **Perception** | 59 | [Voice](agents/perception/voice/README.md) · [Audio](agents/perception/audio/README.md) · [Vision](agents/perception/vision/README.md) · [Video](agents/perception/video/README.md) · [Accessibility](agents/perception/accessibility/README.md) |
+| 📚 **Information** | 47 | [Text](agents/information/text/README.md) · [Search](agents/information/search/README.md) · [Research](agents/information/research/README.md) |
+| 🌐 **Action** | 53 | [Browser](agents/action/browser/README.md) · [Computer use](agents/action/computer-use/README.md) · [Documents](agents/action/documents/README.md) · [Integration](agents/action/integration/README.md) · [Physical](agents/action/physical/README.md) |
+| 💻 **Builders** | 76 | [Coding](agents/builders/coding/README.md) · [DevOps](agents/builders/devops/README.md) · [Data](agents/builders/data/README.md) · [AI engineering](agents/builders/ai-engineering/README.md) · [Security](agents/builders/security/README.md) · [IT support](agents/builders/it-support/README.md) |
+| 💼 **Business** | 134 | [Communication](agents/business/communication/README.md) · [Meetings](agents/business/meetings/README.md) · [Content](agents/business/content/README.md) · [Marketing](agents/business/marketing/README.md) · [Sales](agents/business/sales/README.md) · [Support](agents/business/support/README.md) · [Finance](agents/business/finance/README.md) · [Legal](agents/business/legal/README.md) · [HR](agents/business/hr/README.md) · [Operations](agents/business/operations/README.md) · [Supply chain](agents/business/supply-chain/README.md) · [Strategy](agents/business/strategy/README.md) |
+| 🌿 **Life** | 65 | [Productivity](agents/life/productivity/README.md) · [Personal](agents/life/personal/README.md) · [Travel](agents/life/travel/README.md) · [Wellness](agents/life/wellness/README.md) · [Education](agents/life/education/README.md) · [Creative](agents/life/creative/README.md) · [Community](agents/life/community/README.md) |
+| 🏢 **Industries** | 91 | [Banking](agents/industries/banking/README.md) · [Insurance](agents/industries/insurance/README.md) · [Healthcare](agents/industries/healthcare/README.md) · [E-commerce](agents/industries/ecommerce/README.md) · [Real estate](agents/industries/real-estate/README.md) · [Manufacturing](agents/industries/manufacturing/README.md) · [Agriculture](agents/industries/agriculture/README.md) · [Energy](agents/industries/energy/README.md) · [Government](agents/industries/government/README.md) · [Hospitality](agents/industries/hospitality/README.md) · [Science](agents/industries/science/README.md) · [Gaming](agents/industries/gaming/README.md) |
+| **Total** | **571** | **54 categories** · 66 P0 · 170 P1 · 335 P2 |
+
 <details>
-<summary><b>Option D — Export Agents Anywhere (`SKILL.md`, A2A Card, MCP, Codex `.toml`, LangGraph)</b></summary>
+<summary><b>See example agents in every category</b></summary>
 
-```bash
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli export voice/speech-to-text --as a2a --out ./exports
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli export voice/speech-to-text --as skill --out ./exports
-PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli export --all --as subagent --out ./exports/subagents
-```
-
-</details>
-
-<details>
-<summary><b>Option E — Launch the Local Interactive Catalog & Compatibility Graph Explorer</b></summary>
-
-```bash
-python3 -m http.server 4173 --directory docs/site
-# Open http://127.0.0.1:4173 in your browser to search 571 agents, filter P0/P1/P2 & S0-S4,
-# inspect teams/recipes/MCP servers, and click through schema compatibility edges.
-```
+| Category | Example agents |
+|---|---|
+| [Orchestration](agents/core/orchestration/README.md) (18) | router, task-planner, supervisor, critic, verifier, human-approval-gate, agent-builder |
+| [Memory](agents/core/memory/README.md) (10) | memory-writer, memory-retriever, knowledge-ingestor, knowledge-graph-builder, session-summarizer |
+| [Guardrails](agents/core/guardrails/README.md) (12) | prompt-injection-detector, pii-redactor, content-moderator, hallucination-checker, red-teamer |
+| [Evaluation](agents/core/evaluation/README.md) (6) | llm-judge, test-case-generator, regression-runner, benchmark-runner, trace-analyzer |
+| [Voice](agents/perception/voice/README.md) (17) | speech-to-text, text-to-speech, voice-form-filler, realtime-voice-assistant, live-interpreter |
+| [Audio](agents/perception/audio/README.md) (8) | audio-cleaner, podcast-producer, audio-search, audiobook-producer, music-tagger |
+| [Vision](agents/perception/vision/README.md) (17) | ocr, visual-qa, screenshot-understander, chart-reader, id-document-reader |
+| [Video](agents/perception/video/README.md) (9) | video-summarizer, video-captioner, clip-generator, dubbing-agent, lecture-to-notes |
+| [Accessibility](agents/perception/accessibility/README.md) (8) | alt-text-writer, accessibility-auditor, screen-narrator, live-captioner, easy-read-simplifier |
+| [Text](agents/information/text/README.md) (17) | summarizer, translator, rewriter, classifier, structured-extractor, entity-extractor |
+| [Search](agents/information/search/README.md) (15) | web-search, answer-engine, rag-qa, semantic-search, enterprise-search, news-monitor |
+| [Research](agents/information/research/README.md) (15) | deep-researcher, source-reader, fact-checker, report-writer, competitive-analyst |
+| [Browser](agents/action/browser/README.md) (12) | web-navigator, web-form-filler, web-scraper, page-change-monitor, web-tester |
+| [Computer use](agents/action/computer-use/README.md) (9) | shell-operator, desktop-operator, app-automator, mobile-operator, macro-recorder |
+| [Documents](agents/action/documents/README.md) (18) | document-parser, table-extractor, spreadsheet-agent, invoice-receipt-parser, file-organizer |
+| [Integration](agents/action/integration/README.md) (8) | api-caller, workflow-builder, webhook-handler, mcp-server-generator, notification-dispatcher |
+| [Physical](agents/action/physical/README.md) (6) | smart-home-controller, sensor-monitor, energy-optimizer, robot-task-planner, vehicle-diagnostics |
+| [Coding](agents/builders/coding/README.md) (22) | code-generator, code-reviewer, bug-fixer, test-writer, codebase-qa, ci-fixer |
+| [DevOps](agents/builders/devops/README.md) (13) | log-analyzer, incident-responder, alert-triager, iac-generator, cloud-cost-optimizer |
+| [Data](agents/builders/data/README.md) (15) | text-to-sql, data-analyst, data-cleaner, chart-maker, anomaly-detector, forecaster |
+| [AI engineering](agents/builders/ai-engineering/README.md) (8) | prompt-engineer, rag-builder, automl-trainer, model-evaluator, model-monitor |
+| [Security](agents/builders/security/README.md) (12) | vuln-triager, secure-code-reviewer, secret-scanner, phishing-analyzer, sbom-auditor |
+| [IT support](agents/builders/it-support/README.md) (6) | helpdesk-agent, access-request-handler, device-setup-guide, license-manager, asset-inventory |
+| [Communication](agents/business/communication/README.md) (10) | inbox-triager, email-drafter, chat-summarizer, follow-up-tracker, newsletter-digest |
+| [Meetings](agents/business/meetings/README.md) (8) | meeting-scheduler, meeting-notetaker, action-item-extractor, meeting-prep, meeting-follow-up |
+| [Content](agents/business/content/README.md) (15) | blog-writer, copywriter, social-post-writer, content-repurposer, technical-writer, editor |
+| [Marketing](agents/business/marketing/README.md) (14) | campaign-planner, ad-creative-generator, seo-auditor, keyword-researcher, brand-monitor |
+| [Sales](agents/business/sales/README.md) (13) | lead-finder, lead-enricher, lead-scorer, account-researcher, outreach-personalizer, crm-updater |
+| [Support](agents/business/support/README.md) (11) | support-chatbot, ticket-triager, reply-drafter, kb-writer, escalation-detector |
+| [Finance](agents/business/finance/README.md) (14) | transaction-categorizer, accounts-payable, bank-reconciler, expense-auditor, financial-statement-analyzer |
+| [Legal](agents/business/legal/README.md) (13) | contract-analyzer, nda-reviewer, compliance-monitor, terms-simplifier, contract-drafter |
+| [HR](agents/business/hr/README.md) (12) | jd-writer, resume-screener, hr-policy-qa, onboarding-buddy, candidate-sourcer |
+| [Operations](agents/business/operations/README.md) (10) | project-manager, status-reporter, sop-writer, requirements-analyst, okr-tracker |
+| [Supply chain](agents/business/supply-chain/README.md) (8) | shipment-tracker, demand-forecaster, inventory-optimizer, route-optimizer, customs-doc-preparer |
+| [Strategy](agents/business/strategy/README.md) (6) | strategy-analyst, decision-analyst, business-plan-writer, pitch-deck-builder, board-pack-preparer |
+| [Productivity](agents/life/productivity/README.md) (10) | task-manager, daily-briefer, note-organizer, reminder-agent, personal-knowledge-qa |
+| [Personal](agents/life/personal/README.md) (14) | personal-finance-tracker, bill-subscription-manager, shopping-assistant, meal-planner, event-planner |
+| [Travel](agents/life/travel/README.md) (6) | trip-planner, flight-hotel-searcher, travel-doc-checker, local-guide, flight-tracker |
+| [Wellness](agents/life/wellness/README.md) (8) | symptom-navigator, lab-report-explainer, medication-reminder, fitness-coach, sleep-coach |
+| [Education](agents/life/education/README.md) (12) | tutor, quiz-generator, flashcard-maker, course-builder, language-partner, math-solver |
+| [Creative](agents/life/creative/README.md) (10) | photo-organizer, brand-kit-designer, storyboard-artist, game-designer, 3d-asset-generator |
+| [Community](agents/life/community/README.md) (5) | community-moderator, community-qa-bot, misinformation-flagger, event-organizer, volunteer-coordinator |
+| [Banking](agents/industries/banking/README.md) (17) | kyc-onboarding, aml-alert-investigator, sanctions-screener, fraud-signal-explainer, regulatory-circular-tracker |
+| [Insurance](agents/industries/insurance/README.md) (6) | claims-intake, claims-adjuster-assistant, underwriting-assistant, policy-explainer, policy-comparer |
+| [Healthcare](agents/industries/healthcare/README.md) (8) | medical-scribe, patient-intake, clinical-coder, prior-authorization, clinical-trial-matcher |
+| [E-commerce](agents/industries/ecommerce/README.md) (11) | product-listing-writer, catalog-enricher, shopping-concierge, pricing-monitor, marketplace-sync |
+| [Real estate](agents/industries/real-estate/README.md) (7) | listing-writer, property-valuator, lease-abstractor, property-search-assistant, tenant-screening-assistant |
+| [Manufacturing](agents/industries/manufacturing/README.md) (6) | quality-inspector, predictive-maintenance, maintenance-copilot, work-instruction-writer, production-scheduler |
+| [Agriculture](agents/industries/agriculture/README.md) (6) | crop-doctor, farm-weather-advisor, market-price-advisor, soil-report-explainer, agri-scheme-finder |
+| [Energy](agents/industries/energy/README.md) (5) | utility-bill-analyzer, solar-sizing-advisor, load-forecaster, outage-communicator, energy-auditor |
+| [Government](agents/industries/government/README.md) (8) | citizen-services-assistant, scheme-eligibility-checker, gov-form-assistant, rti-drafter, tender-analyzer |
+| [Hospitality](agents/industries/hospitality/README.md) (4) | reservation-agent, hotel-concierge, menu-engineer, housekeeping-optimizer |
+| [Science](agents/industries/science/README.md) (9) | paper-reader, experiment-designer, lab-protocol-writer, proof-assistant, peer-review-assistant |
+| [Gaming](agents/industries/gaming/README.md) (4) | npc-agent, game-tester, level-generator, game-master |
 
 </details>
 
 ---
 
-## Browse All 8 Families & 54 Categories
+## 👥 Ready-made teams
 
-| Family | Agents | Categories | Explore |
-|---|---:|---:|---|
-| **1. Core** | **46** | 4 | Orchestration, Memory, Guardrails, Evaluation |
-| **2. Perception** | **59** | 5 | Voice, Audio, Vision, Video, Accessibility |
-| **3. Information** | **47** | 3 | Text, Search, Research |
-| **4. Action** | **53** | 5 | Browser, Computer Use, Documents, Integration, Physical |
-| **5. Builders** | **76** | 6 | Coding, DevOps, Data, AI Engineering, Security, IT Support |
-| **6. Business** | **134** | 12 | Communication, Meetings, Content, Marketing, Sales, Support, Finance, Legal, HR, Operations, Supply Chain, Strategy |
-| **7. Life** | **65** | 7 | Productivity, Personal, Travel, Wellness, Education, Creative, Community |
-| **8. Industries** | **91** | 12 | Banking, Insurance, Healthcare, E-Commerce, Real Estate, Manufacturing, Agriculture, Energy, Government, Hospitality, Science, Gaming |
-| **Total** | **571** | **54** | **66 P0 (`beta`) · 170 P1 (`prototype`) · 335 P2 (`prototype`)** |
-
-Click any family below to jump straight to every category README:
+Teams are reusable multi-agent workflows (`team.yaml`): which agents, in what order, with which approval points.
 
 <details>
-<summary><b>Family 1 — Core (46 agents across 4 categories)</b></summary>
+<summary><b>See all 22 teams</b></summary>
 
-- [`core/orchestration`](agents/core/orchestration/README.md) (18) — router, task-planner, supervisor, critic, verifier, human-approval-gate, debate-moderator, model-selector, prompt-optimizer, and more
-- [`core/memory`](agents/core/memory/README.md) (10) — memory-writer, memory-retriever, knowledge-ingestor, entity-resolver, wiki-maintainer, episodic-replay, and more
-- [`core/guardrails`](agents/core/guardrails/README.md) (12) — prompt-injection-detector, pii-redactor, content-moderator, hallucination-checker, bias-auditor, data-residency-guard, age-safety-filter, and more
-- [`core/evaluation`](agents/core/evaluation/README.md) (6) — llm-judge, test-case-generator, regression-runner, benchmark-runner, dataset-curator, ab-evaluator
+| Team | Pattern | Priority | What it does |
+|---|---|:---:|---|
+| [`research-team`](teams/research-team/README.md) | Orchestrator–workers | P0 | Cited, grounding-checked research reports |
+| [`document-intake`](teams/document-intake/README.md) | Prompt chaining | P0 | Classify, parse, extract and approve documents |
+| [`voice-concierge`](teams/voice-concierge/README.md) | Routing | P0 | Voice in → routed action → voice out |
+| [`inbox-zero`](teams/inbox-zero/README.md) | Prompt chaining | P0 | Triage mail, draft replies, extract tasks |
+| [`meeting-to-done`](teams/meeting-to-done/README.md) | Prompt chaining | P0 | Meeting notes → action items → tracked tasks |
+| [`support-desk`](teams/support-desk/README.md) | Routing + handoff | P0 | Tiered customer support with escalation |
+| [`software-squad`](teams/software-squad/README.md) | Evaluator–optimizer | P1 | Requirements → code → tests → review → PR |
+| [`bug-squash`](teams/bug-squash/README.md) | Orchestrator–workers | P1 | Triage → fix → test → review |
+| [`data-insights`](teams/data-insights/README.md) | Plan-and-execute | P1 | Question → SQL → analysis → chart → report |
+| [`content-studio`](teams/content-studio/README.md) | Prompt chaining | P1 | Keywords → draft → edit → SEO → social posts |
+| [`sdr-team`](teams/sdr-team/README.md) | Prompt chaining | P1 | Find, enrich and score leads, draft outreach |
+| [`incident-war-room`](teams/incident-war-room/README.md) | Orchestrator–workers | P1 | Alerts → logs → approved fix → postmortem |
+| [`accounts-payable-team`](teams/accounts-payable-team/README.md) | Prompt chaining | P1 | Invoice parsing → matching → approval |
+| [`contract-desk`](teams/contract-desk/README.md) | Prompt chaining | P1 | Contract intake, clause review, obligations |
+| [`kyc-pipeline`](teams/kyc-pipeline/README.md) | Prompt chaining | P1 | ID extraction → KYC → sanctions → audit |
+| [`chief-of-staff`](teams/chief-of-staff/README.md) | Hierarchical | P1 | Daily brief, inbox, meeting prep, tasks, memory |
+| [`web-qa-team`](teams/web-qa-team/README.md) | Orchestrator–workers | P1 | Navigate → test → accessibility audit → issues |
+| [`agent-factory`](teams/agent-factory/README.md) | Evaluator–optimizer | P1 | Build new agents with evals and red-teaming |
+| [`ecosystem-radar`](teams/ecosystem-radar/README.md) | Scheduled orchestrator | P1 | Track new agent standards, papers and tools |
+| [`hiring-pipeline`](teams/hiring-pipeline/README.md) | Prompt chaining | P2 | JD → sourcing → screening → bias audit |
+| [`learning-coach`](teams/learning-coach/README.md) | Hierarchical | P2 | Course → tutoring → quizzes → study plan |
+| [`regulatory-watch`](teams/regulatory-watch/README.md) | Prompt chaining | P2 | Regulator updates → impact → brief |
 
 </details>
 
-<details>
-<summary><b>Family 2 — Perception & Interaction (59 agents across 5 categories)</b></summary>
+## 🍳 Product recipes
 
-- [`perception/voice`](agents/perception/voice/README.md) (17) — speech-to-text, text-to-speech, voice-form-filler, voice-command, realtime-voice-assistant, voice-search, live-interpreter, ivr-designer, and more
-- [`perception/audio`](agents/perception/audio/README.md) (8) — audio-cleaner, podcast-producer, audiobook-producer, audio-search, meeting-diarizer, music-tagger, sound-effect-generator
-- [`perception/vision`](agents/perception/vision/README.md) (17) — ocr, visual-qa, screenshot-understander, diagram-to-code, document-layout-parser, scene-safety-monitor, id-document-reader, and more
-- [`perception/video`](agents/perception/video/README.md) (9) — video-summarizer, clip-generator, video-captioner, dubbing-agent, lecture-to-notes, video-search, live-stream-monitor
-- [`perception/accessibility`](agents/perception/accessibility/README.md) (8) — screen-narrator, live-captioner, alt-text-writer, accessibility-auditor, easy-read-simplifier, document-remediator, voice-control-navigator
-
-</details>
+Recipes are complete, runnable products built from agents and teams, each with a demo app and an integration test.
 
 <details>
-<summary><b>Family 3 — Information (47 agents across 3 categories)</b></summary>
+<summary><b>See all 12 recipes</b></summary>
 
-- [`information/text`](agents/information/text/README.md) (17) — summarizer, translator, rewriter, proofreader, classifier, structured-extractor, entity-extractor, regex-builder, readability-scorer, and more
-- [`information/search`](agents/information/search/README.md) (15) — web-search, answer-engine, rag-qa, semantic-search, multimodal-search, patent-search, citation-finder, alert-digest, and more
-- [`information/research`](agents/information/research/README.md) (15) — deep-researcher, source-reader, fact-checker, report-writer, competitive-analyst, due-diligence, policy-analyst, trend-spotter, and more
-
-</details>
-
-<details>
-<summary><b>Family 4 — Action (53 agents across 5 categories)</b></summary>
-
-- [`action/browser`](agents/action/browser/README.md) (12) — web-navigator, web-form-filler, web-scraper, booking-agent, checkout-assistant, secure-login-helper, web-to-api, and more
-- [`action/computer-use`](agents/action/computer-use/README.md) (9) — shell-operator, desktop-operator, app-automator, mobile-operator, rpa-bridge, macro-recorder, window-organizer, and more
-- [`action/documents`](agents/action/documents/README.md) (18) — document-parser, table-extractor, spreadsheet-agent, invoice-receipt-parser, file-organizer, contract-redliner, mail-merge-agent, and more
-- [`action/integration`](agents/action/integration/README.md) (8) — api-caller, webhook-handler, workflow-builder, mcp-server-generator, etl-mapper, cron-scheduler, notification-dispatcher
-- [`action/physical`](agents/action/physical/README.md) (6) — smart-home-controller, drone-mission-planner, robot-task-planner, energy-manager, warehouse-picker, vehicle-diagnostics
-
-</details>
-
-<details>
-<summary><b>Family 5 — Builders (76 agents across 6 categories)</b></summary>
-
-- [`builders/coding`](agents/builders/coding/README.md) (22) — code-generator, code-reviewer, bug-fixer, test-writer, codebase-qa, architect-agent, db-migration-writer, release-manager, and more
-- [`builders/devops`](agents/builders/devops/README.md) (13) — log-analyzer, incident-responder, iac-generator, cloud-cost-optimizer, k8s-troubleshooter, slo-watcher, capacity-planner, and more
-- [`builders/data`](agents/builders/data/README.md) (15) — text-to-sql, data-analyst, data-cleaner, etl-pipeline-builder, synthetic-data-generator, cohort-analyzer, a-b-test-analyst, and more
-- [`builders/ai-engineering`](agents/builders/ai-engineering/README.md) (8) — prompt-engineer, rag-builder, fine-tune-preparer, embedding-selector, model-router-designer, agent-telemetry-analyst
-- [`builders/security`](agents/builders/security/README.md) (12) — vuln-triager, secret-scanner, phishing-analyzer, secure-code-reviewer, sbom-auditor, soc-tier1-analyst, iam-policy-reviewer, and more
-- [`builders/it-support`](agents/builders/it-support/README.md) (6) — helpdesk-agent, password-access-assistant, onboarding-provisioner, asset-manager, license-auditor, outage-communicator
-
-</details>
-
-<details>
-<summary><b>Family 6 — Business Functions (134 agents across 12 categories)</b></summary>
-
-- [`business/communication`](agents/business/communication/README.md) (10) · [`business/meetings`](agents/business/meetings/README.md) (8) · [`business/content`](agents/business/content/README.md) (15)
-- [`business/marketing`](agents/business/marketing/README.md) (14) · [`business/sales`](agents/business/sales/README.md) (13) · [`business/support`](agents/business/support/README.md) (11)
-- [`business/finance`](agents/business/finance/README.md) (14) · [`business/legal`](agents/business/legal/README.md) (13) · [`business/hr`](agents/business/hr/README.md) (12)
-- [`business/operations`](agents/business/operations/README.md) (10) · [`business/supply-chain`](agents/business/supply-chain/README.md) (8) · [`business/strategy`](agents/business/strategy/README.md) (6)
-
-</details>
-
-<details>
-<summary><b>Family 7 — Life & Learning (65 agents across 7 categories)</b></summary>
-
-- [`life/productivity`](agents/life/productivity/README.md) (10) · [`life/personal`](agents/life/personal/README.md) (14) · [`life/travel`](agents/life/travel/README.md) (6)
-- [`life/wellness`](agents/life/wellness/README.md) (8) · [`life/education`](agents/life/education/README.md) (12) · [`life/creative`](agents/life/creative/README.md) (10) · [`life/community`](agents/life/community/README.md) (5)
-
-</details>
-
-<details>
-<summary><b>Family 8 — Industry Vertical Packs (91 agents across 12 packs)</b></summary>
-
-See [**Industry Packs Overview (`agents/industries/README.md`)**](agents/industries/README.md) for horizontal reuse matrices & local/on-prem compliance rules:
-- [`industries/banking`](agents/industries/banking/README.md) (17) · [`industries/insurance`](agents/industries/insurance/README.md) (6) · [`industries/healthcare`](agents/industries/healthcare/README.md) (8)
-- [`industries/ecommerce`](agents/industries/ecommerce/README.md) (11) · [`industries/real-estate`](agents/industries/real-estate/README.md) (7) · [`industries/manufacturing`](agents/industries/manufacturing/README.md) (6)
-- [`industries/agriculture`](agents/industries/agriculture/README.md) (6) · [`industries/energy`](agents/industries/energy/README.md) (5) · [`industries/government`](agents/industries/government/README.md) (8)
-- [`industries/hospitality`](agents/industries/hospitality/README.md) (4) · [`industries/science`](agents/industries/science/README.md) (9) · [`industries/gaming`](agents/industries/gaming/README.md) (4)
+| Recipe | Priority | What you get |
+|---|:---:|---|
+| [`voice-form-filling`](recipes/voice-form-filling/README.md) | P0 | Speak in any language → validated form fields → read-back → fill (with a local web UI) |
+| [`chat-with-your-docs`](recipes/chat-with-your-docs/README.md) | P0 | Private document Q&A with PII redaction and grounding checks |
+| [`deep-research-app`](recipes/deep-research-app/README.md) | P0 | Multi-source research app producing cited reports |
+| [`invoice-automation`](recipes/invoice-automation/README.md) | P1 | Inbox → invoice extraction → matching → approval |
+| [`ai-receptionist`](recipes/ai-receptionist/README.md) | P1 | AI-disclosed phone and chat receptionist with booking |
+| [`personal-chief-of-staff`](recipes/personal-chief-of-staff/README.md) | P1 | Morning brief across inbox, meetings, tasks and memory |
+| [`ai-qa-engineer`](recipes/ai-qa-engineer/README.md) | P1 | Point at a staging URL, get tests and bug reports |
+| [`content-engine`](recipes/content-engine/README.md) | P1 | One recording → podcast, blog, social posts and clips |
+| [`vernacular-banking-helpline`](recipes/vernacular-banking-helpline/README.md) | P2 | Local-language banking help, scam checks, grievances |
+| [`regulatory-intelligence`](recipes/regulatory-intelligence/README.md) | P2 | Regulator updates mapped to controls and impact reports |
+| [`farmer-advisory`](recipes/farmer-advisory/README.md) | P2 | Low-bandwidth photo and voice crop advice |
+| [`accessible-web`](recipes/accessible-web/README.md) | P2 | Page narration, accessibility audit and voice form filling |
 
 </details>
 
 ---
 
-## 22 Ready-Made Multi-Agent Teams
+## 🛡️ Safety first
 
-<details>
-<summary><b>View all 22 reusable <code>team.yaml</code> workflow graphs</b></summary>
+Every agent declares a safety level, and the runtime enforces it.
 
-| Team | Pattern | Priority | Focus |
-|---|---|---|---|
-| [`research-team`](teams/research-team/README.md) | Orchestrator-workers | P0 | Cited, grounding-verified reports |
-| [`document-intake`](teams/document-intake/README.md) | Prompt chaining | P0 | Classify, parse, extract & approve docs |
-| [`voice-concierge`](teams/voice-concierge/README.md) | Routing | P0 | Voice in -> routed actions -> voice out |
-| [`inbox-zero`](teams/inbox-zero/README.md) | Prompt chaining | P0 | Triage mail, draft replies & tasks |
-| [`meeting-to-done`](teams/meeting-to-done/README.md) | Prompt chaining | P0 | Meeting notes -> actions -> tracked tasks |
-| [`support-desk`](teams/support-desk/README.md) | Routing + handoff | P0 | Tiered customer support & escalations |
-| [`software-squad`](teams/software-squad/README.md) | Evaluator-optimizer | P1 | Requirements -> code -> tests -> PR |
-| [`bug-squash`](teams/bug-squash/README.md) | Orchestrator-workers | P1 | Triage -> fix -> tests -> review |
-| [`data-insights`](teams/data-insights/README.md) | Plan-and-execute | P1 | SQL -> analysis -> chart -> report |
-| [`content-studio`](teams/content-studio/README.md) | Prompt chaining | P1 | Research -> draft -> edit -> multi-channel |
-| [`sdr-team`](teams/sdr-team/README.md) | Prompt chaining | P1 | Lead finding -> scoring -> staged outreach |
-| [`incident-war-room`](teams/incident-war-room/README.md) | Orchestrator-workers | P1 | Alerts -> logs -> runbook gate -> postmortem |
-| [`accounts-payable-team`](teams/accounts-payable-team/README.md) | Prompt chaining | P1 | Invoice parsing -> PO match -> S4 signoff |
-| [`contract-desk`](teams/contract-desk/README.md) | Prompt chaining | P1 | Legal intake -> clauses -> NDA review |
-| [`kyc-pipeline`](teams/kyc-pipeline/README.md) | Prompt chaining | P1 | ID extract -> KYC -> sanctions -> audit |
-| [`chief-of-staff`](teams/chief-of-staff/README.md) | Hierarchical | P1 | Daily brief + inbox + prep + tasks + memory |
-| [`web-qa-team`](teams/web-qa-team/README.md) | Orchestrator-workers | P1 | Navigate -> E2E test -> WCAG -> issues |
-| [`agent-factory`](teams/agent-factory/README.md) | Evaluator-optimizer | P1 | Build agents, generate evals, red-team & judge |
-| [`ecosystem-radar`](teams/ecosystem-radar/README.md) | Scheduled orchestrator | P1 | Track MCP/A2A/arXiv updates & digests |
-| [`hiring-pipeline`](teams/hiring-pipeline/README.md) | Prompt chaining | P2 | JD -> source -> screen -> bias-audit -> HITL |
-| [`learning-coach`](teams/learning-coach/README.md) | Hierarchical | P2 | Course -> tutor -> quizzes -> flashcards -> plan |
-| [`regulatory-watch`](teams/regulatory-watch/README.md) | Prompt chaining | P2 | Circulars -> compliance -> policy -> brief |
+| Level | Meaning | Default control |
+|:---:|---|---|
+| 🟢 **S0** | Pure computation, no external access | Schema validation; no tools allowed |
+| 🟢 **S1** | Reads external or private data | Read-only tools; prompt-injection screening |
+| 🟡 **S2** | Reversible writes (drafts, unsubmitted forms) | Preview, undo, logged changes |
+| 🟠 **S3** | External side effects (send, post, run commands) | Human approval per action |
+| 🔴 **S4** | Money, legal, health, identity, deletion | Mandatory sign-off, audit log, no autonomous mode |
 
-</details>
+Agents move from `spec` → `prototype` → `beta` → `stable` as they gain eval cases, implementations and reviews. Some things we will never build (CAPTCHA solving, covert bots, autonomous trading and more): see [SECURITY.md](SECURITY.md).
 
 ---
 
-## 12 End-to-End Product Recipes
+## 🧰 Under the hood
 
-<details>
-<summary><b>View all 12 runnable product recipes (tested end-to-end)</b></summary>
+- **[Spec](spec/SPEC.md)** (`afe/v1`, plus [`afe/v2`](spec/v2/SPEC.md)) and JSON Schemas for agents, teams, recipes and tools, with [shared types](spec/types) like `Transcript`, `Document` and `FormSchema`.
+- **[36 MCP servers](CATALOG.md#mcp-servers)**: browser, filesystem, documents, OCR, STT, TTS, SQL, sandboxes, git, email, calendar and more.
+- **[A2A registry](registry/a2a-index.json)**: every agent published as an Agent Card, with a [verified index](registry/verified-index.json).
+- **[Deployment profiles](profiles/README.md)**: local, air-gapped and low-bandwidth setups with open-weights models.
+- **[Shared eval datasets](evals/datasets/README.md)** including multilingual and Indic voice and form data, and an [eval leaderboard](evals/leaderboard.md).
+- **[Architecture decisions](docs/adr)** and [guides](docs/guides): writing an agent, writing evals, safety review.
 
-| Recipe | Priority | Summary |
+---
+
+## 🗺️ Roadmap
+
+- [x] Spec, schemas and shared types (`afe/v1`, `afe/v2` draft)
+- [x] 571 agents with contracts, prompts, safety levels and offline eval suites
+- [x] `afe` CLI, Python and TypeScript runtimes, exports (Skills, A2A, MCP, subagents)
+- [x] 22 teams and 12 recipes with integration tests
+- [ ] Live-model implementations and eval scores for every P0 agent
+- [ ] More framework adapters tested end-to-end (LangGraph, OpenAI Agents SDK, Claude Agent SDK, Google ADK)
+- [ ] Larger multilingual eval sets
+- [ ] Community industry packs (telecom, pharma, construction, aviation…)
+
+Full plan: [BLUEPRINT.md](BLUEPRINT.md#11-build-roadmap).
+
+---
+
+## 🤝 Contributing
+
+**This project grows with its community, and every contribution counts.** You don't need to be an AI expert:
+
+| You can… | Time | Start here |
 |---|---|---|
-| [`voice-form-filling`](recipes/voice-form-filling/README.md) | P0 | Multilingual voice in -> extracted JSON -> read-back confirm -> form fill |
-| [`chat-with-your-docs`](recipes/chat-with-your-docs/README.md) | P0 | Private doc ingestion, PII redaction, RAG & hallucination check |
-| [`deep-research-app`](recipes/deep-research-app/README.md) | P0 | Multi-source research app producing grounded cited reports |
-| [`invoice-automation`](recipes/invoice-automation/README.md) | P1 | Inbox -> invoice parser -> AP 3-way match -> S4 payment approval |
-| [`ai-receptionist`](recipes/ai-receptionist/README.md) | P1 | AI-disclosed phone/messaging FAQ & appointment scheduling |
-| [`personal-chief-of-staff`](recipes/personal-chief-of-staff/README.md) | P1 | Morning brief across inbox, meetings, tasks & long-term memory |
-| [`ai-qa-engineer`](recipes/ai-qa-engineer/README.md) | P1 | Automated staging URL walkthrough, injection screen & bug reports |
-| [`content-engine`](recipes/content-engine/README.md) | P1 | One audio/video recording -> podcast, blog, social posts & clips |
-| [`vernacular-banking-helpline`](recipes/vernacular-banking-helpline/README.md) | P2 | Local-language banking voice help, scam check & gated grievance |
-| [`regulatory-intelligence`](recipes/regulatory-intelligence/README.md) | P2 | Regulator circular monitoring mapped to controls & impact reports |
-| [`farmer-advisory`](recipes/farmer-advisory/README.md) | P2 | Low-bandwidth photo/voice crop diagnosis, weather & mandi prices |
-| [`accessible-web`](recipes/accessible-web/README.md) | P2 | Page narration, WCAG audit & voice-guided web form filling |
+| ⭐ **Star the repo** so more builders find it | 1 second | [Star](https://github.com/rupeshbharambe24/agents-for-everything/stargazers) |
+| 🧪 **Add eval cases** to an agent (non-English ones are especially welcome) | 15 min | Any agent's `evals/cases.jsonl` |
+| 🐛 **Report a bug or a confusing doc** | 5 min | [Open an issue](https://github.com/rupeshbharambe24/agents-for-everything/issues/new?template=bug.yml) |
+| 💡 **Request an agent** for a task you need | 5 min | [Agent request](https://github.com/rupeshbharambe24/agents-for-everything/issues/new?template=agent-request.yml) |
+| 🧩 **Build a new agent** | 1–2 h | `uv run afe new --tier atomic --category <category> --slug <name>` |
+| 🔌 **Add a live-model implementation or framework adapter** | a few hours | [Writing an agent](docs/guides/writing-an-agent.md) |
+| 🏢 **Propose an industry pack** | — | [New category RFC](https://github.com/rupeshbharambe24/agents-for-everything/issues/new?template=new-category-rfc.yml) |
+
+Read the **[contributing guide](CONTRIBUTING.md)** to get set up in a few minutes. Look for [`good first issue`](https://github.com/rupeshbharambe24/agents-for-everything/labels/good%20first%20issue) labels.
+
+### 💖 Contributors
+
+<a href="https://github.com/rupeshbharambe24/agents-for-everything/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=rupeshbharambe24/agents-for-everything" alt="Contributors" />
+</a>
+
+### 📈 Star history
+
+<a href="https://star-history.com/#rupeshbharambe24/agents-for-everything&Date">
+  <img src="https://api.star-history.com/svg?repos=rupeshbharambe24/agents-for-everything&type=Date" alt="Star history chart" width="600" />
+</a>
+
+---
+
+## ❓ FAQ
+
+<details>
+<summary><b>Is this a new agent framework?</b></summary>
+
+No. It is a library of agents built on open standards (JSON Schema, MCP, A2A, Agent Skills). Use the small built-in runtime, or export agents to the framework you already use.
+
+</details>
+
+<details>
+<summary><b>Do the agents call a real LLM?</b></summary>
+
+Out of the box, agents run in an **offline, deterministic mode** so you can explore, test and run CI without API keys. Pass a provider and model (for example Ollama with an open-weights model) to run them with a real model. The 8,350 passing evals are offline evals; live-model scores are on the roadmap.
+
+</details>
+
+<details>
+<summary><b>Can I use just one agent?</b></summary>
+
+Yes. `afe add <category>/<agent>` copies that agent and the agents it depends on into your project. Nothing else is required.
+
+</details>
+
+<details>
+<summary><b>Which models are supported?</b></summary>
+
+Agents declare the capabilities they need (tool use, structured output, vision, audio), not a vendor. Frontier models and local open-weights models both work; see [deployment profiles](profiles/README.md).
+
+</details>
+
+<details>
+<summary><b>Can I use it commercially?</b></summary>
+
+Yes. Everything is under the [Apache-2.0 license](LICENSE).
 
 </details>
 
 ---
 
-## MCP Servers, A2A Registry, Local On-Prem & Spec v2
+<div align="center">
 
-- **Open A2A Discovery & Verified Registry (`registry/`):** [`a2a-index.json`](registry/a2a-index.json), [`verified-index.json`](registry/verified-index.json), [`aliases.yaml`](registry/aliases.yaml), and root card [`registry/.well-known/agent.json`](registry/.well-known/agent.json).
-- **Automated Verification & `afe/v2` Migration:** Run `afe verify <id>` for verified badge digests and `afe migrate <id>` to upgrade `afe/v1` manifests to [`spec/v2/SPEC.md`](spec/v2/SPEC.md).
-- **36 Shared MCP Server Contracts (`mcp-servers/`):** Listed in [`CATALOG.md`](CATALOG.md#mcp-servers) (covering web, browser, filesystem, documents, OCR, STT, TTS, SQL, Python/shell sandboxes, git, ERP, payments, medical-kb, logistics, compliance-reg, telephony, threat-intel, home-automation, and more).
-- **Local / On-Premises & Air-Gapped Profiles (`profiles/`):** [`local-onprem.yaml`](profiles/local-onprem.yaml), [`regulated-airgapped.yaml`](profiles/regulated-airgapped.yaml), and [`low-bandwidth-edge.yaml`](profiles/low-bandwidth-edge.yaml) ([Guide](docs/guides/local-onprem.md)).
-- **Shared Indic Multilingual & Safety Datasets (`evals/datasets/`):** [`multilingual_form_utterances.jsonl`](evals/datasets/multilingual_form_utterances.jsonl), [`indic_voice_queries.jsonl`](evals/datasets/indic_voice_queries.jsonl), and [`regulated_safety_prompts.jsonl`](evals/datasets/regulated_safety_prompts.jsonl).
+**If this saves you time, please ⭐ star the repo and share it. It helps more builders find it.**
 
----
+Made with ❤️ by [@rupeshbharambe24](https://github.com/rupeshbharambe24) and [contributors](https://github.com/rupeshbharambe24/agents-for-everything/graphs/contributors) · [Apache-2.0](LICENSE)
 
-## Safety & Maturity Model
-
-| Safety Level | Scope | Default Control |
-|---|---|---|
-| **S0** | Pure computation, zero external I/O | Strict JSON Schema validation (`tools: []` enforced at runtime) |
-| **S1** | Read-only external/private data | Scoped read permissions + prompt-injection screening |
-| **S2** | Reversible local writes / unsubmitted drafts | Diff/preview, undo capability, PII-masked action trace |
-| **S3** | External side effects (send, post, write APIs, shell) | Human approval gate (`ApprovalRequiredError`) + `SAFETY_REVIEW.md` |
-| **S4** | Money, legal, clinical, identity, irreversible deletion | Mandatory human sign-off, immutable audit log, domain disclaimers |
-
-Maturity lifecycle: `spec` -> `prototype` (>= 10 passing eval cases) -> `beta` (>= 50 cases + Python/TS adapters + S3/S4 safety review) -> `stable` (recipe-proven production release). Read [`SECURITY.md`](SECURITY.md) for strict prohibited uses.
-
----
-
-## Contributing & Ecosystem Radar
-
-We welcome new atomic/composite agents, domain packs, multilingual eval cases, and framework adapters under **Apache-2.0** and DCO sign-off (`git commit -s`). Start with [`CONTRIBUTING.md`](CONTRIBUTING.md), [`docs/guides/writing-an-agent.md`](docs/guides/writing-an-agent.md), and [`AGENTS.md`](AGENTS.md). Stay current with protocol shifts (MCP, A2A, Agent Skills, AG-UI, OpenTelemetry GenAI) in [`radar/`](radar/2026-11.md).
+</div>
