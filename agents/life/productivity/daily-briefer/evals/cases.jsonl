@@ -1,0 +1,10 @@
+{"id": "dail-01", "input": {"input": "Sample daily-briefer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-02", "input": {"input": "Sample daily-briefer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-03", "input": {"input": "Sample daily-briefer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-04", "input": {"input": "Sample daily-briefer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-05", "input": {"input": "Sample daily-briefer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-06", "input": {"input": "Sample daily-briefer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-07", "input": {"input": "Sample daily-briefer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-08", "input": {"input": "Sample daily-briefer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-09", "input": {"input": "Sample daily-briefer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "dail-10", "input": {"input": "Sample daily-briefer request #10"}, "expected": {}, "expect_non_empty": ["result"]}
