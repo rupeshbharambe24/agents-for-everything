@@ -1,47 +1,129 @@
-# Synthetic Data Generator `data/synthetic-data-generator`
+<!-- afe:begin-generated (scripts/build_readmes.py) — edit the manifest, not this block -->
 
-prototype · P2 · atomic · safety S0 · autonomy L1
+[🏠 Agents for Everything](../../../../README.md) › [📖 Catalog](../../../../CATALOG.md) › [📊 Data and analytics](../README.md) › **Synthetic Data Generator**
 
-## What it does
+# 📊 Synthetic Data Generator
+
+![id: data/synthetic-data-generator](https://img.shields.io/badge/id-data%2Fsynthetic--data--generator-0f172a?style=flat-square) ![maturity: prototype](https://img.shields.io/badge/maturity-prototype-f59e0b?style=flat-square) ![priority: P2](https://img.shields.io/badge/priority-P2-a78bfa?style=flat-square) ![tier: atomic](https://img.shields.io/badge/tier-atomic-0d9488?style=flat-square) ![safety: S0](https://img.shields.io/badge/safety-S0-16a34a?style=flat-square) ![autonomy: L1](https://img.shields.io/badge/autonomy-L1-475569?style=flat-square) ![version: 0.1.0](https://img.shields.io/badge/version-0.1.0-64748b?style=flat-square)
+
+> Creates privacy-safe synthetic datasets that keep statistical properties.
+
 Creates privacy-safe synthetic datasets that keep statistical properties.
 
-## When to use / not use
-- **Use when:** You need single-purpose synthetic data generator (schema/sample → synthetic data).
-- **Do not use when:** Actions exceed declared MCP tools or bypass required human sign-off.
+| | |
+|---|---|
+| **Use it when** | You need single-purpose synthetic data generator (schema/sample → synthetic data). |
+| **Don't use it when** | Actions exceed declared MCP tools or bypass required human sign-off. |
+| **Pattern** | `augmented-llm` |
+| **Modality** | text |
+| **Runtime** | interactive · memory: `none` |
+| **Languages** | `en` |
+| **Tags** | `builders` `data` `synthetic` |
 
-## How it works
-1. Validates input against `schemas/input.schema.json`.
-2. Enforces `SafetyPolicy` (`S0`) and declared MCP permissions.
-3. Runs `data/synthetic-data-generator` logic locally (`mock` or `ollama`) or via any configured model provider.
-4. Validates output against `schemas/output.schema.json`.
+## 🚀 Quick start
 
-## Input & Output
-- Input schema: [`schemas/input.schema.json`](schemas/input.schema.json)
-- Output schema: [`schemas/output.schema.json`](schemas/output.schema.json)
-
-## Quick start
 ```bash
-afe add data/synthetic-data-generator
-afe test data/synthetic-data-generator
+afe add data/synthetic-data-generator          # copy this agent (and the agents it uses) into ./agents
+afe info data/synthetic-data-generator         # manifest, tools, safety level
+afe test data/synthetic-data-generator         # run its 10 eval cases
 ```
 
-## Composes with
-orchestration/router, orchestration/verifier
+```python
+from agents_for_everything import AgentRunner
 
-## Tools required
-None (pure computation / LLM reasoning)
+payload = {"input": ""}  # from evals/cases.jsonl
+result = AgentRunner().run("data/synthetic-data-generator", payload)
+print(result.output)
+```
 
-## Safety
-- Safety tier: `S0`
-- Side effects: `[]`
-- Approval gates: `[]`
-- Handles PII: `False`
+> No `afe` command yet? See [Install the CLI](../../../../README.md#-quick-start).
 
-## Evaluation
-Run `afe test data/synthetic-data-generator` to verify all 10 cases in `evals/cases.jsonl`.
+## 🧩 How it works
 
-## Limitations
+```mermaid
+flowchart LR
+    IN[/"Input"/] --> AG["Synthetic Data Generator"]
+    AG --> OUT[/"Output"/]
+```
+
+1. The input is validated against [`input.schema.json`](schemas/input.schema.json).
+2. The runtime enforces safety level **S0** and allows only the tools declared in [`tools.yaml`](tools.yaml).
+3. The agent follows its [system prompt](prompts/system.md) using the `augmented-llm` pattern.
+4. The output is validated against [`output.schema.json`](schemas/output.schema.json) before it is returned.
+
+## 📥 Input
+
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| `input` | `string` | ✅ | Primary task payload (schema/sample → synthetic data) |
+| `locale` | `string` |  | default `"en"` |
+| `context` | `object` |  |  |
+| `execute` | `boolean` |  | default `false` |
+
+## 📤 Output
+
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| `result` | `string` | ✅ |  |
+| `items` | array of `object` |  |  |
+| `confidence` | `number` |  |  |
+| `status` | `string` | ✅ |  |
+| `locale` | `string` |  |  |
+
+## 🔗 Composes with
+
+- **Uses:** _none (atomic building block)_
+- **Used by agents:** _none yet_
+
+## 🧰 Tools (MCP servers)
+
+_No tools: this agent works only on its input._
+
+## 🛡️ Safety and limits
+
+| | |
+|---|---|
+| **Safety level** | **S0** — Pure computation: No external access; schema validation only |
+| **Autonomy** | **L1** — human executes |
+| **Side effects** | none |
+| **Needs approval for** | nothing |
+| **Handles personal data** | no · retention: `none` |
+| **Run limits** | 10 steps · 60 s · $0.03 max |
+
+Full policy: [SECURITY.md](../../../../SECURITY.md).
+
+## 📏 Evaluation
+
+- **10 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
+- **Run:** `afe test data/synthetic-data-generator`
+
+## 🧠 Model requirements
+
+- **Needs:** `structured_output`
+- **Context:** 8,000+ tokens
+- **Tested with:** `frontier-large`, `frontier-small`, `open-weights-8b`
+- **Exports:** `python`, `typescript`, `mcp-server`, `a2a-card`, `agent-skill`, `subagent`
+
+## ⚠️ Limitations
+
 Offline mock mode uses deterministic structured heuristics; connect Ollama or a frontier model provider for open-ended reasoning.
 
-## Changelog
-See [CHANGELOG.md](CHANGELOG.md).
+## 📁 Files
+
+| File | Purpose |
+|---|---|
+| [`agent.yaml`](agent.yaml) | Manifest: the single source of truth |
+| [`prompts/system.md`](prompts/system.md) | Instructions the model follows |
+| [`schemas/`](schemas/input.schema.json) | Input and output contracts |
+| [`tools.yaml`](tools.yaml) | MCP servers and permissions |
+| [`evals/`](evals/eval.yaml) | Test cases, rubric, targets |
+| `impl/` | Python and TypeScript implementations |
+| [`examples/basic.md`](examples/basic.md) | Worked example |
+| [`CHANGELOG.md`](CHANGELOG.md) | Version history |
+
+## 🤝 Help improve this agent
+
+Add eval cases (especially non-English and edge cases), a live-model implementation, or a framework adapter. Start with the [contributing guide](../../../../CONTRIBUTING.md), or [open an issue](https://github.com/rupeshbharambe24/agents-for-everything/issues/new?title=%5Bdata/synthetic-data-generator%5D%20) about this agent.
+
+<!-- afe:end-generated -->

@@ -1,47 +1,131 @@
-# Audiobook Producer `audio/audiobook-producer`
+<!-- afe:begin-generated (scripts/build_readmes.py) — edit the manifest, not this block -->
 
-prototype · P2 · composite · safety S0 · autonomy L1
+[🏠 Agents for Everything](../../../../README.md) › [📖 Catalog](../../../../CATALOG.md) › [🎧 Audio and music](../README.md) › **Audiobook Producer**
 
-## What it does
+# 🎧 Audiobook Producer
+
+![id: audio/audiobook-producer](https://img.shields.io/badge/id-audio%2Faudiobook--producer-0f172a?style=flat-square) ![maturity: prototype](https://img.shields.io/badge/maturity-prototype-f59e0b?style=flat-square) ![priority: P2](https://img.shields.io/badge/priority-P2-a78bfa?style=flat-square) ![tier: composite](https://img.shields.io/badge/tier-composite-0d9488?style=flat-square) ![safety: S0](https://img.shields.io/badge/safety-S0-16a34a?style=flat-square) ![autonomy: L1](https://img.shields.io/badge/autonomy-L1-475569?style=flat-square) ![version: 0.1.0](https://img.shields.io/badge/version-0.1.0-64748b?style=flat-square)
+
+> Turns a manuscript into a multi-voice audiobook with chapter files.
+
 Turns a manuscript into a multi-voice audiobook with chapter files.
 
-## When to use / not use
-- **Use when:** You need single-purpose audiobook producer (manuscript → audio chapters).
-- **Do not use when:** Actions exceed declared MCP tools or bypass required human sign-off.
+| | |
+|---|---|
+| **Use it when** | You need single-purpose audiobook producer (manuscript → audio chapters). |
+| **Don't use it when** | Actions exceed declared MCP tools or bypass required human sign-off. |
+| **Pattern** | `orchestrator-workers` |
+| **Modality** | voice, text |
+| **Runtime** | interactive · memory: `session` |
+| **Languages** | `en` |
+| **Tags** | `audio` `audiobook` `perception` |
 
-## How it works
-1. Validates input against `schemas/input.schema.json`.
-2. Enforces `SafetyPolicy` (`S0`) and declared MCP permissions.
-3. Runs `audio/audiobook-producer` logic locally (`mock` or `ollama`) or via any configured model provider.
-4. Validates output against `schemas/output.schema.json`.
+## 🚀 Quick start
 
-## Input & Output
-- Input schema: [`schemas/input.schema.json`](schemas/input.schema.json)
-- Output schema: [`schemas/output.schema.json`](schemas/output.schema.json)
-
-## Quick start
 ```bash
-afe add audio/audiobook-producer
-afe test audio/audiobook-producer
+afe add audio/audiobook-producer          # copy this agent (and the agents it uses) into ./agents
+afe info audio/audiobook-producer         # manifest, tools, safety level
+afe test audio/audiobook-producer         # run its 10 eval cases
 ```
 
-## Composes with
-voice/text-to-speech, voice/speech-to-text
+```python
+from agents_for_everything import AgentRunner
 
-## Tools required
-None (pure computation / LLM reasoning)
+payload = {"input": ""}  # from evals/cases.jsonl
+result = AgentRunner().run("audio/audiobook-producer", payload)
+print(result.output)
+```
 
-## Safety
-- Safety tier: `S0`
-- Side effects: `[]`
-- Approval gates: `[]`
-- Handles PII: `False`
+> No `afe` command yet? See [Install the CLI](../../../../README.md#-quick-start).
 
-## Evaluation
-Run `afe test audio/audiobook-producer` to verify all 10 cases in `evals/cases.jsonl`.
+## 🧩 How it works
 
-## Limitations
+```mermaid
+flowchart LR
+    IN[/"Input"/] --> AG["Audiobook Producer"]
+    AG --> OUT[/"Output"/]
+    AG -. uses .-> D0["voice/text-to-speech"]
+    AG -. uses .-> D1["voice/speech-to-text"]
+```
+
+1. The input is validated against [`input.schema.json`](schemas/input.schema.json).
+2. The runtime enforces safety level **S0** and allows only the tools declared in [`tools.yaml`](tools.yaml).
+3. The agent follows its [system prompt](prompts/system.md) using the `orchestrator-workers` pattern, calling the agents it composes.
+4. The output is validated against [`output.schema.json`](schemas/output.schema.json) before it is returned.
+
+## 📥 Input
+
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| `input` | `string` | ✅ | Primary task payload (manuscript → audio chapters) |
+| `locale` | `string` |  | default `"en"` |
+| `context` | `object` |  |  |
+| `execute` | `boolean` |  | default `false` |
+
+## 📤 Output
+
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| `result` | `string` | ✅ |  |
+| `items` | array of `object` |  |  |
+| `confidence` | `number` |  |  |
+| `status` | `string` | ✅ |  |
+| `locale` | `string` |  |  |
+
+## 🔗 Composes with
+
+- **Uses:** [`voice/text-to-speech`](../../voice/text-to-speech/README.md), [`voice/speech-to-text`](../../voice/speech-to-text/README.md)
+- **Used by agents:** _none yet_
+
+## 🧰 Tools (MCP servers)
+
+_No tools: this agent works only on its input._
+
+## 🛡️ Safety and limits
+
+| | |
+|---|---|
+| **Safety level** | **S0** — Pure computation: No external access; schema validation only |
+| **Autonomy** | **L1** — human executes |
+| **Side effects** | none |
+| **Needs approval for** | nothing |
+| **Handles personal data** | no · retention: `none` |
+| **Run limits** | 10 steps · 60 s · $0.03 max |
+
+Full policy: [SECURITY.md](../../../../SECURITY.md).
+
+## 📏 Evaluation
+
+- **10 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
+- **Run:** `afe test audio/audiobook-producer`
+
+## 🧠 Model requirements
+
+- **Needs:** `structured_output`
+- **Context:** 8,000+ tokens
+- **Tested with:** `frontier-large`, `frontier-small`, `open-weights-8b`
+- **Exports:** `python`, `typescript`, `mcp-server`, `a2a-card`, `agent-skill`, `subagent`
+
+## ⚠️ Limitations
+
 Offline mock mode uses deterministic structured heuristics; connect Ollama or a frontier model provider for open-ended reasoning.
 
-## Changelog
-See [CHANGELOG.md](CHANGELOG.md).
+## 📁 Files
+
+| File | Purpose |
+|---|---|
+| [`agent.yaml`](agent.yaml) | Manifest: the single source of truth |
+| [`prompts/system.md`](prompts/system.md) | Instructions the model follows |
+| [`schemas/`](schemas/input.schema.json) | Input and output contracts |
+| [`tools.yaml`](tools.yaml) | MCP servers and permissions |
+| [`evals/`](evals/eval.yaml) | Test cases, rubric, targets |
+| `impl/` | Python and TypeScript implementations |
+| [`examples/basic.md`](examples/basic.md) | Worked example |
+| [`CHANGELOG.md`](CHANGELOG.md) | Version history |
+
+## 🤝 Help improve this agent
+
+Add eval cases (especially non-English and edge cases), a live-model implementation, or a framework adapter. Start with the [contributing guide](../../../../CONTRIBUTING.md), or [open an issue](https://github.com/rupeshbharambe24/agents-for-everything/issues/new?title=%5Baudio/audiobook-producer%5D%20) about this agent.
+
+<!-- afe:end-generated -->

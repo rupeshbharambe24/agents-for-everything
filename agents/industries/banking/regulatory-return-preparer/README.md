@@ -1,49 +1,139 @@
-# Regulatory Return Preparer `banking/regulatory-return-preparer`
+<!-- afe:begin-generated (scripts/build_readmes.py) — edit the manifest, not this block -->
 
-prototype · P2 · composite · safety S4 · autonomy L2
+[🏠 Agents for Everything](../../../../README.md) › [📖 Catalog](../../../../CATALOG.md) › [🏦 Banking and financial services](../README.md) › **Regulatory Return Preparer**
 
-## What it does
+# 🏦 Regulatory Return Preparer
+
+![id: banking/regulatory-return-preparer](https://img.shields.io/badge/id-banking%2Fregulatory--return--preparer-0f172a?style=flat-square) ![maturity: prototype](https://img.shields.io/badge/maturity-prototype-f59e0b?style=flat-square) ![priority: P2](https://img.shields.io/badge/priority-P2-a78bfa?style=flat-square) ![tier: composite](https://img.shields.io/badge/tier-composite-0d9488?style=flat-square) ![safety: S4](https://img.shields.io/badge/safety-S4-dc2626?style=flat-square) ![autonomy: L2](https://img.shields.io/badge/autonomy-L2-475569?style=flat-square) ![version: 0.1.0](https://img.shields.io/badge/version-0.1.0-64748b?style=flat-square)
+
+> Prepares and validates regulatory returns against taxonomy and validation rules (e.g. XBRL).
+
 Prepares and validates regulatory returns against taxonomy and validation rules (e.g. XBRL).
 
-> **Important Safety Notice:** Financial compliance assistant; high-stakes KYC, AML, lending, fraud, and dispute actions require human officer review and approval.
+| | |
+|---|---|
+| **Use it when** | You need single-purpose regulatory return preparer (source data → return + validation report). |
+| **Don't use it when** | Actions exceed declared MCP tools or bypass required human sign-off. |
+| **Pattern** | `orchestrator-workers` |
+| **Modality** | text |
+| **Runtime** | interactive · memory: `session` |
+| **Languages** | `en`, `hi`, `ta`, `te`, `bn`, `mr` |
+| **Tags** | `banking` `industries` `on-prem` `regulated` `regulatory` |
 
-## When to use / not use
-- **Use when:** You need single-purpose regulatory return preparer (source data → return + validation report).
-- **Do not use when:** Actions exceed declared MCP tools or bypass required human sign-off.
+## 🚀 Quick start
 
-## How it works
-1. Validates input against `schemas/input.schema.json`.
-2. Enforces `SafetyPolicy` (`S4`) and declared MCP permissions.
-3. Runs `banking/regulatory-return-preparer` logic locally (`mock` or `ollama`) or via any configured model provider.
-4. Validates output against `schemas/output.schema.json`.
-
-## Input & Output
-- Input schema: [`schemas/input.schema.json`](schemas/input.schema.json)
-- Output schema: [`schemas/output.schema.json`](schemas/output.schema.json)
-
-## Quick start
 ```bash
-afe add banking/regulatory-return-preparer
-afe test banking/regulatory-return-preparer
+afe add banking/regulatory-return-preparer          # copy this agent (and the agents it uses) into ./agents
+afe info banking/regulatory-return-preparer         # manifest, tools, safety level
+afe test banking/regulatory-return-preparer         # run its 10 eval cases
 ```
 
-## Composes with
-documents/document-parser, guardrails/pii-redactor
+```python
+from agents_for_everything import AgentRunner
 
-## Tools required
-afe/accounting, afe/git
+payload = {"input": ""}  # from evals/cases.jsonl
+result = AgentRunner().run("banking/regulatory-return-preparer", payload)
+print(result.output)
+```
 
-## Safety
-- Safety tier: `S4`
-- Side effects: `['high-stakes-action-requires-human-signoff']`
-- Approval gates: `['human_officer_signoff']`
-- Handles PII: `True`
+> No `afe` command yet? See [Install the CLI](../../../../README.md#-quick-start).
 
-## Evaluation
-Run `afe test banking/regulatory-return-preparer` to verify all 10 cases in `evals/cases.jsonl`.
+## 🧩 How it works
 
-## Limitations
+```mermaid
+flowchart LR
+    IN[/"Input"/] --> AG["Regulatory Return Preparer"]
+    AG --> OUT[/"Output"/]
+    AG -. uses .-> D0["documents/document-parser"]
+    AG -. uses .-> D1["guardrails/pii-redactor"]
+    AG -. tool .-> T0[("afe/accounting")]
+    AG -. tool .-> T1[("afe/git")]
+    AG -. needs approval .-> H0{{"human approval: human_officer_signoff"}}
+```
+
+1. The input is validated against [`input.schema.json`](schemas/input.schema.json).
+2. The runtime enforces safety level **S4** and allows only the tools declared in [`tools.yaml`](tools.yaml).
+3. The agent follows its [system prompt](prompts/system.md) using the `orchestrator-workers` pattern, calling the agents it composes.
+4. The output is validated against [`output.schema.json`](schemas/output.schema.json) before it is returned.
+
+## 📥 Input
+
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| `input` | `string` | ✅ | Primary task payload (source data → return + validation report) |
+| `locale` | `string` |  | default `"en"` |
+| `context` | `object` |  |  |
+| `execute` | `boolean` |  | default `false` |
+
+## 📤 Output
+
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| `result` | `string` | ✅ |  |
+| `items` | array of `object` |  |  |
+| `confidence` | `number` |  |  |
+| `status` | `string` | ✅ |  |
+| `locale` | `string` |  |  |
+| `disclaimer` | `string` |  |  |
+
+## 🔗 Composes with
+
+- **Uses:** [`documents/document-parser`](../../../action/documents/document-parser/README.md), [`guardrails/pii-redactor`](../../../core/guardrails/pii-redactor/README.md)
+- **Used by agents:** _none yet_
+
+## 🧰 Tools (MCP servers)
+
+| Server | Required | What it provides |
+|---|:---:|---|
+| [`afe/accounting`](../../../../mcp-servers/accounting/README.md) | ✅ | Read-only ledger inspection, reconciliation matching, and staged AP/expense drafts. |
+| [`afe/git`](../../../../mcp-servers/git/README.md) | ✅ | Inspect git diffs, branches, commits, and repository metadata safely. |
+
+## 🛡️ Safety and limits
+
+| | |
+|---|---|
+| **Safety level** | **S4** — High stakes: Mandatory human sign-off, immutable audit log, no autonomous mode |
+| **Autonomy** | **L2** — acts with per-action approval |
+| **Side effects** | `high-stakes-action-requires-human-signoff` |
+| **Needs approval for** | `human_officer_signoff` |
+| **Handles personal data** | yes · retention: `none` |
+| **Run limits** | 10 steps · 60 s · $0.03 max |
+| **Safety review** | [SAFETY_REVIEW.md](SAFETY_REVIEW.md) |
+
+Full policy: [SECURITY.md](../../../../SECURITY.md).
+
+## 📏 Evaluation
+
+- **10 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
+- **Run:** `afe test banking/regulatory-return-preparer`
+
+## 🧠 Model requirements
+
+- **Needs:** `structured_output`, `tool_use`
+- **Context:** 8,000+ tokens
+- **Tested with:** `frontier-large`, `frontier-small`, `open-weights-8b`, `open-weights-70b`, `local-onprem`
+- **Exports:** `python`, `typescript`, `mcp-server`, `a2a-card`, `agent-skill`, `subagent`
+
+## ⚠️ Limitations
+
 Offline mock mode uses deterministic structured heuristics; connect Ollama or a frontier model provider for open-ended reasoning.
 
-## Changelog
-See [CHANGELOG.md](CHANGELOG.md).
+## 📁 Files
+
+| File | Purpose |
+|---|---|
+| [`agent.yaml`](agent.yaml) | Manifest: the single source of truth |
+| [`prompts/system.md`](prompts/system.md) | Instructions the model follows |
+| [`schemas/`](schemas/input.schema.json) | Input and output contracts |
+| [`tools.yaml`](tools.yaml) | MCP servers and permissions |
+| [`evals/`](evals/eval.yaml) | Test cases, rubric, targets |
+| `impl/` | Python and TypeScript implementations |
+| [`examples/basic.md`](examples/basic.md) | Worked example |
+| [`CHANGELOG.md`](CHANGELOG.md) | Version history |
+
+## 🤝 Help improve this agent
+
+Add eval cases (especially non-English and edge cases), a live-model implementation, or a framework adapter. Start with the [contributing guide](../../../../CONTRIBUTING.md), or [open an issue](https://github.com/rupeshbharambe24/agents-for-everything/issues/new?title=%5Bbanking/regulatory-return-preparer%5D%20) about this agent.
+
+<!-- afe:end-generated -->

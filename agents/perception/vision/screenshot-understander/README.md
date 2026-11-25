@@ -1,46 +1,122 @@
-# Screen Parser `vision/screenshot-understander`
+<!-- afe:begin-generated (scripts/build_readmes.py) — edit the manifest, not this block -->
 
-beta · P0 · atomic · safety S1 · autonomy L1
+[🏠 Agents for Everything](../../../../README.md) › [📖 Catalog](../../../../CATALOG.md) › [👁️ Vision and images](../README.md) › **Screen Parser**
 
-## What it does
+# 👁️ Screen Parser
+
+![id: vision/screenshot-understander](https://img.shields.io/badge/id-vision%2Fscreenshot--understander-0f172a?style=flat-square) ![maturity: beta](https://img.shields.io/badge/maturity-beta-2563eb?style=flat-square) ![priority: P0](https://img.shields.io/badge/priority-P0-7c3aed?style=flat-square) ![tier: atomic](https://img.shields.io/badge/tier-atomic-0d9488?style=flat-square) ![safety: S1](https://img.shields.io/badge/safety-S1-65a30d?style=flat-square) ![autonomy: L1](https://img.shields.io/badge/autonomy-L1-475569?style=flat-square) ![version: 0.1.0](https://img.shields.io/badge/version-0.1.0-64748b?style=flat-square)
+
+> Converts UI screenshots into a structured tree of buttons, inputs, and coordinates.
+
 Gives desktop and browser agents a structured element map from screen pixels.
 
-## When to use / not use
-- **Use when:** GUI/computer-use automation where DOM/accessibility trees are unavailable.
-- **Do not use when:** APIs or semantic web DOMs where HTML suffices.
+| | |
+|---|---|
+| **Use it when** | GUI/computer-use automation where DOM/accessibility trees are unavailable. |
+| **Don't use it when** | APIs or semantic web DOMs where HTML suffices. |
+| **Pattern** | `augmented-llm` |
+| **Modality** | vision, gui |
+| **Runtime** | interactive · memory: `none` |
+| **Languages** | `en` |
+| **Tags** | `vision` `screenshot-understander` |
 
-## How it works
-1. Validates input payload against `schemas/input.schema.json`.
-2. Enforces `SafetyPolicy` (S1) and declared MCP server permissions.
-3. Executes `vision/screenshot-understander` task logic (deterministic local processing or live model execution).
-4. Validates output against `schemas/output.schema.json`.
+## 🚀 Quick start
 
-## Input & Output
-- Input schema: [`schemas/input.schema.json`](schemas/input.schema.json)
-- Output schema: [`schemas/output.schema.json`](schemas/output.schema.json)
-
-## Quick start
 ```bash
-afe add vision/screenshot-understander
-afe test vision/screenshot-understander
+afe add vision/screenshot-understander          # copy this agent (and the agents it uses) into ./agents
+afe info vision/screenshot-understander         # manifest, tools, safety level
+afe test vision/screenshot-understander         # run its 50 eval cases
 ```
 
-## Composes with
-orchestration/router, orchestration/verifier
+```python
+from agents_for_everything import AgentRunner
 
-## Tools required
-None
+payload = {"image": {"text_hint": "Name, Email, Submit 1"}}  # from evals/cases.jsonl
+result = AgentRunner().run("vision/screenshot-understander", payload)
+print(result.output)
+```
 
-## Safety
-- Safety tier: `S1`
-- Side effects: ['none']
-- Approval gates: ['none']
+> No `afe` command yet? See [Install the CLI](../../../../README.md#-quick-start).
 
-## Evaluation
-Run `afe test vision/screenshot-understander` to verify all 10 cases in `evals/cases.jsonl`.
+## 🧩 How it works
 
-## Limitations
+```mermaid
+flowchart LR
+    IN[/"Input"/] --> AG["Screen Parser"]
+    AG --> OUT[/"Output"/]
+```
+
+1. The input is validated against [`input.schema.json`](schemas/input.schema.json).
+2. The runtime enforces safety level **S1** and allows only the tools declared in [`tools.yaml`](tools.yaml).
+3. The agent follows its [system prompt](prompts/system.md) using the `augmented-llm` pattern.
+4. The output is validated against [`output.schema.json`](schemas/output.schema.json) before it is returned.
+
+## 📥 Input
+
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| `image` | [`ImageSource`](../../../../spec/types/ImageSource.schema.json) | ✅ |  |
+
+## 📤 Output
+
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| `elements` | array of `object` | ✅ |  |
+
+## 🔗 Composes with
+
+- **Uses:** _none (atomic building block)_
+- **Used by agents:** [`accessibility/accessibility-auditor`](../../accessibility/accessibility-auditor/README.md), [`accessibility/screen-narrator`](../../accessibility/screen-narrator/README.md), [`accessibility/sign-language-interpreter`](../../accessibility/sign-language-interpreter/README.md), [`browser/web-navigator`](../../../action/browser/web-navigator/README.md), [`computer-use/desktop-operator`](../../../action/computer-use/desktop-operator/README.md), [`computer-use/macro-recorder`](../../../action/computer-use/macro-recorder/README.md), [`computer-use/mobile-operator`](../../../action/computer-use/mobile-operator/README.md), [`computer-use/rpa-bridge`](../../../action/computer-use/rpa-bridge/README.md), [`video/lecture-to-notes`](../../video/lecture-to-notes/README.md), [`video/live-stream-monitor`](../../video/live-stream-monitor/README.md), [`video/video-editor`](../../video/video-editor/README.md), [`video/video-search`](../../video/video-search/README.md), [`vision/scene-safety-monitor`](../scene-safety-monitor/README.md)
+
+## 🧰 Tools (MCP servers)
+
+_No tools: this agent works only on its input._
+
+## 🛡️ Safety and limits
+
+| | |
+|---|---|
+| **Safety level** | **S1** — Reads data: Read-only tool scopes; untrusted input screened for prompt injection |
+| **Autonomy** | **L1** — human executes |
+| **Side effects** | none |
+| **Needs approval for** | nothing |
+| **Handles personal data** | no · retention: `none` |
+| **Run limits** | 10 steps · 60 s · $0.03 max |
+
+Full policy: [SECURITY.md](../../../../SECURITY.md).
+
+## 📏 Evaluation
+
+- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
+- **Run:** `afe test vision/screenshot-understander`
+
+## 🧠 Model requirements
+
+- **Needs:** `vision`, `structured_output`
+- **Context:** 8,000+ tokens
+- **Tested with:** `frontier-large`, `frontier-small`, `open-weights-8b`
+- **Exports:** `python`, `typescript`, `mcp-server`, `a2a-card`, `agent-skill`, `subagent`
+
+## ⚠️ Limitations
+
 Offline mock mode uses deterministic domain heuristics; connect a live model provider for open-ended reasoning.
 
-## Changelog
-See [CHANGELOG.md](CHANGELOG.md).
+## 📁 Files
+
+| File | Purpose |
+|---|---|
+| [`agent.yaml`](agent.yaml) | Manifest: the single source of truth |
+| [`prompts/system.md`](prompts/system.md) | Instructions the model follows |
+| [`schemas/`](schemas/input.schema.json) | Input and output contracts |
+| [`tools.yaml`](tools.yaml) | MCP servers and permissions |
+| [`evals/`](evals/eval.yaml) | Test cases, rubric, targets |
+| `impl/` | Python and TypeScript implementations |
+| [`examples/basic.md`](examples/basic.md) | Worked example |
+| [`CHANGELOG.md`](CHANGELOG.md) | Version history |
+
+## 🤝 Help improve this agent
+
+Add eval cases (especially non-English and edge cases), a live-model implementation, or a framework adapter. Start with the [contributing guide](../../../../CONTRIBUTING.md), or [open an issue](https://github.com/rupeshbharambe24/agents-for-everything/issues/new?title=%5Bvision/screenshot-understander%5D%20) about this agent.
+
+<!-- afe:end-generated -->
