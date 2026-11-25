@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: legal/redline-negotiator
+  name: "Redline Negotiator"
+  version: 0.1.0
+  family: business
+  category: legal
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["business", "legal", "on-prem", "redline", "regulated"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Proposes counter-redlines with reasons based on the playbook."
+  purpose: "Proposes counter-redlines with reasons based on the playbook."
+  pattern: orchestrator-workers
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["professional", "enterprise"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b", "open-weights-70b", "local-onprem"]
+  tools:
+    required: ["afe/documents"]
+    optional: []
+  uses_agents: ["legal/contract-analyzer", "text/summarizer"]
+  memory: session
+  safety:
+    level: S2
+    side_effects: ["draft-or-local-write"]
+    approval_required_for: ["confirm_write"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]
