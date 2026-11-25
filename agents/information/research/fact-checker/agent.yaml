@@ -7,7 +7,7 @@ metadata:
   family: information
   category: research
   tier: composite
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["research", "fact-checker"]
   maintainers: ["@rupeshbharambe24"]

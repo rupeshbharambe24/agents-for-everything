@@ -8,3 +8,43 @@
 {"id": "ae-08", "input": {"question": "Explain agent standard #8"}, "expected": {}, "expect_non_empty": ["answer", "citations"]}
 {"id": "ae-09", "input": {"question": "Explain agent standard #9"}, "expected": {}, "expect_non_empty": ["answer", "citations"]}
 {"id": "ae-10", "input": {"question": "Explain agent standard #10"}, "expected": {}, "expect_non_empty": ["answer", "citations"]}
+{"id": "ae-01-b1", "input": {"question": "Explain agent standard #1 batch 1"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "hi-IN"}
+{"id": "ae-02-b2", "input": {"question": "Explain agent standard #2 batch 2"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "mr-IN"}
+{"id": "ae-03-b3", "input": {"question": "Explain agent standard #3 batch 3"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "ta-IN"}
+{"id": "ae-04-b4", "input": {"question": "Explain agent standard #4 batch 4"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "te-IN"}
+{"id": "ae-05-b5", "input": {"question": "Explain agent standard #5 batch 5"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "bn-IN"}
+{"id": "ae-06-b6", "input": {"question": "Explain agent standard #6 batch 6"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "es"}
+{"id": "ae-07-b7", "input": {"question": "Explain agent standard #7 batch 7"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "fr"}
+{"id": "ae-08-b8", "input": {"question": "Explain agent standard #8 batch 8"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "en"}
+{"id": "ae-09-b9", "input": {"question": "Explain agent standard #9 batch 9"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "hi-IN"}
+{"id": "ae-10-b10", "input": {"question": "Explain agent standard #10 batch 10"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "mr-IN"}
+{"id": "ae-01-b11", "input": {"question": "Explain agent standard #1 batch 11"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "ta-IN"}
+{"id": "ae-02-b12", "input": {"question": "Explain agent standard #2 batch 12"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "te-IN"}
+{"id": "ae-03-b13", "input": {"question": "Explain agent standard #3 batch 13"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "bn-IN"}
+{"id": "ae-04-b14", "input": {"question": "Explain agent standard #4 batch 14"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "es"}
+{"id": "ae-05-b15", "input": {"question": "Explain agent standard #5 batch 15"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "fr"}
+{"id": "ae-06-b16", "input": {"question": "Explain agent standard #6 batch 16"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "en"}
+{"id": "ae-07-b17", "input": {"question": "Explain agent standard #7 batch 17"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "hi-IN"}
+{"id": "ae-08-b18", "input": {"question": "Explain agent standard #8 batch 18"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "mr-IN"}
+{"id": "ae-09-b19", "input": {"question": "Explain agent standard #9 batch 19"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "ta-IN"}
+{"id": "ae-10-b20", "input": {"question": "Explain agent standard #10 batch 20"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "te-IN"}
+{"id": "ae-01-b21", "input": {"question": "Explain agent standard #1 batch 21"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "bn-IN"}
+{"id": "ae-02-b22", "input": {"question": "Explain agent standard #2 batch 22"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "es"}
+{"id": "ae-03-b23", "input": {"question": "Explain agent standard #3 batch 23"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "fr"}
+{"id": "ae-04-b24", "input": {"question": "Explain agent standard #4 batch 24"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "en"}
+{"id": "ae-05-b25", "input": {"question": "Explain agent standard #5 batch 25"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "hi-IN"}
+{"id": "ae-06-b26", "input": {"question": "Explain agent standard #6 batch 26"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "mr-IN"}
+{"id": "ae-07-b27", "input": {"question": "Explain agent standard #7 batch 27"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "ta-IN"}
+{"id": "ae-08-b28", "input": {"question": "Explain agent standard #8 batch 28"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "te-IN"}
+{"id": "ae-09-b29", "input": {"question": "Explain agent standard #9 batch 29"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "bn-IN"}
+{"id": "ae-10-b30", "input": {"question": "Explain agent standard #10 batch 30"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "es"}
+{"id": "ae-01-b31", "input": {"question": "Explain agent standard #1 batch 31"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "fr"}
+{"id": "ae-02-b32", "input": {"question": "Explain agent standard #2 batch 32"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "en"}
+{"id": "ae-03-b33", "input": {"question": "Explain agent standard #3 batch 33"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "hi-IN"}
+{"id": "ae-04-b34", "input": {"question": "Explain agent standard #4 batch 34"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "mr-IN"}
+{"id": "ae-05-b35", "input": {"question": "Explain agent standard #5 batch 35"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "ta-IN"}
+{"id": "ae-06-b36", "input": {"question": "Explain agent standard #6 batch 36"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "te-IN"}
+{"id": "ae-07-b37", "input": {"question": "Explain agent standard #7 batch 37"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "bn-IN"}
+{"id": "ae-08-b38", "input": {"question": "Explain agent standard #8 batch 38"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "es"}
+{"id": "ae-09-b39", "input": {"question": "Explain agent standard #9 batch 39"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "fr"}
+{"id": "ae-10-b40", "input": {"question": "Explain agent standard #10 batch 40"}, "expected": {}, "expect_non_empty": ["answer", "citations"], "locale": "en"}

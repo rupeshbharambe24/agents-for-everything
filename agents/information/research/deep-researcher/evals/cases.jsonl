@@ -8,3 +8,43 @@
 {"id": "dr-08", "input": {"topic": "Agentic AI Architecture Trend 8", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
 {"id": "dr-09", "input": {"topic": "Agentic AI Architecture Trend 9", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
 {"id": "dr-10", "input": {"topic": "Agentic AI Architecture Trend 10", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-01-b1", "input": {"topic": "Agentic AI Architecture Trend 1 batch 1", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "hi-IN"}
+{"id": "dr-02-b2", "input": {"topic": "Agentic AI Architecture Trend 2 batch 2", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "mr-IN"}
+{"id": "dr-03-b3", "input": {"topic": "Agentic AI Architecture Trend 3 batch 3", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "ta-IN"}
+{"id": "dr-04-b4", "input": {"topic": "Agentic AI Architecture Trend 4 batch 4", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "te-IN"}
+{"id": "dr-05-b5", "input": {"topic": "Agentic AI Architecture Trend 5 batch 5", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "bn-IN"}
+{"id": "dr-06-b6", "input": {"topic": "Agentic AI Architecture Trend 6 batch 6", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "es"}
+{"id": "dr-07-b7", "input": {"topic": "Agentic AI Architecture Trend 7 batch 7", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "fr"}
+{"id": "dr-08-b8", "input": {"topic": "Agentic AI Architecture Trend 8 batch 8", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "en"}
+{"id": "dr-09-b9", "input": {"topic": "Agentic AI Architecture Trend 9 batch 9", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "hi-IN"}
+{"id": "dr-10-b10", "input": {"topic": "Agentic AI Architecture Trend 10 batch 10", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "mr-IN"}
+{"id": "dr-01-b11", "input": {"topic": "Agentic AI Architecture Trend 1 batch 11", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "ta-IN"}
+{"id": "dr-02-b12", "input": {"topic": "Agentic AI Architecture Trend 2 batch 12", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "te-IN"}
+{"id": "dr-03-b13", "input": {"topic": "Agentic AI Architecture Trend 3 batch 13", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "bn-IN"}
+{"id": "dr-04-b14", "input": {"topic": "Agentic AI Architecture Trend 4 batch 14", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "es"}
+{"id": "dr-05-b15", "input": {"topic": "Agentic AI Architecture Trend 5 batch 15", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "fr"}
+{"id": "dr-06-b16", "input": {"topic": "Agentic AI Architecture Trend 6 batch 16", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "en"}
+{"id": "dr-07-b17", "input": {"topic": "Agentic AI Architecture Trend 7 batch 17", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "hi-IN"}
+{"id": "dr-08-b18", "input": {"topic": "Agentic AI Architecture Trend 8 batch 18", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "mr-IN"}
+{"id": "dr-09-b19", "input": {"topic": "Agentic AI Architecture Trend 9 batch 19", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "ta-IN"}
+{"id": "dr-10-b20", "input": {"topic": "Agentic AI Architecture Trend 10 batch 20", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "te-IN"}
+{"id": "dr-01-b21", "input": {"topic": "Agentic AI Architecture Trend 1 batch 21", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "bn-IN"}
+{"id": "dr-02-b22", "input": {"topic": "Agentic AI Architecture Trend 2 batch 22", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "es"}
+{"id": "dr-03-b23", "input": {"topic": "Agentic AI Architecture Trend 3 batch 23", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "fr"}
+{"id": "dr-04-b24", "input": {"topic": "Agentic AI Architecture Trend 4 batch 24", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "en"}
+{"id": "dr-05-b25", "input": {"topic": "Agentic AI Architecture Trend 5 batch 25", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "hi-IN"}
+{"id": "dr-06-b26", "input": {"topic": "Agentic AI Architecture Trend 6 batch 26", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "mr-IN"}
+{"id": "dr-07-b27", "input": {"topic": "Agentic AI Architecture Trend 7 batch 27", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "ta-IN"}
+{"id": "dr-08-b28", "input": {"topic": "Agentic AI Architecture Trend 8 batch 28", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "te-IN"}
+{"id": "dr-09-b29", "input": {"topic": "Agentic AI Architecture Trend 9 batch 29", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "bn-IN"}
+{"id": "dr-10-b30", "input": {"topic": "Agentic AI Architecture Trend 10 batch 30", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "es"}
+{"id": "dr-01-b31", "input": {"topic": "Agentic AI Architecture Trend 1 batch 31", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "fr"}
+{"id": "dr-02-b32", "input": {"topic": "Agentic AI Architecture Trend 2 batch 32", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "en"}
+{"id": "dr-03-b33", "input": {"topic": "Agentic AI Architecture Trend 3 batch 33", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "hi-IN"}
+{"id": "dr-04-b34", "input": {"topic": "Agentic AI Architecture Trend 4 batch 34", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "mr-IN"}
+{"id": "dr-05-b35", "input": {"topic": "Agentic AI Architecture Trend 5 batch 35", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "ta-IN"}
+{"id": "dr-06-b36", "input": {"topic": "Agentic AI Architecture Trend 6 batch 36", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "te-IN"}
+{"id": "dr-07-b37", "input": {"topic": "Agentic AI Architecture Trend 7 batch 37", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "bn-IN"}
+{"id": "dr-08-b38", "input": {"topic": "Agentic AI Architecture Trend 8 batch 38", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "es"}
+{"id": "dr-09-b39", "input": {"topic": "Agentic AI Architecture Trend 9 batch 39", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "fr"}
+{"id": "dr-10-b40", "input": {"topic": "Agentic AI Architecture Trend 10 batch 40", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"], "locale": "en"}

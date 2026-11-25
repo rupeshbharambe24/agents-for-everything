@@ -1,6 +1,6 @@
 # Text Classifier `text/classifier`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Categorizes tickets, emails, clauses, or intents into exact predefined labels.

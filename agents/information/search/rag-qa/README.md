@@ -1,6 +1,6 @@
 # Document Q&A `search/rag-qa`
 
-prototype · P0 · composite · safety S1 · autonomy L1
+beta · P0 · composite · safety S1 · autonomy L1
 
 ## What it does
 Composes semantic search to synthesize grounded answers with explicit citations.

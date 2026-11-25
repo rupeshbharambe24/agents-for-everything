@@ -1,6 +1,6 @@
 # Report Writer `research/report-writer`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Formats verified evidence and citations into readable multi-section reports.

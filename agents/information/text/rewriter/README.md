@@ -1,6 +1,6 @@
 # Rewriter `text/rewriter`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Rewrites drafts into executive, friendly, concise, or plain-language variants.

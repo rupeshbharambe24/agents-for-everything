@@ -1,6 +1,6 @@
 # Answer Engine `search/answer-engine`
 
-prototype · P0 · composite · safety S1 · autonomy L1
+beta · P0 · composite · safety S1 · autonomy L1
 
 ## What it does
 Combines web-search and source-reader into concise Perplexity-style cited answers.

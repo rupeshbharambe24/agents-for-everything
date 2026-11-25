@@ -1,6 +1,6 @@
 # Translator `text/translator`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Translates text cleanly while preserving glossary terms and placeholders.

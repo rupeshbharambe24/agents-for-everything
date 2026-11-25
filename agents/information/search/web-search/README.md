@@ -1,6 +1,6 @@
 # Web Searcher `search/web-search`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Provides clean deduplicated SearchResult items for answer engines and researchers.

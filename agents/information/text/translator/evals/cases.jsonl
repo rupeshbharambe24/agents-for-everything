@@ -8,3 +8,43 @@
 {"id": "tr-08", "input": {"text": "Download receipt", "target_language": "bn"}, "expected": {"target_language": "bn"}, "expect_non_empty": ["translated_text"]}
 {"id": "tr-09", "input": {"text": "Open dashboard", "target_language": "de"}, "expected": {"target_language": "de"}, "expect_non_empty": ["translated_text"]}
 {"id": "tr-10", "input": {"text": "Save draft", "target_language": "ja"}, "expected": {"target_language": "ja"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-01-b1", "input": {"text": "Hello [case 1]", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"], "locale": "hi-IN"}
+{"id": "tr-02-b2", "input": {"text": "Thank you [case 2]", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"], "locale": "mr-IN"}
+{"id": "tr-03-b3", "input": {"text": "Hello [case 3]", "target_language": "es"}, "expected": {"target_language": "es"}, "expect_non_empty": ["translated_text"], "locale": "ta-IN"}
+{"id": "tr-04-b4", "input": {"text": "Hello [case 4]", "target_language": "fr"}, "expected": {"target_language": "fr"}, "expect_non_empty": ["translated_text"], "locale": "te-IN"}
+{"id": "tr-05-b5", "input": {"text": "Confirm submission [case 5]", "target_language": "mr"}, "expected": {"target_language": "mr"}, "expect_non_empty": ["translated_text"], "locale": "bn-IN"}
+{"id": "tr-06-b6", "input": {"text": "Enter mobile number [case 6]", "target_language": "ta"}, "expected": {"target_language": "ta"}, "expect_non_empty": ["translated_text"], "locale": "es"}
+{"id": "tr-07-b7", "input": {"text": "Check status [case 7]", "target_language": "te"}, "expected": {"target_language": "te"}, "expect_non_empty": ["translated_text"], "locale": "fr"}
+{"id": "tr-08-b8", "input": {"text": "Download receipt [case 8]", "target_language": "bn"}, "expected": {"target_language": "bn"}, "expect_non_empty": ["translated_text"], "locale": "en"}
+{"id": "tr-09-b9", "input": {"text": "Open dashboard [case 9]", "target_language": "de"}, "expected": {"target_language": "de"}, "expect_non_empty": ["translated_text"], "locale": "hi-IN"}
+{"id": "tr-10-b10", "input": {"text": "Save draft [case 10]", "target_language": "ja"}, "expected": {"target_language": "ja"}, "expect_non_empty": ["translated_text"], "locale": "mr-IN"}
+{"id": "tr-01-b11", "input": {"text": "Hello [case 11]", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"], "locale": "ta-IN"}
+{"id": "tr-02-b12", "input": {"text": "Thank you [case 12]", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"], "locale": "te-IN"}
+{"id": "tr-03-b13", "input": {"text": "Hello [case 13]", "target_language": "es"}, "expected": {"target_language": "es"}, "expect_non_empty": ["translated_text"], "locale": "bn-IN"}
+{"id": "tr-04-b14", "input": {"text": "Hello [case 14]", "target_language": "fr"}, "expected": {"target_language": "fr"}, "expect_non_empty": ["translated_text"], "locale": "es"}
+{"id": "tr-05-b15", "input": {"text": "Confirm submission [case 15]", "target_language": "mr"}, "expected": {"target_language": "mr"}, "expect_non_empty": ["translated_text"], "locale": "fr"}
+{"id": "tr-06-b16", "input": {"text": "Enter mobile number [case 16]", "target_language": "ta"}, "expected": {"target_language": "ta"}, "expect_non_empty": ["translated_text"], "locale": "en"}
+{"id": "tr-07-b17", "input": {"text": "Check status [case 17]", "target_language": "te"}, "expected": {"target_language": "te"}, "expect_non_empty": ["translated_text"], "locale": "hi-IN"}
+{"id": "tr-08-b18", "input": {"text": "Download receipt [case 18]", "target_language": "bn"}, "expected": {"target_language": "bn"}, "expect_non_empty": ["translated_text"], "locale": "mr-IN"}
+{"id": "tr-09-b19", "input": {"text": "Open dashboard [case 19]", "target_language": "de"}, "expected": {"target_language": "de"}, "expect_non_empty": ["translated_text"], "locale": "ta-IN"}
+{"id": "tr-10-b20", "input": {"text": "Save draft [case 20]", "target_language": "ja"}, "expected": {"target_language": "ja"}, "expect_non_empty": ["translated_text"], "locale": "te-IN"}
+{"id": "tr-01-b21", "input": {"text": "Hello [case 21]", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"], "locale": "bn-IN"}
+{"id": "tr-02-b22", "input": {"text": "Thank you [case 22]", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"], "locale": "es"}
+{"id": "tr-03-b23", "input": {"text": "Hello [case 23]", "target_language": "es"}, "expected": {"target_language": "es"}, "expect_non_empty": ["translated_text"], "locale": "fr"}
+{"id": "tr-04-b24", "input": {"text": "Hello [case 24]", "target_language": "fr"}, "expected": {"target_language": "fr"}, "expect_non_empty": ["translated_text"], "locale": "en"}
+{"id": "tr-05-b25", "input": {"text": "Confirm submission [case 25]", "target_language": "mr"}, "expected": {"target_language": "mr"}, "expect_non_empty": ["translated_text"], "locale": "hi-IN"}
+{"id": "tr-06-b26", "input": {"text": "Enter mobile number [case 26]", "target_language": "ta"}, "expected": {"target_language": "ta"}, "expect_non_empty": ["translated_text"], "locale": "mr-IN"}
+{"id": "tr-07-b27", "input": {"text": "Check status [case 27]", "target_language": "te"}, "expected": {"target_language": "te"}, "expect_non_empty": ["translated_text"], "locale": "ta-IN"}
+{"id": "tr-08-b28", "input": {"text": "Download receipt [case 28]", "target_language": "bn"}, "expected": {"target_language": "bn"}, "expect_non_empty": ["translated_text"], "locale": "te-IN"}
+{"id": "tr-09-b29", "input": {"text": "Open dashboard [case 29]", "target_language": "de"}, "expected": {"target_language": "de"}, "expect_non_empty": ["translated_text"], "locale": "bn-IN"}
+{"id": "tr-10-b30", "input": {"text": "Save draft [case 30]", "target_language": "ja"}, "expected": {"target_language": "ja"}, "expect_non_empty": ["translated_text"], "locale": "es"}
+{"id": "tr-01-b31", "input": {"text": "Hello [case 31]", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"], "locale": "fr"}
+{"id": "tr-02-b32", "input": {"text": "Thank you [case 32]", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"], "locale": "en"}
+{"id": "tr-03-b33", "input": {"text": "Hello [case 33]", "target_language": "es"}, "expected": {"target_language": "es"}, "expect_non_empty": ["translated_text"], "locale": "hi-IN"}
+{"id": "tr-04-b34", "input": {"text": "Hello [case 34]", "target_language": "fr"}, "expected": {"target_language": "fr"}, "expect_non_empty": ["translated_text"], "locale": "mr-IN"}
+{"id": "tr-05-b35", "input": {"text": "Confirm submission [case 35]", "target_language": "mr"}, "expected": {"target_language": "mr"}, "expect_non_empty": ["translated_text"], "locale": "ta-IN"}
+{"id": "tr-06-b36", "input": {"text": "Enter mobile number [case 36]", "target_language": "ta"}, "expected": {"target_language": "ta"}, "expect_non_empty": ["translated_text"], "locale": "te-IN"}
+{"id": "tr-07-b37", "input": {"text": "Check status [case 37]", "target_language": "te"}, "expected": {"target_language": "te"}, "expect_non_empty": ["translated_text"], "locale": "bn-IN"}
+{"id": "tr-08-b38", "input": {"text": "Download receipt [case 38]", "target_language": "bn"}, "expected": {"target_language": "bn"}, "expect_non_empty": ["translated_text"], "locale": "es"}
+{"id": "tr-09-b39", "input": {"text": "Open dashboard [case 39]", "target_language": "de"}, "expected": {"target_language": "de"}, "expect_non_empty": ["translated_text"], "locale": "fr"}
+{"id": "tr-10-b40", "input": {"text": "Save draft [case 40]", "target_language": "ja"}, "expected": {"target_language": "ja"}, "expect_non_empty": ["translated_text"], "locale": "en"}

@@ -8,3 +8,43 @@
 {"id": "pr-08", "input": {"text": "Keep   clean   logs."}, "expected": {"clean_text": "Keep clean logs."}}
 {"id": "pr-09", "input": {"text": "No typos here."}, "expected": {"corrections": []}}
 {"id": "pr-10", "input": {"text": "seperate teh items"}, "expected": {"clean_text": "separate the items"}}
+{"id": "pr-01-b1", "input": {"text": "We recieve teh package."}, "expected": {"clean_text": "We receive the package."}, "locale": "hi-IN"}
+{"id": "pr-02-b2", "input": {"text": "Two   spaces  here."}, "expected": {"clean_text": "Two spaces here."}, "locale": "mr-IN"}
+{"id": "pr-03-b3", "input": {"text": "It occured in seperate files."}, "expected": {"clean_text": "It occurred in separate files."}, "locale": "ta-IN"}
+{"id": "pr-04-b4", "input": {"text": "Already clean sentence."}, "expected": {"clean_text": "Already clean sentence.", "corrections": []}, "locale": "te-IN"}
+{"id": "pr-05-b5", "input": {"text": "teh quick brown fox"}, "expected": {"clean_text": "the quick brown fox"}, "locale": "bn-IN"}
+{"id": "pr-06-b6", "input": {"text": "Please recieve receipt."}, "expected": {"clean_text": "Please receive receipt."}, "locale": "es"}
+{"id": "pr-07-b7", "input": {"text": "  Trim ends  "}, "expected": {"clean_text": "Trim ends"}, "locale": "fr"}
+{"id": "pr-08-b8", "input": {"text": "Keep   clean   logs."}, "expected": {"clean_text": "Keep clean logs."}, "locale": "en"}
+{"id": "pr-09-b9", "input": {"text": "No typos here."}, "expected": {"corrections": []}, "locale": "hi-IN"}
+{"id": "pr-10-b10", "input": {"text": "seperate teh items"}, "expected": {"clean_text": "separate the items"}, "locale": "mr-IN"}
+{"id": "pr-01-b11", "input": {"text": "We recieve teh package."}, "expected": {"clean_text": "We receive the package."}, "locale": "ta-IN"}
+{"id": "pr-02-b12", "input": {"text": "Two   spaces  here."}, "expected": {"clean_text": "Two spaces here."}, "locale": "te-IN"}
+{"id": "pr-03-b13", "input": {"text": "It occured in seperate files."}, "expected": {"clean_text": "It occurred in separate files."}, "locale": "bn-IN"}
+{"id": "pr-04-b14", "input": {"text": "Already clean sentence."}, "expected": {"clean_text": "Already clean sentence.", "corrections": []}, "locale": "es"}
+{"id": "pr-05-b15", "input": {"text": "teh quick brown fox"}, "expected": {"clean_text": "the quick brown fox"}, "locale": "fr"}
+{"id": "pr-06-b16", "input": {"text": "Please recieve receipt."}, "expected": {"clean_text": "Please receive receipt."}, "locale": "en"}
+{"id": "pr-07-b17", "input": {"text": "  Trim ends  "}, "expected": {"clean_text": "Trim ends"}, "locale": "hi-IN"}
+{"id": "pr-08-b18", "input": {"text": "Keep   clean   logs."}, "expected": {"clean_text": "Keep clean logs."}, "locale": "mr-IN"}
+{"id": "pr-09-b19", "input": {"text": "No typos here."}, "expected": {"corrections": []}, "locale": "ta-IN"}
+{"id": "pr-10-b20", "input": {"text": "seperate teh items"}, "expected": {"clean_text": "separate the items"}, "locale": "te-IN"}
+{"id": "pr-01-b21", "input": {"text": "We recieve teh package."}, "expected": {"clean_text": "We receive the package."}, "locale": "bn-IN"}
+{"id": "pr-02-b22", "input": {"text": "Two   spaces  here."}, "expected": {"clean_text": "Two spaces here."}, "locale": "es"}
+{"id": "pr-03-b23", "input": {"text": "It occured in seperate files."}, "expected": {"clean_text": "It occurred in separate files."}, "locale": "fr"}
+{"id": "pr-04-b24", "input": {"text": "Already clean sentence."}, "expected": {"clean_text": "Already clean sentence.", "corrections": []}, "locale": "en"}
+{"id": "pr-05-b25", "input": {"text": "teh quick brown fox"}, "expected": {"clean_text": "the quick brown fox"}, "locale": "hi-IN"}
+{"id": "pr-06-b26", "input": {"text": "Please recieve receipt."}, "expected": {"clean_text": "Please receive receipt."}, "locale": "mr-IN"}
+{"id": "pr-07-b27", "input": {"text": "  Trim ends  "}, "expected": {"clean_text": "Trim ends"}, "locale": "ta-IN"}
+{"id": "pr-08-b28", "input": {"text": "Keep   clean   logs."}, "expected": {"clean_text": "Keep clean logs."}, "locale": "te-IN"}
+{"id": "pr-09-b29", "input": {"text": "No typos here."}, "expected": {"corrections": []}, "locale": "bn-IN"}
+{"id": "pr-10-b30", "input": {"text": "seperate teh items"}, "expected": {"clean_text": "separate the items"}, "locale": "es"}
+{"id": "pr-01-b31", "input": {"text": "We recieve teh package."}, "expected": {"clean_text": "We receive the package."}, "locale": "fr"}
+{"id": "pr-02-b32", "input": {"text": "Two   spaces  here."}, "expected": {"clean_text": "Two spaces here."}, "locale": "en"}
+{"id": "pr-03-b33", "input": {"text": "It occured in seperate files."}, "expected": {"clean_text": "It occurred in separate files."}, "locale": "hi-IN"}
+{"id": "pr-04-b34", "input": {"text": "Already clean sentence."}, "expected": {"clean_text": "Already clean sentence.", "corrections": []}, "locale": "mr-IN"}
+{"id": "pr-05-b35", "input": {"text": "teh quick brown fox"}, "expected": {"clean_text": "the quick brown fox"}, "locale": "ta-IN"}
+{"id": "pr-06-b36", "input": {"text": "Please recieve receipt."}, "expected": {"clean_text": "Please receive receipt."}, "locale": "te-IN"}
+{"id": "pr-07-b37", "input": {"text": "  Trim ends  "}, "expected": {"clean_text": "Trim ends"}, "locale": "bn-IN"}
+{"id": "pr-08-b38", "input": {"text": "Keep   clean   logs."}, "expected": {"clean_text": "Keep clean logs."}, "locale": "es"}
+{"id": "pr-09-b39", "input": {"text": "No typos here."}, "expected": {"corrections": []}, "locale": "fr"}
+{"id": "pr-10-b40", "input": {"text": "seperate teh items"}, "expected": {"clean_text": "separate the items"}, "locale": "en"}

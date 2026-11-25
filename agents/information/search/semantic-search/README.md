@@ -1,6 +1,6 @@
 # Hybrid Searcher `search/semantic-search`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Retrieves the highest-scoring document chunks matching a user query.

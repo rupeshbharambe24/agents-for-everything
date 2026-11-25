@@ -8,3 +8,43 @@
 {"id": "ws-08", "input": {"query": "MCP specification v8"}, "expected": {}, "expect_non_empty": ["results"]}
 {"id": "ws-09", "input": {"query": "MCP specification v9"}, "expected": {}, "expect_non_empty": ["results"]}
 {"id": "ws-10", "input": {"query": "MCP specification v10"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-01-b1", "input": {"query": "MCP specification v1 batch 1"}, "expected": {}, "expect_non_empty": ["results"], "locale": "hi-IN"}
+{"id": "ws-02-b2", "input": {"query": "MCP specification v2 batch 2"}, "expected": {}, "expect_non_empty": ["results"], "locale": "mr-IN"}
+{"id": "ws-03-b3", "input": {"query": "MCP specification v3 batch 3"}, "expected": {}, "expect_non_empty": ["results"], "locale": "ta-IN"}
+{"id": "ws-04-b4", "input": {"query": "MCP specification v4 batch 4"}, "expected": {}, "expect_non_empty": ["results"], "locale": "te-IN"}
+{"id": "ws-05-b5", "input": {"query": "MCP specification v5 batch 5"}, "expected": {}, "expect_non_empty": ["results"], "locale": "bn-IN"}
+{"id": "ws-06-b6", "input": {"query": "MCP specification v6 batch 6"}, "expected": {}, "expect_non_empty": ["results"], "locale": "es"}
+{"id": "ws-07-b7", "input": {"query": "MCP specification v7 batch 7"}, "expected": {}, "expect_non_empty": ["results"], "locale": "fr"}
+{"id": "ws-08-b8", "input": {"query": "MCP specification v8 batch 8"}, "expected": {}, "expect_non_empty": ["results"], "locale": "en"}
+{"id": "ws-09-b9", "input": {"query": "MCP specification v9 batch 9"}, "expected": {}, "expect_non_empty": ["results"], "locale": "hi-IN"}
+{"id": "ws-10-b10", "input": {"query": "MCP specification v10 batch 10"}, "expected": {}, "expect_non_empty": ["results"], "locale": "mr-IN"}
+{"id": "ws-01-b11", "input": {"query": "MCP specification v1 batch 11"}, "expected": {}, "expect_non_empty": ["results"], "locale": "ta-IN"}
+{"id": "ws-02-b12", "input": {"query": "MCP specification v2 batch 12"}, "expected": {}, "expect_non_empty": ["results"], "locale": "te-IN"}
+{"id": "ws-03-b13", "input": {"query": "MCP specification v3 batch 13"}, "expected": {}, "expect_non_empty": ["results"], "locale": "bn-IN"}
+{"id": "ws-04-b14", "input": {"query": "MCP specification v4 batch 14"}, "expected": {}, "expect_non_empty": ["results"], "locale": "es"}
+{"id": "ws-05-b15", "input": {"query": "MCP specification v5 batch 15"}, "expected": {}, "expect_non_empty": ["results"], "locale": "fr"}
+{"id": "ws-06-b16", "input": {"query": "MCP specification v6 batch 16"}, "expected": {}, "expect_non_empty": ["results"], "locale": "en"}
+{"id": "ws-07-b17", "input": {"query": "MCP specification v7 batch 17"}, "expected": {}, "expect_non_empty": ["results"], "locale": "hi-IN"}
+{"id": "ws-08-b18", "input": {"query": "MCP specification v8 batch 18"}, "expected": {}, "expect_non_empty": ["results"], "locale": "mr-IN"}
+{"id": "ws-09-b19", "input": {"query": "MCP specification v9 batch 19"}, "expected": {}, "expect_non_empty": ["results"], "locale": "ta-IN"}
+{"id": "ws-10-b20", "input": {"query": "MCP specification v10 batch 20"}, "expected": {}, "expect_non_empty": ["results"], "locale": "te-IN"}
+{"id": "ws-01-b21", "input": {"query": "MCP specification v1 batch 21"}, "expected": {}, "expect_non_empty": ["results"], "locale": "bn-IN"}
+{"id": "ws-02-b22", "input": {"query": "MCP specification v2 batch 22"}, "expected": {}, "expect_non_empty": ["results"], "locale": "es"}
+{"id": "ws-03-b23", "input": {"query": "MCP specification v3 batch 23"}, "expected": {}, "expect_non_empty": ["results"], "locale": "fr"}
+{"id": "ws-04-b24", "input": {"query": "MCP specification v4 batch 24"}, "expected": {}, "expect_non_empty": ["results"], "locale": "en"}
+{"id": "ws-05-b25", "input": {"query": "MCP specification v5 batch 25"}, "expected": {}, "expect_non_empty": ["results"], "locale": "hi-IN"}
+{"id": "ws-06-b26", "input": {"query": "MCP specification v6 batch 26"}, "expected": {}, "expect_non_empty": ["results"], "locale": "mr-IN"}
+{"id": "ws-07-b27", "input": {"query": "MCP specification v7 batch 27"}, "expected": {}, "expect_non_empty": ["results"], "locale": "ta-IN"}
+{"id": "ws-08-b28", "input": {"query": "MCP specification v8 batch 28"}, "expected": {}, "expect_non_empty": ["results"], "locale": "te-IN"}
+{"id": "ws-09-b29", "input": {"query": "MCP specification v9 batch 29"}, "expected": {}, "expect_non_empty": ["results"], "locale": "bn-IN"}
+{"id": "ws-10-b30", "input": {"query": "MCP specification v10 batch 30"}, "expected": {}, "expect_non_empty": ["results"], "locale": "es"}
+{"id": "ws-01-b31", "input": {"query": "MCP specification v1 batch 31"}, "expected": {}, "expect_non_empty": ["results"], "locale": "fr"}
+{"id": "ws-02-b32", "input": {"query": "MCP specification v2 batch 32"}, "expected": {}, "expect_non_empty": ["results"], "locale": "en"}
+{"id": "ws-03-b33", "input": {"query": "MCP specification v3 batch 33"}, "expected": {}, "expect_non_empty": ["results"], "locale": "hi-IN"}
+{"id": "ws-04-b34", "input": {"query": "MCP specification v4 batch 34"}, "expected": {}, "expect_non_empty": ["results"], "locale": "mr-IN"}
+{"id": "ws-05-b35", "input": {"query": "MCP specification v5 batch 35"}, "expected": {}, "expect_non_empty": ["results"], "locale": "ta-IN"}
+{"id": "ws-06-b36", "input": {"query": "MCP specification v6 batch 36"}, "expected": {}, "expect_non_empty": ["results"], "locale": "te-IN"}
+{"id": "ws-07-b37", "input": {"query": "MCP specification v7 batch 37"}, "expected": {}, "expect_non_empty": ["results"], "locale": "bn-IN"}
+{"id": "ws-08-b38", "input": {"query": "MCP specification v8 batch 38"}, "expected": {}, "expect_non_empty": ["results"], "locale": "es"}
+{"id": "ws-09-b39", "input": {"query": "MCP specification v9 batch 39"}, "expected": {}, "expect_non_empty": ["results"], "locale": "fr"}
+{"id": "ws-10-b40", "input": {"query": "MCP specification v10 batch 40"}, "expected": {}, "expect_non_empty": ["results"], "locale": "en"}

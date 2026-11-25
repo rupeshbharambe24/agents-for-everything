@@ -1,6 +1,6 @@
 # Entity Extractor `text/entity-extractor`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Identifies structured entity mentions for indexing, redaction, or CRM enrichment.

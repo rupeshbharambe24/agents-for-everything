@@ -1,6 +1,6 @@
 # Deep Researcher `research/deep-researcher`
 
-prototype · P0 · composite · safety S1 · autonomy L2
+beta · P0 · composite · safety S1 · autonomy L2
 
 ## What it does
 End-to-end composite research orchestrator combining search, reading, fact-checking, and report writing.

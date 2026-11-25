@@ -1,6 +1,6 @@
 # Source Reader `research/source-reader`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Produces structured research notes with exact quotes from a single source.

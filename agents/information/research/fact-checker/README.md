@@ -1,6 +1,6 @@
 # Fact Checker `research/fact-checker`
 
-prototype · P0 · composite · safety S1 · autonomy L1
+beta · P0 · composite · safety S1 · autonomy L1
 
 ## What it does
 Checks factual accuracy of claims and attaches supporting citations.

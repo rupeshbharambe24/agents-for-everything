@@ -1,0 +1,7 @@
+{
+  "name": "@afe-agents/text-entity-extractor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./agent.ts"
+}

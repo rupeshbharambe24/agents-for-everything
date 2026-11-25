@@ -8,3 +8,43 @@
 {"id": "rw-08", "input": {"text": "Draft message 8 for update.", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"]}
 {"id": "rw-09", "input": {"text": "Draft message 9 for update.", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"]}
 {"id": "rw-10", "input": {"text": "Draft message 10 for update.", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-01-b1", "input": {"text": "Draft message 1 for update. [case 1]", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"], "locale": "hi-IN"}
+{"id": "rw-02-b2", "input": {"text": "Draft message 2 for update. [case 2]", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"], "locale": "mr-IN"}
+{"id": "rw-03-b3", "input": {"text": "Draft message 3 for update. [case 3]", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"], "locale": "ta-IN"}
+{"id": "rw-04-b4", "input": {"text": "Draft message 4 for update. [case 4]", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"], "locale": "te-IN"}
+{"id": "rw-05-b5", "input": {"text": "Draft message 5 for update. [case 5]", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"], "locale": "bn-IN"}
+{"id": "rw-06-b6", "input": {"text": "Draft message 6 for update. [case 6]", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"], "locale": "es"}
+{"id": "rw-07-b7", "input": {"text": "Draft message 7 for update. [case 7]", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"], "locale": "fr"}
+{"id": "rw-08-b8", "input": {"text": "Draft message 8 for update. [case 8]", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"], "locale": "en"}
+{"id": "rw-09-b9", "input": {"text": "Draft message 9 for update. [case 9]", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"], "locale": "hi-IN"}
+{"id": "rw-10-b10", "input": {"text": "Draft message 10 for update. [case 10]", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"], "locale": "mr-IN"}
+{"id": "rw-01-b11", "input": {"text": "Draft message 1 for update. [case 11]", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"], "locale": "ta-IN"}
+{"id": "rw-02-b12", "input": {"text": "Draft message 2 for update. [case 12]", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"], "locale": "te-IN"}
+{"id": "rw-03-b13", "input": {"text": "Draft message 3 for update. [case 13]", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"], "locale": "bn-IN"}
+{"id": "rw-04-b14", "input": {"text": "Draft message 4 for update. [case 14]", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"], "locale": "es"}
+{"id": "rw-05-b15", "input": {"text": "Draft message 5 for update. [case 15]", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"], "locale": "fr"}
+{"id": "rw-06-b16", "input": {"text": "Draft message 6 for update. [case 16]", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"], "locale": "en"}
+{"id": "rw-07-b17", "input": {"text": "Draft message 7 for update. [case 17]", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"], "locale": "hi-IN"}
+{"id": "rw-08-b18", "input": {"text": "Draft message 8 for update. [case 18]", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"], "locale": "mr-IN"}
+{"id": "rw-09-b19", "input": {"text": "Draft message 9 for update. [case 19]", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"], "locale": "ta-IN"}
+{"id": "rw-10-b20", "input": {"text": "Draft message 10 for update. [case 20]", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"], "locale": "te-IN"}
+{"id": "rw-01-b21", "input": {"text": "Draft message 1 for update. [case 21]", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"], "locale": "bn-IN"}
+{"id": "rw-02-b22", "input": {"text": "Draft message 2 for update. [case 22]", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"], "locale": "es"}
+{"id": "rw-03-b23", "input": {"text": "Draft message 3 for update. [case 23]", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"], "locale": "fr"}
+{"id": "rw-04-b24", "input": {"text": "Draft message 4 for update. [case 24]", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"], "locale": "en"}
+{"id": "rw-05-b25", "input": {"text": "Draft message 5 for update. [case 25]", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"], "locale": "hi-IN"}
+{"id": "rw-06-b26", "input": {"text": "Draft message 6 for update. [case 26]", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"], "locale": "mr-IN"}
+{"id": "rw-07-b27", "input": {"text": "Draft message 7 for update. [case 27]", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"], "locale": "ta-IN"}
+{"id": "rw-08-b28", "input": {"text": "Draft message 8 for update. [case 28]", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"], "locale": "te-IN"}
+{"id": "rw-09-b29", "input": {"text": "Draft message 9 for update. [case 29]", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"], "locale": "bn-IN"}
+{"id": "rw-10-b30", "input": {"text": "Draft message 10 for update. [case 30]", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"], "locale": "es"}
+{"id": "rw-01-b31", "input": {"text": "Draft message 1 for update. [case 31]", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"], "locale": "fr"}
+{"id": "rw-02-b32", "input": {"text": "Draft message 2 for update. [case 32]", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"], "locale": "en"}
+{"id": "rw-03-b33", "input": {"text": "Draft message 3 for update. [case 33]", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"], "locale": "hi-IN"}
+{"id": "rw-04-b34", "input": {"text": "Draft message 4 for update. [case 34]", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"], "locale": "mr-IN"}
+{"id": "rw-05-b35", "input": {"text": "Draft message 5 for update. [case 35]", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"], "locale": "ta-IN"}
+{"id": "rw-06-b36", "input": {"text": "Draft message 6 for update. [case 36]", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"], "locale": "te-IN"}
+{"id": "rw-07-b37", "input": {"text": "Draft message 7 for update. [case 37]", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"], "locale": "bn-IN"}
+{"id": "rw-08-b38", "input": {"text": "Draft message 8 for update. [case 38]", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"], "locale": "es"}
+{"id": "rw-09-b39", "input": {"text": "Draft message 9 for update. [case 39]", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"], "locale": "fr"}
+{"id": "rw-10-b40", "input": {"text": "Draft message 10 for update. [case 40]", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"], "locale": "en"}

@@ -7,7 +7,7 @@ metadata:
   family: information
   category: search
   tier: composite
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["search", "answer-engine"]
   maintainers: ["@rupeshbharambe24"]

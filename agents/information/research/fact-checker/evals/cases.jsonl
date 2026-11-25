@@ -8,3 +8,43 @@
 {"id": "fc-08", "input": {"claims": ["Claim #8: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
 {"id": "fc-09", "input": {"claims": ["Claim #9: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
 {"id": "fc-10", "input": {"claims": ["Claim #10: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-01-b1", "input": {"claims": ["Claim #1: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "hi-IN"}
+{"id": "fc-02-b2", "input": {"claims": ["Claim #2: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "mr-IN"}
+{"id": "fc-03-b3", "input": {"claims": ["Claim #3: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "ta-IN"}
+{"id": "fc-04-b4", "input": {"claims": ["Claim #4: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "te-IN"}
+{"id": "fc-05-b5", "input": {"claims": ["Claim #5: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "bn-IN"}
+{"id": "fc-06-b6", "input": {"claims": ["Claim #6: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "es"}
+{"id": "fc-07-b7", "input": {"claims": ["Claim #7: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "fr"}
+{"id": "fc-08-b8", "input": {"claims": ["Claim #8: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "en"}
+{"id": "fc-09-b9", "input": {"claims": ["Claim #9: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "hi-IN"}
+{"id": "fc-10-b10", "input": {"claims": ["Claim #10: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "mr-IN"}
+{"id": "fc-01-b11", "input": {"claims": ["Claim #1: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "ta-IN"}
+{"id": "fc-02-b12", "input": {"claims": ["Claim #2: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "te-IN"}
+{"id": "fc-03-b13", "input": {"claims": ["Claim #3: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "bn-IN"}
+{"id": "fc-04-b14", "input": {"claims": ["Claim #4: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "es"}
+{"id": "fc-05-b15", "input": {"claims": ["Claim #5: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "fr"}
+{"id": "fc-06-b16", "input": {"claims": ["Claim #6: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "en"}
+{"id": "fc-07-b17", "input": {"claims": ["Claim #7: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "hi-IN"}
+{"id": "fc-08-b18", "input": {"claims": ["Claim #8: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "mr-IN"}
+{"id": "fc-09-b19", "input": {"claims": ["Claim #9: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "ta-IN"}
+{"id": "fc-10-b20", "input": {"claims": ["Claim #10: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "te-IN"}
+{"id": "fc-01-b21", "input": {"claims": ["Claim #1: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "bn-IN"}
+{"id": "fc-02-b22", "input": {"claims": ["Claim #2: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "es"}
+{"id": "fc-03-b23", "input": {"claims": ["Claim #3: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "fr"}
+{"id": "fc-04-b24", "input": {"claims": ["Claim #4: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "en"}
+{"id": "fc-05-b25", "input": {"claims": ["Claim #5: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "hi-IN"}
+{"id": "fc-06-b26", "input": {"claims": ["Claim #6: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "mr-IN"}
+{"id": "fc-07-b27", "input": {"claims": ["Claim #7: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "ta-IN"}
+{"id": "fc-08-b28", "input": {"claims": ["Claim #8: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "te-IN"}
+{"id": "fc-09-b29", "input": {"claims": ["Claim #9: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "bn-IN"}
+{"id": "fc-10-b30", "input": {"claims": ["Claim #10: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "es"}
+{"id": "fc-01-b31", "input": {"claims": ["Claim #1: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "fr"}
+{"id": "fc-02-b32", "input": {"claims": ["Claim #2: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "en"}
+{"id": "fc-03-b33", "input": {"claims": ["Claim #3: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "hi-IN"}
+{"id": "fc-04-b34", "input": {"claims": ["Claim #4: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "mr-IN"}
+{"id": "fc-05-b35", "input": {"claims": ["Claim #5: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "ta-IN"}
+{"id": "fc-06-b36", "input": {"claims": ["Claim #6: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "te-IN"}
+{"id": "fc-07-b37", "input": {"claims": ["Claim #7: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "bn-IN"}
+{"id": "fc-08-b38", "input": {"claims": ["Claim #8: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "es"}
+{"id": "fc-09-b39", "input": {"claims": ["Claim #9: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "fr"}
+{"id": "fc-10-b40", "input": {"claims": ["Claim #10: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"], "locale": "en"}

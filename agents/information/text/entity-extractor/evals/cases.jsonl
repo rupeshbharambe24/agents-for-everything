@@ -8,3 +8,43 @@
 {"id": "ent-08", "input": {"text": "Plain lowercase text without entities."}, "expected": {}, "expect_non_empty": []}
 {"id": "ent-09", "input": {"text": "Anirban Sen sent a message."}, "expected": {}, "expect_non_empty": ["entities"]}
 {"id": "ent-10", "input": {"text": "Contact support@example.org for INR 999 refund."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-01-b1", "input": {"text": "Contact Priya Sharma at priya@example.org regarding INR 50,000."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "hi-IN"}
+{"id": "ent-02-b2", "input": {"text": "Acme Corp paid USD 1200 yesterday."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "mr-IN"}
+{"id": "ent-03-b3", "input": {"text": "Aarav Mehta lives in Pune."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "ta-IN"}
+{"id": "ent-04-b4", "input": {"text": "Email rupesh@example.com for details."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "te-IN"}
+{"id": "ent-05-b5", "input": {"text": "Invoice amount INR 1180."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "bn-IN"}
+{"id": "ent-06-b6", "input": {"text": "Meeting with Sneha Kulkarni tomorrow."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "es"}
+{"id": "ent-07-b7", "input": {"text": "Total $299.00 due Friday."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "fr"}
+{"id": "ent-08-b8", "input": {"text": "Plain lowercase text without entities."}, "expected": {}, "expect_non_empty": [], "locale": "en"}
+{"id": "ent-09-b9", "input": {"text": "Anirban Sen sent a message."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "hi-IN"}
+{"id": "ent-10-b10", "input": {"text": "Contact support@example.org for INR 999 refund."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "mr-IN"}
+{"id": "ent-01-b11", "input": {"text": "Contact Priya Sharma at priya@example.org regarding INR 50,000."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "ta-IN"}
+{"id": "ent-02-b12", "input": {"text": "Acme Corp paid USD 1200 yesterday."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "te-IN"}
+{"id": "ent-03-b13", "input": {"text": "Aarav Mehta lives in Pune."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "bn-IN"}
+{"id": "ent-04-b14", "input": {"text": "Email rupesh@example.com for details."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "es"}
+{"id": "ent-05-b15", "input": {"text": "Invoice amount INR 1180."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "fr"}
+{"id": "ent-06-b16", "input": {"text": "Meeting with Sneha Kulkarni tomorrow."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "en"}
+{"id": "ent-07-b17", "input": {"text": "Total $299.00 due Friday."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "hi-IN"}
+{"id": "ent-08-b18", "input": {"text": "Plain lowercase text without entities."}, "expected": {}, "expect_non_empty": [], "locale": "mr-IN"}
+{"id": "ent-09-b19", "input": {"text": "Anirban Sen sent a message."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "ta-IN"}
+{"id": "ent-10-b20", "input": {"text": "Contact support@example.org for INR 999 refund."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "te-IN"}
+{"id": "ent-01-b21", "input": {"text": "Contact Priya Sharma at priya@example.org regarding INR 50,000."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "bn-IN"}
+{"id": "ent-02-b22", "input": {"text": "Acme Corp paid USD 1200 yesterday."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "es"}
+{"id": "ent-03-b23", "input": {"text": "Aarav Mehta lives in Pune."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "fr"}
+{"id": "ent-04-b24", "input": {"text": "Email rupesh@example.com for details."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "en"}
+{"id": "ent-05-b25", "input": {"text": "Invoice amount INR 1180."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "hi-IN"}
+{"id": "ent-06-b26", "input": {"text": "Meeting with Sneha Kulkarni tomorrow."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "mr-IN"}
+{"id": "ent-07-b27", "input": {"text": "Total $299.00 due Friday."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "ta-IN"}
+{"id": "ent-08-b28", "input": {"text": "Plain lowercase text without entities."}, "expected": {}, "expect_non_empty": [], "locale": "te-IN"}
+{"id": "ent-09-b29", "input": {"text": "Anirban Sen sent a message."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "bn-IN"}
+{"id": "ent-10-b30", "input": {"text": "Contact support@example.org for INR 999 refund."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "es"}
+{"id": "ent-01-b31", "input": {"text": "Contact Priya Sharma at priya@example.org regarding INR 50,000."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "fr"}
+{"id": "ent-02-b32", "input": {"text": "Acme Corp paid USD 1200 yesterday."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "en"}
+{"id": "ent-03-b33", "input": {"text": "Aarav Mehta lives in Pune."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "hi-IN"}
+{"id": "ent-04-b34", "input": {"text": "Email rupesh@example.com for details."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "mr-IN"}
+{"id": "ent-05-b35", "input": {"text": "Invoice amount INR 1180."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "ta-IN"}
+{"id": "ent-06-b36", "input": {"text": "Meeting with Sneha Kulkarni tomorrow."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "te-IN"}
+{"id": "ent-07-b37", "input": {"text": "Total $299.00 due Friday."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "bn-IN"}
+{"id": "ent-08-b38", "input": {"text": "Plain lowercase text without entities."}, "expected": {}, "expect_non_empty": [], "locale": "es"}
+{"id": "ent-09-b39", "input": {"text": "Anirban Sen sent a message."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "fr"}
+{"id": "ent-10-b40", "input": {"text": "Contact support@example.org for INR 999 refund."}, "expected": {}, "expect_non_empty": ["entities"], "locale": "en"}

@@ -8,3 +8,43 @@
 {"id": "rep-08", "input": {"topic": "Research Topic 8", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
 {"id": "rep-09", "input": {"topic": "Research Topic 9", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
 {"id": "rep-10", "input": {"topic": "Research Topic 10", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-01-b1", "input": {"topic": "Research Topic 1 [case 1]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "hi-IN"}
+{"id": "rep-02-b2", "input": {"topic": "Research Topic 2 [case 2]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "mr-IN"}
+{"id": "rep-03-b3", "input": {"topic": "Research Topic 3 [case 3]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "ta-IN"}
+{"id": "rep-04-b4", "input": {"topic": "Research Topic 4 [case 4]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "te-IN"}
+{"id": "rep-05-b5", "input": {"topic": "Research Topic 5 [case 5]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "bn-IN"}
+{"id": "rep-06-b6", "input": {"topic": "Research Topic 6 [case 6]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "es"}
+{"id": "rep-07-b7", "input": {"topic": "Research Topic 7 [case 7]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "fr"}
+{"id": "rep-08-b8", "input": {"topic": "Research Topic 8 [case 8]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "en"}
+{"id": "rep-09-b9", "input": {"topic": "Research Topic 9 [case 9]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "hi-IN"}
+{"id": "rep-10-b10", "input": {"topic": "Research Topic 10 [case 10]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "mr-IN"}
+{"id": "rep-01-b11", "input": {"topic": "Research Topic 1 [case 11]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "ta-IN"}
+{"id": "rep-02-b12", "input": {"topic": "Research Topic 2 [case 12]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "te-IN"}
+{"id": "rep-03-b13", "input": {"topic": "Research Topic 3 [case 13]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "bn-IN"}
+{"id": "rep-04-b14", "input": {"topic": "Research Topic 4 [case 14]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "es"}
+{"id": "rep-05-b15", "input": {"topic": "Research Topic 5 [case 15]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "fr"}
+{"id": "rep-06-b16", "input": {"topic": "Research Topic 6 [case 16]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "en"}
+{"id": "rep-07-b17", "input": {"topic": "Research Topic 7 [case 17]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "hi-IN"}
+{"id": "rep-08-b18", "input": {"topic": "Research Topic 8 [case 18]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "mr-IN"}
+{"id": "rep-09-b19", "input": {"topic": "Research Topic 9 [case 19]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "ta-IN"}
+{"id": "rep-10-b20", "input": {"topic": "Research Topic 10 [case 20]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "te-IN"}
+{"id": "rep-01-b21", "input": {"topic": "Research Topic 1 [case 21]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "bn-IN"}
+{"id": "rep-02-b22", "input": {"topic": "Research Topic 2 [case 22]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "es"}
+{"id": "rep-03-b23", "input": {"topic": "Research Topic 3 [case 23]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "fr"}
+{"id": "rep-04-b24", "input": {"topic": "Research Topic 4 [case 24]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "en"}
+{"id": "rep-05-b25", "input": {"topic": "Research Topic 5 [case 25]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "hi-IN"}
+{"id": "rep-06-b26", "input": {"topic": "Research Topic 6 [case 26]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "mr-IN"}
+{"id": "rep-07-b27", "input": {"topic": "Research Topic 7 [case 27]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "ta-IN"}
+{"id": "rep-08-b28", "input": {"topic": "Research Topic 8 [case 28]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "te-IN"}
+{"id": "rep-09-b29", "input": {"topic": "Research Topic 9 [case 29]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "bn-IN"}
+{"id": "rep-10-b30", "input": {"topic": "Research Topic 10 [case 30]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "es"}
+{"id": "rep-01-b31", "input": {"topic": "Research Topic 1 [case 31]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "fr"}
+{"id": "rep-02-b32", "input": {"topic": "Research Topic 2 [case 32]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "en"}
+{"id": "rep-03-b33", "input": {"topic": "Research Topic 3 [case 33]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "hi-IN"}
+{"id": "rep-04-b34", "input": {"topic": "Research Topic 4 [case 34]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "mr-IN"}
+{"id": "rep-05-b35", "input": {"topic": "Research Topic 5 [case 35]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "ta-IN"}
+{"id": "rep-06-b36", "input": {"topic": "Research Topic 6 [case 36]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "te-IN"}
+{"id": "rep-07-b37", "input": {"topic": "Research Topic 7 [case 37]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "bn-IN"}
+{"id": "rep-08-b38", "input": {"topic": "Research Topic 8 [case 38]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "es"}
+{"id": "rep-09-b39", "input": {"topic": "Research Topic 9 [case 39]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "fr"}
+{"id": "rep-10-b40", "input": {"topic": "Research Topic 10 [case 40]", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"], "locale": "en"}

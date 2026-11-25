@@ -1,6 +1,6 @@
 # Summarizer `text/summarizer`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Condenses documents, emails, and articles faithfully without inventing facts.

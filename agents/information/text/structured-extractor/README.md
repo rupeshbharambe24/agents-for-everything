@@ -1,6 +1,6 @@
 # Structured Extractor `text/structured-extractor`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Extracts names, ISO dates, PIN codes, emails, phones, and multilingual numbers (e.g. 'pachas hazaar' -> 50000) into typed fields.
