@@ -1,0 +1,10 @@
+{"id": "de-01", "input": {"utterances": ["Sentence 1.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 1."}}
+{"id": "de-02", "input": {"utterances": ["Sentence 2.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 2."}}
+{"id": "de-03", "input": {"utterances": ["Sentence 3.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 3."}}
+{"id": "de-04", "input": {"utterances": ["Sentence 4.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 4."}}
+{"id": "de-05", "input": {"utterances": ["Sentence 5.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 5."}}
+{"id": "de-06", "input": {"utterances": ["Sentence 6.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 6."}}
+{"id": "de-07", "input": {"utterances": ["Sentence 7.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 7."}}
+{"id": "de-08", "input": {"utterances": ["Sentence 8.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 8."}}
+{"id": "de-09", "input": {"utterances": ["Sentence 9.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 9."}}
+{"id": "de-10", "input": {"utterances": ["Sentence 10.", "Wrong sentence.", "delete last"]}, "expected": {"text": "Sentence 10."}}

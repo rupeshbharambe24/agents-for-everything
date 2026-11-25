@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: voice/live-interpreter
+  name: "Live Interpreter"
+  version: 0.1.0
+  family: perception
+  category: voice
+  tier: composite
+  maturity: prototype
+  priority: P1
+  tags: ["voice", "live-interpreter"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Two-way real-time speech translation across languages."
+  purpose: "Two-way real-time speech translation across languages."
+  pattern: augmented-llm
+  autonomy: L1
+  classic_type: goal-based
+  modality: ["voice", "text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/stt", "afe/tts"]
+    optional: []
+  uses_agents: ["voice/speech-to-text", "text/translator", "voice/text-to-speech"]
+  memory: none
+  safety:
+    level: S1
+    side_effects: []
+    approval_required_for: []
+    handles_pii: false
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en", "hi", "ta", "te", "bn", "mr", "es", "fr"]

@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/telephony
+    required: true
+    permissions: ["read"]
+    scope: declared
+  - id: afe/stt
+    required: true
+    permissions: ["read"]
+    scope: declared
+  - id: afe/tts
+    required: true
+    permissions: ["read"]
+    scope: declared

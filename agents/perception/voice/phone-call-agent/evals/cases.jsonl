@@ -1,0 +1,10 @@
+{"id": "phon-01", "input": {"input": "Sample phone-call-agent request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "phon-02", "input": {"input": "Sample phone-call-agent request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "phon-03", "input": {"input": "Sample phone-call-agent request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "phon-04", "input": {"input": "Sample phone-call-agent request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "phon-05", "input": {"input": "Sample phone-call-agent request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "phon-06", "input": {"input": "Sample phone-call-agent request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "phon-07", "input": {"input": "Sample phone-call-agent request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "phon-08", "input": {"input": "Sample phone-call-agent request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "phon-09", "input": {"input": "Sample phone-call-agent request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "phon-10", "input": {"input": "Sample phone-call-agent request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}

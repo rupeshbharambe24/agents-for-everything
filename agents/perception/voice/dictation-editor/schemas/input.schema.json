@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://voice/dictation-editor/input",
+  "type": "object",
+  "required": [
+    "utterances"
+  ],
+  "properties": {
+    "utterances": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
