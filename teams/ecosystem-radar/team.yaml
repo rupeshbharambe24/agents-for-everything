@@ -1,0 +1,34 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: ecosystem-radar
+  name: Ecosystem Radar Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["ecosystem", "radar"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Tracks protocol/paper/web updates, reads primary notes, and compiles the monthly ecosystem radar digest."
+  pattern: orchestrator-workers
+  entry: search/news-monitor
+  members:
+    - search/news-monitor
+    - search/academic-search
+    - search/web-search
+    - research/source-reader
+    - research/report-writer
+  graph:
+    - [news-monitor, academic-search]
+    - [academic-search, web-search]
+    - [web-search, source-reader]
+    - [source-reader, report-writer]
+  approvals: []
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S1
+  evals:
+    suite: evals/eval.yaml
