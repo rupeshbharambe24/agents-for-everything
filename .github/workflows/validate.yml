@@ -22,5 +22,11 @@ jobs:
         run: PYTHONPATH=.:packages/core-python/src:cli/src python3 -m unittest discover -s packages/core-python/tests -v
       - name: Run CLI unit tests
         run: PYTHONPATH=.:packages/core-python/src:cli/src python3 -m unittest discover -s cli/tests -v
+      - name: Run adapter & recipe integration tests
+        run: |
+          PYTHONPATH=.:packages/core-python/src:cli/src python3 -m unittest packages/adapters/tests/test_adapters.py -v
+          PYTHONPATH=.:packages/core-python/src:cli/src python3 -m unittest recipes/*/tests/test_recipe.py -v
+      - name: Verify badge compliance (all agents)
+        run: PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli verify --all --skip-evals
       - name: Run core-typescript unit tests
-        run: node --test packages/core-typescript/tests/*.test.ts
+        run: node --test packages/core-typescript/tests/*.test.ts packages/adapters/tests/*.test.ts

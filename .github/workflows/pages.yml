@@ -1,0 +1,35 @@
+name: Deploy Catalog & A2A Registry Site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stage static site and A2A discovery registry
+        run: |
+          mkdir -p _site/registry _site/.well-known
+          cp -r docs/site/* _site/
+          cp registry/catalog.json registry/a2a-index.json registry/verified-index.json registry/compatibility-graph.json _site/registry/
+          cp registry/.well-known/agent.json _site/.well-known/agent.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

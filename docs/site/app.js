@@ -15,7 +15,7 @@
   const statsEl = document.getElementById("stats");
   const counts = data.catalog.counts || {};
   statsEl.innerHTML = [
-    `Agents: ${counts.agents ?? agents.length}`,
+    `Agents: ${counts.agents ?? agents.length} (${counts.verified_agents ?? agents.filter((a) => a.verified).length} verified)`,
     `Teams: ${counts.teams ?? teams.length}`,
     `Recipes: ${counts.recipes ?? recipes.length}`,
     `MCP Servers: ${counts.mcp_servers ?? servers.length}`,
@@ -62,6 +62,20 @@
     const lb = lbMap[agent.id];
     const incoming = edges.filter((e) => e.to === agent.id).slice(0, 14);
     const outgoing = edges.filter((e) => e.from === agent.id).slice(0, 14);
+    const a2aCard = {
+      name: agent.name,
+      id: agent.id,
+      version: agent.version || "0.1.0",
+      description: agent.summary,
+      skills: [{ id: agent.id, name: agent.name, tags: agent.tags || [] }],
+      metadata: {
+        safetyLevel: agent.safety_level,
+        autonomyLevel: agent.autonomy || "L1",
+        maturity: agent.maturity,
+        verificationBadge: agent.badge || (agent.verified ? "verified" : "unverified"),
+        digest: agent.digest || "",
+      },
+    };
     inspEl.innerHTML = `
       <h2>${agent.name}</h2>
       <div class="card-id">${agent.id}</div>
@@ -70,13 +84,18 @@
         <span class="badge">${agent.family}/${agent.category}</span>
         <span class="badge">${agent.priority}</span>
         <span class="badge ${agent.maturity}">${agent.maturity}</span>
+        <span class="badge ${agent.verified ? "verified" : "unverified"}">${agent.badge || (agent.verified ? "verified" : "unverified")}</span>
         <span class="badge">${agent.safety_level}</span>
         <span class="badge">${agent.autonomy || "L1"}</span>
       </div>
       ${lb ? `<p class="muted">Eval pass rate: <strong>${Math.round(lb.pass_rate * 100)}%</strong> (${lb.passed}/${lb.cases})</p>` : ""}
       <p class="muted"><strong>Tools:</strong> ${((agent.tools && agent.tools.required) || []).join(", ") || "None (pure compute)"}<br/><strong>Locales:</strong> ${(agent.locales || ["en"]).join(", ")}</p>
       <h3>CLI Usage</h3>
-      <pre>afe add ${agent.id}\nafe test ${agent.id}\nafe export ${agent.id} --as skill</pre>
+      <pre>afe add ${agent.id}\nafe verify ${agent.id}\nafe migrate ${agent.id}\nafe export ${agent.id} --as a2a</pre>
+      <details>
+        <summary class="muted"><strong>A2A Agent Card Preview</strong></summary>
+        <pre>${JSON.stringify(a2aCard, null, 2)}</pre>
+      </details>
       <h3>Composes (uses_agents)</h3>
       <ul class="edge-list">${(agent.uses_agents || []).length ? agent.uses_agents.map((u) => `<li><button class="edge-jump" data-agent="${u}">${u}</button></li>`).join("") : "<li>None (atomic)</li>"}</ul>
       <h3>Compatible Upstream (${incoming.length})</h3>
@@ -129,6 +148,7 @@
           <div class="badges">
             <span class="badge">${a.priority}</span>
             <span class="badge ${a.maturity}">${a.maturity}</span>
+            <span class="badge ${a.verified ? "verified" : "unverified"}">${a.badge || (a.verified ? "verified" : "unverified")}</span>
             <span class="badge">${a.safety_level}</span>
             <span class="badge">${a.tier}</span>
           </div>

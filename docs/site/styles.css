@@ -31,7 +31,8 @@ input, select { background: var(--panel); color: var(--text); border: 1px solid 
 .card-id { font-family: ui-monospace, monospace; font-size: 0.8rem; color: var(--accent); margin-bottom: 0.45rem; }
 .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.5rem; }
 .badge { font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 6px; background: var(--panel); border: 1px solid var(--border); color: var(--muted); }
-.badge.beta, .badge.stable { color: var(--good); border-color: #10b98155; }
+.badge.beta, .badge.stable, .badge.verified { color: var(--good); border-color: #10b98155; }
+.badge.unverified { color: #f87171; border-color: #ef444455; }
 .card-summary { font-size: 0.85rem; color: var(--muted); line-height: 1.35; }
 .inspector { position: sticky; top: 1rem; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; max-height: 85vh; overflow-y: auto; }
 .inspector h2 { margin-top: 0; font-size: 1.05rem; }
