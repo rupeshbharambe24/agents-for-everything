@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/context-manager/output",
+  "type": "object",
+  "required": [
+    "compact_context",
+    "dropped_count"
+  ],
+  "properties": {
+    "compact_context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dropped_count": {
+      "type": "integer"
+    }
+  }
+}

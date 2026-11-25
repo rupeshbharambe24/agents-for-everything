@@ -1,0 +1,10 @@
+{"id": "clr-01", "input": {"request": "help me"}, "expected": {"needs_clarification": true}}
+{"id": "clr-02", "input": {"request": "help me"}, "expected": {"needs_clarification": true}}
+{"id": "clr-03", "input": {"request": "help me"}, "expected": {"needs_clarification": true}}
+{"id": "clr-04", "input": {"request": "help me"}, "expected": {"needs_clarification": true}}
+{"id": "clr-05", "input": {"request": "help me"}, "expected": {"needs_clarification": true}}
+{"id": "clr-06", "input": {"request": "Summarize Q6 revenue CSV into JSON"}, "expected": {"needs_clarification": false}}
+{"id": "clr-07", "input": {"request": "Summarize Q7 revenue CSV into JSON"}, "expected": {"needs_clarification": false}}
+{"id": "clr-08", "input": {"request": "Summarize Q8 revenue CSV into JSON"}, "expected": {"needs_clarification": false}}
+{"id": "clr-09", "input": {"request": "Summarize Q9 revenue CSV into JSON"}, "expected": {"needs_clarification": false}}
+{"id": "clr-10", "input": {"request": "Summarize Q10 revenue CSV into JSON"}, "expected": {"needs_clarification": false}}

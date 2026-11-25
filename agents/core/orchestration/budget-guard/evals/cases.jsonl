@@ -1,0 +1,10 @@
+{"id": "bg-01", "input": {"cost_usd": 0.1, "max_cost_usd": 1.0}, "expected": {"decision": "allow"}}
+{"id": "bg-02", "input": {"cost_usd": 0.5, "max_cost_usd": 1.0}, "expected": {"decision": "allow"}}
+{"id": "bg-03", "input": {"cost_usd": 0.85, "max_cost_usd": 1.0}, "expected": {"decision": "throttle"}}
+{"id": "bg-04", "input": {"cost_usd": 1.0, "max_cost_usd": 1.0}, "expected": {"decision": "stop"}}
+{"id": "bg-05", "input": {"cost_usd": 1.5, "max_cost_usd": 1.0}, "expected": {"decision": "stop"}}
+{"id": "bg-06", "input": {"cost_usd": 0.2, "max_cost_usd": 1.0}, "expected": {"decision": "allow"}}
+{"id": "bg-07", "input": {"cost_usd": 0.9, "max_cost_usd": 1.0}, "expected": {"decision": "throttle"}}
+{"id": "bg-08", "input": {"cost_usd": 0.0, "max_cost_usd": 1.0}, "expected": {"decision": "allow"}}
+{"id": "bg-09", "input": {"cost_usd": 0.8, "max_cost_usd": 1.0}, "expected": {"decision": "throttle"}}
+{"id": "bg-10", "input": {"cost_usd": 2.0, "max_cost_usd": 1.0}, "expected": {"decision": "stop"}}

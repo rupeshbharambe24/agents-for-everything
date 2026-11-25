@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/clarifier/output",
+  "type": "object",
+  "required": [
+    "needs_clarification",
+    "questions",
+    "refined_request"
+  ],
+  "properties": {
+    "needs_clarification": {
+      "type": "boolean"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "refined_request": {
+      "type": "string"
+    }
+  }
+}

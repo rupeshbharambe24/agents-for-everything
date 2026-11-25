@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/budget-guard/output",
+  "type": "object",
+  "required": [
+    "decision",
+    "remaining_usd"
+  ],
+  "properties": {
+    "decision": {
+      "enum": [
+        "allow",
+        "throttle",
+        "stop"
+      ]
+    },
+    "remaining_usd": {
+      "type": "number"
+    }
+  }
+}

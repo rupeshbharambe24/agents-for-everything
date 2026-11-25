@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/tool-selector/input",
+  "type": "object",
+  "required": [
+    "task"
+  ],
+  "properties": {
+    "task": {
+      "type": "string"
+    },
+    "available_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

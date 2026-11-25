@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/context-manager/input",
+  "type": "object",
+  "required": [
+    "history"
+  ],
+  "properties": {
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "max_items": {
+      "type": "integer",
+      "default": 5
+    }
+  }
+}

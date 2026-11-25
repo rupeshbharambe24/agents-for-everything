@@ -1,0 +1,10 @@
+{"id": "tool-01", "input": {"task": "Sample tool-selector request #1"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-02", "input": {"task": "Sample tool-selector request #2"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-03", "input": {"task": "Sample tool-selector request #3"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-04", "input": {"task": "Sample tool-selector request #4"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-05", "input": {"task": "Sample tool-selector request #5"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-06", "input": {"task": "Sample tool-selector request #6"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-07", "input": {"task": "Sample tool-selector request #7"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-08", "input": {"task": "Sample tool-selector request #8"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-09", "input": {"task": "Sample tool-selector request #9"}, "expected": {}, "expect_non_empty": ["selected_tools"]}
+{"id": "tool-10", "input": {"task": "Sample tool-selector request #10"}, "expected": {}, "expect_non_empty": ["selected_tools"]}

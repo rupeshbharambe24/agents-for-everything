@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/budget-guard/input",
+  "type": "object",
+  "required": [
+    "cost_usd",
+    "max_cost_usd"
+  ],
+  "properties": {
+    "cost_usd": {
+      "type": "number"
+    },
+    "max_cost_usd": {
+      "type": "number"
+    }
+  }
+}

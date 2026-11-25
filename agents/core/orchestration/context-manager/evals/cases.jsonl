@@ -1,0 +1,10 @@
+{"id": "ctx-01", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3"], "max_items": 3}, "expected": {"dropped_count": 1}}
+{"id": "ctx-02", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4"], "max_items": 3}, "expected": {"dropped_count": 2}}
+{"id": "ctx-03", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4", "msg 5"], "max_items": 3}, "expected": {"dropped_count": 3}}
+{"id": "ctx-04", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6"], "max_items": 3}, "expected": {"dropped_count": 4}}
+{"id": "ctx-05", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6", "msg 7"], "max_items": 3}, "expected": {"dropped_count": 5}}
+{"id": "ctx-06", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6", "msg 7", "msg 8"], "max_items": 3}, "expected": {"dropped_count": 6}}
+{"id": "ctx-07", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6", "msg 7", "msg 8", "msg 9"], "max_items": 3}, "expected": {"dropped_count": 7}}
+{"id": "ctx-08", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6", "msg 7", "msg 8", "msg 9", "msg 10"], "max_items": 3}, "expected": {"dropped_count": 8}}
+{"id": "ctx-09", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6", "msg 7", "msg 8", "msg 9", "msg 10", "msg 11"], "max_items": 3}, "expected": {"dropped_count": 9}}
+{"id": "ctx-10", "input": {"history": ["msg 0", "msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6", "msg 7", "msg 8", "msg 9", "msg 10", "msg 11", "msg 12"], "max_items": 3}, "expected": {"dropped_count": 10}}

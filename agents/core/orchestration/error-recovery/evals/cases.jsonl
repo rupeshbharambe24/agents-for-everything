@@ -1,0 +1,10 @@
+{"id": "erro-01", "input": {"input": "Sample error-recovery request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-02", "input": {"input": "Sample error-recovery request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-03", "input": {"input": "Sample error-recovery request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-04", "input": {"input": "Sample error-recovery request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-05", "input": {"input": "Sample error-recovery request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-06", "input": {"input": "Sample error-recovery request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-07", "input": {"input": "Sample error-recovery request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-08", "input": {"input": "Sample error-recovery request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-09", "input": {"input": "Sample error-recovery request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "erro-10", "input": {"input": "Sample error-recovery request #10"}, "expected": {}, "expect_non_empty": ["result"]}
