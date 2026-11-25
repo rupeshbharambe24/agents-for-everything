@@ -1,0 +1,10 @@
+{"id": "data-01", "input": {"input": "Sample data-labeler request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-02", "input": {"input": "Sample data-labeler request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-03", "input": {"input": "Sample data-labeler request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-04", "input": {"input": "Sample data-labeler request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-05", "input": {"input": "Sample data-labeler request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-06", "input": {"input": "Sample data-labeler request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-07", "input": {"input": "Sample data-labeler request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-08", "input": {"input": "Sample data-labeler request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-09", "input": {"input": "Sample data-labeler request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "data-10", "input": {"input": "Sample data-labeler request #10"}, "expected": {}, "expect_non_empty": ["result"]}

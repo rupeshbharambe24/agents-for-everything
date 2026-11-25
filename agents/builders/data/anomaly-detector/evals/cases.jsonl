@@ -1,0 +1,10 @@
+{"id": "ad-01", "input": {"series": [10, 11, 10, 9, 10, 95]}, "expected": {"has_anomalies": true}}
+{"id": "ad-02", "input": {"series": [10, 11, 10, 9, 10, 95]}, "expected": {"has_anomalies": true}}
+{"id": "ad-03", "input": {"series": [10, 11, 10, 9, 10, 95]}, "expected": {"has_anomalies": true}}
+{"id": "ad-04", "input": {"series": [10, 11, 10, 9, 10, 95]}, "expected": {"has_anomalies": true}}
+{"id": "ad-05", "input": {"series": [10, 11, 10, 9, 10, 95]}, "expected": {"has_anomalies": true}}
+{"id": "ad-06", "input": {"series": [10, 11, 10, 11, 10]}, "expected": {"has_anomalies": false}}
+{"id": "ad-07", "input": {"series": [10, 11, 10, 11, 10]}, "expected": {"has_anomalies": false}}
+{"id": "ad-08", "input": {"series": [10, 11, 10, 11, 10]}, "expected": {"has_anomalies": false}}
+{"id": "ad-09", "input": {"series": [10, 11, 10, 11, 10]}, "expected": {"has_anomalies": false}}
+{"id": "ad-10", "input": {"series": [10, 11, 10, 11, 10]}, "expected": {"has_anomalies": false}}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://data/anomaly-detector/output",
+  "type": "object",
+  "required": [
+    "anomaly_indices",
+    "has_anomalies"
+  ],
+  "properties": {
+    "anomaly_indices": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "has_anomalies": {
+      "type": "boolean"
+    }
+  }
+}

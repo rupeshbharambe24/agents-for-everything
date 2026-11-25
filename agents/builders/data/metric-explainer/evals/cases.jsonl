@@ -1,0 +1,10 @@
+{"id": "metr-01", "input": {"input": "Sample metric-explainer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-02", "input": {"input": "Sample metric-explainer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-03", "input": {"input": "Sample metric-explainer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-04", "input": {"input": "Sample metric-explainer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-05", "input": {"input": "Sample metric-explainer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-06", "input": {"input": "Sample metric-explainer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-07", "input": {"input": "Sample metric-explainer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-08", "input": {"input": "Sample metric-explainer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-09", "input": {"input": "Sample metric-explainer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "metr-10", "input": {"input": "Sample metric-explainer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

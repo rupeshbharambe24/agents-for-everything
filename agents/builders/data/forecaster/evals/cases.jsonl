@@ -1,0 +1,10 @@
+{"id": "fore-01", "input": {"input": "Sample forecaster request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-02", "input": {"input": "Sample forecaster request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-03", "input": {"input": "Sample forecaster request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-04", "input": {"input": "Sample forecaster request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-05", "input": {"input": "Sample forecaster request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-06", "input": {"input": "Sample forecaster request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-07", "input": {"input": "Sample forecaster request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-08", "input": {"input": "Sample forecaster request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-09", "input": {"input": "Sample forecaster request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fore-10", "input": {"input": "Sample forecaster request #10"}, "expected": {}, "expect_non_empty": ["result"]}

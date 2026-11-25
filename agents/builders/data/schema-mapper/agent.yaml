@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: data/schema-mapper
+  name: "Schema Mapper"
+  version: 0.1.0
+  family: builders
+  category: data
+  tier: atomic
+  maturity: prototype
+  priority: P1
+  tags: ["data", "schema-mapper"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Maps source table columns to target schemas with explicit transformation rules."
+  purpose: "Maps source table columns to target schemas with explicit transformation rules."
+  pattern: augmented-llm
+  autonomy: L1
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: []
+    optional: []
+  uses_agents: []
+  memory: none
+  safety:
+    level: S0
+    side_effects: []
+    approval_required_for: []
+    handles_pii: false
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]

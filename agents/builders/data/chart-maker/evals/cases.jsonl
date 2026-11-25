@@ -1,0 +1,10 @@
+{"id": "char-01", "input": {"input": "Sample chart-maker request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-02", "input": {"input": "Sample chart-maker request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-03", "input": {"input": "Sample chart-maker request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-04", "input": {"input": "Sample chart-maker request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-05", "input": {"input": "Sample chart-maker request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-06", "input": {"input": "Sample chart-maker request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-07", "input": {"input": "Sample chart-maker request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-08", "input": {"input": "Sample chart-maker request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-09", "input": {"input": "Sample chart-maker request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "char-10", "input": {"input": "Sample chart-maker request #10"}, "expected": {}, "expect_non_empty": ["result"]}
