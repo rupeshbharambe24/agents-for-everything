@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://legal/contract-analyzer/input",
+  "type": "object",
+  "required": [
+    "contract_text"
+  ],
+  "properties": {
+    "contract_text": {
+      "type": "string"
+    }
+  }
+}

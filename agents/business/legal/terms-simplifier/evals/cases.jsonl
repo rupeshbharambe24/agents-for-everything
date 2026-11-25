@@ -1,0 +1,10 @@
+{"id": "term-01", "input": {"input": "Sample terms-simplifier request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-02", "input": {"input": "Sample terms-simplifier request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-03", "input": {"input": "Sample terms-simplifier request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-04", "input": {"input": "Sample terms-simplifier request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-05", "input": {"input": "Sample terms-simplifier request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-06", "input": {"input": "Sample terms-simplifier request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-07", "input": {"input": "Sample terms-simplifier request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-08", "input": {"input": "Sample terms-simplifier request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-09", "input": {"input": "Sample terms-simplifier request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "term-10", "input": {"input": "Sample terms-simplifier request #10"}, "expected": {}, "expect_non_empty": ["result"]}

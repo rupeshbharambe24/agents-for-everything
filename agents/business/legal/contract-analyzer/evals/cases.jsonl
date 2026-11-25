@@ -1,0 +1,10 @@
+{"id": "ca-01", "input": {"contract_text": "Vendor carries unlimited liability and automatic renewal."}, "expected": {"risk_level": "high"}}
+{"id": "ca-02", "input": {"contract_text": "Vendor carries unlimited liability and automatic renewal."}, "expected": {"risk_level": "high"}}
+{"id": "ca-03", "input": {"contract_text": "Vendor carries unlimited liability and automatic renewal."}, "expected": {"risk_level": "high"}}
+{"id": "ca-04", "input": {"contract_text": "Vendor carries unlimited liability and automatic renewal."}, "expected": {"risk_level": "high"}}
+{"id": "ca-05", "input": {"contract_text": "Vendor carries unlimited liability and automatic renewal."}, "expected": {"risk_level": "high"}}
+{"id": "ca-06", "input": {"contract_text": "Standard mutual confidentiality terms."}, "expected": {"risk_level": "low"}}
+{"id": "ca-07", "input": {"contract_text": "Standard mutual confidentiality terms."}, "expected": {"risk_level": "low"}}
+{"id": "ca-08", "input": {"contract_text": "Standard mutual confidentiality terms."}, "expected": {"risk_level": "low"}}
+{"id": "ca-09", "input": {"contract_text": "Standard mutual confidentiality terms."}, "expected": {"risk_level": "low"}}
+{"id": "ca-10", "input": {"contract_text": "Standard mutual confidentiality terms."}, "expected": {"risk_level": "low"}}
