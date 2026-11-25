@@ -1,0 +1,10 @@
+{"id": "imag-01", "input": {"input": "Sample image-editor request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-02", "input": {"input": "Sample image-editor request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-03", "input": {"input": "Sample image-editor request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-04", "input": {"input": "Sample image-editor request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-05", "input": {"input": "Sample image-editor request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-06", "input": {"input": "Sample image-editor request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-07", "input": {"input": "Sample image-editor request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-08", "input": {"input": "Sample image-editor request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-09", "input": {"input": "Sample image-editor request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "imag-10", "input": {"input": "Sample image-editor request #10"}, "expected": {}, "expect_non_empty": ["result"]}

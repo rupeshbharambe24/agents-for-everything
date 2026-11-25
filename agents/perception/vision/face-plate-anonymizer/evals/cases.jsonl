@@ -1,0 +1,10 @@
+{"id": "face-01", "input": {"input": "Sample face-plate-anonymizer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-02", "input": {"input": "Sample face-plate-anonymizer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-03", "input": {"input": "Sample face-plate-anonymizer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-04", "input": {"input": "Sample face-plate-anonymizer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-05", "input": {"input": "Sample face-plate-anonymizer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-06", "input": {"input": "Sample face-plate-anonymizer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-07", "input": {"input": "Sample face-plate-anonymizer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-08", "input": {"input": "Sample face-plate-anonymizer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-09", "input": {"input": "Sample face-plate-anonymizer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "face-10", "input": {"input": "Sample face-plate-anonymizer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

@@ -1,0 +1,10 @@
+{"id": "obje-01", "input": {"input": "Sample object-detector request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-02", "input": {"input": "Sample object-detector request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-03", "input": {"input": "Sample object-detector request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-04", "input": {"input": "Sample object-detector request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-05", "input": {"input": "Sample object-detector request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-06", "input": {"input": "Sample object-detector request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-07", "input": {"input": "Sample object-detector request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-08", "input": {"input": "Sample object-detector request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-09", "input": {"input": "Sample object-detector request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "obje-10", "input": {"input": "Sample object-detector request #10"}, "expected": {}, "expect_non_empty": ["result"]}

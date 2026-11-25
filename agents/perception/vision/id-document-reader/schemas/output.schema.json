@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://vision/id-document-reader/output",
+  "type": "object",
+  "required": [
+    "fields",
+    "status"
+  ],
+  "properties": {
+    "fields": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

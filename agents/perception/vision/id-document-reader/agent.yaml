@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: vision/id-document-reader
+  name: "ID Document Reader"
+  version: 0.1.0
+  family: perception
+  category: vision
+  tier: atomic
+  maturity: prototype
+  priority: P1
+  tags: ["vision", "id-document-reader"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Extracts identity card fields for consented KYC workflows with quality checks."
+  purpose: "Extracts identity card fields for consented KYC workflows with quality checks."
+  pattern: augmented-llm
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["vision", "text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/ocr"]
+    optional: []
+  uses_agents: []
+  memory: none
+  safety:
+    level: S4
+    side_effects: ["vision-action"]
+    approval_required_for: ["verified_user_consent"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]

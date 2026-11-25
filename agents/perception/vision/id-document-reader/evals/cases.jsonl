@@ -1,0 +1,10 @@
+{"id": "id-01", "input": {"image": {"text_hint": "ID #1"}, "user_consent": true}, "auto_approve": true, "expected": {"status": "extracted_consented"}}
+{"id": "id-02", "input": {"image": {"text_hint": "ID #2"}, "user_consent": true}, "auto_approve": true, "expected": {"status": "extracted_consented"}}
+{"id": "id-03", "input": {"image": {"text_hint": "ID #3"}, "user_consent": true}, "auto_approve": true, "expected": {"status": "extracted_consented"}}
+{"id": "id-04", "input": {"image": {"text_hint": "ID #4"}, "user_consent": true}, "auto_approve": true, "expected": {"status": "extracted_consented"}}
+{"id": "id-05", "input": {"image": {"text_hint": "ID #5"}, "user_consent": true}, "auto_approve": true, "expected": {"status": "extracted_consented"}}
+{"id": "id-06", "input": {"image": {"text_hint": "ID #6"}, "user_consent": true}, "auto_approve": true, "expected": {"status": "extracted_consented"}}
+{"id": "id-07", "input": {"image": {"text_hint": "ID #7"}, "user_consent": true}, "auto_approve": true, "expected": {"status": "extracted_consented"}}
+{"id": "id-08", "input": {"image": {"text_hint": "ID #8"}, "user_consent": true}, "auto_approve": true, "expected": {"status": "extracted_consented"}}
+{"id": "id-09", "input": {"image": {"text_hint": "ID"}, "user_consent": false}, "expect_error": "PermissionError"}
+{"id": "id-10", "input": {"image": {"text_hint": "ID"}, "user_consent": true}, "expect_error": "ApprovalRequiredError"}
