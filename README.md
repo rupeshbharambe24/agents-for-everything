@@ -3,15 +3,16 @@
 > **One agent for every real-world task. Snap them together like typed Lego blocks to build anything.**
 
 [![Agents](https://img.shields.io/badge/Agents-571-2563eb?style=flat-square)](CATALOG.md)
+[![Verified](https://img.shields.io/badge/Verified-571%2F571-10b981?style=flat-square)](registry/verified-index.json)
 [![Categories](https://img.shields.io/badge/Categories-54-0d9488?style=flat-square)](#browse-all-8-families--54-categories)
 [![Teams](https://img.shields.io/badge/Teams-22-7c3aed?style=flat-square)](#22-ready-made-multi-agent-teams)
 [![Recipes](https://img.shields.io/badge/Recipes-12-db2777?style=flat-square)](#12-end-to-end-product-recipes)
-[![MCP Servers](https://img.shields.io/badge/MCP%20Servers-36-ea580c?style=flat-square)](#mcp-servers-local-on-prem--multilingual-evals)
+[![MCP Servers](https://img.shields.io/badge/MCP%20Servers-36-ea580c?style=flat-square)](#mcp-servers-a2a-registry-local-on-prem--spec-v2)
 [![Evals](https://img.shields.io/badge/Offline%20Evals-8350%2F8350%20Passing-16a34a?style=flat-square)](evals/leaderboard.md)
-[![Spec](https://img.shields.io/badge/Spec-afe%2Fv1-475569?style=flat-square)](spec/SPEC.md)
+[![Spec](https://img.shields.io/badge/Spec-afe%2Fv1%20%2B%20v2-475569?style=flat-square)](spec/v2/SPEC.md)
 [![License](https://img.shields.io/badge/License-Apache--2.0-f59e0b?style=flat-square)](LICENSE)
 
-[**Full Catalog**](CATALOG.md) · [**Interactive Explorer**](docs/site/index.html) · [**Master Blueprint**](BLUEPRINT.md) · [**Eval Leaderboard**](evals/leaderboard.md) · [**Industry Packs**](agents/industries/README.md) · [**Local & On-Prem**](profiles/README.md) · [**Security Policy**](SECURITY.md)
+[**Full Catalog**](CATALOG.md) · [**A2A Discovery Index**](registry/a2a-index.json) · [**Interactive Explorer**](docs/site/index.html) · [**Master Blueprint**](BLUEPRINT.md) · [**Eval Leaderboard**](evals/leaderboard.md) · [**Industry Packs**](agents/industries/README.md) · [**Local & On-Prem**](profiles/README.md) · [**Security Policy**](SECURITY.md)
 
 ---
 
@@ -324,8 +325,10 @@ See [**Industry Packs Overview (`agents/industries/README.md`)**](agents/industr
 
 ---
 
-## MCP Servers, Local On-Prem & Multilingual Evals
+## MCP Servers, A2A Registry, Local On-Prem & Spec v2
 
+- **Open A2A Discovery & Verified Registry (`registry/`):** [`a2a-index.json`](registry/a2a-index.json), [`verified-index.json`](registry/verified-index.json), [`aliases.yaml`](registry/aliases.yaml), and root card [`registry/.well-known/agent.json`](registry/.well-known/agent.json).
+- **Automated Verification & `afe/v2` Migration:** Run `afe verify <id>` for verified badge digests and `afe migrate <id>` to upgrade `afe/v1` manifests to [`spec/v2/SPEC.md`](spec/v2/SPEC.md).
 - **36 Shared MCP Server Contracts (`mcp-servers/`):** Listed in [`CATALOG.md`](CATALOG.md#mcp-servers) (covering web, browser, filesystem, documents, OCR, STT, TTS, SQL, Python/shell sandboxes, git, ERP, payments, medical-kb, logistics, compliance-reg, telephony, threat-intel, home-automation, and more).
 - **Local / On-Premises & Air-Gapped Profiles (`profiles/`):** [`local-onprem.yaml`](profiles/local-onprem.yaml), [`regulated-airgapped.yaml`](profiles/regulated-airgapped.yaml), and [`low-bandwidth-edge.yaml`](profiles/low-bandwidth-edge.yaml) ([Guide](docs/guides/local-onprem.md)).
 - **Shared Indic Multilingual & Safety Datasets (`evals/datasets/`):** [`multilingual_form_utterances.jsonl`](evals/datasets/multilingual_form_utterances.jsonl), [`indic_voice_queries.jsonl`](evals/datasets/indic_voice_queries.jsonl), and [`regulated_safety_prompts.jsonl`](evals/datasets/regulated_safety_prompts.jsonl).

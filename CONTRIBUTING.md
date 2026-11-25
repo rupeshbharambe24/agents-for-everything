@@ -20,11 +20,16 @@ Thank you for helping build the open, composable library of AI agents!
 4. **Implement & Test**:
    - Add a clean implementation in `impl/python/agent.py` (using `agents-for-everything` core primitives).
    - Add **at least 10 eval cases** in `evals/cases.jsonl` covering normal cases, edge cases, adversarial/prompt-injection inputs, and non-English / multilingual inputs where applicable.
-5. **Validate & Regenerate Catalog**:
+5. **Validate, Verify Badge & Regenerate Catalog**:
    ```bash
    afe validate
    afe test <category>/<agent-slug>
+   afe verify <category>/<agent-slug>
    python3 scripts/build_catalog.py
+   ```
+6. **Optional — Upgrade Manifest to `afe/v2`**:
+   ```bash
+   afe migrate <category>/<agent-slug> --in-place
    ```
 
 ## PR Checklist
