@@ -2,7 +2,7 @@
   "name": "Agents for Everything Registry",
   "id": "afe/registry",
   "version": "1.0.0",
-  "description": "Open A2A discovery registry indexing 571 composable agents (569 verified), 22 teams, 12 recipes, and 36 MCP servers.",
+  "description": "Open A2A discovery registry indexing 571 composable agents (571 verified), 22 teams, 12 recipes, and 36 MCP servers.",
   "capabilities": {
     "streaming": true,
     "stateTransitionHistory": true
@@ -2484,7 +2484,7 @@
       "id": "research/report-writer",
       "name": "Report Writer",
       "description": "Turns research findings into structured Markdown reports with executive summaries and references.",
-      "verificationBadge": "unverified"
+      "verificationBadge": "verified"
     },
     {
       "id": "research/source-reader",
@@ -3408,7 +3408,7 @@
       "id": "voice/text-to-speech",
       "name": "Narrator",
       "description": "Natural speech synthesis from text with locale, speed, and tone control.",
-      "verificationBadge": "unverified"
+      "verificationBadge": "verified"
     },
     {
       "id": "voice/voice-command",

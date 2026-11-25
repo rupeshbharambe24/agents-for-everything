@@ -1,6 +1,6 @@
 {
   "apiVersion": "afe/v1",
-  "verified_count": 569,
+  "verified_count": 571,
   "total_count": 571,
   "agents": {
     "browser/booking-agent": {
@@ -4937,15 +4937,15 @@
     },
     "research/report-writer": {
       "agent_id": "research/report-writer",
-      "verified": false,
-      "badge": "unverified",
+      "verified": true,
+      "badge": "verified",
       "safety_level": "S0",
       "safety_reviewed": true,
       "maturity": "beta",
       "eval_passed": 50,
       "eval_total": 50,
       "eval_pass_rate": 1.0,
-      "digest": "sha256:e45a00649c019726489d97efa48b5832423136de3487a9f65821e95547c3e94e"
+      "digest": "sha256:9209fd1e743d7e05a8f7f56cc6f9d69a5ff7ab65ee4f91a0130334e92bdfe438"
     },
     "research/source-reader": {
       "agent_id": "research/source-reader",
@@ -6785,15 +6785,15 @@
     },
     "voice/text-to-speech": {
       "agent_id": "voice/text-to-speech",
-      "verified": false,
-      "badge": "unverified",
+      "verified": true,
+      "badge": "verified",
       "safety_level": "S0",
       "safety_reviewed": true,
       "maturity": "beta",
       "eval_passed": 50,
       "eval_total": 50,
       "eval_pass_rate": 1.0,
-      "digest": "sha256:74f7b28de546f6437fcb9c9b82342fdae15e0e67ea211e498edfd3803d932afb"
+      "digest": "sha256:9729ea27b6b429004879c3d25669f1e2c633f38c04013a9892a7f294d9a81476"
     },
     "voice/voice-command": {
       "agent_id": "voice/voice-command",

@@ -2,7 +2,7 @@
 
 > Auto-generated from `agent.yaml`, `team.yaml`, `recipe.yaml`, and `server.yaml` manifests via `scripts/build_catalog.py`.
 
-- **Agents:** 571 (569 verified)
+- **Agents:** 571 (571 verified)
 - **Teams:** 22
 - **Recipes:** 12
 - **MCP Servers:** 36
@@ -424,7 +424,7 @@
 | [`research/literature-reviewer`](agents/information/research/literature-reviewer/README.md) | Literature Reviewer | `information/research` | composite | `prototype` | `verified` | P1 | S1 | Conducts structured PRISMA-style screening, extraction, and synthesis across academic papers. |
 | [`research/market-researcher`](agents/information/research/market-researcher/README.md) | Market Researcher | `information/research` | composite | `prototype` | `verified` | P1 | S1 | Synthesizes market sizing, segments, trends, and explicit assumptions with sources. |
 | [`research/policy-analyst`](agents/information/research/policy-analyst/README.md) | Policy Analyst | `information/research` | composite | `prototype` | `verified` | P2 | S1 | Analyzes a regulation or policy proposal: who it affects and how. |
-| [`research/report-writer`](agents/information/research/report-writer/README.md) | Report Writer | `information/research` | atomic | `beta` | `unverified` | P0 | S0 | Turns research findings into structured Markdown reports with executive summaries and references. |
+| [`research/report-writer`](agents/information/research/report-writer/README.md) | Report Writer | `information/research` | atomic | `beta` | `verified` | P0 | S0 | Turns research findings into structured Markdown reports with executive summaries and references. |
 | [`research/source-reader`](agents/information/research/source-reader/README.md) | Source Reader | `information/research` | atomic | `beta` | `verified` | P0 | S1 | Reads one URL or document deeply and extracts key points, facts, and quotes. |
 | [`research/survey-analyst`](agents/information/research/survey-analyst/README.md) | Survey Analyst | `information/research` | composite | `prototype` | `verified` | P1 | S1 | Codes open-ended survey answers into themes with counts and representative quotes. |
 | [`research/trend-spotter`](agents/information/research/trend-spotter/README.md) | Trend Spotter | `information/research` | composite | `prototype` | `verified` | P2 | S1 | Detects emerging trends across news, social media, papers and patents. |
@@ -578,7 +578,7 @@
 | [`voice/speaker-diarizer`](agents/perception/voice/speaker-diarizer/README.md) | Speaker Diarizer | `perception/voice` | atomic | `prototype` | `verified` | P1 | S1 | Labels speaker turns and timestamps in multi-speaker audio transcripts. |
 | [`voice/speaker-verifier`](agents/perception/voice/speaker-verifier/README.md) | Speaker Verifier | `perception/voice` | atomic | `prototype` | `verified` | P2 | S4 | Consent-based speaker verification with anti-spoofing and synthetic-voice detection. |
 | [`voice/speech-to-text`](agents/perception/voice/speech-to-text/README.md) | Transcriber | `perception/voice` | atomic | `beta` | `verified` | P0 | S1 | Batch or streaming speech recognition with punctuation, language detection, and code-switching. |
-| [`voice/text-to-speech`](agents/perception/voice/text-to-speech/README.md) | Narrator | `perception/voice` | atomic | `beta` | `unverified` | P0 | S0 | Natural speech synthesis from text with locale, speed, and tone control. |
+| [`voice/text-to-speech`](agents/perception/voice/text-to-speech/README.md) | Narrator | `perception/voice` | atomic | `beta` | `verified` | P0 | S0 | Natural speech synthesis from text with locale, speed, and tone control. |
 | [`voice/voice-command`](agents/perception/voice/voice-command/README.md) | Voice Command Interpreter | `perception/voice` | atomic | `beta` | `verified` | P0 | S1 | Maps spoken commands to structured app actions or function calls. |
 | [`voice/voice-form-filler`](agents/perception/voice/voice-form-filler/README.md) | Voice-to-Form Filler | `perception/voice` | composite | `beta` | `verified` | P0 | S2 | Listens to natural speech, maps answers to typed form fields, checks gaps, and confirms before submit. |
 | [`voice/voice-note-summarizer`](agents/perception/voice/voice-note-summarizer/README.md) | Voice Note Processor | `perception/voice` | composite | `prototype` | `verified` | P1 | S1 | Converts voice memos into structured notes, tasks, and follow-up reminders. |

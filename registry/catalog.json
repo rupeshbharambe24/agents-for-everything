@@ -2,7 +2,7 @@
   "apiVersion": "afe/v1",
   "counts": {
     "agents": 571,
-    "verified_agents": 569,
+    "verified_agents": 571,
     "teams": 22,
     "recipes": 12,
     "mcp_servers": 36
@@ -13962,14 +13962,12 @@
       "pattern": "augmented-llm",
       "autonomy": "L1",
       "safety_level": "S0",
-      "verified": false,
-      "badge": "unverified",
-      "digest": "sha256:e45a00649c019726489d97efa48b5832423136de3487a9f65821e95547c3e94e",
+      "verified": true,
+      "badge": "verified",
+      "digest": "sha256:9209fd1e743d7e05a8f7f56cc6f9d69a5ff7ab65ee4f91a0130334e92bdfe438",
       "summary": "Turns research findings into structured Markdown reports with executive summaries and references.",
       "tools": {
-        "required": [
-          "afe/documents"
-        ],
+        "required": [],
         "optional": []
       },
       "uses_agents": [],
@@ -19262,14 +19260,12 @@
       "pattern": "augmented-llm",
       "autonomy": "L1",
       "safety_level": "S0",
-      "verified": false,
-      "badge": "unverified",
-      "digest": "sha256:74f7b28de546f6437fcb9c9b82342fdae15e0e67ea211e498edfd3803d932afb",
+      "verified": true,
+      "badge": "verified",
+      "digest": "sha256:9729ea27b6b429004879c3d25669f1e2c633f38c04013a9892a7f294d9a81476",
       "summary": "Natural speech synthesis from text with locale, speed, and tone control.",
       "tools": {
-        "required": [
-          "afe/tts"
-        ],
+        "required": [],
         "optional": []
       },
       "uses_agents": [],

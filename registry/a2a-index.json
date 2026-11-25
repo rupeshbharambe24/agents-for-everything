@@ -2,7 +2,7 @@
   "apiVersion": "afe/v1",
   "protocol": "a2a",
   "total": 571,
-  "verified": 569,
+  "verified": 571,
   "cards": [
     {
       "name": "Booking Assistant",
@@ -32891,8 +32891,8 @@
         "autonomyLevel": "L1",
         "maturity": "beta",
         "license": "Apache-2.0",
-        "verificationBadge": "unverified",
-        "digest": "sha256:e45a00649c019726489d97efa48b5832423136de3487a9f65821e95547c3e94e"
+        "verificationBadge": "verified",
+        "digest": "sha256:9209fd1e743d7e05a8f7f56cc6f9d69a5ff7ab65ee4f91a0130334e92bdfe438"
       },
       "url": "agents/information/research/report-writer/"
     },
@@ -45012,8 +45012,8 @@
         "autonomyLevel": "L1",
         "maturity": "beta",
         "license": "Apache-2.0",
-        "verificationBadge": "unverified",
-        "digest": "sha256:74f7b28de546f6437fcb9c9b82342fdae15e0e67ea211e498edfd3803d932afb"
+        "verificationBadge": "verified",
+        "digest": "sha256:9729ea27b6b429004879c3d25669f1e2c633f38c04013a9892a7f294d9a81476"
       },
       "url": "agents/perception/voice/text-to-speech/"
     },
