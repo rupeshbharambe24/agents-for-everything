@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: content-engine
+  name: Content Engine
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: [content, podcast, blog, social, video]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Turns one raw recording into a podcast package, edited blog post, social posts, and short clip suggestions.
+  problem: Creators spend hours manually repurposing one long recording across formats and channels.
+  solution: Composes podcast-producer, blog-writer, editor, social-post-writer, and clip-generator.
+  agents:
+    - audio/podcast-producer
+    - content/blog-writer
+    - content/editor
+    - content/social-post-writer
+    - video/clip-generator
+  teams:
+    - content-studio
+  mcp_servers:
+    - afe/stt
+    - afe/media
+  entrypoint: app.py
+  safety:
+    level: S1
+    approval_required_for: []
+  evals:
+    suite: tests/test_recipe.py
