@@ -1,0 +1,11 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/git
+    required: true
+    permissions: ["read", "draft"]
+    scope: declared
+  - id: afe/shell-sandbox
+    required: true
+    permissions: ["read", "draft"]
+    scope: declared
