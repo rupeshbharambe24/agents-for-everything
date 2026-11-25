@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: physical/robot-task-planner
+  name: "Robot Task Planner"
+  version: 0.1.0
+  family: action
+  category: physical
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["action", "physical", "robot"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Turns instructions into safe robot action plans (ROS 2) with workspace constraints."
+  purpose: "Turns instructions into safe robot action plans (ROS 2) with workspace constraints."
+  pattern: human-in-the-loop
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["physical", "api"]
+  runtime: interactive
+  environment: physical
+  audience: ["professional", "enterprise"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b"]
+  tools:
+    required: ["afe/home-automation"]
+    optional: []
+  uses_agents: ["orchestration/human-approval-gate"]
+  memory: session
+  safety:
+    level: S4
+    side_effects: ["high-stakes-action-requires-human-signoff"]
+    approval_required_for: ["human_officer_signoff"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]
