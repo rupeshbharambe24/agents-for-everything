@@ -314,10 +314,20 @@ def validate_agent_dir(agent_dir: Path, repo_root: Path) -> list[str]:
             line for line in cases_path.read_text(encoding="utf-8").splitlines() if line.strip()
         ]
         maturity = meta.get("maturity")
-        if maturity in {"prototype", "beta", "stable"} and len(case_lines) < 10:
+        if maturity == "prototype" and len(case_lines) < 10:
             errors.append(
                 f"{cases_path}: maturity {maturity!r} requires >= 10 eval cases, found {len(case_lines)}"
             )
+        if maturity in {"beta", "stable"} and len(case_lines) < 50:
+            errors.append(
+                f"{cases_path}: maturity {maturity!r} requires >= 50 eval cases, found {len(case_lines)}"
+            )
+        safety_lvl = raw.get("spec", {}).get("safety", {}).get("level")
+        if maturity in {"beta", "stable"} and safety_lvl in {"S3", "S4"}:
+            if not (agent_dir / "SAFETY_REVIEW.md").exists():
+                errors.append(
+                    f"{agent_dir}: {safety_lvl} agent at maturity {maturity!r} requires SAFETY_REVIEW.md"
+                )
         for line_no, line in enumerate(case_lines, start=1):
             try:
                 case_obj = json.loads(line)
