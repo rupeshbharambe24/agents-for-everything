@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: sales/quote-builder
+  name: "Quote Builder"
+  version: 0.1.0
+  family: business
+  category: sales
+  tier: atomic
+  maturity: prototype
+  priority: P2
+  tags: ["business", "quote", "sales"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Builds quotes using price books and discount rules."
+  purpose: "Builds quotes using price books and discount rules."
+  pattern: augmented-llm
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["professional", "enterprise"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b"]
+  tools:
+    required: ["afe/crm"]
+    optional: []
+  memory: none
+  safety:
+    level: S2
+    side_effects: ["draft-or-local-write"]
+    approval_required_for: ["confirm_write"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]
