@@ -1,0 +1,11 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/stt
+    required: true
+    permissions: ["read", "draft"]
+    scope: declared
+  - id: afe/media
+    required: true
+    permissions: ["read", "draft"]
+    scope: declared
