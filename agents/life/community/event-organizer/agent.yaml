@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: community/event-organizer
+  name: "Meetup Organizer"
+  version: 0.1.0
+  family: life
+  category: community
+  tier: atomic
+  maturity: prototype
+  priority: P2
+  tags: ["community", "event", "life"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "RSVPs, reminders, venue logistics and follow-ups for community events."
+  purpose: "RSVPs, reminders, venue logistics and follow-ups for community events."
+  pattern: human-in-the-loop
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: scheduled
+  environment: digital-api
+  audience: ["consumer", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b"]
+  tools:
+    required: ["afe/email", "afe/calendar"]
+    optional: []
+  memory: none
+  safety:
+    level: S3
+    side_effects: ["external-action-requires-approval"]
+    approval_required_for: ["approve_external_action"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en", "hi", "ta", "te", "bn", "mr"]
