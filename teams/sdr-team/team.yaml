@@ -1,0 +1,36 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: sdr-team
+  name: SDR Prospecting Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["sdr", "team"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Finds ICP leads, enriches and scores accounts, drafts tailored outreach, and stages CRM updates."
+  pattern: prompt-chaining
+  entry: sales/lead-finder
+  members:
+    - sales/lead-finder
+    - sales/lead-enricher
+    - sales/lead-scorer
+    - sales/account-researcher
+    - sales/outreach-personalizer
+    - sales/crm-updater
+  graph:
+    - [lead-finder, lead-enricher]
+    - [lead-enricher, lead-scorer]
+    - [lead-scorer, account-researcher]
+    - [account-researcher, outreach-personalizer]
+    - [outreach-personalizer, crm-updater]
+  approvals: ["crm-updater"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S3
+  evals:
+    suite: evals/eval.yaml
