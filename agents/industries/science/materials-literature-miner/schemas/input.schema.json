@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://science/materials-literature-miner/input",
+  "type": "object",
+  "required": [
+    "input"
+  ],
+  "properties": {
+    "input": {
+      "type": "string",
+      "description": "Primary task payload (papers \u2192 dataset)"
+    },
+    "locale": {
+      "type": "string",
+      "default": "en"
+    },
+    "context": {
+      "type": "object"
+    },
+    "execute": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
