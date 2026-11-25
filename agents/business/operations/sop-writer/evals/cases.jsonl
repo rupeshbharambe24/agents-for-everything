@@ -1,0 +1,10 @@
+{"id": "sop--01", "input": {"input": "Sample sop-writer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--02", "input": {"input": "Sample sop-writer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--03", "input": {"input": "Sample sop-writer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--04", "input": {"input": "Sample sop-writer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--05", "input": {"input": "Sample sop-writer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--06", "input": {"input": "Sample sop-writer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--07", "input": {"input": "Sample sop-writer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--08", "input": {"input": "Sample sop-writer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--09", "input": {"input": "Sample sop-writer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sop--10", "input": {"input": "Sample sop-writer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

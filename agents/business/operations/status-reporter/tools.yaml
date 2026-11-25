@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/issue-tracker
+    required: true
+    permissions: ["read"]
+    scope: declared
+  - id: afe/filesystem
+    required: true
+    permissions: ["read"]
+    scope: declared
+  - id: afe/chat
+    required: true
+    permissions: ["read"]
+    scope: declared
