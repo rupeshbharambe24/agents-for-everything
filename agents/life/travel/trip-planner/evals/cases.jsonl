@@ -1,0 +1,10 @@
+{"id": "trip-01", "input": {"input": "Sample trip-planner request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-02", "input": {"input": "Sample trip-planner request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-03", "input": {"input": "Sample trip-planner request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-04", "input": {"input": "Sample trip-planner request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-05", "input": {"input": "Sample trip-planner request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-06", "input": {"input": "Sample trip-planner request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-07", "input": {"input": "Sample trip-planner request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-08", "input": {"input": "Sample trip-planner request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-09", "input": {"input": "Sample trip-planner request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "trip-10", "input": {"input": "Sample trip-planner request #10"}, "expected": {}, "expect_non_empty": ["result"]}
