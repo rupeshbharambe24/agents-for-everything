@@ -1,0 +1,10 @@
+{"id": "bran-01", "input": {"input": "Sample brand-monitor request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-02", "input": {"input": "Sample brand-monitor request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-03", "input": {"input": "Sample brand-monitor request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-04", "input": {"input": "Sample brand-monitor request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-05", "input": {"input": "Sample brand-monitor request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-06", "input": {"input": "Sample brand-monitor request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-07", "input": {"input": "Sample brand-monitor request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-08", "input": {"input": "Sample brand-monitor request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-09", "input": {"input": "Sample brand-monitor request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bran-10", "input": {"input": "Sample brand-monitor request #10"}, "expected": {}, "expect_non_empty": ["result"]}

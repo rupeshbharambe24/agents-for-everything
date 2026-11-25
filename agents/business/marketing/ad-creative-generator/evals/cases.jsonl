@@ -1,0 +1,10 @@
+{"id": "ad-c-01", "input": {"input": "Sample ad-creative-generator request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-02", "input": {"input": "Sample ad-creative-generator request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-03", "input": {"input": "Sample ad-creative-generator request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-04", "input": {"input": "Sample ad-creative-generator request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-05", "input": {"input": "Sample ad-creative-generator request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-06", "input": {"input": "Sample ad-creative-generator request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-07", "input": {"input": "Sample ad-creative-generator request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-08", "input": {"input": "Sample ad-creative-generator request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-09", "input": {"input": "Sample ad-creative-generator request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "ad-c-10", "input": {"input": "Sample ad-creative-generator request #10"}, "expected": {}, "expect_non_empty": ["result"]}
