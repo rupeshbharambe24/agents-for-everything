@@ -4,3 +4,9 @@
 {"id":"ds-ta-004","locale":"ta-IN","utterance":"en peyar Karthik Subramanian, city Chennai, pincode 600001","expected":{"full_name":"Karthik Subramanian","city":"Chennai","pincode":"600001"}}
 {"id":"ds-te-005","locale":"te-IN","utterance":"naa peru Divya Reddy, city Hyderabad, pincode 500001","expected":{"full_name":"Divya Reddy","city":"Hyderabad","pincode":"500001"}}
 {"id":"ds-bn-006","locale":"bn-IN","utterance":"amar naam Anirban Sen, city Kolkata, pincode 700001","expected":{"full_name":"Anirban Sen","city":"Kolkata","pincode":"700001"}}
+{"id":"ds-gu-007","locale":"gu-IN","utterance":"maru naam Rohan Patel che, city Ahmedabad, pincode 380001","expected":{"full_name":"Rohan Patel","city":"Ahmedabad","pincode":"380001"}}
+{"id":"ds-kn-008","locale":"kn-IN","utterance":"nanna hesaru Kavya Rao, city Bengaluru, pincode 560001","expected":{"full_name":"Kavya Rao","city":"Bengaluru","pincode":"560001"}}
+{"id":"ds-ml-009","locale":"ml-IN","utterance":"ente peru Arjun Nair, city Kochi, pincode 682001","expected":{"full_name":"Arjun Nair","city":"Kochi","pincode":"682001"}}
+{"id":"ds-pa-010","locale":"pa-IN","utterance":"mera naa Simran Kaur hai, city Chandigarh, pincode 160001","expected":{"full_name":"Simran Kaur","city":"Chandigarh","pincode":"160001"}}
+{"id":"ds-hi-dev-011","locale":"hi-IN","utterance":"मेरा नाम विक्रम जोशी है, शहर जयपुर, पिनकोड 302001","expected":{"full_name":"विक्रम जोशी","city":"जयपुर","pincode":"302001"}}
+{"id":"ds-mr-dev-012","locale":"mr-IN","utterance":"माझे नाव अमोल देशमुख आहे, शहर नागपूर, पिनकोड 440001","expected":{"full_name":"अमोल देशमुख","city":"नागपूर","pincode":"440001"}}

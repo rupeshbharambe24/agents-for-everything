@@ -1,0 +1,29 @@
+apiVersion: afe/v1
+kind: Profile
+metadata:
+  id: regulated-airgapped
+  name: Regulated Air-Gapped Profile (Banking, Healthcare, Government)
+  license: Apache-2.0
+spec:
+  provider: ollama
+  model_tiers:
+    - open-weights-70b
+    - local-onprem
+  default_model: llama3.3:70b
+  applicable_packs:
+    - banking
+    - insurance
+    - healthcare
+    - government
+    - legal
+    - finance
+  env:
+    AFE_PROVIDER: ollama
+    OLLAMA_HOST: http://127.0.0.1:11434
+    AFE_MODEL: llama3.3:70b
+  safety:
+    mask_pii_in_traces: true
+    allow_auto_approve_s3_s4: false
+    require_safety_review_md: true
+    data_retention: none
+    allow_external_telemetry: false

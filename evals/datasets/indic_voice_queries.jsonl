@@ -1,0 +1,10 @@
+{"id":"vq-hi-001","locale":"hi-IN","domain":"agriculture","query":"gehun ki fasal mein peela ratua bimari ka upay bataye","intent":"crop_disease_advisory"}
+{"id":"vq-mr-002","locale":"mr-IN","domain":"agriculture","query":"aaj Nashik mandi madhe kanda bhav kay ahe","intent":"mandi_price_lookup"}
+{"id":"vq-ta-003","locale":"ta-IN","domain":"government","query":"senior citizen pension scheme eligibility documents yenna","intent":"scheme_eligibility"}
+{"id":"vq-te-004","locale":"te-IN","domain":"banking","query":"naa khata lo suspicious UPI message vachindi check cheyandi","intent":"scam_check"}
+{"id":"vq-bn-005","locale":"bn-IN","domain":"healthcare","query":"discharge summary ta bangla te bujhiye din","intent":"discharge_simplify"}
+{"id":"vq-gu-006","locale":"gu-IN","domain":"agriculture","query":"aavti kale Surat ma varshad padse ke kem","intent":"farm_weather"}
+{"id":"vq-kn-007","locale":"kn-IN","domain":"accessibility","query":"ee form na ella fields odi heli mattu bharthi madi","intent":"accessible_form_fill"}
+{"id":"vq-ml-008","locale":"ml-IN","domain":"travel","query":"Kochi ninnu Munnar weekend trip plan thayaraku","intent":"trip_plan"}
+{"id":"vq-pa-009","locale":"pa-IN","domain":"education","query":"10th science light chapter quiz banao Punjabi vich","intent":"quiz_generation"}
+{"id":"vq-en-010","locale":"en-IN","domain":"banking","query":"explain Section 80C housing loan interest deduction simply","intent":"financial_literacy"}

@@ -1,0 +1,26 @@
+apiVersion: afe/v1
+kind: Profile
+metadata:
+  id: low-bandwidth-edge
+  name: Low-Bandwidth & Voice-First Edge Profile
+  license: Apache-2.0
+spec:
+  provider: ollama
+  model_tiers:
+    - open-weights-8b
+    - local-onprem
+  default_model: llama3.2:3b
+  applicable_packs:
+    - agriculture
+    - voice
+    - accessibility
+    - government
+  env:
+    AFE_PROVIDER: ollama
+    OLLAMA_HOST: http://127.0.0.1:11434
+    AFE_MODEL: llama3.2:3b
+  safety:
+    mask_pii_in_traces: true
+    allow_auto_approve_s3_s4: false
+    data_retention: ephemeral
+    allow_external_telemetry: false

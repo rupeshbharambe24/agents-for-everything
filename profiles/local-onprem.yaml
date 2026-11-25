@@ -1,0 +1,22 @@
+apiVersion: afe/v1
+kind: Profile
+metadata:
+  id: local-onprem
+  name: Local On-Premises Workstation & VPC Profile
+  license: Apache-2.0
+spec:
+  provider: ollama
+  model_tiers:
+    - open-weights-8b
+    - open-weights-70b
+    - local-onprem
+  default_model: qwen2.5:14b
+  env:
+    AFE_PROVIDER: ollama
+    OLLAMA_HOST: http://localhost:11434
+    AFE_MODEL: qwen2.5:14b
+  safety:
+    mask_pii_in_traces: true
+    allow_auto_approve_s3_s4: false
+    data_retention: none
+    allow_external_telemetry: false
