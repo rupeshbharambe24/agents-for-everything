@@ -1,0 +1,36 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: chief-of-staff
+  name: Chief of Staff Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["chief", "of", "staff"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Coordinates daily briefing, inbox triage, meeting prep, task planning, and memory recall."
+  pattern: hierarchical
+  entry: orchestration/supervisor
+  members:
+    - orchestration/supervisor
+    - productivity/daily-briefer
+    - communication/inbox-triager
+    - meetings/meeting-prep
+    - productivity/task-manager
+    - memory/memory-retriever
+  graph:
+    - [supervisor, daily-briefer]
+    - [daily-briefer, inbox-triager]
+    - [inbox-triager, meeting-prep]
+    - [meeting-prep, task-manager]
+    - [task-manager, memory-retriever]
+  approvals: []
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S2
+  evals:
+    suite: evals/eval.yaml
