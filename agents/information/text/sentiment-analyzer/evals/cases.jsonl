@@ -1,0 +1,10 @@
+{"id": "sa-01", "input": {"text": "Great fast helpful service"}, "expected": {"sentiment": "positive"}}
+{"id": "sa-02", "input": {"text": "Great fast helpful service"}, "expected": {"sentiment": "positive"}}
+{"id": "sa-03", "input": {"text": "Great fast helpful service"}, "expected": {"sentiment": "positive"}}
+{"id": "sa-04", "input": {"text": "Great fast helpful service"}, "expected": {"sentiment": "positive"}}
+{"id": "sa-05", "input": {"text": "Great fast helpful service"}, "expected": {"sentiment": "positive"}}
+{"id": "sa-06", "input": {"text": "Broken slow failed checkout"}, "expected": {"sentiment": "negative"}}
+{"id": "sa-07", "input": {"text": "Broken slow failed checkout"}, "expected": {"sentiment": "negative"}}
+{"id": "sa-08", "input": {"text": "Broken slow failed checkout"}, "expected": {"sentiment": "negative"}}
+{"id": "sa-09", "input": {"text": "Broken slow failed checkout"}, "expected": {"sentiment": "negative"}}
+{"id": "sa-10", "input": {"text": "Broken slow failed checkout"}, "expected": {"sentiment": "negative"}}

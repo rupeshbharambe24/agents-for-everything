@@ -1,0 +1,10 @@
+{"id": "expl-01", "input": {"input": "Sample explainer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-02", "input": {"input": "Sample explainer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-03", "input": {"input": "Sample explainer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-04", "input": {"input": "Sample explainer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-05", "input": {"input": "Sample explainer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-06", "input": {"input": "Sample explainer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-07", "input": {"input": "Sample explainer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-08", "input": {"input": "Sample explainer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-09", "input": {"input": "Sample explainer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "expl-10", "input": {"input": "Sample explainer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

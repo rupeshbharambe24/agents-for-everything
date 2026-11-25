@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://text/sentiment-analyzer/output",
+  "type": "object",
+  "required": [
+    "sentiment",
+    "score"
+  ],
+  "properties": {
+    "sentiment": {
+      "enum": [
+        "positive",
+        "negative",
+        "neutral",
+        "mixed"
+      ]
+    },
+    "score": {
+      "type": "number"
+    }
+  }
+}
