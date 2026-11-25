@@ -1,0 +1,10 @@
+{"id": "resu-01", "input": {"input": "Sample resume-screener request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "resu-02", "input": {"input": "Sample resume-screener request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "resu-03", "input": {"input": "Sample resume-screener request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "resu-04", "input": {"input": "Sample resume-screener request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "resu-05", "input": {"input": "Sample resume-screener request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "resu-06", "input": {"input": "Sample resume-screener request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "resu-07", "input": {"input": "Sample resume-screener request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "resu-08", "input": {"input": "Sample resume-screener request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "resu-09", "input": {"input": "Sample resume-screener request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "resu-10", "input": {"input": "Sample resume-screener request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}
