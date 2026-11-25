@@ -1,0 +1,10 @@
+{"id": "easy-01", "input": {"input": "Sample easy-read-simplifier request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-02", "input": {"input": "Sample easy-read-simplifier request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-03", "input": {"input": "Sample easy-read-simplifier request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-04", "input": {"input": "Sample easy-read-simplifier request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-05", "input": {"input": "Sample easy-read-simplifier request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-06", "input": {"input": "Sample easy-read-simplifier request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-07", "input": {"input": "Sample easy-read-simplifier request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-08", "input": {"input": "Sample easy-read-simplifier request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-09", "input": {"input": "Sample easy-read-simplifier request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "easy-10", "input": {"input": "Sample easy-read-simplifier request #10"}, "expected": {}, "expect_non_empty": ["result"]}
