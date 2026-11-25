@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: healthcare/medical-scribe
+  name: "Ambient Medical Scribe"
+  version: 0.1.0
+  family: industries
+  category: healthcare
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["healthcare", "industries", "medical", "on-prem", "regulated"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Turns a consented doctor\u2013patient conversation into a structured clinical note (SOAP) for the clinician to approve."
+  purpose: "Turns a consented doctor\u2013patient conversation into a structured clinical note (SOAP) for the clinician to approve."
+  pattern: orchestrator-workers
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["voice", "text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["industry", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b", "open-weights-70b", "local-onprem"]
+  tools:
+    required: ["afe/stt"]
+    optional: []
+  uses_agents: ["voice/speech-to-text", "voice/speaker-diarizer"]
+  memory: session
+  safety:
+    level: S4
+    side_effects: ["high-stakes-action-requires-human-signoff"]
+    approval_required_for: ["human_officer_signoff"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en", "hi", "ta", "te", "bn", "mr"]

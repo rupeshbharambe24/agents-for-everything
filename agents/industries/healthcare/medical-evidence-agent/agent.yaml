@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: healthcare/medical-evidence-agent
+  name: "Medical Evidence Summarizer"
+  version: 0.1.0
+  family: industries
+  category: healthcare
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["healthcare", "industries", "medical", "on-prem", "regulated"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Evidence summaries from guidelines and literature with citations."
+  purpose: "Evidence summaries from guidelines and literature with citations."
+  pattern: orchestrator-workers
+  autonomy: L1
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["industry", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b", "open-weights-70b", "local-onprem"]
+  tools:
+    required: ["afe/web-search"]
+    optional: []
+  uses_agents: ["search/academic-search", "voice/speech-to-text"]
+  memory: session
+  safety:
+    level: S1
+    side_effects: ["read-only-external-query"]
+    approval_required_for: []
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en", "hi", "ta", "te", "bn", "mr"]
