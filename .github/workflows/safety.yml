@@ -5,6 +5,13 @@ on:
     paths:
       - "agents/**"
       - "SECURITY.md"
+  push:
+    branches: [main]
+    paths:
+      - "agents/**"
+      - "SECURITY.md"
+      - ".github/workflows/safety.yml"
+  workflow_dispatch:
 
 jobs:
   safety-check:

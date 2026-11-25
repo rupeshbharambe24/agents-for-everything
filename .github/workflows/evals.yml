@@ -7,8 +7,17 @@ on:
       - "teams/**"
       - "recipes/**"
       - "evals/**"
+  push:
+    branches: [main]
+    paths:
+      - "agents/**"
+      - "teams/**"
+      - "recipes/**"
+      - "evals/**"
+      - ".github/workflows/evals.yml"
   schedule:
     - cron: "0 2 * * *"
+  workflow_dispatch:
 
 jobs:
   evals:
