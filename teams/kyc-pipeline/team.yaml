@@ -1,0 +1,34 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: kyc-pipeline
+  name: KYC Onboarding Pipeline
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["kyc", "pipeline"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Consented ID extraction, KYC checks, sanctions/PEP screening, officer approval, and audit logging."
+  pattern: prompt-chaining
+  entry: vision/id-document-reader
+  members:
+    - vision/id-document-reader
+    - banking/kyc-onboarding
+    - banking/sanctions-screener
+    - orchestration/human-approval-gate
+    - guardrails/audit-logger
+  graph:
+    - [id-document-reader, kyc-onboarding]
+    - [kyc-onboarding, sanctions-screener]
+    - [sanctions-screener, human-approval-gate]
+    - [human-approval-gate, audit-logger]
+  approvals: ["id-document-reader", "kyc-onboarding", "sanctions-screener", "human-approval-gate"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S4
+  evals:
+    suite: evals/eval.yaml
