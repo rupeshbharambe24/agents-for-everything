@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://travel/trip-expense-reporter/input",
+  "type": "object",
+  "required": [
+    "input"
+  ],
+  "properties": {
+    "input": {
+      "type": "string",
+      "description": "Primary task payload (receipts \u2192 report)"
+    },
+    "locale": {
+      "type": "string",
+      "default": "en"
+    },
+    "context": {
+      "type": "object"
+    },
+    "execute": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
