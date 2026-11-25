@@ -1,0 +1,10 @@
+{"id": "drd-01", "input": {"text": "Doc 1 email user1@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-02", "input": {"text": "Doc 2 email user2@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-03", "input": {"text": "Doc 3 email user3@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-04", "input": {"text": "Doc 4 email user4@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-05", "input": {"text": "Doc 5 email user5@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-06", "input": {"text": "Doc 6 email user6@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-07", "input": {"text": "Doc 7 email user7@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-08", "input": {"text": "Doc 8 email user8@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-09", "input": {"text": "Doc 9 email user9@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}
+{"id": "drd-10", "input": {"text": "Doc 10 email user10@example.org"}, "expected": {"pii_found": ["email"]}, "expect_non_empty": ["redacted_text"]}

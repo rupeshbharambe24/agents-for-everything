@@ -1,0 +1,10 @@
+{"id": "dcl-01", "input": {"text": "Invoice #102 Subtotal INR 500 GST 90"}, "expected": {"doc_type": "invoice"}}
+{"id": "dcl-02", "input": {"text": "Mutual NDA Agreement indemnity clause"}, "expected": {"doc_type": "contract"}}
+{"id": "dcl-03", "input": {"text": "Bank statement opening balance debit credit"}, "expected": {"doc_type": "bank_statement"}}
+{"id": "dcl-04", "input": {"text": "Passport number and date of birth"}, "expected": {"doc_type": "id_document"}}
+{"id": "dcl-05", "input": {"text": "Work experience and Python skills"}, "expected": {"doc_type": "resume"}}
+{"id": "dcl-06", "input": {"text": "Invoice due date tomorrow"}, "expected": {"doc_type": "invoice"}}
+{"id": "dcl-07", "input": {"text": "Master Services Agreement clause 4"}, "expected": {"doc_type": "contract"}}
+{"id": "dcl-08", "input": {"text": "Monthly bank statement summary"}, "expected": {"doc_type": "bank_statement"}}
+{"id": "dcl-09", "input": {"text": "Aadhaar ID card copy"}, "expected": {"doc_type": "id_document"}}
+{"id": "dcl-10", "input": {"text": "Random unstructured memo"}, "expected": {"doc_type": "other"}}

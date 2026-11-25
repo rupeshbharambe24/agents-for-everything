@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://documents/doc-classifier/output",
+  "type": "object",
+  "required": [
+    "doc_type",
+    "confidence"
+  ],
+  "properties": {
+    "doc_type": {
+      "enum": [
+        "invoice",
+        "contract",
+        "bank_statement",
+        "id_document",
+        "resume",
+        "other"
+      ]
+    },
+    "confidence": {
+      "type": "number"
+    }
+  }
+}

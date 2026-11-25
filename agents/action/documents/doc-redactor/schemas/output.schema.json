@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://documents/doc-redactor/output",
+  "type": "object",
+  "required": [
+    "redacted_text",
+    "pii_found"
+  ],
+  "properties": {
+    "redacted_text": {
+      "type": "string"
+    },
+    "pii_found": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
