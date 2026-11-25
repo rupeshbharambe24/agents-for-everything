@@ -1,0 +1,7 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/memory-store
+    required: true
+    permissions: ["read", "draft"]
+    scope: declared
