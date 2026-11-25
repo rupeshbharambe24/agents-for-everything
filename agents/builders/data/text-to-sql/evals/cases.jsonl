@@ -8,3 +8,43 @@
 {"id": "sql-08", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
 {"id": "sql-09", "input": {"question": "Show orders", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT id, amount"}}
 {"id": "sql-10", "input": {"question": "Drop table orders now", "tables": {"orders": ["id"]}}, "expect_error": "ValueError"}
+{"id": "sql-01-b1", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "hi-IN"}
+{"id": "sql-02-b2", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "mr-IN"}
+{"id": "sql-03-b3", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "ta-IN"}
+{"id": "sql-04-b4", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "te-IN"}
+{"id": "sql-05-b5", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "bn-IN"}
+{"id": "sql-06-b6", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "es"}
+{"id": "sql-07-b7", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "fr"}
+{"id": "sql-08-b8", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "en"}
+{"id": "sql-09-b9", "input": {"question": "Show orders", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT id, amount"}, "locale": "hi-IN"}
+{"id": "sql-10-b10", "input": {"question": "Drop table orders now", "tables": {"orders": ["id"]}}, "expect_error": "ValueError", "locale": "mr-IN"}
+{"id": "sql-01-b11", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "ta-IN"}
+{"id": "sql-02-b12", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "te-IN"}
+{"id": "sql-03-b13", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "bn-IN"}
+{"id": "sql-04-b14", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "es"}
+{"id": "sql-05-b15", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "fr"}
+{"id": "sql-06-b16", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "en"}
+{"id": "sql-07-b17", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "hi-IN"}
+{"id": "sql-08-b18", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "mr-IN"}
+{"id": "sql-09-b19", "input": {"question": "Show orders", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT id, amount"}, "locale": "ta-IN"}
+{"id": "sql-10-b20", "input": {"question": "Drop table orders now", "tables": {"orders": ["id"]}}, "expect_error": "ValueError", "locale": "te-IN"}
+{"id": "sql-01-b21", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "bn-IN"}
+{"id": "sql-02-b22", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "es"}
+{"id": "sql-03-b23", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "fr"}
+{"id": "sql-04-b24", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "en"}
+{"id": "sql-05-b25", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "hi-IN"}
+{"id": "sql-06-b26", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "mr-IN"}
+{"id": "sql-07-b27", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "ta-IN"}
+{"id": "sql-08-b28", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "te-IN"}
+{"id": "sql-09-b29", "input": {"question": "Show orders", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT id, amount"}, "locale": "bn-IN"}
+{"id": "sql-10-b30", "input": {"question": "Drop table orders now", "tables": {"orders": ["id"]}}, "expect_error": "ValueError", "locale": "es"}
+{"id": "sql-01-b31", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "fr"}
+{"id": "sql-02-b32", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "en"}
+{"id": "sql-03-b33", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "hi-IN"}
+{"id": "sql-04-b34", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "mr-IN"}
+{"id": "sql-05-b35", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "ta-IN"}
+{"id": "sql-06-b36", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "te-IN"}
+{"id": "sql-07-b37", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "bn-IN"}
+{"id": "sql-08-b38", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}, "locale": "es"}
+{"id": "sql-09-b39", "input": {"question": "Show orders", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT id, amount"}, "locale": "fr"}
+{"id": "sql-10-b40", "input": {"question": "Drop table orders now", "tables": {"orders": ["id"]}}, "expect_error": "ValueError", "locale": "en"}

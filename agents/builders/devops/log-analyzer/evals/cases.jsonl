@@ -8,3 +8,43 @@
 {"id": "log-08", "input": {"logs": "INFO ok\nERROR timeout db #8\nERROR timeout db #8\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
 {"id": "log-09", "input": {"logs": "INFO ok\nERROR timeout db #9\nERROR timeout db #9\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
 {"id": "log-10", "input": {"logs": "INFO ok\nERROR timeout db #10\nERROR timeout db #10\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-01-b1", "input": {"logs": "INFO ok\nERROR timeout db #1\nERROR timeout db #1\n\nINFO check #1"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "hi-IN"}
+{"id": "log-02-b2", "input": {"logs": "INFO ok\nERROR timeout db #2\nERROR timeout db #2\n\nINFO check #2"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "mr-IN"}
+{"id": "log-03-b3", "input": {"logs": "INFO ok\nERROR timeout db #3\nERROR timeout db #3\n\nINFO check #3"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "ta-IN"}
+{"id": "log-04-b4", "input": {"logs": "INFO ok\nERROR timeout db #4\nERROR timeout db #4\n\nINFO check #4"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "te-IN"}
+{"id": "log-05-b5", "input": {"logs": "INFO ok\nERROR timeout db #5\nERROR timeout db #5\n\nINFO check #5"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "bn-IN"}
+{"id": "log-06-b6", "input": {"logs": "INFO ok\nERROR timeout db #6\nERROR timeout db #6\n\nINFO check #6"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "es"}
+{"id": "log-07-b7", "input": {"logs": "INFO ok\nERROR timeout db #7\nERROR timeout db #7\n\nINFO check #7"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "fr"}
+{"id": "log-08-b8", "input": {"logs": "INFO ok\nERROR timeout db #8\nERROR timeout db #8\n\nINFO check #8"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "en"}
+{"id": "log-09-b9", "input": {"logs": "INFO ok\nERROR timeout db #9\nERROR timeout db #9\n\nINFO check #9"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "hi-IN"}
+{"id": "log-10-b10", "input": {"logs": "INFO ok\nERROR timeout db #10\nERROR timeout db #10\n\nINFO check #10"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "mr-IN"}
+{"id": "log-01-b11", "input": {"logs": "INFO ok\nERROR timeout db #1\nERROR timeout db #1\n\nINFO check #11"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "ta-IN"}
+{"id": "log-02-b12", "input": {"logs": "INFO ok\nERROR timeout db #2\nERROR timeout db #2\n\nINFO check #12"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "te-IN"}
+{"id": "log-03-b13", "input": {"logs": "INFO ok\nERROR timeout db #3\nERROR timeout db #3\n\nINFO check #13"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "bn-IN"}
+{"id": "log-04-b14", "input": {"logs": "INFO ok\nERROR timeout db #4\nERROR timeout db #4\n\nINFO check #14"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "es"}
+{"id": "log-05-b15", "input": {"logs": "INFO ok\nERROR timeout db #5\nERROR timeout db #5\n\nINFO check #15"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "fr"}
+{"id": "log-06-b16", "input": {"logs": "INFO ok\nERROR timeout db #6\nERROR timeout db #6\n\nINFO check #16"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "en"}
+{"id": "log-07-b17", "input": {"logs": "INFO ok\nERROR timeout db #7\nERROR timeout db #7\n\nINFO check #17"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "hi-IN"}
+{"id": "log-08-b18", "input": {"logs": "INFO ok\nERROR timeout db #8\nERROR timeout db #8\n\nINFO check #18"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "mr-IN"}
+{"id": "log-09-b19", "input": {"logs": "INFO ok\nERROR timeout db #9\nERROR timeout db #9\n\nINFO check #19"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "ta-IN"}
+{"id": "log-10-b20", "input": {"logs": "INFO ok\nERROR timeout db #10\nERROR timeout db #10\n\nINFO check #20"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "te-IN"}
+{"id": "log-01-b21", "input": {"logs": "INFO ok\nERROR timeout db #1\nERROR timeout db #1\n\nINFO check #21"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "bn-IN"}
+{"id": "log-02-b22", "input": {"logs": "INFO ok\nERROR timeout db #2\nERROR timeout db #2\n\nINFO check #22"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "es"}
+{"id": "log-03-b23", "input": {"logs": "INFO ok\nERROR timeout db #3\nERROR timeout db #3\n\nINFO check #23"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "fr"}
+{"id": "log-04-b24", "input": {"logs": "INFO ok\nERROR timeout db #4\nERROR timeout db #4\n\nINFO check #24"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "en"}
+{"id": "log-05-b25", "input": {"logs": "INFO ok\nERROR timeout db #5\nERROR timeout db #5\n\nINFO check #25"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "hi-IN"}
+{"id": "log-06-b26", "input": {"logs": "INFO ok\nERROR timeout db #6\nERROR timeout db #6\n\nINFO check #26"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "mr-IN"}
+{"id": "log-07-b27", "input": {"logs": "INFO ok\nERROR timeout db #7\nERROR timeout db #7\n\nINFO check #27"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "ta-IN"}
+{"id": "log-08-b28", "input": {"logs": "INFO ok\nERROR timeout db #8\nERROR timeout db #8\n\nINFO check #28"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "te-IN"}
+{"id": "log-09-b29", "input": {"logs": "INFO ok\nERROR timeout db #9\nERROR timeout db #9\n\nINFO check #29"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "bn-IN"}
+{"id": "log-10-b30", "input": {"logs": "INFO ok\nERROR timeout db #10\nERROR timeout db #10\n\nINFO check #30"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "es"}
+{"id": "log-01-b31", "input": {"logs": "INFO ok\nERROR timeout db #1\nERROR timeout db #1\n\nINFO check #31"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "fr"}
+{"id": "log-02-b32", "input": {"logs": "INFO ok\nERROR timeout db #2\nERROR timeout db #2\n\nINFO check #32"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "en"}
+{"id": "log-03-b33", "input": {"logs": "INFO ok\nERROR timeout db #3\nERROR timeout db #3\n\nINFO check #33"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "hi-IN"}
+{"id": "log-04-b34", "input": {"logs": "INFO ok\nERROR timeout db #4\nERROR timeout db #4\n\nINFO check #34"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "mr-IN"}
+{"id": "log-05-b35", "input": {"logs": "INFO ok\nERROR timeout db #5\nERROR timeout db #5\n\nINFO check #35"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "ta-IN"}
+{"id": "log-06-b36", "input": {"logs": "INFO ok\nERROR timeout db #6\nERROR timeout db #6\n\nINFO check #36"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "te-IN"}
+{"id": "log-07-b37", "input": {"logs": "INFO ok\nERROR timeout db #7\nERROR timeout db #7\n\nINFO check #37"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "bn-IN"}
+{"id": "log-08-b38", "input": {"logs": "INFO ok\nERROR timeout db #8\nERROR timeout db #8\n\nINFO check #38"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "es"}
+{"id": "log-09-b39", "input": {"logs": "INFO ok\nERROR timeout db #9\nERROR timeout db #9\n\nINFO check #39"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "fr"}
+{"id": "log-10-b40", "input": {"logs": "INFO ok\nERROR timeout db #10\nERROR timeout db #10\n\nINFO check #40"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"], "locale": "en"}

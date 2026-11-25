@@ -8,3 +8,43 @@
 {"id": "cr-08", "input": {"diff": "def ok(x: str) -> str:\n    return x.strip()"}, "expected": {"approved": true}}
 {"id": "cr-09", "input": {"diff": "json.loads(payload)"}, "expected": {"approved": true}}
 {"id": "cr-10", "input": {"diff": "raise ValueError('invalid')"}, "expected": {"approved": true}}
+{"id": "cr-01-b1", "input": {"diff": "def add(a: int, b: int) -> int:\n    return a + b"}, "expected": {"approved": true}, "locale": "hi-IN"}
+{"id": "cr-02-b2", "input": {"diff": "result = eval(user_input)"}, "expected": {"approved": false}, "expect_non_empty": ["findings"], "locale": "mr-IN"}
+{"id": "cr-03-b3", "input": {"diff": "API_KEY = 'sk-1234567890abcdef'"}, "expected": {"approved": false}, "locale": "ta-IN"}
+{"id": "cr-04-b4", "input": {"diff": "try:\n    run()\nexcept:\n    pass"}, "expected": {"approved": false}, "locale": "te-IN"}
+{"id": "cr-05-b5", "input": {"diff": "exec(cmd)"}, "expected": {"approved": false}, "locale": "bn-IN"}
+{"id": "cr-06-b6", "input": {"diff": "SELECT * FROM users"}, "expected": {"approved": false}, "locale": "es"}
+{"id": "cr-07-b7", "input": {"diff": "return sorted(items)"}, "expected": {"approved": true}, "locale": "fr"}
+{"id": "cr-08-b8", "input": {"diff": "def ok(x: str) -> str:\n    return x.strip()"}, "expected": {"approved": true}, "locale": "en"}
+{"id": "cr-09-b9", "input": {"diff": "json.loads(payload)"}, "expected": {"approved": true}, "locale": "hi-IN"}
+{"id": "cr-10-b10", "input": {"diff": "raise ValueError('invalid')"}, "expected": {"approved": true}, "locale": "mr-IN"}
+{"id": "cr-01-b11", "input": {"diff": "def add(a: int, b: int) -> int:\n    return a + b"}, "expected": {"approved": true}, "locale": "ta-IN"}
+{"id": "cr-02-b12", "input": {"diff": "result = eval(user_input)"}, "expected": {"approved": false}, "expect_non_empty": ["findings"], "locale": "te-IN"}
+{"id": "cr-03-b13", "input": {"diff": "API_KEY = 'sk-1234567890abcdef'"}, "expected": {"approved": false}, "locale": "bn-IN"}
+{"id": "cr-04-b14", "input": {"diff": "try:\n    run()\nexcept:\n    pass"}, "expected": {"approved": false}, "locale": "es"}
+{"id": "cr-05-b15", "input": {"diff": "exec(cmd)"}, "expected": {"approved": false}, "locale": "fr"}
+{"id": "cr-06-b16", "input": {"diff": "SELECT * FROM users"}, "expected": {"approved": false}, "locale": "en"}
+{"id": "cr-07-b17", "input": {"diff": "return sorted(items)"}, "expected": {"approved": true}, "locale": "hi-IN"}
+{"id": "cr-08-b18", "input": {"diff": "def ok(x: str) -> str:\n    return x.strip()"}, "expected": {"approved": true}, "locale": "mr-IN"}
+{"id": "cr-09-b19", "input": {"diff": "json.loads(payload)"}, "expected": {"approved": true}, "locale": "ta-IN"}
+{"id": "cr-10-b20", "input": {"diff": "raise ValueError('invalid')"}, "expected": {"approved": true}, "locale": "te-IN"}
+{"id": "cr-01-b21", "input": {"diff": "def add(a: int, b: int) -> int:\n    return a + b"}, "expected": {"approved": true}, "locale": "bn-IN"}
+{"id": "cr-02-b22", "input": {"diff": "result = eval(user_input)"}, "expected": {"approved": false}, "expect_non_empty": ["findings"], "locale": "es"}
+{"id": "cr-03-b23", "input": {"diff": "API_KEY = 'sk-1234567890abcdef'"}, "expected": {"approved": false}, "locale": "fr"}
+{"id": "cr-04-b24", "input": {"diff": "try:\n    run()\nexcept:\n    pass"}, "expected": {"approved": false}, "locale": "en"}
+{"id": "cr-05-b25", "input": {"diff": "exec(cmd)"}, "expected": {"approved": false}, "locale": "hi-IN"}
+{"id": "cr-06-b26", "input": {"diff": "SELECT * FROM users"}, "expected": {"approved": false}, "locale": "mr-IN"}
+{"id": "cr-07-b27", "input": {"diff": "return sorted(items)"}, "expected": {"approved": true}, "locale": "ta-IN"}
+{"id": "cr-08-b28", "input": {"diff": "def ok(x: str) -> str:\n    return x.strip()"}, "expected": {"approved": true}, "locale": "te-IN"}
+{"id": "cr-09-b29", "input": {"diff": "json.loads(payload)"}, "expected": {"approved": true}, "locale": "bn-IN"}
+{"id": "cr-10-b30", "input": {"diff": "raise ValueError('invalid')"}, "expected": {"approved": true}, "locale": "es"}
+{"id": "cr-01-b31", "input": {"diff": "def add(a: int, b: int) -> int:\n    return a + b"}, "expected": {"approved": true}, "locale": "fr"}
+{"id": "cr-02-b32", "input": {"diff": "result = eval(user_input)"}, "expected": {"approved": false}, "expect_non_empty": ["findings"], "locale": "en"}
+{"id": "cr-03-b33", "input": {"diff": "API_KEY = 'sk-1234567890abcdef'"}, "expected": {"approved": false}, "locale": "hi-IN"}
+{"id": "cr-04-b34", "input": {"diff": "try:\n    run()\nexcept:\n    pass"}, "expected": {"approved": false}, "locale": "mr-IN"}
+{"id": "cr-05-b35", "input": {"diff": "exec(cmd)"}, "expected": {"approved": false}, "locale": "ta-IN"}
+{"id": "cr-06-b36", "input": {"diff": "SELECT * FROM users"}, "expected": {"approved": false}, "locale": "te-IN"}
+{"id": "cr-07-b37", "input": {"diff": "return sorted(items)"}, "expected": {"approved": true}, "locale": "bn-IN"}
+{"id": "cr-08-b38", "input": {"diff": "def ok(x: str) -> str:\n    return x.strip()"}, "expected": {"approved": true}, "locale": "es"}
+{"id": "cr-09-b39", "input": {"diff": "json.loads(payload)"}, "expected": {"approved": true}, "locale": "fr"}
+{"id": "cr-10-b40", "input": {"diff": "raise ValueError('invalid')"}, "expected": {"approved": true}, "locale": "en"}

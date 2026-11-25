@@ -8,3 +8,43 @@
 {"id": "bf-08", "input": {"issue": "Null edge case #8", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
 {"id": "bf-09", "input": {"issue": "Null edge case #9", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
 {"id": "bf-10", "input": {"issue": "Null edge case #10", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-01-b1", "input": {"issue": "Null edge case #1", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "hi-IN"}
+{"id": "bf-02-b2", "input": {"issue": "Null edge case #2", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "mr-IN"}
+{"id": "bf-03-b3", "input": {"issue": "Null edge case #3", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "ta-IN"}
+{"id": "bf-04-b4", "input": {"issue": "Null edge case #4", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "te-IN"}
+{"id": "bf-05-b5", "input": {"issue": "Null edge case #5", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "bn-IN"}
+{"id": "bf-06-b6", "input": {"issue": "Null edge case #6", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "es"}
+{"id": "bf-07-b7", "input": {"issue": "Null edge case #7", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "fr"}
+{"id": "bf-08-b8", "input": {"issue": "Null edge case #8", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "en"}
+{"id": "bf-09-b9", "input": {"issue": "Null edge case #9", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "hi-IN"}
+{"id": "bf-10-b10", "input": {"issue": "Null edge case #10", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "mr-IN"}
+{"id": "bf-01-b11", "input": {"issue": "Null edge case #1", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "ta-IN"}
+{"id": "bf-02-b12", "input": {"issue": "Null edge case #2", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "te-IN"}
+{"id": "bf-03-b13", "input": {"issue": "Null edge case #3", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "bn-IN"}
+{"id": "bf-04-b14", "input": {"issue": "Null edge case #4", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "es"}
+{"id": "bf-05-b15", "input": {"issue": "Null edge case #5", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "fr"}
+{"id": "bf-06-b16", "input": {"issue": "Null edge case #6", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "en"}
+{"id": "bf-07-b17", "input": {"issue": "Null edge case #7", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "hi-IN"}
+{"id": "bf-08-b18", "input": {"issue": "Null edge case #8", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "mr-IN"}
+{"id": "bf-09-b19", "input": {"issue": "Null edge case #9", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "ta-IN"}
+{"id": "bf-10-b20", "input": {"issue": "Null edge case #10", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "te-IN"}
+{"id": "bf-01-b21", "input": {"issue": "Null edge case #1", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "bn-IN"}
+{"id": "bf-02-b22", "input": {"issue": "Null edge case #2", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "es"}
+{"id": "bf-03-b23", "input": {"issue": "Null edge case #3", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "fr"}
+{"id": "bf-04-b24", "input": {"issue": "Null edge case #4", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "en"}
+{"id": "bf-05-b25", "input": {"issue": "Null edge case #5", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "hi-IN"}
+{"id": "bf-06-b26", "input": {"issue": "Null edge case #6", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "mr-IN"}
+{"id": "bf-07-b27", "input": {"issue": "Null edge case #7", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "ta-IN"}
+{"id": "bf-08-b28", "input": {"issue": "Null edge case #8", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "te-IN"}
+{"id": "bf-09-b29", "input": {"issue": "Null edge case #9", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "bn-IN"}
+{"id": "bf-10-b30", "input": {"issue": "Null edge case #10", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "es"}
+{"id": "bf-01-b31", "input": {"issue": "Null edge case #1", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "fr"}
+{"id": "bf-02-b32", "input": {"issue": "Null edge case #2", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "en"}
+{"id": "bf-03-b33", "input": {"issue": "Null edge case #3", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "hi-IN"}
+{"id": "bf-04-b34", "input": {"issue": "Null edge case #4", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "mr-IN"}
+{"id": "bf-05-b35", "input": {"issue": "Null edge case #5", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "ta-IN"}
+{"id": "bf-06-b36", "input": {"issue": "Null edge case #6", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "te-IN"}
+{"id": "bf-07-b37", "input": {"issue": "Null edge case #7", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "bn-IN"}
+{"id": "bf-08-b38", "input": {"issue": "Null edge case #8", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "es"}
+{"id": "bf-09-b39", "input": {"issue": "Null edge case #9", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "fr"}
+{"id": "bf-10-b40", "input": {"issue": "Null edge case #10", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"], "locale": "en"}

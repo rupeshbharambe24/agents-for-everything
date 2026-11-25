@@ -8,3 +8,43 @@
 {"id": "tw-08", "input": {"code": "def compute_8(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
 {"id": "tw-09", "input": {"code": "def compute_9(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
 {"id": "tw-10", "input": {"code": "def compute_10(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-01-b1", "input": {"code": "def compute_1(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "hi-IN"}
+{"id": "tw-02-b2", "input": {"code": "def compute_2(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "mr-IN"}
+{"id": "tw-03-b3", "input": {"code": "def compute_3(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "ta-IN"}
+{"id": "tw-04-b4", "input": {"code": "def compute_4(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "te-IN"}
+{"id": "tw-05-b5", "input": {"code": "def compute_5(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "bn-IN"}
+{"id": "tw-06-b6", "input": {"code": "def compute_6(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "es"}
+{"id": "tw-07-b7", "input": {"code": "def compute_7(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "fr"}
+{"id": "tw-08-b8", "input": {"code": "def compute_8(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "en"}
+{"id": "tw-09-b9", "input": {"code": "def compute_9(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "hi-IN"}
+{"id": "tw-10-b10", "input": {"code": "def compute_10(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "mr-IN"}
+{"id": "tw-01-b11", "input": {"code": "def compute_1(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "ta-IN"}
+{"id": "tw-02-b12", "input": {"code": "def compute_2(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "te-IN"}
+{"id": "tw-03-b13", "input": {"code": "def compute_3(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "bn-IN"}
+{"id": "tw-04-b14", "input": {"code": "def compute_4(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "es"}
+{"id": "tw-05-b15", "input": {"code": "def compute_5(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "fr"}
+{"id": "tw-06-b16", "input": {"code": "def compute_6(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "en"}
+{"id": "tw-07-b17", "input": {"code": "def compute_7(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "hi-IN"}
+{"id": "tw-08-b18", "input": {"code": "def compute_8(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "mr-IN"}
+{"id": "tw-09-b19", "input": {"code": "def compute_9(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "ta-IN"}
+{"id": "tw-10-b20", "input": {"code": "def compute_10(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "te-IN"}
+{"id": "tw-01-b21", "input": {"code": "def compute_1(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "bn-IN"}
+{"id": "tw-02-b22", "input": {"code": "def compute_2(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "es"}
+{"id": "tw-03-b23", "input": {"code": "def compute_3(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "fr"}
+{"id": "tw-04-b24", "input": {"code": "def compute_4(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "en"}
+{"id": "tw-05-b25", "input": {"code": "def compute_5(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "hi-IN"}
+{"id": "tw-06-b26", "input": {"code": "def compute_6(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "mr-IN"}
+{"id": "tw-07-b27", "input": {"code": "def compute_7(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "ta-IN"}
+{"id": "tw-08-b28", "input": {"code": "def compute_8(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "te-IN"}
+{"id": "tw-09-b29", "input": {"code": "def compute_9(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "bn-IN"}
+{"id": "tw-10-b30", "input": {"code": "def compute_10(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "es"}
+{"id": "tw-01-b31", "input": {"code": "def compute_1(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "fr"}
+{"id": "tw-02-b32", "input": {"code": "def compute_2(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "en"}
+{"id": "tw-03-b33", "input": {"code": "def compute_3(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "hi-IN"}
+{"id": "tw-04-b34", "input": {"code": "def compute_4(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "mr-IN"}
+{"id": "tw-05-b35", "input": {"code": "def compute_5(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "ta-IN"}
+{"id": "tw-06-b36", "input": {"code": "def compute_6(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "te-IN"}
+{"id": "tw-07-b37", "input": {"code": "def compute_7(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "bn-IN"}
+{"id": "tw-08-b38", "input": {"code": "def compute_8(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "es"}
+{"id": "tw-09-b39", "input": {"code": "def compute_9(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "fr"}
+{"id": "tw-10-b40", "input": {"code": "def compute_10(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"], "locale": "en"}

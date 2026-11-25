@@ -1,6 +1,6 @@
 # Data Cleaner `data/data-cleaner`
 
-prototype · P0 · atomic · safety S2 · autonomy L1
+beta · P0 · atomic · safety S2 · autonomy L1
 
 ## What it does
 Standardizes messy row records prior to analysis or database loading.

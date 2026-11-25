@@ -1,6 +1,6 @@
 # Data Analyst `data/data-analyst`
 
-prototype · P0 · composite · safety S1 · autonomy L1
+beta · P0 · composite · safety S1 · autonomy L1
 
 ## What it does
 Composes data-cleaner with numeric summary analytics to answer business questions.

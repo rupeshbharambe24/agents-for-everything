@@ -1,6 +1,6 @@
 # Feature Implementer `coding/code-generator`
 
-prototype · P0 · composite · safety S2 · autonomy L1
+beta · P0 · composite · safety S2 · autonomy L1
 
 ## What it does
 Composes spec implementation and test-writer verification following repo conventions.

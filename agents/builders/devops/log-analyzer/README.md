@@ -1,6 +1,6 @@
 # Log Analyzer `devops/log-analyzer`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Groups noisy log streams by error signature and counts occurrences.

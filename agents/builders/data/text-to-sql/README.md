@@ -1,6 +1,6 @@
 # Text-to-SQL `data/text-to-sql`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Generates schema-verified read-only SQL queries and refuses destructive DDL/DML.

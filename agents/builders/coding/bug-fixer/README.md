@@ -1,6 +1,6 @@
 # Bug Fixer `coding/bug-fixer`
 
-prototype · P0 · composite · safety S2 · autonomy L1
+beta · P0 · composite · safety S2 · autonomy L1
 
 ## What it does
 Coordinates root-cause diagnosis, test creation, and diff review into a verified patch.

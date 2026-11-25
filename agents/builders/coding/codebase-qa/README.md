@@ -1,6 +1,6 @@
 # Codebase Q&A `coding/codebase-qa`
 
-prototype · P0 · composite · safety S1 · autonomy L1
+beta · P0 · composite · safety S1 · autonomy L1
 
 ## What it does
 Searches source files via semantic search and returns grounded answers citing file paths.

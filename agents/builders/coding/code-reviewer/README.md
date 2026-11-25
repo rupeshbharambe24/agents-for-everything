@@ -1,6 +1,6 @@
 # Code Reviewer `coding/code-reviewer`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Flags concrete defects like hardcoded secrets, eval/exec, SQL string interpolation, and missing error handling.

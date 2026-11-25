@@ -8,3 +8,43 @@
 {"id": "cg-08", "input": {"spec": "Add handler #8"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
 {"id": "cg-09", "input": {"spec": "Add handler #9"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
 {"id": "cg-10", "input": {"spec": "Add handler #10"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-01-b1", "input": {"spec": "Add handler #1 [case 1]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "hi-IN"}
+{"id": "cg-02-b2", "input": {"spec": "Add handler #2 [case 2]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "mr-IN"}
+{"id": "cg-03-b3", "input": {"spec": "Add handler #3 [case 3]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "ta-IN"}
+{"id": "cg-04-b4", "input": {"spec": "Add handler #4 [case 4]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "te-IN"}
+{"id": "cg-05-b5", "input": {"spec": "Add handler #5 [case 5]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "bn-IN"}
+{"id": "cg-06-b6", "input": {"spec": "Add handler #6 [case 6]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "es"}
+{"id": "cg-07-b7", "input": {"spec": "Add handler #7 [case 7]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "fr"}
+{"id": "cg-08-b8", "input": {"spec": "Add handler #8 [case 8]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "en"}
+{"id": "cg-09-b9", "input": {"spec": "Add handler #9 [case 9]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "hi-IN"}
+{"id": "cg-10-b10", "input": {"spec": "Add handler #10 [case 10]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "mr-IN"}
+{"id": "cg-01-b11", "input": {"spec": "Add handler #1 [case 11]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "ta-IN"}
+{"id": "cg-02-b12", "input": {"spec": "Add handler #2 [case 12]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "te-IN"}
+{"id": "cg-03-b13", "input": {"spec": "Add handler #3 [case 13]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "bn-IN"}
+{"id": "cg-04-b14", "input": {"spec": "Add handler #4 [case 14]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "es"}
+{"id": "cg-05-b15", "input": {"spec": "Add handler #5 [case 15]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "fr"}
+{"id": "cg-06-b16", "input": {"spec": "Add handler #6 [case 16]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "en"}
+{"id": "cg-07-b17", "input": {"spec": "Add handler #7 [case 17]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "hi-IN"}
+{"id": "cg-08-b18", "input": {"spec": "Add handler #8 [case 18]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "mr-IN"}
+{"id": "cg-09-b19", "input": {"spec": "Add handler #9 [case 19]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "ta-IN"}
+{"id": "cg-10-b20", "input": {"spec": "Add handler #10 [case 20]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "te-IN"}
+{"id": "cg-01-b21", "input": {"spec": "Add handler #1 [case 21]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "bn-IN"}
+{"id": "cg-02-b22", "input": {"spec": "Add handler #2 [case 22]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "es"}
+{"id": "cg-03-b23", "input": {"spec": "Add handler #3 [case 23]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "fr"}
+{"id": "cg-04-b24", "input": {"spec": "Add handler #4 [case 24]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "en"}
+{"id": "cg-05-b25", "input": {"spec": "Add handler #5 [case 25]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "hi-IN"}
+{"id": "cg-06-b26", "input": {"spec": "Add handler #6 [case 26]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "mr-IN"}
+{"id": "cg-07-b27", "input": {"spec": "Add handler #7 [case 27]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "ta-IN"}
+{"id": "cg-08-b28", "input": {"spec": "Add handler #8 [case 28]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "te-IN"}
+{"id": "cg-09-b29", "input": {"spec": "Add handler #9 [case 29]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "bn-IN"}
+{"id": "cg-10-b30", "input": {"spec": "Add handler #10 [case 30]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "es"}
+{"id": "cg-01-b31", "input": {"spec": "Add handler #1 [case 31]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "fr"}
+{"id": "cg-02-b32", "input": {"spec": "Add handler #2 [case 32]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "en"}
+{"id": "cg-03-b33", "input": {"spec": "Add handler #3 [case 33]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "hi-IN"}
+{"id": "cg-04-b34", "input": {"spec": "Add handler #4 [case 34]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "mr-IN"}
+{"id": "cg-05-b35", "input": {"spec": "Add handler #5 [case 35]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "ta-IN"}
+{"id": "cg-06-b36", "input": {"spec": "Add handler #6 [case 36]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "te-IN"}
+{"id": "cg-07-b37", "input": {"spec": "Add handler #7 [case 37]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "bn-IN"}
+{"id": "cg-08-b38", "input": {"spec": "Add handler #8 [case 38]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "es"}
+{"id": "cg-09-b39", "input": {"spec": "Add handler #9 [case 39]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "fr"}
+{"id": "cg-10-b40", "input": {"spec": "Add handler #10 [case 40]"}, "expected": {}, "expect_non_empty": ["code", "tests"], "locale": "en"}

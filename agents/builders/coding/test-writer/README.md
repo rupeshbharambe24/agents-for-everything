@@ -1,6 +1,6 @@
 # Test Writer `coding/test-writer`
 
-prototype · P0 · atomic · safety S2 · autonomy L1
+beta · P0 · atomic · safety S2 · autonomy L1
 
 ## What it does
 Writes clean unit tests verifying happy paths, boundary cases, and error paths.
