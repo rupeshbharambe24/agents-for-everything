@@ -1,6 +1,6 @@
 # Intent Router `orchestration/router`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Routes incoming natural-language requests to the right specialized agent ID and structured starter arguments.

@@ -1,6 +1,6 @@
 # Grounding Checker `guardrails/hallucination-checker`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Measures factual grounding of generated answers or reports against source text.

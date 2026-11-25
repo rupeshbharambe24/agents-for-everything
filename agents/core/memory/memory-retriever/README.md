@@ -1,6 +1,6 @@
 # Memory Retriever `memory/memory-retriever`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Matches query terms against stored memory records and returns top-k ranked matches.

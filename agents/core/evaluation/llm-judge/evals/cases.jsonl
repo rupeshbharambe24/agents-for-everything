@@ -8,3 +8,43 @@
 {"id": "jdg-08", "input": {"output": "Cited source [1] confirms growth rate.", "rubric": "Citation present", "required_terms": ["source"]}, "expected": {"passed": true}}
 {"id": "jdg-09", "input": {"output": "PII redacted successfully before logging.", "rubric": "Confirm redaction", "required_terms": ["redacted"]}, "expected": {"passed": true}}
 {"id": "jdg-10", "input": {"output": "No answer.", "rubric": "Explain architecture", "required_terms": ["architecture", "contracts"]}, "expected": {"passed": false}}
+{"id": "jdg-01-b1", "input": {"output": "Summary includes revenue and profit drivers.", "rubric": "Must cover revenue and profit", "required_terms": ["revenue", "profit"]}, "expected": {"passed": true}, "locale": "hi-IN"}
+{"id": "jdg-02-b2", "input": {"output": "", "rubric": "Non-empty"}, "expected": {"passed": false}, "locale": "mr-IN"}
+{"id": "jdg-03-b3", "input": {"output": "Weather is sunny today.", "rubric": "Cover SQL index tuning", "required_terms": ["sql", "index"]}, "expected": {"passed": false}, "locale": "ta-IN"}
+{"id": "jdg-04-b4", "input": {"output": "Invoice verified: vendor Acme, GST 18%.", "rubric": "Mention vendor and GST", "required_terms": ["vendor", "gst"]}, "expected": {"passed": true}, "locale": "te-IN"}
+{"id": "jdg-05-b5", "input": {"output": "Approved by human operator with audit log.", "rubric": "Audit confirmation", "required_terms": ["audit"]}, "expected": {"passed": true}, "locale": "bn-IN"}
+{"id": "jdg-06-b6", "input": {"output": "Missing email address.", "rubric": "Must mention email", "required_terms": ["email"]}, "expected": {"passed": true}, "locale": "es"}
+{"id": "jdg-07-b7", "input": {"output": "Short", "rubric": "Detailed explanation", "required_terms": ["explanation"]}, "expected": {"passed": false}, "locale": "fr"}
+{"id": "jdg-08-b8", "input": {"output": "Cited source [1] confirms growth rate.", "rubric": "Citation present", "required_terms": ["source"]}, "expected": {"passed": true}, "locale": "en"}
+{"id": "jdg-09-b9", "input": {"output": "PII redacted successfully before logging.", "rubric": "Confirm redaction", "required_terms": ["redacted"]}, "expected": {"passed": true}, "locale": "hi-IN"}
+{"id": "jdg-10-b10", "input": {"output": "No answer.", "rubric": "Explain architecture", "required_terms": ["architecture", "contracts"]}, "expected": {"passed": false}, "locale": "mr-IN"}
+{"id": "jdg-01-b11", "input": {"output": "Summary includes revenue and profit drivers.", "rubric": "Must cover revenue and profit", "required_terms": ["revenue", "profit"]}, "expected": {"passed": true}, "locale": "ta-IN"}
+{"id": "jdg-02-b12", "input": {"output": "", "rubric": "Non-empty"}, "expected": {"passed": false}, "locale": "te-IN"}
+{"id": "jdg-03-b13", "input": {"output": "Weather is sunny today.", "rubric": "Cover SQL index tuning", "required_terms": ["sql", "index"]}, "expected": {"passed": false}, "locale": "bn-IN"}
+{"id": "jdg-04-b14", "input": {"output": "Invoice verified: vendor Acme, GST 18%.", "rubric": "Mention vendor and GST", "required_terms": ["vendor", "gst"]}, "expected": {"passed": true}, "locale": "es"}
+{"id": "jdg-05-b15", "input": {"output": "Approved by human operator with audit log.", "rubric": "Audit confirmation", "required_terms": ["audit"]}, "expected": {"passed": true}, "locale": "fr"}
+{"id": "jdg-06-b16", "input": {"output": "Missing email address.", "rubric": "Must mention email", "required_terms": ["email"]}, "expected": {"passed": true}, "locale": "en"}
+{"id": "jdg-07-b17", "input": {"output": "Short", "rubric": "Detailed explanation", "required_terms": ["explanation"]}, "expected": {"passed": false}, "locale": "hi-IN"}
+{"id": "jdg-08-b18", "input": {"output": "Cited source [1] confirms growth rate.", "rubric": "Citation present", "required_terms": ["source"]}, "expected": {"passed": true}, "locale": "mr-IN"}
+{"id": "jdg-09-b19", "input": {"output": "PII redacted successfully before logging.", "rubric": "Confirm redaction", "required_terms": ["redacted"]}, "expected": {"passed": true}, "locale": "ta-IN"}
+{"id": "jdg-10-b20", "input": {"output": "No answer.", "rubric": "Explain architecture", "required_terms": ["architecture", "contracts"]}, "expected": {"passed": false}, "locale": "te-IN"}
+{"id": "jdg-01-b21", "input": {"output": "Summary includes revenue and profit drivers.", "rubric": "Must cover revenue and profit", "required_terms": ["revenue", "profit"]}, "expected": {"passed": true}, "locale": "bn-IN"}
+{"id": "jdg-02-b22", "input": {"output": "", "rubric": "Non-empty"}, "expected": {"passed": false}, "locale": "es"}
+{"id": "jdg-03-b23", "input": {"output": "Weather is sunny today.", "rubric": "Cover SQL index tuning", "required_terms": ["sql", "index"]}, "expected": {"passed": false}, "locale": "fr"}
+{"id": "jdg-04-b24", "input": {"output": "Invoice verified: vendor Acme, GST 18%.", "rubric": "Mention vendor and GST", "required_terms": ["vendor", "gst"]}, "expected": {"passed": true}, "locale": "en"}
+{"id": "jdg-05-b25", "input": {"output": "Approved by human operator with audit log.", "rubric": "Audit confirmation", "required_terms": ["audit"]}, "expected": {"passed": true}, "locale": "hi-IN"}
+{"id": "jdg-06-b26", "input": {"output": "Missing email address.", "rubric": "Must mention email", "required_terms": ["email"]}, "expected": {"passed": true}, "locale": "mr-IN"}
+{"id": "jdg-07-b27", "input": {"output": "Short", "rubric": "Detailed explanation", "required_terms": ["explanation"]}, "expected": {"passed": false}, "locale": "ta-IN"}
+{"id": "jdg-08-b28", "input": {"output": "Cited source [1] confirms growth rate.", "rubric": "Citation present", "required_terms": ["source"]}, "expected": {"passed": true}, "locale": "te-IN"}
+{"id": "jdg-09-b29", "input": {"output": "PII redacted successfully before logging.", "rubric": "Confirm redaction", "required_terms": ["redacted"]}, "expected": {"passed": true}, "locale": "bn-IN"}
+{"id": "jdg-10-b30", "input": {"output": "No answer.", "rubric": "Explain architecture", "required_terms": ["architecture", "contracts"]}, "expected": {"passed": false}, "locale": "es"}
+{"id": "jdg-01-b31", "input": {"output": "Summary includes revenue and profit drivers.", "rubric": "Must cover revenue and profit", "required_terms": ["revenue", "profit"]}, "expected": {"passed": true}, "locale": "fr"}
+{"id": "jdg-02-b32", "input": {"output": "", "rubric": "Non-empty"}, "expected": {"passed": false}, "locale": "en"}
+{"id": "jdg-03-b33", "input": {"output": "Weather is sunny today.", "rubric": "Cover SQL index tuning", "required_terms": ["sql", "index"]}, "expected": {"passed": false}, "locale": "hi-IN"}
+{"id": "jdg-04-b34", "input": {"output": "Invoice verified: vendor Acme, GST 18%.", "rubric": "Mention vendor and GST", "required_terms": ["vendor", "gst"]}, "expected": {"passed": true}, "locale": "mr-IN"}
+{"id": "jdg-05-b35", "input": {"output": "Approved by human operator with audit log.", "rubric": "Audit confirmation", "required_terms": ["audit"]}, "expected": {"passed": true}, "locale": "ta-IN"}
+{"id": "jdg-06-b36", "input": {"output": "Missing email address.", "rubric": "Must mention email", "required_terms": ["email"]}, "expected": {"passed": true}, "locale": "te-IN"}
+{"id": "jdg-07-b37", "input": {"output": "Short", "rubric": "Detailed explanation", "required_terms": ["explanation"]}, "expected": {"passed": false}, "locale": "bn-IN"}
+{"id": "jdg-08-b38", "input": {"output": "Cited source [1] confirms growth rate.", "rubric": "Citation present", "required_terms": ["source"]}, "expected": {"passed": true}, "locale": "es"}
+{"id": "jdg-09-b39", "input": {"output": "PII redacted successfully before logging.", "rubric": "Confirm redaction", "required_terms": ["redacted"]}, "expected": {"passed": true}, "locale": "fr"}
+{"id": "jdg-10-b40", "input": {"output": "No answer.", "rubric": "Explain architecture", "required_terms": ["architecture", "contracts"]}, "expected": {"passed": false}, "locale": "en"}

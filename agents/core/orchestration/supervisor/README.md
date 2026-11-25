@@ -1,6 +1,6 @@
 # Supervisor / Orchestrator `orchestration/supervisor`
 
-prototype · P0 · composite · safety S1 · autonomy L3
+beta · P0 · composite · safety S1 · autonomy L3
 
 ## What it does
 Coordinates multi-step agent execution across atomic workers declared in uses_agents.

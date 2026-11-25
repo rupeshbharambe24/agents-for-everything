@@ -1,6 +1,6 @@
 # Injection Detector `guardrails/prompt-injection-detector`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Detects indirect prompt injection attempts before untrusted data reaches downstream executors.

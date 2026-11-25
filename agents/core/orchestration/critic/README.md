@@ -1,6 +1,6 @@
 # Critic / Reflector `orchestration/critic`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Provides structured self-critique and revision instructions in evaluator-optimizer loops.

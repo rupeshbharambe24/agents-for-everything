@@ -1,6 +1,6 @@
 # LLM Judge `evaluation/llm-judge`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Evaluates agent outputs during CI regressions, prompt optimization, and quality gates.

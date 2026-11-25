@@ -1,6 +1,6 @@
 # Content Moderator `guardrails/content-moderator`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Screens inputs and generated outputs for prohibited or harmful content categories.

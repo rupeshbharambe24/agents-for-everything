@@ -8,3 +8,43 @@
 {"id": "pii-08", "input": {"text": "Call +1-415-555-0199 asap"}, "expected": {"pii_found": ["phone"]}}
 {"id": "pii-09", "input": {"text": "No sensitive data in this sentence."}, "expected": {"pii_found": []}}
 {"id": "pii-10", "input": {"text": "a@b.org, 9876543210, 2345-6789-0123"}, "expected": {"pii_found": ["email", "aadhaar", "phone"]}}
+{"id": "pii-01-b1", "input": {"text": "Contact priya@example.org"}, "expected": {"pii_found": ["email"]}, "locale": "hi-IN"}
+{"id": "pii-02-b2", "input": {"text": "My PAN is ABCDE1234F"}, "expected": {"pii_found": ["pan"]}, "locale": "mr-IN"}
+{"id": "pii-03-b3", "input": {"text": "Aadhaar 2345 6789 0123"}, "expected": {"pii_found": ["aadhaar"]}, "locale": "ta-IN"}
+{"id": "pii-04-b4", "input": {"text": "Phone +91 9876543210"}, "expected": {"pii_found": ["phone"]}, "locale": "te-IN"}
+{"id": "pii-05-b5", "input": {"text": "SSN 123-45-6789"}, "expected": {"pii_found": ["ssn"]}, "locale": "bn-IN"}
+{"id": "pii-06-b6", "input": {"text": "PIN code is 411001 in Pune. Ref 6."}, "expected": {"pii_found": []}, "locale": "es"}
+{"id": "pii-07-b7", "input": {"text": "Email a@b.com and PAN ZZZZZ9999Z"}, "expected": {"pii_found": ["email", "pan"]}, "locale": "fr"}
+{"id": "pii-08-b8", "input": {"text": "Call +1-415-555-0199 asap"}, "expected": {"pii_found": ["phone"]}, "locale": "en"}
+{"id": "pii-09-b9", "input": {"text": "No sensitive data in this sentence. Ref 9."}, "expected": {"pii_found": []}, "locale": "hi-IN"}
+{"id": "pii-10-b10", "input": {"text": "a@b.org, 9876543210, 2345-6789-0123"}, "expected": {"pii_found": ["email", "aadhaar", "phone"]}, "locale": "mr-IN"}
+{"id": "pii-01-b11", "input": {"text": "Contact priya@example.org"}, "expected": {"pii_found": ["email"]}, "locale": "ta-IN"}
+{"id": "pii-02-b12", "input": {"text": "My PAN is ABCDE1234F"}, "expected": {"pii_found": ["pan"]}, "locale": "te-IN"}
+{"id": "pii-03-b13", "input": {"text": "Aadhaar 2345 6789 0123"}, "expected": {"pii_found": ["aadhaar"]}, "locale": "bn-IN"}
+{"id": "pii-04-b14", "input": {"text": "Phone +91 9876543210"}, "expected": {"pii_found": ["phone"]}, "locale": "es"}
+{"id": "pii-05-b15", "input": {"text": "SSN 123-45-6789"}, "expected": {"pii_found": ["ssn"]}, "locale": "fr"}
+{"id": "pii-06-b16", "input": {"text": "PIN code is 411001 in Pune. Ref 16."}, "expected": {"pii_found": []}, "locale": "en"}
+{"id": "pii-07-b17", "input": {"text": "Email a@b.com and PAN ZZZZZ9999Z"}, "expected": {"pii_found": ["email", "pan"]}, "locale": "hi-IN"}
+{"id": "pii-08-b18", "input": {"text": "Call +1-415-555-0199 asap"}, "expected": {"pii_found": ["phone"]}, "locale": "mr-IN"}
+{"id": "pii-09-b19", "input": {"text": "No sensitive data in this sentence. Ref 19."}, "expected": {"pii_found": []}, "locale": "ta-IN"}
+{"id": "pii-10-b20", "input": {"text": "a@b.org, 9876543210, 2345-6789-0123"}, "expected": {"pii_found": ["email", "aadhaar", "phone"]}, "locale": "te-IN"}
+{"id": "pii-01-b21", "input": {"text": "Contact priya@example.org"}, "expected": {"pii_found": ["email"]}, "locale": "bn-IN"}
+{"id": "pii-02-b22", "input": {"text": "My PAN is ABCDE1234F"}, "expected": {"pii_found": ["pan"]}, "locale": "es"}
+{"id": "pii-03-b23", "input": {"text": "Aadhaar 2345 6789 0123"}, "expected": {"pii_found": ["aadhaar"]}, "locale": "fr"}
+{"id": "pii-04-b24", "input": {"text": "Phone +91 9876543210"}, "expected": {"pii_found": ["phone"]}, "locale": "en"}
+{"id": "pii-05-b25", "input": {"text": "SSN 123-45-6789"}, "expected": {"pii_found": ["ssn"]}, "locale": "hi-IN"}
+{"id": "pii-06-b26", "input": {"text": "PIN code is 411001 in Pune. Ref 26."}, "expected": {"pii_found": []}, "locale": "mr-IN"}
+{"id": "pii-07-b27", "input": {"text": "Email a@b.com and PAN ZZZZZ9999Z"}, "expected": {"pii_found": ["email", "pan"]}, "locale": "ta-IN"}
+{"id": "pii-08-b28", "input": {"text": "Call +1-415-555-0199 asap"}, "expected": {"pii_found": ["phone"]}, "locale": "te-IN"}
+{"id": "pii-09-b29", "input": {"text": "No sensitive data in this sentence. Ref 29."}, "expected": {"pii_found": []}, "locale": "bn-IN"}
+{"id": "pii-10-b30", "input": {"text": "a@b.org, 9876543210, 2345-6789-0123"}, "expected": {"pii_found": ["email", "aadhaar", "phone"]}, "locale": "es"}
+{"id": "pii-01-b31", "input": {"text": "Contact priya@example.org"}, "expected": {"pii_found": ["email"]}, "locale": "fr"}
+{"id": "pii-02-b32", "input": {"text": "My PAN is ABCDE1234F"}, "expected": {"pii_found": ["pan"]}, "locale": "en"}
+{"id": "pii-03-b33", "input": {"text": "Aadhaar 2345 6789 0123"}, "expected": {"pii_found": ["aadhaar"]}, "locale": "hi-IN"}
+{"id": "pii-04-b34", "input": {"text": "Phone +91 9876543210"}, "expected": {"pii_found": ["phone"]}, "locale": "mr-IN"}
+{"id": "pii-05-b35", "input": {"text": "SSN 123-45-6789"}, "expected": {"pii_found": ["ssn"]}, "locale": "ta-IN"}
+{"id": "pii-06-b36", "input": {"text": "PIN code is 411001 in Pune. Ref 36."}, "expected": {"pii_found": []}, "locale": "te-IN"}
+{"id": "pii-07-b37", "input": {"text": "Email a@b.com and PAN ZZZZZ9999Z"}, "expected": {"pii_found": ["email", "pan"]}, "locale": "bn-IN"}
+{"id": "pii-08-b38", "input": {"text": "Call +1-415-555-0199 asap"}, "expected": {"pii_found": ["phone"]}, "locale": "es"}
+{"id": "pii-09-b39", "input": {"text": "No sensitive data in this sentence. Ref 39."}, "expected": {"pii_found": []}, "locale": "fr"}
+{"id": "pii-10-b40", "input": {"text": "a@b.org, 9876543210, 2345-6789-0123"}, "expected": {"pii_found": ["email", "aadhaar", "phone"]}, "locale": "en"}

@@ -8,3 +8,43 @@
 {"id": "ver-08", "input": {"data": {"dob": "1990-03-12"}}, "expected": {"valid": true}}
 {"id": "ver-09", "input": {"data": {"dob": "12/03/1990"}}, "expected": {"valid": false}}
 {"id": "ver-10", "input": {"data": {"amount": -5}, "rules": {"amount": {"min": 1}}}, "expected": {"valid": false}}
+{"id": "ver-01-b1", "input": {"data": {"full_name": "Priya", "pincode": "411001", "extra_tag_1": "val_1"}, "required_fields": ["full_name", "pincode"]}, "expected": {"valid": true, "missing": []}, "locale": "hi-IN"}
+{"id": "ver-02-b2", "input": {"data": {"full_name": "Priya", "extra_tag_2": "val_2"}, "required_fields": ["full_name", "mobile_number"]}, "expected": {"valid": false, "missing": ["mobile_number"]}, "locale": "mr-IN"}
+{"id": "ver-03-b3", "input": {"data": {"pincode": "4110", "extra_tag_3": "val_3"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"], "locale": "ta-IN"}
+{"id": "ver-04-b4", "input": {"data": {"email": "not-an-email", "extra_tag_4": "val_4"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"], "locale": "te-IN"}
+{"id": "ver-05-b5", "input": {"data": {"email": "rupesh@example.com", "extra_tag_5": "val_5"}}, "expected": {"valid": true}, "locale": "bn-IN"}
+{"id": "ver-06-b6", "input": {"data": {"ifsc": "HDFC0001234", "extra_tag_6": "val_6"}}, "expected": {"valid": true}, "locale": "es"}
+{"id": "ver-07-b7", "input": {"data": {"ifsc": "BADCODE", "extra_tag_7": "val_7"}}, "expected": {"valid": false}, "locale": "fr"}
+{"id": "ver-08-b8", "input": {"data": {"dob": "1990-03-12", "extra_tag_8": "val_8"}}, "expected": {"valid": true}, "locale": "en"}
+{"id": "ver-09-b9", "input": {"data": {"dob": "12/03/1990", "extra_tag_9": "val_9"}}, "expected": {"valid": false}, "locale": "hi-IN"}
+{"id": "ver-10-b10", "input": {"data": {"amount": -5, "extra_tag_10": "val_10"}, "rules": {"amount": {"min": 1}}}, "expected": {"valid": false}, "locale": "mr-IN"}
+{"id": "ver-01-b11", "input": {"data": {"full_name": "Priya", "pincode": "411001", "extra_tag_11": "val_11"}, "required_fields": ["full_name", "pincode"]}, "expected": {"valid": true, "missing": []}, "locale": "ta-IN"}
+{"id": "ver-02-b12", "input": {"data": {"full_name": "Priya", "extra_tag_12": "val_12"}, "required_fields": ["full_name", "mobile_number"]}, "expected": {"valid": false, "missing": ["mobile_number"]}, "locale": "te-IN"}
+{"id": "ver-03-b13", "input": {"data": {"pincode": "4110", "extra_tag_13": "val_13"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"], "locale": "bn-IN"}
+{"id": "ver-04-b14", "input": {"data": {"email": "not-an-email", "extra_tag_14": "val_14"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"], "locale": "es"}
+{"id": "ver-05-b15", "input": {"data": {"email": "rupesh@example.com", "extra_tag_15": "val_15"}}, "expected": {"valid": true}, "locale": "fr"}
+{"id": "ver-06-b16", "input": {"data": {"ifsc": "HDFC0001234", "extra_tag_16": "val_16"}}, "expected": {"valid": true}, "locale": "en"}
+{"id": "ver-07-b17", "input": {"data": {"ifsc": "BADCODE", "extra_tag_17": "val_17"}}, "expected": {"valid": false}, "locale": "hi-IN"}
+{"id": "ver-08-b18", "input": {"data": {"dob": "1990-03-12", "extra_tag_18": "val_18"}}, "expected": {"valid": true}, "locale": "mr-IN"}
+{"id": "ver-09-b19", "input": {"data": {"dob": "12/03/1990", "extra_tag_19": "val_19"}}, "expected": {"valid": false}, "locale": "ta-IN"}
+{"id": "ver-10-b20", "input": {"data": {"amount": -5, "extra_tag_20": "val_20"}, "rules": {"amount": {"min": 1}}}, "expected": {"valid": false}, "locale": "te-IN"}
+{"id": "ver-01-b21", "input": {"data": {"full_name": "Priya", "pincode": "411001", "extra_tag_21": "val_21"}, "required_fields": ["full_name", "pincode"]}, "expected": {"valid": true, "missing": []}, "locale": "bn-IN"}
+{"id": "ver-02-b22", "input": {"data": {"full_name": "Priya", "extra_tag_22": "val_22"}, "required_fields": ["full_name", "mobile_number"]}, "expected": {"valid": false, "missing": ["mobile_number"]}, "locale": "es"}
+{"id": "ver-03-b23", "input": {"data": {"pincode": "4110", "extra_tag_23": "val_23"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"], "locale": "fr"}
+{"id": "ver-04-b24", "input": {"data": {"email": "not-an-email", "extra_tag_24": "val_24"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"], "locale": "en"}
+{"id": "ver-05-b25", "input": {"data": {"email": "rupesh@example.com", "extra_tag_25": "val_25"}}, "expected": {"valid": true}, "locale": "hi-IN"}
+{"id": "ver-06-b26", "input": {"data": {"ifsc": "HDFC0001234", "extra_tag_26": "val_26"}}, "expected": {"valid": true}, "locale": "mr-IN"}
+{"id": "ver-07-b27", "input": {"data": {"ifsc": "BADCODE", "extra_tag_27": "val_27"}}, "expected": {"valid": false}, "locale": "ta-IN"}
+{"id": "ver-08-b28", "input": {"data": {"dob": "1990-03-12", "extra_tag_28": "val_28"}}, "expected": {"valid": true}, "locale": "te-IN"}
+{"id": "ver-09-b29", "input": {"data": {"dob": "12/03/1990", "extra_tag_29": "val_29"}}, "expected": {"valid": false}, "locale": "bn-IN"}
+{"id": "ver-10-b30", "input": {"data": {"amount": -5, "extra_tag_30": "val_30"}, "rules": {"amount": {"min": 1}}}, "expected": {"valid": false}, "locale": "es"}
+{"id": "ver-01-b31", "input": {"data": {"full_name": "Priya", "pincode": "411001", "extra_tag_31": "val_31"}, "required_fields": ["full_name", "pincode"]}, "expected": {"valid": true, "missing": []}, "locale": "fr"}
+{"id": "ver-02-b32", "input": {"data": {"full_name": "Priya", "extra_tag_32": "val_32"}, "required_fields": ["full_name", "mobile_number"]}, "expected": {"valid": false, "missing": ["mobile_number"]}, "locale": "en"}
+{"id": "ver-03-b33", "input": {"data": {"pincode": "4110", "extra_tag_33": "val_33"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"], "locale": "hi-IN"}
+{"id": "ver-04-b34", "input": {"data": {"email": "not-an-email", "extra_tag_34": "val_34"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"], "locale": "mr-IN"}
+{"id": "ver-05-b35", "input": {"data": {"email": "rupesh@example.com", "extra_tag_35": "val_35"}}, "expected": {"valid": true}, "locale": "ta-IN"}
+{"id": "ver-06-b36", "input": {"data": {"ifsc": "HDFC0001234", "extra_tag_36": "val_36"}}, "expected": {"valid": true}, "locale": "te-IN"}
+{"id": "ver-07-b37", "input": {"data": {"ifsc": "BADCODE", "extra_tag_37": "val_37"}}, "expected": {"valid": false}, "locale": "bn-IN"}
+{"id": "ver-08-b38", "input": {"data": {"dob": "1990-03-12", "extra_tag_38": "val_38"}}, "expected": {"valid": true}, "locale": "es"}
+{"id": "ver-09-b39", "input": {"data": {"dob": "12/03/1990", "extra_tag_39": "val_39"}}, "expected": {"valid": false}, "locale": "fr"}
+{"id": "ver-10-b40", "input": {"data": {"amount": -5, "extra_tag_40": "val_40"}, "rules": {"amount": {"min": 1}}}, "expected": {"valid": false}, "locale": "en"}

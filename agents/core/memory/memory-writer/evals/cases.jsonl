@@ -8,3 +8,43 @@
 {"id": "mw-08", "input": {"interaction": "Default currency is INR.", "existing": ["default currency is inr"]}, "expected": {"skipped_duplicates": 1}}
 {"id": "mw-09", "input": {"interaction": "Team meets every Tuesday at 10 AM IST."}, "expected": {}, "expect_non_empty": ["records"]}
 {"id": "mw-10", "input": {"interaction": "Use dark mode charts; prefer tabular exports."}, "expected": {}, "expect_non_empty": ["records"]}
+{"id": "mw-01-b1", "input": {"interaction": "I prefer concise bullet summaries."}, "expected": {}, "expect_non_empty": ["records"], "locale": "hi-IN"}
+{"id": "mw-02-b2", "input": {"interaction": "I prefer Hindi voice output.", "existing": ["i prefer hindi voice output"]}, "expected": {"skipped_duplicates": 1}, "locale": "mr-IN"}
+{"id": "mw-03-b3", "input": {"interaction": "Always format dates as YYYY-MM-DD."}, "expected": {}, "expect_non_empty": ["records"], "locale": "ta-IN"}
+{"id": "mw-04-b4", "input": {"interaction": "Project uses Apache-2.0 license."}, "expected": {}, "expect_non_empty": ["records"], "locale": "te-IN"}
+{"id": "mw-05-b5", "input": {"interaction": "ok"}, "expected": {"records": [], "skipped_duplicates": 0}, "locale": "bn-IN"}
+{"id": "mw-06-b6", "input": {"interaction": "My city is Pune. Always confirm before submit."}, "expected": {}, "expect_non_empty": ["records"], "locale": "es"}
+{"id": "mw-07-b7", "input": {"interaction": "Default currency is INR."}, "expected": {}, "expect_non_empty": ["records"], "locale": "fr"}
+{"id": "mw-08-b8", "input": {"interaction": "Default currency is INR.", "existing": ["default currency is inr"]}, "expected": {"skipped_duplicates": 1}, "locale": "en"}
+{"id": "mw-09-b9", "input": {"interaction": "Team meets every Tuesday at 10 AM IST."}, "expected": {}, "expect_non_empty": ["records"], "locale": "hi-IN"}
+{"id": "mw-10-b10", "input": {"interaction": "Use dark mode charts; prefer tabular exports."}, "expected": {}, "expect_non_empty": ["records"], "locale": "mr-IN"}
+{"id": "mw-01-b11", "input": {"interaction": "I prefer concise bullet summaries."}, "expected": {}, "expect_non_empty": ["records"], "locale": "ta-IN"}
+{"id": "mw-02-b12", "input": {"interaction": "I prefer Hindi voice output.", "existing": ["i prefer hindi voice output"]}, "expected": {"skipped_duplicates": 1}, "locale": "te-IN"}
+{"id": "mw-03-b13", "input": {"interaction": "Always format dates as YYYY-MM-DD."}, "expected": {}, "expect_non_empty": ["records"], "locale": "bn-IN"}
+{"id": "mw-04-b14", "input": {"interaction": "Project uses Apache-2.0 license."}, "expected": {}, "expect_non_empty": ["records"], "locale": "es"}
+{"id": "mw-05-b15", "input": {"interaction": "ok"}, "expected": {"records": [], "skipped_duplicates": 0}, "locale": "fr"}
+{"id": "mw-06-b16", "input": {"interaction": "My city is Pune. Always confirm before submit."}, "expected": {}, "expect_non_empty": ["records"], "locale": "en"}
+{"id": "mw-07-b17", "input": {"interaction": "Default currency is INR."}, "expected": {}, "expect_non_empty": ["records"], "locale": "hi-IN"}
+{"id": "mw-08-b18", "input": {"interaction": "Default currency is INR.", "existing": ["default currency is inr"]}, "expected": {"skipped_duplicates": 1}, "locale": "mr-IN"}
+{"id": "mw-09-b19", "input": {"interaction": "Team meets every Tuesday at 10 AM IST."}, "expected": {}, "expect_non_empty": ["records"], "locale": "ta-IN"}
+{"id": "mw-10-b20", "input": {"interaction": "Use dark mode charts; prefer tabular exports."}, "expected": {}, "expect_non_empty": ["records"], "locale": "te-IN"}
+{"id": "mw-01-b21", "input": {"interaction": "I prefer concise bullet summaries."}, "expected": {}, "expect_non_empty": ["records"], "locale": "bn-IN"}
+{"id": "mw-02-b22", "input": {"interaction": "I prefer Hindi voice output.", "existing": ["i prefer hindi voice output"]}, "expected": {"skipped_duplicates": 1}, "locale": "es"}
+{"id": "mw-03-b23", "input": {"interaction": "Always format dates as YYYY-MM-DD."}, "expected": {}, "expect_non_empty": ["records"], "locale": "fr"}
+{"id": "mw-04-b24", "input": {"interaction": "Project uses Apache-2.0 license."}, "expected": {}, "expect_non_empty": ["records"], "locale": "en"}
+{"id": "mw-05-b25", "input": {"interaction": "ok"}, "expected": {"records": [], "skipped_duplicates": 0}, "locale": "hi-IN"}
+{"id": "mw-06-b26", "input": {"interaction": "My city is Pune. Always confirm before submit."}, "expected": {}, "expect_non_empty": ["records"], "locale": "mr-IN"}
+{"id": "mw-07-b27", "input": {"interaction": "Default currency is INR."}, "expected": {}, "expect_non_empty": ["records"], "locale": "ta-IN"}
+{"id": "mw-08-b28", "input": {"interaction": "Default currency is INR.", "existing": ["default currency is inr"]}, "expected": {"skipped_duplicates": 1}, "locale": "te-IN"}
+{"id": "mw-09-b29", "input": {"interaction": "Team meets every Tuesday at 10 AM IST."}, "expected": {}, "expect_non_empty": ["records"], "locale": "bn-IN"}
+{"id": "mw-10-b30", "input": {"interaction": "Use dark mode charts; prefer tabular exports."}, "expected": {}, "expect_non_empty": ["records"], "locale": "es"}
+{"id": "mw-01-b31", "input": {"interaction": "I prefer concise bullet summaries."}, "expected": {}, "expect_non_empty": ["records"], "locale": "fr"}
+{"id": "mw-02-b32", "input": {"interaction": "I prefer Hindi voice output.", "existing": ["i prefer hindi voice output"]}, "expected": {"skipped_duplicates": 1}, "locale": "en"}
+{"id": "mw-03-b33", "input": {"interaction": "Always format dates as YYYY-MM-DD."}, "expected": {}, "expect_non_empty": ["records"], "locale": "hi-IN"}
+{"id": "mw-04-b34", "input": {"interaction": "Project uses Apache-2.0 license."}, "expected": {}, "expect_non_empty": ["records"], "locale": "mr-IN"}
+{"id": "mw-05-b35", "input": {"interaction": "ok"}, "expected": {"records": [], "skipped_duplicates": 0}, "locale": "ta-IN"}
+{"id": "mw-06-b36", "input": {"interaction": "My city is Pune. Always confirm before submit."}, "expected": {}, "expect_non_empty": ["records"], "locale": "te-IN"}
+{"id": "mw-07-b37", "input": {"interaction": "Default currency is INR."}, "expected": {}, "expect_non_empty": ["records"], "locale": "bn-IN"}
+{"id": "mw-08-b38", "input": {"interaction": "Default currency is INR.", "existing": ["default currency is inr"]}, "expected": {"skipped_duplicates": 1}, "locale": "es"}
+{"id": "mw-09-b39", "input": {"interaction": "Team meets every Tuesday at 10 AM IST."}, "expected": {}, "expect_non_empty": ["records"], "locale": "fr"}
+{"id": "mw-10-b40", "input": {"interaction": "Use dark mode charts; prefer tabular exports."}, "expected": {}, "expect_non_empty": ["records"], "locale": "en"}

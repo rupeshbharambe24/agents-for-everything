@@ -1,6 +1,6 @@
 # PII Redactor `guardrails/pii-redactor`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Protects privacy before prompts leave trust boundaries or enter logs/traces.

@@ -1,6 +1,6 @@
 # Task Planner `orchestration/task-planner`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Decomposes complex multi-step goals into an acyclic execution plan (DAG) of atomic agent calls.

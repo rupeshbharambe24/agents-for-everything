@@ -1,0 +1,7 @@
+{
+  "name": "@afe-agents/guardrails-prompt-injection-detector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./agent.ts"
+}

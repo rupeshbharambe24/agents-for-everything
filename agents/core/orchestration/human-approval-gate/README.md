@@ -1,6 +1,6 @@
 # Human-in-the-Loop Gate `orchestration/human-approval-gate`
 
-prototype · P0 · atomic · safety S1 · autonomy L2
+beta · P0 · atomic · safety S1 · autonomy L2
 
 ## What it does
 Enforces explicit human confirmation and emits an audit log entry prior to external or high-stakes actions.

@@ -8,3 +8,43 @@
 {"id": "plan-08", "input": {"goal": "Analyze Q3 revenue drops using SQL"}, "expected": {}, "expect_non_empty": ["steps"]}
 {"id": "plan-09", "input": {"goal": "Plan a 3-step onboarding checklist"}, "expected": {}, "expect_non_empty": ["steps"]}
 {"id": "plan-10", "input": {"goal": "Evaluate output quality of summarizer agent"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-01-b1", "input": {"goal": "Research AI safety benchmarks and write a cited report"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "hi-IN"}
+{"id": "plan-02-b2", "input": {"goal": "Fill a loan form by voice"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "mr-IN"}
+{"id": "plan-03-b3", "input": {"goal": "Summarize weekly engineering updates"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "ta-IN"}
+{"id": "plan-04-b4", "input": {"goal": "Parse incoming PDF invoices into ledger entries"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "te-IN"}
+{"id": "plan-05-b5", "input": {"goal": "Triage urgent support tickets and draft replies"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "bn-IN"}
+{"id": "plan-06-b6", "input": {"goal": "Audit repository code for security issues"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "es"}
+{"id": "plan-07-b7", "input": {"goal": "Translate product documentation to Spanish and Hindi"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "fr"}
+{"id": "plan-08-b8", "input": {"goal": "Analyze Q3 revenue drops using SQL"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "en"}
+{"id": "plan-09-b9", "input": {"goal": "Plan a 3-step onboarding checklist"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "hi-IN"}
+{"id": "plan-10-b10", "input": {"goal": "Evaluate output quality of summarizer agent"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "mr-IN"}
+{"id": "plan-01-b11", "input": {"goal": "Research AI safety benchmarks and write a cited report"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "ta-IN"}
+{"id": "plan-02-b12", "input": {"goal": "Fill a loan form by voice"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "te-IN"}
+{"id": "plan-03-b13", "input": {"goal": "Summarize weekly engineering updates"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "bn-IN"}
+{"id": "plan-04-b14", "input": {"goal": "Parse incoming PDF invoices into ledger entries"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "es"}
+{"id": "plan-05-b15", "input": {"goal": "Triage urgent support tickets and draft replies"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "fr"}
+{"id": "plan-06-b16", "input": {"goal": "Audit repository code for security issues"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "en"}
+{"id": "plan-07-b17", "input": {"goal": "Translate product documentation to Spanish and Hindi"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "hi-IN"}
+{"id": "plan-08-b18", "input": {"goal": "Analyze Q3 revenue drops using SQL"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "mr-IN"}
+{"id": "plan-09-b19", "input": {"goal": "Plan a 3-step onboarding checklist"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "ta-IN"}
+{"id": "plan-10-b20", "input": {"goal": "Evaluate output quality of summarizer agent"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "te-IN"}
+{"id": "plan-01-b21", "input": {"goal": "Research AI safety benchmarks and write a cited report"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "bn-IN"}
+{"id": "plan-02-b22", "input": {"goal": "Fill a loan form by voice"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "es"}
+{"id": "plan-03-b23", "input": {"goal": "Summarize weekly engineering updates"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "fr"}
+{"id": "plan-04-b24", "input": {"goal": "Parse incoming PDF invoices into ledger entries"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "en"}
+{"id": "plan-05-b25", "input": {"goal": "Triage urgent support tickets and draft replies"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "hi-IN"}
+{"id": "plan-06-b26", "input": {"goal": "Audit repository code for security issues"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "mr-IN"}
+{"id": "plan-07-b27", "input": {"goal": "Translate product documentation to Spanish and Hindi"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "ta-IN"}
+{"id": "plan-08-b28", "input": {"goal": "Analyze Q3 revenue drops using SQL"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "te-IN"}
+{"id": "plan-09-b29", "input": {"goal": "Plan a 3-step onboarding checklist"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "bn-IN"}
+{"id": "plan-10-b30", "input": {"goal": "Evaluate output quality of summarizer agent"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "es"}
+{"id": "plan-01-b31", "input": {"goal": "Research AI safety benchmarks and write a cited report"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "fr"}
+{"id": "plan-02-b32", "input": {"goal": "Fill a loan form by voice"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "en"}
+{"id": "plan-03-b33", "input": {"goal": "Summarize weekly engineering updates"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "hi-IN"}
+{"id": "plan-04-b34", "input": {"goal": "Parse incoming PDF invoices into ledger entries"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "mr-IN"}
+{"id": "plan-05-b35", "input": {"goal": "Triage urgent support tickets and draft replies"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "ta-IN"}
+{"id": "plan-06-b36", "input": {"goal": "Audit repository code for security issues"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "te-IN"}
+{"id": "plan-07-b37", "input": {"goal": "Translate product documentation to Spanish and Hindi"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "bn-IN"}
+{"id": "plan-08-b38", "input": {"goal": "Analyze Q3 revenue drops using SQL"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "es"}
+{"id": "plan-09-b39", "input": {"goal": "Plan a 3-step onboarding checklist"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "fr"}
+{"id": "plan-10-b40", "input": {"goal": "Evaluate output quality of summarizer agent"}, "expected": {}, "expect_non_empty": ["steps"], "locale": "en"}

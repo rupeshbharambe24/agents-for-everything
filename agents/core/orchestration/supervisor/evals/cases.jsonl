@@ -8,3 +8,43 @@
 {"id": "sup-08", "input": {"goal": "Check report claims against sources"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
 {"id": "sup-09", "input": {"goal": "Organize messy project downloads folder"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
 {"id": "sup-10", "input": {"goal": "Summarize daily engineering standup chat"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-01-b1", "input": {"goal": "Research latest MCP standards and summarize"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "hi-IN"}
+{"id": "sup-02-b2", "input": {"goal": "Fill customer intake form by voice"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "mr-IN"}
+{"id": "sup-03-b3", "input": {"goal": "Extract invoice fields into JSON"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "ta-IN"}
+{"id": "sup-04-b4", "input": {"goal": "Triage incoming support tickets"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "te-IN"}
+{"id": "sup-05-b5", "input": {"goal": "Translate onboarding guide to Hindi"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "bn-IN"}
+{"id": "sup-06-b6", "input": {"goal": "Review pull request diff for bugs"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "es"}
+{"id": "sup-07-b7", "input": {"goal": "Generate SQL query for weekly sales"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "fr"}
+{"id": "sup-08-b8", "input": {"goal": "Check report claims against sources"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "en"}
+{"id": "sup-09-b9", "input": {"goal": "Organize messy project downloads folder"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "hi-IN"}
+{"id": "sup-10-b10", "input": {"goal": "Summarize daily engineering standup chat"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "mr-IN"}
+{"id": "sup-01-b11", "input": {"goal": "Research latest MCP standards and summarize"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "ta-IN"}
+{"id": "sup-02-b12", "input": {"goal": "Fill customer intake form by voice"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "te-IN"}
+{"id": "sup-03-b13", "input": {"goal": "Extract invoice fields into JSON"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "bn-IN"}
+{"id": "sup-04-b14", "input": {"goal": "Triage incoming support tickets"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "es"}
+{"id": "sup-05-b15", "input": {"goal": "Translate onboarding guide to Hindi"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "fr"}
+{"id": "sup-06-b16", "input": {"goal": "Review pull request diff for bugs"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "en"}
+{"id": "sup-07-b17", "input": {"goal": "Generate SQL query for weekly sales"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "hi-IN"}
+{"id": "sup-08-b18", "input": {"goal": "Check report claims against sources"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "mr-IN"}
+{"id": "sup-09-b19", "input": {"goal": "Organize messy project downloads folder"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "ta-IN"}
+{"id": "sup-10-b20", "input": {"goal": "Summarize daily engineering standup chat"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "te-IN"}
+{"id": "sup-01-b21", "input": {"goal": "Research latest MCP standards and summarize"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "bn-IN"}
+{"id": "sup-02-b22", "input": {"goal": "Fill customer intake form by voice"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "es"}
+{"id": "sup-03-b23", "input": {"goal": "Extract invoice fields into JSON"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "fr"}
+{"id": "sup-04-b24", "input": {"goal": "Triage incoming support tickets"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "en"}
+{"id": "sup-05-b25", "input": {"goal": "Translate onboarding guide to Hindi"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "hi-IN"}
+{"id": "sup-06-b26", "input": {"goal": "Review pull request diff for bugs"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "mr-IN"}
+{"id": "sup-07-b27", "input": {"goal": "Generate SQL query for weekly sales"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "ta-IN"}
+{"id": "sup-08-b28", "input": {"goal": "Check report claims against sources"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "te-IN"}
+{"id": "sup-09-b29", "input": {"goal": "Organize messy project downloads folder"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "bn-IN"}
+{"id": "sup-10-b30", "input": {"goal": "Summarize daily engineering standup chat"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "es"}
+{"id": "sup-01-b31", "input": {"goal": "Research latest MCP standards and summarize"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "fr"}
+{"id": "sup-02-b32", "input": {"goal": "Fill customer intake form by voice"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "en"}
+{"id": "sup-03-b33", "input": {"goal": "Extract invoice fields into JSON"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "hi-IN"}
+{"id": "sup-04-b34", "input": {"goal": "Triage incoming support tickets"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "mr-IN"}
+{"id": "sup-05-b35", "input": {"goal": "Translate onboarding guide to Hindi"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "ta-IN"}
+{"id": "sup-06-b36", "input": {"goal": "Review pull request diff for bugs"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "te-IN"}
+{"id": "sup-07-b37", "input": {"goal": "Generate SQL query for weekly sales"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "bn-IN"}
+{"id": "sup-08-b38", "input": {"goal": "Check report claims against sources"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "es"}
+{"id": "sup-09-b39", "input": {"goal": "Organize messy project downloads folder"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "fr"}
+{"id": "sup-10-b40", "input": {"goal": "Summarize daily engineering standup chat"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"], "locale": "en"}

@@ -8,3 +8,43 @@
 {"id": "crit-08", "input": {"output": "Verified against https://example.org", "rubric": "Include citation"}, "expected": {"passed": true}}
 {"id": "crit-09", "input": {"output": "Action items: 1) Ship fix, 2) Run tests.", "rubric": "Concise"}, "expected": {"passed": true}}
 {"id": "crit-10", "input": {"output": "ok", "rubric": "Comprehensive"}, "expected": {"passed": false}}
+{"id": "crit-01-b1", "input": {"output": "Detailed overview backed by [Source 1].", "rubric": "Include citations"}, "expected": {"passed": true}, "locale": "hi-IN"}
+{"id": "crit-02-b2", "input": {"output": "Short", "rubric": "Provide detailed response"}, "expected": {"passed": false}, "locale": "mr-IN"}
+{"id": "crit-03-b3", "input": {"output": "No links here at all, just text.", "rubric": "Must include citation"}, "expected": {"passed": false}, "locale": "ta-IN"}
+{"id": "crit-04-b4", "input": {"output": "{\"status\":\"ok\",\"count\":5}", "rubric": "Output valid JSON"}, "expected": {"passed": true}, "locale": "te-IN"}
+{"id": "crit-05-b5", "input": {"output": "Plain text summary", "rubric": "Must return JSON"}, "expected": {"passed": false}, "locale": "bn-IN"}
+{"id": "crit-06-b6", "input": {"output": "Clear explanation of rate limiting with examples.", "rubric": "Clarity"}, "expected": {"passed": true}, "locale": "es"}
+{"id": "crit-07-b7", "input": {"output": "", "rubric": "Non-empty output"}, "expected": {"passed": false}, "locale": "fr"}
+{"id": "crit-08-b8", "input": {"output": "Verified against https://example.org", "rubric": "Include citation"}, "expected": {"passed": true}, "locale": "en"}
+{"id": "crit-09-b9", "input": {"output": "Action items: 1) Ship fix, 2) Run tests.", "rubric": "Concise"}, "expected": {"passed": true}, "locale": "hi-IN"}
+{"id": "crit-10-b10", "input": {"output": "ok", "rubric": "Comprehensive"}, "expected": {"passed": false}, "locale": "mr-IN"}
+{"id": "crit-01-b11", "input": {"output": "Detailed overview backed by [Source 1].", "rubric": "Include citations"}, "expected": {"passed": true}, "locale": "ta-IN"}
+{"id": "crit-02-b12", "input": {"output": "Short", "rubric": "Provide detailed response"}, "expected": {"passed": false}, "locale": "te-IN"}
+{"id": "crit-03-b13", "input": {"output": "No links here at all, just text.", "rubric": "Must include citation"}, "expected": {"passed": false}, "locale": "bn-IN"}
+{"id": "crit-04-b14", "input": {"output": "{\"status\":\"ok\",\"count\":5}", "rubric": "Output valid JSON"}, "expected": {"passed": true}, "locale": "es"}
+{"id": "crit-05-b15", "input": {"output": "Plain text summary", "rubric": "Must return JSON"}, "expected": {"passed": false}, "locale": "fr"}
+{"id": "crit-06-b16", "input": {"output": "Clear explanation of rate limiting with examples.", "rubric": "Clarity"}, "expected": {"passed": true}, "locale": "en"}
+{"id": "crit-07-b17", "input": {"output": "", "rubric": "Non-empty output"}, "expected": {"passed": false}, "locale": "hi-IN"}
+{"id": "crit-08-b18", "input": {"output": "Verified against https://example.org", "rubric": "Include citation"}, "expected": {"passed": true}, "locale": "mr-IN"}
+{"id": "crit-09-b19", "input": {"output": "Action items: 1) Ship fix, 2) Run tests.", "rubric": "Concise"}, "expected": {"passed": true}, "locale": "ta-IN"}
+{"id": "crit-10-b20", "input": {"output": "ok", "rubric": "Comprehensive"}, "expected": {"passed": false}, "locale": "te-IN"}
+{"id": "crit-01-b21", "input": {"output": "Detailed overview backed by [Source 1].", "rubric": "Include citations"}, "expected": {"passed": true}, "locale": "bn-IN"}
+{"id": "crit-02-b22", "input": {"output": "Short", "rubric": "Provide detailed response"}, "expected": {"passed": false}, "locale": "es"}
+{"id": "crit-03-b23", "input": {"output": "No links here at all, just text.", "rubric": "Must include citation"}, "expected": {"passed": false}, "locale": "fr"}
+{"id": "crit-04-b24", "input": {"output": "{\"status\":\"ok\",\"count\":5}", "rubric": "Output valid JSON"}, "expected": {"passed": true}, "locale": "en"}
+{"id": "crit-05-b25", "input": {"output": "Plain text summary", "rubric": "Must return JSON"}, "expected": {"passed": false}, "locale": "hi-IN"}
+{"id": "crit-06-b26", "input": {"output": "Clear explanation of rate limiting with examples.", "rubric": "Clarity"}, "expected": {"passed": true}, "locale": "mr-IN"}
+{"id": "crit-07-b27", "input": {"output": "", "rubric": "Non-empty output"}, "expected": {"passed": false}, "locale": "ta-IN"}
+{"id": "crit-08-b28", "input": {"output": "Verified against https://example.org", "rubric": "Include citation"}, "expected": {"passed": true}, "locale": "te-IN"}
+{"id": "crit-09-b29", "input": {"output": "Action items: 1) Ship fix, 2) Run tests.", "rubric": "Concise"}, "expected": {"passed": true}, "locale": "bn-IN"}
+{"id": "crit-10-b30", "input": {"output": "ok", "rubric": "Comprehensive"}, "expected": {"passed": false}, "locale": "es"}
+{"id": "crit-01-b31", "input": {"output": "Detailed overview backed by [Source 1].", "rubric": "Include citations"}, "expected": {"passed": true}, "locale": "fr"}
+{"id": "crit-02-b32", "input": {"output": "Short", "rubric": "Provide detailed response"}, "expected": {"passed": false}, "locale": "en"}
+{"id": "crit-03-b33", "input": {"output": "No links here at all, just text.", "rubric": "Must include citation"}, "expected": {"passed": false}, "locale": "hi-IN"}
+{"id": "crit-04-b34", "input": {"output": "{\"status\":\"ok\",\"count\":5}", "rubric": "Output valid JSON"}, "expected": {"passed": true}, "locale": "mr-IN"}
+{"id": "crit-05-b35", "input": {"output": "Plain text summary", "rubric": "Must return JSON"}, "expected": {"passed": false}, "locale": "ta-IN"}
+{"id": "crit-06-b36", "input": {"output": "Clear explanation of rate limiting with examples.", "rubric": "Clarity"}, "expected": {"passed": true}, "locale": "te-IN"}
+{"id": "crit-07-b37", "input": {"output": "", "rubric": "Non-empty output"}, "expected": {"passed": false}, "locale": "bn-IN"}
+{"id": "crit-08-b38", "input": {"output": "Verified against https://example.org", "rubric": "Include citation"}, "expected": {"passed": true}, "locale": "es"}
+{"id": "crit-09-b39", "input": {"output": "Action items: 1) Ship fix, 2) Run tests.", "rubric": "Concise"}, "expected": {"passed": true}, "locale": "fr"}
+{"id": "crit-10-b40", "input": {"output": "ok", "rubric": "Comprehensive"}, "expected": {"passed": false}, "locale": "en"}

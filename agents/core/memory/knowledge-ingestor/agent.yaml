@@ -7,7 +7,7 @@ metadata:
   family: core
   category: memory
   tier: atomic
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["memory", "knowledge-ingestor"]
   maintainers: ["@rupeshbharambe24"]

@@ -1,6 +1,6 @@
 # Knowledge Ingestor `memory/knowledge-ingestor`
 
-prototype · P0 · atomic · safety S2 · autonomy L2
+beta · P0 · atomic · safety S2 · autonomy L2
 
 ## What it does
 Splits raw documents into deterministic overlapping chunks with provenance IDs for RAG agents.

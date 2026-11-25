@@ -8,3 +8,43 @@
 {"id": "gate-08", "input": {"action": "run_shell", "summary": "Run cleanup", "safety_level": "S3", "user_response": "yes"}, "expected": {"decision": "approved"}}
 {"id": "gate-09", "input": {"action": "post_social", "summary": "Publish post", "user_response": "edit"}, "expected": {"decision": "needs_edit"}}
 {"id": "gate-10", "input": {"action": "approve_action", "summary": "Auto test"}, "auto_approve": true, "expected": {"decision": "approved"}}
+{"id": "gate-01-b1", "input": {"action": "submit_form", "summary": "Submit loan app [batch #1]", "user_response": "yes"}, "expected": {"decision": "approved"}, "locale": "hi-IN"}
+{"id": "gate-02-b2", "input": {"action": "submit_form", "summary": "Submit loan app [batch #2]", "user_response": "no"}, "expected": {"decision": "rejected"}, "locale": "mr-IN"}
+{"id": "gate-03-b3", "input": {"action": "submit_form", "summary": "Submit loan app [batch #3]", "user_response": "edit"}, "expected": {"decision": "needs_edit"}, "locale": "ta-IN"}
+{"id": "gate-04-b4", "input": {"action": "send_email", "summary": "Send invoice reply [batch #4]", "user_response": "approve"}, "expected": {"decision": "approved"}, "locale": "te-IN"}
+{"id": "gate-05-b5", "input": {"action": "delete_files", "summary": "Delete archive [batch #5]"}, "expect_error": "ApprovalRequiredError", "locale": "bn-IN"}
+{"id": "gate-06-b6", "input": {"action": "send_email", "summary": "Send reply [batch #6]"}, "auto_approve": true, "expected": {"decision": "approved"}, "locale": "es"}
+{"id": "gate-07-b7", "input": {"action": "pay_bill", "summary": "Pay vendor [batch #7]", "safety_level": "S4", "user_response": "reject"}, "expected": {"decision": "rejected"}, "locale": "fr"}
+{"id": "gate-08-b8", "input": {"action": "run_shell", "summary": "Run cleanup [batch #8]", "safety_level": "S3", "user_response": "yes"}, "expected": {"decision": "approved"}, "locale": "en"}
+{"id": "gate-09-b9", "input": {"action": "post_social", "summary": "Publish post [batch #9]", "user_response": "edit"}, "expected": {"decision": "needs_edit"}, "locale": "hi-IN"}
+{"id": "gate-10-b10", "input": {"action": "approve_action", "summary": "Auto test [batch #10]"}, "auto_approve": true, "expected": {"decision": "approved"}, "locale": "mr-IN"}
+{"id": "gate-01-b11", "input": {"action": "submit_form", "summary": "Submit loan app [batch #11]", "user_response": "yes"}, "expected": {"decision": "approved"}, "locale": "ta-IN"}
+{"id": "gate-02-b12", "input": {"action": "submit_form", "summary": "Submit loan app [batch #12]", "user_response": "no"}, "expected": {"decision": "rejected"}, "locale": "te-IN"}
+{"id": "gate-03-b13", "input": {"action": "submit_form", "summary": "Submit loan app [batch #13]", "user_response": "edit"}, "expected": {"decision": "needs_edit"}, "locale": "bn-IN"}
+{"id": "gate-04-b14", "input": {"action": "send_email", "summary": "Send invoice reply [batch #14]", "user_response": "approve"}, "expected": {"decision": "approved"}, "locale": "es"}
+{"id": "gate-05-b15", "input": {"action": "delete_files", "summary": "Delete archive [batch #15]"}, "expect_error": "ApprovalRequiredError", "locale": "fr"}
+{"id": "gate-06-b16", "input": {"action": "send_email", "summary": "Send reply [batch #16]"}, "auto_approve": true, "expected": {"decision": "approved"}, "locale": "en"}
+{"id": "gate-07-b17", "input": {"action": "pay_bill", "summary": "Pay vendor [batch #17]", "safety_level": "S4", "user_response": "reject"}, "expected": {"decision": "rejected"}, "locale": "hi-IN"}
+{"id": "gate-08-b18", "input": {"action": "run_shell", "summary": "Run cleanup [batch #18]", "safety_level": "S3", "user_response": "yes"}, "expected": {"decision": "approved"}, "locale": "mr-IN"}
+{"id": "gate-09-b19", "input": {"action": "post_social", "summary": "Publish post [batch #19]", "user_response": "edit"}, "expected": {"decision": "needs_edit"}, "locale": "ta-IN"}
+{"id": "gate-10-b20", "input": {"action": "approve_action", "summary": "Auto test [batch #20]"}, "auto_approve": true, "expected": {"decision": "approved"}, "locale": "te-IN"}
+{"id": "gate-01-b21", "input": {"action": "submit_form", "summary": "Submit loan app [batch #21]", "user_response": "yes"}, "expected": {"decision": "approved"}, "locale": "bn-IN"}
+{"id": "gate-02-b22", "input": {"action": "submit_form", "summary": "Submit loan app [batch #22]", "user_response": "no"}, "expected": {"decision": "rejected"}, "locale": "es"}
+{"id": "gate-03-b23", "input": {"action": "submit_form", "summary": "Submit loan app [batch #23]", "user_response": "edit"}, "expected": {"decision": "needs_edit"}, "locale": "fr"}
+{"id": "gate-04-b24", "input": {"action": "send_email", "summary": "Send invoice reply [batch #24]", "user_response": "approve"}, "expected": {"decision": "approved"}, "locale": "en"}
+{"id": "gate-05-b25", "input": {"action": "delete_files", "summary": "Delete archive [batch #25]"}, "expect_error": "ApprovalRequiredError", "locale": "hi-IN"}
+{"id": "gate-06-b26", "input": {"action": "send_email", "summary": "Send reply [batch #26]"}, "auto_approve": true, "expected": {"decision": "approved"}, "locale": "mr-IN"}
+{"id": "gate-07-b27", "input": {"action": "pay_bill", "summary": "Pay vendor [batch #27]", "safety_level": "S4", "user_response": "reject"}, "expected": {"decision": "rejected"}, "locale": "ta-IN"}
+{"id": "gate-08-b28", "input": {"action": "run_shell", "summary": "Run cleanup [batch #28]", "safety_level": "S3", "user_response": "yes"}, "expected": {"decision": "approved"}, "locale": "te-IN"}
+{"id": "gate-09-b29", "input": {"action": "post_social", "summary": "Publish post [batch #29]", "user_response": "edit"}, "expected": {"decision": "needs_edit"}, "locale": "bn-IN"}
+{"id": "gate-10-b30", "input": {"action": "approve_action", "summary": "Auto test [batch #30]"}, "auto_approve": true, "expected": {"decision": "approved"}, "locale": "es"}
+{"id": "gate-01-b31", "input": {"action": "submit_form", "summary": "Submit loan app [batch #31]", "user_response": "yes"}, "expected": {"decision": "approved"}, "locale": "fr"}
+{"id": "gate-02-b32", "input": {"action": "submit_form", "summary": "Submit loan app [batch #32]", "user_response": "no"}, "expected": {"decision": "rejected"}, "locale": "en"}
+{"id": "gate-03-b33", "input": {"action": "submit_form", "summary": "Submit loan app [batch #33]", "user_response": "edit"}, "expected": {"decision": "needs_edit"}, "locale": "hi-IN"}
+{"id": "gate-04-b34", "input": {"action": "send_email", "summary": "Send invoice reply [batch #34]", "user_response": "approve"}, "expected": {"decision": "approved"}, "locale": "mr-IN"}
+{"id": "gate-05-b35", "input": {"action": "delete_files", "summary": "Delete archive [batch #35]"}, "expect_error": "ApprovalRequiredError", "locale": "ta-IN"}
+{"id": "gate-06-b36", "input": {"action": "send_email", "summary": "Send reply [batch #36]"}, "auto_approve": true, "expected": {"decision": "approved"}, "locale": "te-IN"}
+{"id": "gate-07-b37", "input": {"action": "pay_bill", "summary": "Pay vendor [batch #37]", "safety_level": "S4", "user_response": "reject"}, "expected": {"decision": "rejected"}, "locale": "bn-IN"}
+{"id": "gate-08-b38", "input": {"action": "run_shell", "summary": "Run cleanup [batch #38]", "safety_level": "S3", "user_response": "yes"}, "expected": {"decision": "approved"}, "locale": "es"}
+{"id": "gate-09-b39", "input": {"action": "post_social", "summary": "Publish post [batch #39]", "user_response": "edit"}, "expected": {"decision": "needs_edit"}, "locale": "fr"}
+{"id": "gate-10-b40", "input": {"action": "approve_action", "summary": "Auto test [batch #40]"}, "auto_approve": true, "expected": {"decision": "approved"}, "locale": "en"}

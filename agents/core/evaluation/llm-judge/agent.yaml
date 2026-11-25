@@ -7,7 +7,7 @@ metadata:
   family: core
   category: evaluation
   tier: atomic
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["evaluation", "llm-judge"]
   maintainers: ["@rupeshbharambe24"]

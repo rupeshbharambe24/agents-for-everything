@@ -7,7 +7,7 @@ metadata:
   family: core
   category: orchestration
   tier: composite
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["orchestration", "supervisor"]
   maintainers: ["@rupeshbharambe24"]

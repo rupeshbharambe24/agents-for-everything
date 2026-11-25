@@ -1,6 +1,6 @@
 # Memory Writer `memory/memory-writer`
 
-prototype · P0 · atomic · safety S2 · autonomy L2
+beta · P0 · atomic · safety S2 · autonomy L2
 
 ## What it does
 Filters ephemeral noise and writes clean deduplicated memory records with consent.

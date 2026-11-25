@@ -1,6 +1,6 @@
 # Output Verifier `orchestration/verifier`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Validates structured outputs (such as filled form values, dates, PIN codes, emails) and returns exact missing/invalid diagnostics.

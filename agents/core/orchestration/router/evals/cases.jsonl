@@ -8,3 +8,43 @@
 {"id": "route-08", "input": {"request": "Triage my inbox for urgent client emails"}, "expected": {"agent_id": "communication/inbox-triager"}}
 {"id": "route-09", "input": {"request": "Run deep research on solid-state batteries"}, "expected": {"agent_id": "research/deep-researcher"}}
 {"id": "route-10", "input": {"request": "Pick custom candidate", "candidates": [{"id": "finance/bank-reconciler", "summary": "Match bank ledger lines", "tags": ["custom", "candidate"]}]}, "expected": {"agent_id": "finance/bank-reconciler"}}
+{"id": "route-01-b1", "input": {"request": "Please summarize this 10-page PDF"}, "expected": {"agent_id": "text/summarizer"}, "locale": "hi-IN"}
+{"id": "route-02-b2", "input": {"request": "Translate this paragraph into Hindi"}, "expected": {"agent_id": "text/translator"}, "locale": "mr-IN"}
+{"id": "route-03-b3", "input": {"request": "Fill form by voice for loan application"}, "expected": {"agent_id": "voice/voice-form-filler"}, "locale": "ta-IN"}
+{"id": "route-04-b4", "input": {"request": "Extract vendor and GST from this invoice"}, "expected": {"agent_id": "documents/invoice-receipt-parser"}, "locale": "te-IN"}
+{"id": "route-05-b5", "input": {"request": "Write a SQL query to count monthly active users"}, "expected": {"agent_id": "data/text-to-sql"}, "locale": "bn-IN"}
+{"id": "route-06-b6", "input": {"request": "Mask PII including Aadhaar and email before logging"}, "expected": {"agent_id": "guardrails/pii-redactor"}, "locale": "es"}
+{"id": "route-07-b7", "input": {"request": "Review code diff for race conditions"}, "expected": {"agent_id": "coding/code-reviewer"}, "locale": "fr"}
+{"id": "route-08-b8", "input": {"request": "Triage my inbox for urgent client emails"}, "expected": {"agent_id": "communication/inbox-triager"}, "locale": "en"}
+{"id": "route-09-b9", "input": {"request": "Run deep research on solid-state batteries"}, "expected": {"agent_id": "research/deep-researcher"}, "locale": "hi-IN"}
+{"id": "route-10-b10", "input": {"request": "Pick custom candidate", "candidates": [{"id": "finance/bank-reconciler", "summary": "Match bank ledger lines", "tags": ["custom", "candidate"]}]}, "expected": {"agent_id": "finance/bank-reconciler"}, "locale": "mr-IN"}
+{"id": "route-01-b11", "input": {"request": "Please summarize this 10-page PDF"}, "expected": {"agent_id": "text/summarizer"}, "locale": "ta-IN"}
+{"id": "route-02-b12", "input": {"request": "Translate this paragraph into Hindi"}, "expected": {"agent_id": "text/translator"}, "locale": "te-IN"}
+{"id": "route-03-b13", "input": {"request": "Fill form by voice for loan application"}, "expected": {"agent_id": "voice/voice-form-filler"}, "locale": "bn-IN"}
+{"id": "route-04-b14", "input": {"request": "Extract vendor and GST from this invoice"}, "expected": {"agent_id": "documents/invoice-receipt-parser"}, "locale": "es"}
+{"id": "route-05-b15", "input": {"request": "Write a SQL query to count monthly active users"}, "expected": {"agent_id": "data/text-to-sql"}, "locale": "fr"}
+{"id": "route-06-b16", "input": {"request": "Mask PII including Aadhaar and email before logging"}, "expected": {"agent_id": "guardrails/pii-redactor"}, "locale": "en"}
+{"id": "route-07-b17", "input": {"request": "Review code diff for race conditions"}, "expected": {"agent_id": "coding/code-reviewer"}, "locale": "hi-IN"}
+{"id": "route-08-b18", "input": {"request": "Triage my inbox for urgent client emails"}, "expected": {"agent_id": "communication/inbox-triager"}, "locale": "mr-IN"}
+{"id": "route-09-b19", "input": {"request": "Run deep research on solid-state batteries"}, "expected": {"agent_id": "research/deep-researcher"}, "locale": "ta-IN"}
+{"id": "route-10-b20", "input": {"request": "Pick custom candidate", "candidates": [{"id": "finance/bank-reconciler", "summary": "Match bank ledger lines", "tags": ["custom", "candidate"]}]}, "expected": {"agent_id": "finance/bank-reconciler"}, "locale": "te-IN"}
+{"id": "route-01-b21", "input": {"request": "Please summarize this 10-page PDF"}, "expected": {"agent_id": "text/summarizer"}, "locale": "bn-IN"}
+{"id": "route-02-b22", "input": {"request": "Translate this paragraph into Hindi"}, "expected": {"agent_id": "text/translator"}, "locale": "es"}
+{"id": "route-03-b23", "input": {"request": "Fill form by voice for loan application"}, "expected": {"agent_id": "voice/voice-form-filler"}, "locale": "fr"}
+{"id": "route-04-b24", "input": {"request": "Extract vendor and GST from this invoice"}, "expected": {"agent_id": "documents/invoice-receipt-parser"}, "locale": "en"}
+{"id": "route-05-b25", "input": {"request": "Write a SQL query to count monthly active users"}, "expected": {"agent_id": "data/text-to-sql"}, "locale": "hi-IN"}
+{"id": "route-06-b26", "input": {"request": "Mask PII including Aadhaar and email before logging"}, "expected": {"agent_id": "guardrails/pii-redactor"}, "locale": "mr-IN"}
+{"id": "route-07-b27", "input": {"request": "Review code diff for race conditions"}, "expected": {"agent_id": "coding/code-reviewer"}, "locale": "ta-IN"}
+{"id": "route-08-b28", "input": {"request": "Triage my inbox for urgent client emails"}, "expected": {"agent_id": "communication/inbox-triager"}, "locale": "te-IN"}
+{"id": "route-09-b29", "input": {"request": "Run deep research on solid-state batteries"}, "expected": {"agent_id": "research/deep-researcher"}, "locale": "bn-IN"}
+{"id": "route-10-b30", "input": {"request": "Pick custom candidate", "candidates": [{"id": "finance/bank-reconciler", "summary": "Match bank ledger lines", "tags": ["custom", "candidate"]}]}, "expected": {"agent_id": "finance/bank-reconciler"}, "locale": "es"}
+{"id": "route-01-b31", "input": {"request": "Please summarize this 10-page PDF"}, "expected": {"agent_id": "text/summarizer"}, "locale": "fr"}
+{"id": "route-02-b32", "input": {"request": "Translate this paragraph into Hindi"}, "expected": {"agent_id": "text/translator"}, "locale": "en"}
+{"id": "route-03-b33", "input": {"request": "Fill form by voice for loan application"}, "expected": {"agent_id": "voice/voice-form-filler"}, "locale": "hi-IN"}
+{"id": "route-04-b34", "input": {"request": "Extract vendor and GST from this invoice"}, "expected": {"agent_id": "documents/invoice-receipt-parser"}, "locale": "mr-IN"}
+{"id": "route-05-b35", "input": {"request": "Write a SQL query to count monthly active users"}, "expected": {"agent_id": "data/text-to-sql"}, "locale": "ta-IN"}
+{"id": "route-06-b36", "input": {"request": "Mask PII including Aadhaar and email before logging"}, "expected": {"agent_id": "guardrails/pii-redactor"}, "locale": "te-IN"}
+{"id": "route-07-b37", "input": {"request": "Review code diff for race conditions"}, "expected": {"agent_id": "coding/code-reviewer"}, "locale": "bn-IN"}
+{"id": "route-08-b38", "input": {"request": "Triage my inbox for urgent client emails"}, "expected": {"agent_id": "communication/inbox-triager"}, "locale": "es"}
+{"id": "route-09-b39", "input": {"request": "Run deep research on solid-state batteries"}, "expected": {"agent_id": "research/deep-researcher"}, "locale": "fr"}
+{"id": "route-10-b40", "input": {"request": "Pick custom candidate", "candidates": [{"id": "finance/bank-reconciler", "summary": "Match bank ledger lines", "tags": ["custom", "candidate"]}]}, "expected": {"agent_id": "finance/bank-reconciler"}, "locale": "en"}
