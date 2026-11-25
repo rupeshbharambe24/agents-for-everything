@@ -1,6 +1,6 @@
 # Spreadsheet Agent `documents/spreadsheet-agent`
 
-prototype · P0 · atomic · safety S2 · autonomy L1
+beta · P0 · atomic · safety S2 · autonomy L1
 
 ## What it does
 Executes safe deterministic aggregations and formula checks on tabular rows.

@@ -1,6 +1,6 @@
 # Web Form Filler `browser/web-form-filler`
 
-prototype · P0 · atomic · safety S2 · autonomy L2
+beta · P0 · atomic · safety S2 · autonomy L2
 
 ## What it does
 Bridges extracted field dictionaries into target browser DOM forms safely.

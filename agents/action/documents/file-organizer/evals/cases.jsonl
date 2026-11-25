@@ -8,3 +8,43 @@
 {"id": "fo-08", "input": {"files": ["report_8.pdf", "photo_8.png", "data_8.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
 {"id": "fo-09", "input": {"files": ["report_9.pdf", "photo_9.png", "data_9.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
 {"id": "fo-10", "input": {"files": ["report_10.pdf", "photo_10.png", "data_10.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-01-b1", "input": {"files": ["v1_report_1.pdf", "v1_photo_1.png", "v1_data_1.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "hi-IN"}
+{"id": "fo-02-b2", "input": {"files": ["v2_report_2.pdf", "v2_photo_2.png", "v2_data_2.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "mr-IN"}
+{"id": "fo-03-b3", "input": {"files": ["v3_report_3.pdf", "v3_photo_3.png", "v3_data_3.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "ta-IN"}
+{"id": "fo-04-b4", "input": {"files": ["v4_report_4.pdf", "v4_photo_4.png", "v4_data_4.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "te-IN"}
+{"id": "fo-05-b5", "input": {"files": ["v5_report_5.pdf", "v5_photo_5.png", "v5_data_5.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "bn-IN"}
+{"id": "fo-06-b6", "input": {"files": ["v6_report_6.pdf", "v6_photo_6.png", "v6_data_6.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "es"}
+{"id": "fo-07-b7", "input": {"files": ["v7_report_7.pdf", "v7_photo_7.png", "v7_data_7.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "fr"}
+{"id": "fo-08-b8", "input": {"files": ["v8_report_8.pdf", "v8_photo_8.png", "v8_data_8.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "en"}
+{"id": "fo-09-b9", "input": {"files": ["v9_report_9.pdf", "v9_photo_9.png", "v9_data_9.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "hi-IN"}
+{"id": "fo-10-b10", "input": {"files": ["v10_report_10.pdf", "v10_photo_10.png", "v10_data_10.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "mr-IN"}
+{"id": "fo-01-b11", "input": {"files": ["v11_report_1.pdf", "v11_photo_1.png", "v11_data_1.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "ta-IN"}
+{"id": "fo-02-b12", "input": {"files": ["v12_report_2.pdf", "v12_photo_2.png", "v12_data_2.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "te-IN"}
+{"id": "fo-03-b13", "input": {"files": ["v13_report_3.pdf", "v13_photo_3.png", "v13_data_3.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "bn-IN"}
+{"id": "fo-04-b14", "input": {"files": ["v14_report_4.pdf", "v14_photo_4.png", "v14_data_4.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "es"}
+{"id": "fo-05-b15", "input": {"files": ["v15_report_5.pdf", "v15_photo_5.png", "v15_data_5.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "fr"}
+{"id": "fo-06-b16", "input": {"files": ["v16_report_6.pdf", "v16_photo_6.png", "v16_data_6.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "en"}
+{"id": "fo-07-b17", "input": {"files": ["v17_report_7.pdf", "v17_photo_7.png", "v17_data_7.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "hi-IN"}
+{"id": "fo-08-b18", "input": {"files": ["v18_report_8.pdf", "v18_photo_8.png", "v18_data_8.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "mr-IN"}
+{"id": "fo-09-b19", "input": {"files": ["v19_report_9.pdf", "v19_photo_9.png", "v19_data_9.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "ta-IN"}
+{"id": "fo-10-b20", "input": {"files": ["v20_report_10.pdf", "v20_photo_10.png", "v20_data_10.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "te-IN"}
+{"id": "fo-01-b21", "input": {"files": ["v21_report_1.pdf", "v21_photo_1.png", "v21_data_1.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "bn-IN"}
+{"id": "fo-02-b22", "input": {"files": ["v22_report_2.pdf", "v22_photo_2.png", "v22_data_2.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "es"}
+{"id": "fo-03-b23", "input": {"files": ["v23_report_3.pdf", "v23_photo_3.png", "v23_data_3.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "fr"}
+{"id": "fo-04-b24", "input": {"files": ["v24_report_4.pdf", "v24_photo_4.png", "v24_data_4.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "en"}
+{"id": "fo-05-b25", "input": {"files": ["v25_report_5.pdf", "v25_photo_5.png", "v25_data_5.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "hi-IN"}
+{"id": "fo-06-b26", "input": {"files": ["v26_report_6.pdf", "v26_photo_6.png", "v26_data_6.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "mr-IN"}
+{"id": "fo-07-b27", "input": {"files": ["v27_report_7.pdf", "v27_photo_7.png", "v27_data_7.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "ta-IN"}
+{"id": "fo-08-b28", "input": {"files": ["v28_report_8.pdf", "v28_photo_8.png", "v28_data_8.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "te-IN"}
+{"id": "fo-09-b29", "input": {"files": ["v29_report_9.pdf", "v29_photo_9.png", "v29_data_9.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "bn-IN"}
+{"id": "fo-10-b30", "input": {"files": ["v30_report_10.pdf", "v30_photo_10.png", "v30_data_10.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "es"}
+{"id": "fo-01-b31", "input": {"files": ["v31_report_1.pdf", "v31_photo_1.png", "v31_data_1.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "fr"}
+{"id": "fo-02-b32", "input": {"files": ["v32_report_2.pdf", "v32_photo_2.png", "v32_data_2.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "en"}
+{"id": "fo-03-b33", "input": {"files": ["v33_report_3.pdf", "v33_photo_3.png", "v33_data_3.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "hi-IN"}
+{"id": "fo-04-b34", "input": {"files": ["v34_report_4.pdf", "v34_photo_4.png", "v34_data_4.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "mr-IN"}
+{"id": "fo-05-b35", "input": {"files": ["v35_report_5.pdf", "v35_photo_5.png", "v35_data_5.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "ta-IN"}
+{"id": "fo-06-b36", "input": {"files": ["v36_report_6.pdf", "v36_photo_6.png", "v36_data_6.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "te-IN"}
+{"id": "fo-07-b37", "input": {"files": ["v37_report_7.pdf", "v37_photo_7.png", "v37_data_7.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "bn-IN"}
+{"id": "fo-08-b38", "input": {"files": ["v38_report_8.pdf", "v38_photo_8.png", "v38_data_8.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "es"}
+{"id": "fo-09-b39", "input": {"files": ["v39_report_9.pdf", "v39_photo_9.png", "v39_data_9.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "fr"}
+{"id": "fo-10-b40", "input": {"files": ["v40_report_10.pdf", "v40_photo_10.png", "v40_data_10.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"], "locale": "en"}

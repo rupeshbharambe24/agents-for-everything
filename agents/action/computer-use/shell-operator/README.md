@@ -1,6 +1,6 @@
 # Shell Operator `computer-use/shell-operator`
 
-prototype · P0 · atomic · safety S3 · autonomy L2
+beta · P0 · atomic · safety S3 · autonomy L2
 
 ## What it does
 Translates operational intents into safe terminal commands with explainability and approval gating.

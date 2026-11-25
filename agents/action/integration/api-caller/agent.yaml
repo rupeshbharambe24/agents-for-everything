@@ -7,7 +7,7 @@ metadata:
   family: action
   category: integration
   tier: atomic
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["integration", "api-caller"]
   maintainers: ["@rupeshbharambe24"]

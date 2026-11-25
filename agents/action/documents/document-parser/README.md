@@ -1,6 +1,6 @@
 # Document Parser `documents/document-parser`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Normalizes PDF/DOCX/HTML/scan inputs into clean Markdown and structured metadata.

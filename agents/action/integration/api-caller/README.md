@@ -1,6 +1,6 @@
 # API Caller `integration/api-caller`
 
-prototype · P0 · atomic · safety S3 · autonomy L2
+beta · P0 · atomic · safety S3 · autonomy L2
 
 ## What it does
 Translates structured parameters into validated HTTP requests and gates mutating methods.

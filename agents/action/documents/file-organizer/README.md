@@ -1,6 +1,6 @@
 # File Organizer `documents/file-organizer`
 
-prototype · P0 · atomic · safety S2 · autonomy L2
+beta · P0 · atomic · safety S2 · autonomy L2
 
 ## What it does
 Turns messy directories into clean category folders with explicit preview/approval before moving.

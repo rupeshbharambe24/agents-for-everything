@@ -8,3 +8,43 @@
 {"id": "api-08", "input": {"method": "GET", "url": "https://api.example.org/v1/items/8"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
 {"id": "api-09", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "expect_error": "ApprovalRequiredError"}
 {"id": "api-10", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "auto_approve": true, "expected": {"status_code": 200, "method": "POST"}}
+{"id": "api-01-b1", "input": {"method": "GET", "url": "https://api.example.org/v1/items/1"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "hi-IN"}
+{"id": "api-02-b2", "input": {"method": "GET", "url": "https://api.example.org/v1/items/2"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "mr-IN"}
+{"id": "api-03-b3", "input": {"method": "GET", "url": "https://api.example.org/v1/items/3"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "ta-IN"}
+{"id": "api-04-b4", "input": {"method": "GET", "url": "https://api.example.org/v1/items/4"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "te-IN"}
+{"id": "api-05-b5", "input": {"method": "GET", "url": "https://api.example.org/v1/items/5"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "bn-IN"}
+{"id": "api-06-b6", "input": {"method": "GET", "url": "https://api.example.org/v1/items/6"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "es"}
+{"id": "api-07-b7", "input": {"method": "GET", "url": "https://api.example.org/v1/items/7"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "fr"}
+{"id": "api-08-b8", "input": {"method": "GET", "url": "https://api.example.org/v1/items/8"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "en"}
+{"id": "api-09-b9", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "expect_error": "ApprovalRequiredError", "locale": "hi-IN"}
+{"id": "api-10-b10", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "auto_approve": true, "expected": {"status_code": 200, "method": "POST"}, "locale": "mr-IN"}
+{"id": "api-01-b11", "input": {"method": "GET", "url": "https://api.example.org/v1/items/1"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "ta-IN"}
+{"id": "api-02-b12", "input": {"method": "GET", "url": "https://api.example.org/v1/items/2"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "te-IN"}
+{"id": "api-03-b13", "input": {"method": "GET", "url": "https://api.example.org/v1/items/3"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "bn-IN"}
+{"id": "api-04-b14", "input": {"method": "GET", "url": "https://api.example.org/v1/items/4"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "es"}
+{"id": "api-05-b15", "input": {"method": "GET", "url": "https://api.example.org/v1/items/5"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "fr"}
+{"id": "api-06-b16", "input": {"method": "GET", "url": "https://api.example.org/v1/items/6"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "en"}
+{"id": "api-07-b17", "input": {"method": "GET", "url": "https://api.example.org/v1/items/7"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "hi-IN"}
+{"id": "api-08-b18", "input": {"method": "GET", "url": "https://api.example.org/v1/items/8"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "mr-IN"}
+{"id": "api-09-b19", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "expect_error": "ApprovalRequiredError", "locale": "ta-IN"}
+{"id": "api-10-b20", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "auto_approve": true, "expected": {"status_code": 200, "method": "POST"}, "locale": "te-IN"}
+{"id": "api-01-b21", "input": {"method": "GET", "url": "https://api.example.org/v1/items/1"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "bn-IN"}
+{"id": "api-02-b22", "input": {"method": "GET", "url": "https://api.example.org/v1/items/2"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "es"}
+{"id": "api-03-b23", "input": {"method": "GET", "url": "https://api.example.org/v1/items/3"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "fr"}
+{"id": "api-04-b24", "input": {"method": "GET", "url": "https://api.example.org/v1/items/4"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "en"}
+{"id": "api-05-b25", "input": {"method": "GET", "url": "https://api.example.org/v1/items/5"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "hi-IN"}
+{"id": "api-06-b26", "input": {"method": "GET", "url": "https://api.example.org/v1/items/6"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "mr-IN"}
+{"id": "api-07-b27", "input": {"method": "GET", "url": "https://api.example.org/v1/items/7"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "ta-IN"}
+{"id": "api-08-b28", "input": {"method": "GET", "url": "https://api.example.org/v1/items/8"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "te-IN"}
+{"id": "api-09-b29", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "expect_error": "ApprovalRequiredError", "locale": "bn-IN"}
+{"id": "api-10-b30", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "auto_approve": true, "expected": {"status_code": 200, "method": "POST"}, "locale": "es"}
+{"id": "api-01-b31", "input": {"method": "GET", "url": "https://api.example.org/v1/items/1"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "fr"}
+{"id": "api-02-b32", "input": {"method": "GET", "url": "https://api.example.org/v1/items/2"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "en"}
+{"id": "api-03-b33", "input": {"method": "GET", "url": "https://api.example.org/v1/items/3"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "hi-IN"}
+{"id": "api-04-b34", "input": {"method": "GET", "url": "https://api.example.org/v1/items/4"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "mr-IN"}
+{"id": "api-05-b35", "input": {"method": "GET", "url": "https://api.example.org/v1/items/5"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "ta-IN"}
+{"id": "api-06-b36", "input": {"method": "GET", "url": "https://api.example.org/v1/items/6"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "te-IN"}
+{"id": "api-07-b37", "input": {"method": "GET", "url": "https://api.example.org/v1/items/7"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "bn-IN"}
+{"id": "api-08-b38", "input": {"method": "GET", "url": "https://api.example.org/v1/items/8"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}, "locale": "es"}
+{"id": "api-09-b39", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "expect_error": "ApprovalRequiredError", "locale": "fr"}
+{"id": "api-10-b40", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "auto_approve": true, "expected": {"status_code": 200, "method": "POST"}, "locale": "en"}

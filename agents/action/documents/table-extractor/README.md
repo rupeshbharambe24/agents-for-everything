@@ -1,6 +1,6 @@
 # Table Extractor `documents/table-extractor`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Converts tabular text inside documents or PDFs into clean JSON row arrays.

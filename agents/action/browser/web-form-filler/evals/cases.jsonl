@@ -8,3 +8,43 @@
 {"id": "wff-08", "input": {"url": "https://example.org/f8", "fields": {"full_name": "User 8"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
 {"id": "wff-09", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "expect_error": "ApprovalRequiredError"}
 {"id": "wff-10", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "auto_approve": true, "expected": {"submitted": true, "status": "submitted"}}
+{"id": "wff-01-b1", "input": {"url": "https://example.org/f1", "fields": {"full_name": "User 1"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "hi-IN"}
+{"id": "wff-02-b2", "input": {"url": "https://example.org/f2", "fields": {"full_name": "User 2"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "mr-IN"}
+{"id": "wff-03-b3", "input": {"url": "https://example.org/f3", "fields": {"full_name": "User 3"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "ta-IN"}
+{"id": "wff-04-b4", "input": {"url": "https://example.org/f4", "fields": {"full_name": "User 4"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "te-IN"}
+{"id": "wff-05-b5", "input": {"url": "https://example.org/f5", "fields": {"full_name": "User 5"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "bn-IN"}
+{"id": "wff-06-b6", "input": {"url": "https://example.org/f6", "fields": {"full_name": "User 6"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "es"}
+{"id": "wff-07-b7", "input": {"url": "https://example.org/f7", "fields": {"full_name": "User 7"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "fr"}
+{"id": "wff-08-b8", "input": {"url": "https://example.org/f8", "fields": {"full_name": "User 8"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "en"}
+{"id": "wff-09-b9", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "expect_error": "ApprovalRequiredError", "locale": "hi-IN"}
+{"id": "wff-10-b10", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "auto_approve": true, "expected": {"submitted": true, "status": "submitted"}, "locale": "mr-IN"}
+{"id": "wff-01-b11", "input": {"url": "https://example.org/f1", "fields": {"full_name": "User 1"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "ta-IN"}
+{"id": "wff-02-b12", "input": {"url": "https://example.org/f2", "fields": {"full_name": "User 2"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "te-IN"}
+{"id": "wff-03-b13", "input": {"url": "https://example.org/f3", "fields": {"full_name": "User 3"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "bn-IN"}
+{"id": "wff-04-b14", "input": {"url": "https://example.org/f4", "fields": {"full_name": "User 4"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "es"}
+{"id": "wff-05-b15", "input": {"url": "https://example.org/f5", "fields": {"full_name": "User 5"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "fr"}
+{"id": "wff-06-b16", "input": {"url": "https://example.org/f6", "fields": {"full_name": "User 6"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "en"}
+{"id": "wff-07-b17", "input": {"url": "https://example.org/f7", "fields": {"full_name": "User 7"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "hi-IN"}
+{"id": "wff-08-b18", "input": {"url": "https://example.org/f8", "fields": {"full_name": "User 8"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "mr-IN"}
+{"id": "wff-09-b19", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "expect_error": "ApprovalRequiredError", "locale": "ta-IN"}
+{"id": "wff-10-b20", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "auto_approve": true, "expected": {"submitted": true, "status": "submitted"}, "locale": "te-IN"}
+{"id": "wff-01-b21", "input": {"url": "https://example.org/f1", "fields": {"full_name": "User 1"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "bn-IN"}
+{"id": "wff-02-b22", "input": {"url": "https://example.org/f2", "fields": {"full_name": "User 2"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "es"}
+{"id": "wff-03-b23", "input": {"url": "https://example.org/f3", "fields": {"full_name": "User 3"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "fr"}
+{"id": "wff-04-b24", "input": {"url": "https://example.org/f4", "fields": {"full_name": "User 4"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "en"}
+{"id": "wff-05-b25", "input": {"url": "https://example.org/f5", "fields": {"full_name": "User 5"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "hi-IN"}
+{"id": "wff-06-b26", "input": {"url": "https://example.org/f6", "fields": {"full_name": "User 6"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "mr-IN"}
+{"id": "wff-07-b27", "input": {"url": "https://example.org/f7", "fields": {"full_name": "User 7"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "ta-IN"}
+{"id": "wff-08-b28", "input": {"url": "https://example.org/f8", "fields": {"full_name": "User 8"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "te-IN"}
+{"id": "wff-09-b29", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "expect_error": "ApprovalRequiredError", "locale": "bn-IN"}
+{"id": "wff-10-b30", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "auto_approve": true, "expected": {"submitted": true, "status": "submitted"}, "locale": "es"}
+{"id": "wff-01-b31", "input": {"url": "https://example.org/f1", "fields": {"full_name": "User 1"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "fr"}
+{"id": "wff-02-b32", "input": {"url": "https://example.org/f2", "fields": {"full_name": "User 2"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "en"}
+{"id": "wff-03-b33", "input": {"url": "https://example.org/f3", "fields": {"full_name": "User 3"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "hi-IN"}
+{"id": "wff-04-b34", "input": {"url": "https://example.org/f4", "fields": {"full_name": "User 4"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "mr-IN"}
+{"id": "wff-05-b35", "input": {"url": "https://example.org/f5", "fields": {"full_name": "User 5"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "ta-IN"}
+{"id": "wff-06-b36", "input": {"url": "https://example.org/f6", "fields": {"full_name": "User 6"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "te-IN"}
+{"id": "wff-07-b37", "input": {"url": "https://example.org/f7", "fields": {"full_name": "User 7"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "bn-IN"}
+{"id": "wff-08-b38", "input": {"url": "https://example.org/f8", "fields": {"full_name": "User 8"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}, "locale": "es"}
+{"id": "wff-09-b39", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "expect_error": "ApprovalRequiredError", "locale": "fr"}
+{"id": "wff-10-b40", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "auto_approve": true, "expected": {"submitted": true, "status": "submitted"}, "locale": "en"}

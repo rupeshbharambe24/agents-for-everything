@@ -1,6 +1,6 @@
 # Invoice & Receipt Parser `documents/invoice-receipt-parser`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Parses messy invoice/receipt text into validated financial records with arithmetic verification.

@@ -7,7 +7,7 @@ metadata:
   family: action
   category: documents
   tier: atomic
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["documents", "document-parser"]
   maintainers: ["@rupeshbharambe24"]

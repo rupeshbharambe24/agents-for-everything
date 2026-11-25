@@ -7,7 +7,7 @@ metadata:
   family: action
   category: browser
   tier: composite
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["browser", "web-navigator"]
   maintainers: ["@rupeshbharambe24"]

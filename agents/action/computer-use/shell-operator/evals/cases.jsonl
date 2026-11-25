@@ -8,3 +8,43 @@
 {"id": "sh-08", "input": {"goal": "Delete tree", "command": "rm -rf /tmp/old"}, "auto_approve": true, "expected": {"risk": "destructive"}}
 {"id": "sh-09", "input": {"goal": "Run unapproved", "command": "ls -la"}, "expect_error": "ApprovalRequiredError"}
 {"id": "sh-10", "input": {"goal": "Check git", "command": "git status"}, "auto_approve": true, "expected": {"risk": "read-only"}}
+{"id": "sh-01-b1", "input": {"goal": "List dir 1 (#1)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "hi-IN"}
+{"id": "sh-02-b2", "input": {"goal": "List dir 2 (#2)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "mr-IN"}
+{"id": "sh-03-b3", "input": {"goal": "List dir 3 (#3)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "ta-IN"}
+{"id": "sh-04-b4", "input": {"goal": "List dir 4 (#4)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "te-IN"}
+{"id": "sh-05-b5", "input": {"goal": "List dir 5 (#5)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "bn-IN"}
+{"id": "sh-06-b6", "input": {"goal": "List dir 6 (#6)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "es"}
+{"id": "sh-07-b7", "input": {"goal": "Run tests (#7)", "command": "pytest"}, "auto_approve": true, "expected": {"risk": "write"}, "locale": "fr"}
+{"id": "sh-08-b8", "input": {"goal": "Delete tree (#8)", "command": "rm -rf /tmp/old"}, "auto_approve": true, "expected": {"risk": "destructive"}, "locale": "en"}
+{"id": "sh-09-b9", "input": {"goal": "Run unapproved (#9)", "command": "ls -la"}, "expect_error": "ApprovalRequiredError", "locale": "hi-IN"}
+{"id": "sh-10-b10", "input": {"goal": "Check git (#10)", "command": "git status"}, "auto_approve": true, "expected": {"risk": "read-only"}, "locale": "mr-IN"}
+{"id": "sh-01-b11", "input": {"goal": "List dir 1 (#11)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "ta-IN"}
+{"id": "sh-02-b12", "input": {"goal": "List dir 2 (#12)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "te-IN"}
+{"id": "sh-03-b13", "input": {"goal": "List dir 3 (#13)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "bn-IN"}
+{"id": "sh-04-b14", "input": {"goal": "List dir 4 (#14)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "es"}
+{"id": "sh-05-b15", "input": {"goal": "List dir 5 (#15)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "fr"}
+{"id": "sh-06-b16", "input": {"goal": "List dir 6 (#16)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "en"}
+{"id": "sh-07-b17", "input": {"goal": "Run tests (#17)", "command": "pytest"}, "auto_approve": true, "expected": {"risk": "write"}, "locale": "hi-IN"}
+{"id": "sh-08-b18", "input": {"goal": "Delete tree (#18)", "command": "rm -rf /tmp/old"}, "auto_approve": true, "expected": {"risk": "destructive"}, "locale": "mr-IN"}
+{"id": "sh-09-b19", "input": {"goal": "Run unapproved (#19)", "command": "ls -la"}, "expect_error": "ApprovalRequiredError", "locale": "ta-IN"}
+{"id": "sh-10-b20", "input": {"goal": "Check git (#20)", "command": "git status"}, "auto_approve": true, "expected": {"risk": "read-only"}, "locale": "te-IN"}
+{"id": "sh-01-b21", "input": {"goal": "List dir 1 (#21)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "bn-IN"}
+{"id": "sh-02-b22", "input": {"goal": "List dir 2 (#22)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "es"}
+{"id": "sh-03-b23", "input": {"goal": "List dir 3 (#23)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "fr"}
+{"id": "sh-04-b24", "input": {"goal": "List dir 4 (#24)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "en"}
+{"id": "sh-05-b25", "input": {"goal": "List dir 5 (#25)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "hi-IN"}
+{"id": "sh-06-b26", "input": {"goal": "List dir 6 (#26)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "mr-IN"}
+{"id": "sh-07-b27", "input": {"goal": "Run tests (#27)", "command": "pytest"}, "auto_approve": true, "expected": {"risk": "write"}, "locale": "ta-IN"}
+{"id": "sh-08-b28", "input": {"goal": "Delete tree (#28)", "command": "rm -rf /tmp/old"}, "auto_approve": true, "expected": {"risk": "destructive"}, "locale": "te-IN"}
+{"id": "sh-09-b29", "input": {"goal": "Run unapproved (#29)", "command": "ls -la"}, "expect_error": "ApprovalRequiredError", "locale": "bn-IN"}
+{"id": "sh-10-b30", "input": {"goal": "Check git (#30)", "command": "git status"}, "auto_approve": true, "expected": {"risk": "read-only"}, "locale": "es"}
+{"id": "sh-01-b31", "input": {"goal": "List dir 1 (#31)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "fr"}
+{"id": "sh-02-b32", "input": {"goal": "List dir 2 (#32)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "en"}
+{"id": "sh-03-b33", "input": {"goal": "List dir 3 (#33)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "hi-IN"}
+{"id": "sh-04-b34", "input": {"goal": "List dir 4 (#34)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "mr-IN"}
+{"id": "sh-05-b35", "input": {"goal": "List dir 5 (#35)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "ta-IN"}
+{"id": "sh-06-b36", "input": {"goal": "List dir 6 (#36)", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}, "locale": "te-IN"}
+{"id": "sh-07-b37", "input": {"goal": "Run tests (#37)", "command": "pytest"}, "auto_approve": true, "expected": {"risk": "write"}, "locale": "bn-IN"}
+{"id": "sh-08-b38", "input": {"goal": "Delete tree (#38)", "command": "rm -rf /tmp/old"}, "auto_approve": true, "expected": {"risk": "destructive"}, "locale": "es"}
+{"id": "sh-09-b39", "input": {"goal": "Run unapproved (#39)", "command": "ls -la"}, "expect_error": "ApprovalRequiredError", "locale": "fr"}
+{"id": "sh-10-b40", "input": {"goal": "Check git (#40)", "command": "git status"}, "auto_approve": true, "expected": {"risk": "read-only"}, "locale": "en"}

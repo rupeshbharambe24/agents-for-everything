@@ -1,6 +1,6 @@
 # Web Scraper `browser/web-scraper`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Turns HTML tables or lists into validated JSON arrays cleanly.

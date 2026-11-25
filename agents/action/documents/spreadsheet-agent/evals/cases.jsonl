@@ -8,3 +8,43 @@
 {"id": "sp-08", "input": {"rows": [{"amount": 80}, {"amount": 160}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}}
 {"id": "sp-09", "input": {"rows": [{"amount": 90}, {"amount": 180}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 270.0}}
 {"id": "sp-10", "input": {"rows": [{"amount": 100}, {"amount": 200}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 300.0}}
+{"id": "sp-01-b1", "input": {"rows": [{"amount": 10}, {"amount": 20}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 30.0}, "locale": "hi-IN"}
+{"id": "sp-02-b2", "input": {"rows": [{"amount": 20}, {"amount": 40}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 30.0}, "locale": "mr-IN"}
+{"id": "sp-03-b3", "input": {"rows": [{"amount": 30}, {"amount": 60}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 60.0}, "locale": "ta-IN"}
+{"id": "sp-04-b4", "input": {"rows": [{"amount": 40}, {"amount": 80}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}, "locale": "te-IN"}
+{"id": "sp-05-b5", "input": {"rows": [{"amount": 50}, {"amount": 100}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 150.0}, "locale": "bn-IN"}
+{"id": "sp-06-b6", "input": {"rows": [{"amount": 60}, {"amount": 120}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 90.0}, "locale": "es"}
+{"id": "sp-07-b7", "input": {"rows": [{"amount": 70}, {"amount": 140}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 140.0}, "locale": "fr"}
+{"id": "sp-08-b8", "input": {"rows": [{"amount": 80}, {"amount": 160}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}, "locale": "en"}
+{"id": "sp-09-b9", "input": {"rows": [{"amount": 90}, {"amount": 180}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 270.0}, "locale": "hi-IN"}
+{"id": "sp-10-b10", "input": {"rows": [{"amount": 100}, {"amount": 200}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 300.0}, "locale": "mr-IN"}
+{"id": "sp-01-b11", "input": {"rows": [{"amount": 10}, {"amount": 20}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 30.0}, "locale": "ta-IN"}
+{"id": "sp-02-b12", "input": {"rows": [{"amount": 20}, {"amount": 40}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 30.0}, "locale": "te-IN"}
+{"id": "sp-03-b13", "input": {"rows": [{"amount": 30}, {"amount": 60}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 60.0}, "locale": "bn-IN"}
+{"id": "sp-04-b14", "input": {"rows": [{"amount": 40}, {"amount": 80}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}, "locale": "es"}
+{"id": "sp-05-b15", "input": {"rows": [{"amount": 50}, {"amount": 100}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 150.0}, "locale": "fr"}
+{"id": "sp-06-b16", "input": {"rows": [{"amount": 60}, {"amount": 120}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 90.0}, "locale": "en"}
+{"id": "sp-07-b17", "input": {"rows": [{"amount": 70}, {"amount": 140}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 140.0}, "locale": "hi-IN"}
+{"id": "sp-08-b18", "input": {"rows": [{"amount": 80}, {"amount": 160}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}, "locale": "mr-IN"}
+{"id": "sp-09-b19", "input": {"rows": [{"amount": 90}, {"amount": 180}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 270.0}, "locale": "ta-IN"}
+{"id": "sp-10-b20", "input": {"rows": [{"amount": 100}, {"amount": 200}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 300.0}, "locale": "te-IN"}
+{"id": "sp-01-b21", "input": {"rows": [{"amount": 10}, {"amount": 20}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 30.0}, "locale": "bn-IN"}
+{"id": "sp-02-b22", "input": {"rows": [{"amount": 20}, {"amount": 40}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 30.0}, "locale": "es"}
+{"id": "sp-03-b23", "input": {"rows": [{"amount": 30}, {"amount": 60}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 60.0}, "locale": "fr"}
+{"id": "sp-04-b24", "input": {"rows": [{"amount": 40}, {"amount": 80}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}, "locale": "en"}
+{"id": "sp-05-b25", "input": {"rows": [{"amount": 50}, {"amount": 100}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 150.0}, "locale": "hi-IN"}
+{"id": "sp-06-b26", "input": {"rows": [{"amount": 60}, {"amount": 120}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 90.0}, "locale": "mr-IN"}
+{"id": "sp-07-b27", "input": {"rows": [{"amount": 70}, {"amount": 140}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 140.0}, "locale": "ta-IN"}
+{"id": "sp-08-b28", "input": {"rows": [{"amount": 80}, {"amount": 160}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}, "locale": "te-IN"}
+{"id": "sp-09-b29", "input": {"rows": [{"amount": 90}, {"amount": 180}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 270.0}, "locale": "bn-IN"}
+{"id": "sp-10-b30", "input": {"rows": [{"amount": 100}, {"amount": 200}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 300.0}, "locale": "es"}
+{"id": "sp-01-b31", "input": {"rows": [{"amount": 10}, {"amount": 20}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 30.0}, "locale": "fr"}
+{"id": "sp-02-b32", "input": {"rows": [{"amount": 20}, {"amount": 40}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 30.0}, "locale": "en"}
+{"id": "sp-03-b33", "input": {"rows": [{"amount": 30}, {"amount": 60}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 60.0}, "locale": "hi-IN"}
+{"id": "sp-04-b34", "input": {"rows": [{"amount": 40}, {"amount": 80}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}, "locale": "mr-IN"}
+{"id": "sp-05-b35", "input": {"rows": [{"amount": 50}, {"amount": 100}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 150.0}, "locale": "ta-IN"}
+{"id": "sp-06-b36", "input": {"rows": [{"amount": 60}, {"amount": 120}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 90.0}, "locale": "te-IN"}
+{"id": "sp-07-b37", "input": {"rows": [{"amount": 70}, {"amount": 140}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 140.0}, "locale": "bn-IN"}
+{"id": "sp-08-b38", "input": {"rows": [{"amount": 80}, {"amount": 160}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}, "locale": "es"}
+{"id": "sp-09-b39", "input": {"rows": [{"amount": 90}, {"amount": 180}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 270.0}, "locale": "fr"}
+{"id": "sp-10-b40", "input": {"rows": [{"amount": 100}, {"amount": 200}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 300.0}, "locale": "en"}

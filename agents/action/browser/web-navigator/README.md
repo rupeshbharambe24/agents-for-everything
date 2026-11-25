@@ -1,6 +1,6 @@
 # Browser Operator `browser/web-navigator`
 
-prototype · P0 · composite · safety S3 · autonomy L2
+beta · P0 · composite · safety S3 · autonomy L2
 
 ## What it does
 Navigates web workflows step by step, screens page content for prompt injections, and stops before side effects.
