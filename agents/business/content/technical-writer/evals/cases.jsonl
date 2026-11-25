@@ -1,0 +1,10 @@
+{"id": "tech-01", "input": {"input": "Sample technical-writer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-02", "input": {"input": "Sample technical-writer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-03", "input": {"input": "Sample technical-writer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-04", "input": {"input": "Sample technical-writer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-05", "input": {"input": "Sample technical-writer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-06", "input": {"input": "Sample technical-writer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-07", "input": {"input": "Sample technical-writer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-08", "input": {"input": "Sample technical-writer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-09", "input": {"input": "Sample technical-writer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tech-10", "input": {"input": "Sample technical-writer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

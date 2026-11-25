@@ -1,0 +1,10 @@
+{"id": "soci-01", "input": {"input": "Sample social-post-writer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-02", "input": {"input": "Sample social-post-writer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-03", "input": {"input": "Sample social-post-writer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-04", "input": {"input": "Sample social-post-writer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-05", "input": {"input": "Sample social-post-writer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-06", "input": {"input": "Sample social-post-writer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-07", "input": {"input": "Sample social-post-writer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-08", "input": {"input": "Sample social-post-writer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-09", "input": {"input": "Sample social-post-writer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "soci-10", "input": {"input": "Sample social-post-writer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

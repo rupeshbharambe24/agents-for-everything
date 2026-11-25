@@ -1,0 +1,10 @@
+{"id": "copy-01", "input": {"input": "Sample copywriter request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-02", "input": {"input": "Sample copywriter request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-03", "input": {"input": "Sample copywriter request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-04", "input": {"input": "Sample copywriter request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-05", "input": {"input": "Sample copywriter request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-06", "input": {"input": "Sample copywriter request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-07", "input": {"input": "Sample copywriter request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-08", "input": {"input": "Sample copywriter request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-09", "input": {"input": "Sample copywriter request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "copy-10", "input": {"input": "Sample copywriter request #10"}, "expected": {}, "expect_non_empty": ["result"]}
