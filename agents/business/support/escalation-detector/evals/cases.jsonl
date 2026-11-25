@@ -1,0 +1,10 @@
+{"id": "esc-01", "input": {"message": "I will contact my lawyer if this fraud isn't resolved"}, "expected": {"escalate": true}}
+{"id": "esc-02", "input": {"message": "I will contact my lawyer if this fraud isn't resolved"}, "expected": {"escalate": true}}
+{"id": "esc-03", "input": {"message": "I will contact my lawyer if this fraud isn't resolved"}, "expected": {"escalate": true}}
+{"id": "esc-04", "input": {"message": "I will contact my lawyer if this fraud isn't resolved"}, "expected": {"escalate": true}}
+{"id": "esc-05", "input": {"message": "I will contact my lawyer if this fraud isn't resolved"}, "expected": {"escalate": true}}
+{"id": "esc-06", "input": {"message": "Thanks for helping reset my password!"}, "expected": {"escalate": false}}
+{"id": "esc-07", "input": {"message": "Thanks for helping reset my password!"}, "expected": {"escalate": false}}
+{"id": "esc-08", "input": {"message": "Thanks for helping reset my password!"}, "expected": {"escalate": false}}
+{"id": "esc-09", "input": {"message": "Thanks for helping reset my password!"}, "expected": {"escalate": false}}
+{"id": "esc-10", "input": {"message": "Thanks for helping reset my password!"}, "expected": {"escalate": false}}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://support/escalation-detector/output",
+  "type": "object",
+  "required": [
+    "escalate",
+    "reasons"
+  ],
+  "properties": {
+    "escalate": {
+      "type": "boolean"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
