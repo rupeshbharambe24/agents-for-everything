@@ -1,0 +1,10 @@
+{"id": "tut-01", "input": {"topic": "Recursion lesson 1"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-02", "input": {"topic": "Recursion lesson 2"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-03", "input": {"topic": "Recursion lesson 3"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-04", "input": {"topic": "Recursion lesson 4"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-05", "input": {"topic": "Recursion lesson 5"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-06", "input": {"topic": "Recursion lesson 6"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-07", "input": {"topic": "Recursion lesson 7"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-08", "input": {"topic": "Recursion lesson 8"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-09", "input": {"topic": "Recursion lesson 9"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}
+{"id": "tut-10", "input": {"topic": "Recursion lesson 10"}, "expected": {}, "expect_non_empty": ["guiding_question", "hint"]}

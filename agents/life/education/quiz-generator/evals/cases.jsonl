@@ -1,0 +1,10 @@
+{"id": "quiz-01", "input": {"input": "Sample quiz-generator request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-02", "input": {"input": "Sample quiz-generator request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-03", "input": {"input": "Sample quiz-generator request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-04", "input": {"input": "Sample quiz-generator request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-05", "input": {"input": "Sample quiz-generator request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-06", "input": {"input": "Sample quiz-generator request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-07", "input": {"input": "Sample quiz-generator request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-08", "input": {"input": "Sample quiz-generator request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-09", "input": {"input": "Sample quiz-generator request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quiz-10", "input": {"input": "Sample quiz-generator request #10"}, "expected": {}, "expect_non_empty": ["result"]}
