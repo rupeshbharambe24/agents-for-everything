@@ -1,0 +1,10 @@
+{"id": "vide-01", "input": {"input": "Sample video-captioner request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-02", "input": {"input": "Sample video-captioner request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-03", "input": {"input": "Sample video-captioner request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-04", "input": {"input": "Sample video-captioner request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-05", "input": {"input": "Sample video-captioner request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-06", "input": {"input": "Sample video-captioner request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-07", "input": {"input": "Sample video-captioner request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-08", "input": {"input": "Sample video-captioner request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-09", "input": {"input": "Sample video-captioner request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vide-10", "input": {"input": "Sample video-captioner request #10"}, "expected": {}, "expect_non_empty": ["result"]}

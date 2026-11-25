@@ -1,0 +1,10 @@
+{"id": "clip-01", "input": {"input": "Sample clip-generator request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-02", "input": {"input": "Sample clip-generator request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-03", "input": {"input": "Sample clip-generator request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-04", "input": {"input": "Sample clip-generator request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-05", "input": {"input": "Sample clip-generator request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-06", "input": {"input": "Sample clip-generator request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-07", "input": {"input": "Sample clip-generator request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-08", "input": {"input": "Sample clip-generator request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-09", "input": {"input": "Sample clip-generator request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "clip-10", "input": {"input": "Sample clip-generator request #10"}, "expected": {}, "expect_non_empty": ["result"]}
