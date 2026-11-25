@@ -1,0 +1,34 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: learning-coach
+  name: Personalized Learning Coach
+  version: 0.1.0
+  maturity: prototype
+  priority: P2
+  tags: ["education", "tutoring", "flashcards", "study-plan"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Personalized learning programme combining syllabus design, Socratic tutoring, quizzes, flashcards, and study scheduling."
+  pattern: hierarchical
+  entry: education/course-builder
+  members:
+    - education/course-builder
+    - education/tutor
+    - education/quiz-generator
+    - education/flashcard-maker
+    - education/study-planner
+  graph:
+    - [course-builder, tutor]
+    - [tutor, quiz-generator]
+    - [quiz-generator, flashcard-maker]
+    - [flashcard-maker, study-planner]
+  approvals: []
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S1
+  evals:
+    suite: evals/eval.yaml

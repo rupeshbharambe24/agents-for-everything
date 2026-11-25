@@ -1,0 +1,2 @@
+metrics: [workflow_complete, pedagogy_alignment]
+pass_threshold: 1.0
