@@ -15,8 +15,12 @@ from agents_for_everything import (
     check_schema_compatibility,
     discover_agents,
     discover_teams,
+    dump_yaml,
     export_agent,
     find_repo_root,
+    migrate_agent_dir,
+    verify_agent_dir,
+    verify_repository_agents,
 )
 from evals.harness.runner import evaluate_agent
 
@@ -269,6 +273,86 @@ def _cmd_validate(args: argparse.Namespace) -> int:
     return 0
 
 
+def _resolve_target_agent_dir(root: Path, target: str) -> Path:
+    path_candidate = Path(target)
+    if (path_candidate / "agent.yaml").exists():
+        return path_candidate.resolve()
+    agents = discover_agents(root)
+    if target not in agents:
+        raise KeyError(f"Unknown agent or path: {target!r}")
+    manifest = agents[target]
+    assert manifest.directory is not None
+    return manifest.directory
+
+
+def _cmd_verify(args: argparse.Namespace) -> int:
+    root = _resolve_root(args.repo_root)
+    run_evals = not args.skip_evals
+    if args.all or not args.target:
+        records = verify_repository_agents(root, run_evals=run_evals)
+    else:
+        try:
+            agent_dir = _resolve_target_agent_dir(root, args.target)
+        except KeyError as exc:
+            print(f"Error: {exc}", file=sys.stderr)
+            return 1
+        records = [verify_agent_dir(agent_dir, root, run_evals=run_evals)]
+
+    if args.json:
+        payload = [
+            {
+                "agent_id": r.agent_id,
+                "verified": r.verified,
+                "badge": r.badge,
+                "safety_level": r.safety_level,
+                "maturity": r.maturity,
+                "eval_passed": r.eval_passed,
+                "eval_total": r.eval_total,
+                "eval_pass_rate": r.eval_pass_rate,
+                "safety_reviewed": r.safety_reviewed,
+                "digest": r.digest,
+                "issues": r.issues,
+            }
+            for r in records
+        ]
+        print(json.dumps(payload, indent=2))
+    else:
+        for r in records:
+            tag = "VERIFIED" if r.verified else "FAILED  "
+            print(f"[{tag}] {r.agent_id:38s} {r.safety_level} · {r.eval_passed}/{r.eval_total} · {r.digest[:19]}")
+            for iss in r.issues:
+                print(f"   - {iss}")
+
+    verified_count = sum(1 for r in records if r.verified)
+    if verified_count != len(records):
+        return 1
+    if not args.json and len(records) > 1:
+        print(f"\nVerified badge granted to {verified_count}/{len(records)} agent(s).")
+    return 0
+
+
+def _cmd_migrate(args: argparse.Namespace) -> int:
+    root = _resolve_root(args.repo_root)
+    try:
+        agent_dir = _resolve_target_agent_dir(root, args.target)
+    except KeyError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        return 1
+
+    out_dir = Path(args.out).resolve() if args.out else None
+    written, upgraded = migrate_agent_dir(
+        agent_dir,
+        root,
+        out_dir=out_dir,
+        in_place=bool(args.in_place),
+    )
+    if written is not None:
+        print(f"Migrated {upgraded['metadata']['id']} -> afe/v2 ({written})")
+    else:
+        print(dump_yaml(upgraded))
+    return 0
+
+
 def _cmd_graph(args: argparse.Namespace) -> int:
     root = _resolve_root(args.repo_root)
     agents = discover_agents(root)
@@ -367,6 +451,19 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_val = sub.add_parser("validate", help="Validate all manifests, schemas, and references")
     p_val.set_defaults(func=_cmd_validate)
+
+    p_verify = sub.add_parser("verify", help="Verify agents for verified badge eligibility (schema, evals, safety, secrets)")
+    p_verify.add_argument("target", nargs="?")
+    p_verify.add_argument("--all", action="store_true")
+    p_verify.add_argument("--skip-evals", action="store_true")
+    p_verify.add_argument("--json", action="store_true")
+    p_verify.set_defaults(func=_cmd_verify)
+
+    p_migrate = sub.add_parser("migrate", help="Migrate an agent manifest from afe/v1 to afe/v2")
+    p_migrate.add_argument("target")
+    p_migrate.add_argument("--out", default=None)
+    p_migrate.add_argument("--in-place", action="store_true")
+    p_migrate.set_defaults(func=_cmd_migrate)
 
     p_graph = sub.add_parser("graph", help="Print dependency or team workflow graph")
     p_graph.add_argument("target_id")

@@ -160,7 +160,17 @@ def check_markdown_links(repo_root: Path) -> list[str]:
     """Check relative markdown links inside top-level docs and guides."""
     broken: list[str] = []
     link_re = re.compile(r"\[[^\]]+\]\(([^)#]+)\)")
-    targets = list((repo_root / "docs").rglob("*.md")) if (repo_root / "docs").exists() else []
+    targets: list[Path] = []
+    for folder in ("docs", "evals", "profiles"):
+        sub = repo_root / folder
+        if sub.exists():
+            targets.extend(sub.rglob("*.md"))
+    agents_dir = repo_root / "agents"
+    if agents_dir.exists():
+        targets.extend(agents_dir.glob("*/*/README.md"))
+        ind_readme = agents_dir / "industries" / "README.md"
+        if ind_readme.exists():
+            targets.append(ind_readme)
     for name in ("README.md", "CONTRIBUTING.md", "SECURITY.md", "AGENTS.md"):
         p = repo_root / name
         if p.exists():

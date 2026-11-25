@@ -269,7 +269,10 @@ def validate_agent_dir(agent_dir: Path, repo_root: Path) -> list[str]:
         errors.append(f"{yaml_path}: YAML parse error: {exc}")
         return errors
 
-    agent_schema = _load_schema(repo_root, "agent.schema.json")
+    api_ver = raw.get("apiVersion", "afe/v1")
+    v2_schema = repo_root / "spec" / "v2" / "agent.schema.json"
+    schema_rel = "v2/agent.schema.json" if (api_ver == "afe/v2" and v2_schema.exists()) else "agent.schema.json"
+    agent_schema = _load_schema(repo_root, schema_rel)
     for err in validate_json_schema(raw, agent_schema):
         errors.append(f"{yaml_path}: {err}")
 

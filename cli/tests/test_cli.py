@@ -85,6 +85,25 @@ class CLITests(unittest.TestCase):
             rc_test = main(["--repo-root", str(root), "test", "text/demo-cleaner"])
             self.assertEqual(rc_test, 0)
 
+            rc_verify = main(["--repo-root", str(root), "verify", "text/demo-cleaner"])
+            self.assertEqual(rc_verify, 0)
+
+            migrated_dir = root / "migrated" / "information" / "text" / "demo-cleaner"
+            rc_migrate = main(
+                [
+                    "--repo-root",
+                    str(root),
+                    "migrate",
+                    "text/demo-cleaner",
+                    "--out",
+                    str(migrated_dir),
+                ]
+            )
+            self.assertEqual(rc_migrate, 0)
+            self.assertIn("apiVersion: afe/v2", (migrated_dir / "agent.yaml").read_text(encoding="utf-8"))
+            rc_verify_v2 = main(["--repo-root", str(root), "verify", str(migrated_dir), "--skip-evals"])
+            self.assertEqual(rc_verify_v2, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
