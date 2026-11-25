@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "category",
+    "priority",
+    "queue"
+  ],
+  "properties": {
+    "category": {
+      "type": "string"
+    },
+    "priority": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ]
+    },
+    "queue": {
+      "type": "string"
+    }
+  }
+}

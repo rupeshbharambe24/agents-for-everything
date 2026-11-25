@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/chat
+  name: Team Chat MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Read channels/threads and draft replies across Slack, Teams, Discord, or WhatsApp.
+  transport: stdio
+  upstream: modelcontextprotocol/servers (slack) / community chat MCPs
+  tools:
+    - name: read_channel
+      description: Fetch messages from a channel or thread.
+      read_only: true
+    - name: draft_reply
+      description: Prepare a reply message for confirmation.
+      read_only: false

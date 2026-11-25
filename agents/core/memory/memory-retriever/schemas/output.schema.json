@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://memory/memory-retriever/output",
+  "type": "object",
+  "required": [
+    "matches"
+  ],
+  "properties": {
+    "matches": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

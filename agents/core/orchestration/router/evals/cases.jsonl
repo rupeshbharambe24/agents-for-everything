@@ -1,0 +1,10 @@
+{"id": "route-01", "input": {"request": "Please summarize this 10-page PDF"}, "expected": {"agent_id": "text/summarizer"}}
+{"id": "route-02", "input": {"request": "Translate this paragraph into Hindi"}, "expected": {"agent_id": "text/translator"}}
+{"id": "route-03", "input": {"request": "Fill form by voice for loan application"}, "expected": {"agent_id": "voice/voice-form-filler"}}
+{"id": "route-04", "input": {"request": "Extract vendor and GST from this invoice"}, "expected": {"agent_id": "documents/invoice-receipt-parser"}}
+{"id": "route-05", "input": {"request": "Write a SQL query to count monthly active users"}, "expected": {"agent_id": "data/text-to-sql"}}
+{"id": "route-06", "input": {"request": "Mask PII including Aadhaar and email before logging"}, "expected": {"agent_id": "guardrails/pii-redactor"}}
+{"id": "route-07", "input": {"request": "Review code diff for race conditions"}, "expected": {"agent_id": "coding/code-reviewer"}}
+{"id": "route-08", "input": {"request": "Triage my inbox for urgent client emails"}, "expected": {"agent_id": "communication/inbox-triager"}}
+{"id": "route-09", "input": {"request": "Run deep research on solid-state batteries"}, "expected": {"agent_id": "research/deep-researcher"}}
+{"id": "route-10", "input": {"request": "Pick custom candidate", "candidates": [{"id": "finance/bank-reconciler", "summary": "Match bank ledger lines", "tags": ["custom", "candidate"]}]}, "expected": {"agent_id": "finance/bank-reconciler"}}

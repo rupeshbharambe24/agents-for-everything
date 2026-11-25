@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/python-sandbox
+  name: Isolated Python Sandbox MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Sandboxed Python code execution for data analysis, cleaning, and verification.
+  transport: stdio
+  upstream: e2b / pydantic-run-python / docker sandbox MCP
+  tools:
+    - name: execute_python
+      description: Run isolated Python analysis snippet with timeout and memory limits.
+      read_only: false

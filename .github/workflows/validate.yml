@@ -1,0 +1,26 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate manifests, schemas, and links
+        run: python3 scripts/validate_repo.py
+      - name: Run core-python unit tests
+        run: PYTHONPATH=.:packages/core-python/src:cli/src python3 -m unittest discover -s packages/core-python/tests -v
+      - name: Run CLI unit tests
+        run: PYTHONPATH=.:packages/core-python/src:cli/src python3 -m unittest discover -s cli/tests -v
+      - name: Run core-typescript unit tests
+        run: node --test packages/core-typescript/tests/*.test.ts

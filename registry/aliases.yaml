@@ -1,0 +1,4 @@
+# Immutable ID aliases for deprecated or moved agent IDs
+apiVersion: afe/v1
+kind: Aliases
+aliases: {}

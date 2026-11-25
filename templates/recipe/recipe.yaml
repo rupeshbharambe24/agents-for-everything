@@ -1,0 +1,24 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: "{{slug}}"
+  name: "{{name}}"
+  version: 0.1.0
+  maturity: spec
+  priority: P1
+  tags: ["recipe"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "{{summary}}"
+  problem: Describe the real-world user problem solved by this recipe.
+  solution: Describe how atomic agents and teams compose to solve it.
+  agents: []
+  teams: []
+  mcp_servers: []
+  entrypoint: app.py
+  safety:
+    level: S1
+    approval_required_for: []
+  evals:
+    suite: evals/eval.yaml

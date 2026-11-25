@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+.venv/
+venv/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node / TypeScript
+node_modules/
+.pnpm-store/
+*.tsbuildinfo
+
+# Secrets & local env
+.env
+.env.*
+!.env.example
+
+# Generated eval artifacts & OS junk
+evals/reports/*.json
+evals/reports/*.html
+.DS_Store
+Thumbs.db

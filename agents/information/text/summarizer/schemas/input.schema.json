@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "text"
+  ],
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "style": {
+      "enum": [
+        "tldr",
+        "bullets",
+        "executive"
+      ],
+      "default": "bullets"
+    },
+    "max_sentences": {
+      "type": "integer",
+      "default": 3
+    }
+  }
+}

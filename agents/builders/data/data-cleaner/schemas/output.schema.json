@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "cleaned_rows",
+    "removed_duplicates"
+  ],
+  "properties": {
+    "cleaned_rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "removed_duplicates": {
+      "type": "integer"
+    }
+  }
+}

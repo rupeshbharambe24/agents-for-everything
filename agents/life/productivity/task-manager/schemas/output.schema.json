@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "tasks",
+    "top_focus"
+  ],
+  "properties": {
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "afe://types/Task"
+      }
+    },
+    "top_focus": {
+      "type": "string"
+    }
+  }
+}

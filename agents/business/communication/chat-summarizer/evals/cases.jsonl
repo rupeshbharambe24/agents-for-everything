@@ -1,0 +1,10 @@
+{"id": "cs-01", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.1"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-02", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.2"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-03", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.3"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-04", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.4"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-05", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.5"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-06", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.6"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-07", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.7"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-08", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.8"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-09", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.9"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}
+{"id": "cs-10", "input": {"messages": [{"sender": "A", "text": "Agreed to ship v0.10"}, {"sender": "B", "text": "Can you verify tests?"}]}, "expected": {}, "expect_non_empty": ["summary", "decisions", "asks"]}

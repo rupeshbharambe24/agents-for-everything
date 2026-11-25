@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/AuditEvent",
+  "title": "AuditEvent",
+  "type": "object",
+  "required": ["timestamp", "agent_id", "action", "safety_level"],
+  "properties": {
+    "timestamp": { "type": "string" },
+    "agent_id": { "type": "string" },
+    "action": { "type": "string" },
+    "safety_level": { "enum": ["S0", "S1", "S2", "S3", "S4"] },
+    "approved_by": { "type": "string" },
+    "details": { "type": "object" }
+  }
+}

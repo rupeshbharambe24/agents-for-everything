@@ -1,0 +1,10 @@
+{"id": "da-01", "input": {"rows": [{"rev": 100}, {"rev": 200}], "metric": "rev"}, "expected": {"count": 2, "min": 100.0, "max": 200.0}, "expect_non_empty": ["insight"]}
+{"id": "da-02", "input": {"rows": [{"rev": 200}, {"rev": 400}], "metric": "rev"}, "expected": {"count": 2, "min": 200.0, "max": 400.0}, "expect_non_empty": ["insight"]}
+{"id": "da-03", "input": {"rows": [{"rev": 300}, {"rev": 600}], "metric": "rev"}, "expected": {"count": 2, "min": 300.0, "max": 600.0}, "expect_non_empty": ["insight"]}
+{"id": "da-04", "input": {"rows": [{"rev": 400}, {"rev": 800}], "metric": "rev"}, "expected": {"count": 2, "min": 400.0, "max": 800.0}, "expect_non_empty": ["insight"]}
+{"id": "da-05", "input": {"rows": [{"rev": 500}, {"rev": 1000}], "metric": "rev"}, "expected": {"count": 2, "min": 500.0, "max": 1000.0}, "expect_non_empty": ["insight"]}
+{"id": "da-06", "input": {"rows": [{"rev": 600}, {"rev": 1200}], "metric": "rev"}, "expected": {"count": 2, "min": 600.0, "max": 1200.0}, "expect_non_empty": ["insight"]}
+{"id": "da-07", "input": {"rows": [{"rev": 700}, {"rev": 1400}], "metric": "rev"}, "expected": {"count": 2, "min": 700.0, "max": 1400.0}, "expect_non_empty": ["insight"]}
+{"id": "da-08", "input": {"rows": [{"rev": 800}, {"rev": 1600}], "metric": "rev"}, "expected": {"count": 2, "min": 800.0, "max": 1600.0}, "expect_non_empty": ["insight"]}
+{"id": "da-09", "input": {"rows": [{"rev": 900}, {"rev": 1800}], "metric": "rev"}, "expected": {"count": 2, "min": 900.0, "max": 1800.0}, "expect_non_empty": ["insight"]}
+{"id": "da-10", "input": {"rows": [{"rev": 1000}, {"rev": 2000}], "metric": "rev"}, "expected": {"count": 2, "min": 1000.0, "max": 2000.0}, "expect_non_empty": ["insight"]}

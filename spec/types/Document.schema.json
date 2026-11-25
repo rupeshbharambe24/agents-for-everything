@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/Document",
+  "title": "Document",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "uri": { "type": "string" },
+    "mime_type": { "type": "string" },
+    "content": { "type": "string" },
+    "language": { "type": "string" },
+    "metadata": { "type": "object" }
+  }
+}

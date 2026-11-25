@@ -1,0 +1,10 @@
+{"id": "sh-01", "input": {"goal": "List dir 1", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}}
+{"id": "sh-02", "input": {"goal": "List dir 2", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}}
+{"id": "sh-03", "input": {"goal": "List dir 3", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}}
+{"id": "sh-04", "input": {"goal": "List dir 4", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}}
+{"id": "sh-05", "input": {"goal": "List dir 5", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}}
+{"id": "sh-06", "input": {"goal": "List dir 6", "command": "ls -la"}, "auto_approve": true, "expected": {"risk": "read-only", "status": "executed_approved"}}
+{"id": "sh-07", "input": {"goal": "Run tests", "command": "pytest"}, "auto_approve": true, "expected": {"risk": "write"}}
+{"id": "sh-08", "input": {"goal": "Delete tree", "command": "rm -rf /tmp/old"}, "auto_approve": true, "expected": {"risk": "destructive"}}
+{"id": "sh-09", "input": {"goal": "Run unapproved", "command": "ls -la"}, "expect_error": "ApprovalRequiredError"}
+{"id": "sh-10", "input": {"goal": "Check git", "command": "git status"}, "auto_approve": true, "expected": {"risk": "read-only"}}

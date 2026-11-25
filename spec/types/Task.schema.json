@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/Task",
+  "title": "Task",
+  "type": "object",
+  "required": ["title"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "owner": { "type": "string" },
+    "due_date": { "type": "string" },
+    "priority": { "enum": ["low", "medium", "high", "urgent"] },
+    "status": { "enum": ["todo", "in_progress", "blocked", "done"] },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}

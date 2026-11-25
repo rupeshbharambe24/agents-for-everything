@@ -1,0 +1,10 @@
+{"id": "cr-01", "input": {"diff": "def add(a: int, b: int) -> int:\n    return a + b"}, "expected": {"approved": true}}
+{"id": "cr-02", "input": {"diff": "result = eval(user_input)"}, "expected": {"approved": false}, "expect_non_empty": ["findings"]}
+{"id": "cr-03", "input": {"diff": "API_KEY = 'sk-1234567890abcdef'"}, "expected": {"approved": false}}
+{"id": "cr-04", "input": {"diff": "try:\n    run()\nexcept:\n    pass"}, "expected": {"approved": false}}
+{"id": "cr-05", "input": {"diff": "exec(cmd)"}, "expected": {"approved": false}}
+{"id": "cr-06", "input": {"diff": "SELECT * FROM users"}, "expected": {"approved": false}}
+{"id": "cr-07", "input": {"diff": "return sorted(items)"}, "expected": {"approved": true}}
+{"id": "cr-08", "input": {"diff": "def ok(x: str) -> str:\n    return x.strip()"}, "expected": {"approved": true}}
+{"id": "cr-09", "input": {"diff": "json.loads(payload)"}, "expected": {"approved": true}}
+{"id": "cr-10", "input": {"diff": "raise ValueError('invalid')"}, "expected": {"approved": true}}

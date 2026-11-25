@@ -1,0 +1,10 @@
+{"id": "jdg-01", "input": {"output": "Summary includes revenue and profit drivers.", "rubric": "Must cover revenue and profit", "required_terms": ["revenue", "profit"]}, "expected": {"passed": true}}
+{"id": "jdg-02", "input": {"output": "", "rubric": "Non-empty"}, "expected": {"passed": false}}
+{"id": "jdg-03", "input": {"output": "Weather is sunny today.", "rubric": "Cover SQL index tuning", "required_terms": ["sql", "index"]}, "expected": {"passed": false}}
+{"id": "jdg-04", "input": {"output": "Invoice verified: vendor Acme, GST 18%.", "rubric": "Mention vendor and GST", "required_terms": ["vendor", "gst"]}, "expected": {"passed": true}}
+{"id": "jdg-05", "input": {"output": "Approved by human operator with audit log.", "rubric": "Audit confirmation", "required_terms": ["audit"]}, "expected": {"passed": true}}
+{"id": "jdg-06", "input": {"output": "Missing email address.", "rubric": "Must mention email", "required_terms": ["email"]}, "expected": {"passed": true}}
+{"id": "jdg-07", "input": {"output": "Short", "rubric": "Detailed explanation", "required_terms": ["explanation"]}, "expected": {"passed": false}}
+{"id": "jdg-08", "input": {"output": "Cited source [1] confirms growth rate.", "rubric": "Citation present", "required_terms": ["source"]}, "expected": {"passed": true}}
+{"id": "jdg-09", "input": {"output": "PII redacted successfully before logging.", "rubric": "Confirm redaction", "required_terms": ["redacted"]}, "expected": {"passed": true}}
+{"id": "jdg-10", "input": {"output": "No answer.", "rubric": "Explain architecture", "required_terms": ["architecture", "contracts"]}, "expected": {"passed": false}}

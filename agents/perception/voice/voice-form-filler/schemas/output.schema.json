@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "values",
+    "missing",
+    "status"
+  ],
+  "properties": {
+    "values": {
+      "type": "object"
+    },
+    "confidence": {
+      "type": "object"
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "invalid": {
+      "type": "array",
+      "items": {
+        "$ref": "afe://types/ValidationError"
+      }
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "needs_input",
+        "awaiting_confirmation",
+        "submitted"
+      ]
+    },
+    "prompt_back": {
+      "type": "string"
+    },
+    "transcript": {
+      "$ref": "afe://types/Transcript"
+    }
+  }
+}

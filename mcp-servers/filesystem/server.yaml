@@ -1,0 +1,21 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/filesystem
+  name: Scoped Filesystem MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Workspace-scoped file discovery, read, diff preview, and safe move/organize operations.
+  transport: stdio
+  upstream: modelcontextprotocol/servers (filesystem)
+  tools:
+    - name: list_dir
+      description: List files inside allowed workspace roots.
+      read_only: true
+    - name: read_file
+      description: Read file contents safely.
+      read_only: true
+    - name: apply_plan
+      description: Move or rename files according to an approved plan.
+      read_only: false

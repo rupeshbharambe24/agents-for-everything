@@ -1,0 +1,10 @@
+{"id": "sp-01", "input": {"rows": [{"amount": 10}, {"amount": 20}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 30.0}}
+{"id": "sp-02", "input": {"rows": [{"amount": 20}, {"amount": 40}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 30.0}}
+{"id": "sp-03", "input": {"rows": [{"amount": 30}, {"amount": 60}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 60.0}}
+{"id": "sp-04", "input": {"rows": [{"amount": 40}, {"amount": 80}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}}
+{"id": "sp-05", "input": {"rows": [{"amount": 50}, {"amount": 100}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 150.0}}
+{"id": "sp-06", "input": {"rows": [{"amount": 60}, {"amount": 120}], "column": "amount", "operation": "avg"}, "expected": {"operation": "avg", "value": 90.0}}
+{"id": "sp-07", "input": {"rows": [{"amount": 70}, {"amount": 140}], "column": "amount", "operation": "max"}, "expected": {"operation": "max", "value": 140.0}}
+{"id": "sp-08", "input": {"rows": [{"amount": 80}, {"amount": 160}], "column": "amount", "operation": "count"}, "expected": {"operation": "count", "value": 2.0}}
+{"id": "sp-09", "input": {"rows": [{"amount": 90}, {"amount": 180}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 270.0}}
+{"id": "sp-10", "input": {"rows": [{"amount": 100}, {"amount": 200}], "column": "amount", "operation": "sum"}, "expected": {"operation": "sum", "value": 300.0}}

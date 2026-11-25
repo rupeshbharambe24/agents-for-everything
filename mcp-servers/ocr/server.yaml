@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/ocr
+  name: OCR MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Printed and handwritten text extraction with layout bounding boxes.
+  transport: stdio
+  upstream: tesseract / paddleocr / vision-model MCP wrapper
+  tools:
+    - name: extract_text
+      description: Run OCR on an image or scanned page.
+      read_only: true

@@ -1,0 +1,10 @@
+{"id": "rw-01", "input": {"text": "Draft message 1 for update.", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-02", "input": {"text": "Draft message 2 for update.", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-03", "input": {"text": "Draft message 3 for update.", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-04", "input": {"text": "Draft message 4 for update.", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-05", "input": {"text": "Draft message 5 for update.", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-06", "input": {"text": "Draft message 6 for update.", "tone": "executive"}, "expected": {"tone": "executive"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-07", "input": {"text": "Draft message 7 for update.", "tone": "friendly"}, "expected": {"tone": "friendly"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-08", "input": {"text": "Draft message 8 for update.", "tone": "concise"}, "expected": {"tone": "concise"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-09", "input": {"text": "Draft message 9 for update.", "tone": "formal"}, "expected": {"tone": "formal"}, "expect_non_empty": ["rewritten_text"]}
+{"id": "rw-10", "input": {"text": "Draft message 10 for update.", "tone": "plain"}, "expected": {"tone": "plain"}, "expect_non_empty": ["rewritten_text"]}

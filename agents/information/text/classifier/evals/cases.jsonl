@@ -1,0 +1,10 @@
+{"id": "cls-01", "input": {"text": "Invoice billing double charge", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "billing"}}
+{"id": "cls-02", "input": {"text": "Technical API timeout 500 error", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "technical"}}
+{"id": "cls-03", "input": {"text": "Where is my shipping parcel?", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "shipping"}}
+{"id": "cls-04", "input": {"text": "Review NDA legal indemnity clause", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "legal"}}
+{"id": "cls-05", "input": {"text": "Refund billing subscription", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "billing"}}
+{"id": "cls-06", "input": {"text": "Technical database crash", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "technical"}}
+{"id": "cls-07", "input": {"text": "Delayed shipping tracking", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "shipping"}}
+{"id": "cls-08", "input": {"text": "Legal compliance question", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "legal"}}
+{"id": "cls-09", "input": {"text": "Billing payment failed", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "billing"}}
+{"id": "cls-10", "input": {"text": "Technical login bug", "labels": ["billing", "technical", "shipping", "legal"]}, "expected": {"label": "technical"}}

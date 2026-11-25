@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/tts
+  name: Text-to-Speech MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Natural multilingual text-to-speech synthesis with SSML and pacing controls.
+  transport: stdio
+  upstream: piper / kokoro / elevenlabs MCP wrapper
+  tools:
+    - name: synthesize
+      description: Convert text and locale parameters into audio output.
+      read_only: true

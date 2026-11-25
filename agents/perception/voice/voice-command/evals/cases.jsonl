@@ -1,0 +1,10 @@
+{"id": "vc-01", "input": {"transcript": "search web for flights", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "search_web"}}
+{"id": "vc-02", "input": {"transcript": "please open settings", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "open_settings"}}
+{"id": "vc-03", "input": {"transcript": "go to next slide", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "next_slide"}}
+{"id": "vc-04", "input": {"transcript": "pause audio right now", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "pause_audio"}}
+{"id": "vc-05", "input": {"transcript": "fill form fields", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "fill_form"}}
+{"id": "vc-06", "input": {"transcript": "open settings panel", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "open_settings"}}
+{"id": "vc-07", "input": {"transcript": "search web documentation", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "search_web"}}
+{"id": "vc-08", "input": {"transcript": "next slide please", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "next_slide"}}
+{"id": "vc-09", "input": {"transcript": "pause audio playback", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "pause_audio"}}
+{"id": "vc-10", "input": {"transcript": "help me fill form", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}, "expected": {"action": "fill_form"}}

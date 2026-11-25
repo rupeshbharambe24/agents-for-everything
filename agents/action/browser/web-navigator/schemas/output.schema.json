@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "status",
+    "trace_steps",
+    "injection_safe"
+  ],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "trace_steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "injection_safe": {
+      "type": "boolean"
+    }
+  }
+}

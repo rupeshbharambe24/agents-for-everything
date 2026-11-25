@@ -1,0 +1,10 @@
+{"id": "pii-01", "input": {"text": "Contact priya@example.org"}, "expected": {"pii_found": ["email"]}}
+{"id": "pii-02", "input": {"text": "My PAN is ABCDE1234F"}, "expected": {"pii_found": ["pan"]}}
+{"id": "pii-03", "input": {"text": "Aadhaar 2345 6789 0123"}, "expected": {"pii_found": ["aadhaar"]}}
+{"id": "pii-04", "input": {"text": "Phone +91 9876543210"}, "expected": {"pii_found": ["phone"]}}
+{"id": "pii-05", "input": {"text": "SSN 123-45-6789"}, "expected": {"pii_found": ["ssn"]}}
+{"id": "pii-06", "input": {"text": "PIN code is 411001 in Pune."}, "expected": {"pii_found": []}}
+{"id": "pii-07", "input": {"text": "Email a@b.com and PAN ZZZZZ9999Z"}, "expected": {"pii_found": ["email", "pan"]}}
+{"id": "pii-08", "input": {"text": "Call +1-415-555-0199 asap"}, "expected": {"pii_found": ["phone"]}}
+{"id": "pii-09", "input": {"text": "No sensitive data in this sentence."}, "expected": {"pii_found": []}}
+{"id": "pii-10", "input": {"text": "a@b.org, 9876543210, 2345-6789-0123"}, "expected": {"pii_found": ["email", "aadhaar", "phone"]}}

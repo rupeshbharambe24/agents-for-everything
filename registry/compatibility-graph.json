@@ -1,0 +1,105 @@
+{
+  "apiVersion": "afe/v1",
+  "edges": [
+    {
+      "from": "documents/table-extractor",
+      "to": "data/data-cleaner",
+      "reason": "matched required fields: rows"
+    },
+    {
+      "from": "integration/api-caller",
+      "to": "browser/web-scraper",
+      "reason": "matched required fields: url"
+    },
+    {
+      "from": "coding/code-generator",
+      "to": "coding/test-writer",
+      "reason": "matched required fields: code"
+    },
+    {
+      "from": "orchestration/human-approval-gate",
+      "to": "productivity/task-manager",
+      "reason": "matched required fields: notes"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "documents/invoice-receipt-parser",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "documents/table-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "meetings/action-item-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "guardrails/pii-redactor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "text/entity-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "text/proofreader",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "text/summarizer",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "voice/text-to-speech",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "documents/invoice-receipt-parser",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "documents/table-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "meetings/action-item-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "guardrails/pii-redactor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "text/entity-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "text/proofreader",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "text/summarizer",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "voice/text-to-speech",
+      "reason": "matched required fields: text"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://evaluation/llm-judge/input",
+  "type": "object",
+  "required": [
+    "output",
+    "rubric"
+  ],
+  "properties": {
+    "output": {
+      "type": "string"
+    },
+    "rubric": {
+      "type": "string"
+    },
+    "required_terms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

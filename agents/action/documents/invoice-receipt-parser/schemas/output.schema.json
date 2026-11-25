@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "vendor",
+    "total",
+    "math_valid"
+  ],
+  "properties": {
+    "vendor": {
+      "type": "string"
+    },
+    "invoice_number": {
+      "type": "string"
+    },
+    "subtotal": {
+      "type": "number"
+    },
+    "tax": {
+      "type": "number"
+    },
+    "total": {
+      "type": "number"
+    },
+    "math_valid": {
+      "type": "boolean"
+    }
+  }
+}

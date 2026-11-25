@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/shell-sandbox
+  name: Scoped Shell Sandbox MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Allowlisted terminal command execution with human confirmation for destructive actions.
+  transport: stdio
+  upstream: workspace sandboxed shell MCP
+  tools:
+    - name: run_command
+      description: Execute a bounded command in a scoped directory.
+      read_only: false

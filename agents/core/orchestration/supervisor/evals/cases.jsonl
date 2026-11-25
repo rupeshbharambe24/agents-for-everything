@@ -1,0 +1,10 @@
+{"id": "sup-01", "input": {"goal": "Research latest MCP standards and summarize"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-02", "input": {"goal": "Fill customer intake form by voice"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-03", "input": {"goal": "Extract invoice fields into JSON"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-04", "input": {"goal": "Triage incoming support tickets"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-05", "input": {"goal": "Translate onboarding guide to Hindi"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-06", "input": {"goal": "Review pull request diff for bugs"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-07", "input": {"goal": "Generate SQL query for weekly sales"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-08", "input": {"goal": "Check report claims against sources"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-09", "input": {"goal": "Organize messy project downloads folder"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}
+{"id": "sup-10", "input": {"goal": "Summarize daily engineering standup chat"}, "expected": {"status": "completed"}, "expect_non_empty": ["results", "run_log"]}

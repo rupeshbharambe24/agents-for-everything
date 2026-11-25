@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/router/output",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "arguments",
+    "confidence"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string"
+    },
+    "arguments": {
+      "type": "object"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

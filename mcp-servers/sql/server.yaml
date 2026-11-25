@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/sql
+  name: Read-Only SQL MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Schema inspection and read-only SELECT execution across SQLite/Postgres/DuckDB.
+  transport: stdio
+  upstream: modelcontextprotocol/servers (postgres / sqlite)
+  tools:
+    - name: inspect_schema
+      description: List tables, columns, and types.
+      read_only: true
+    - name: run_select
+      description: Execute read-only SELECT query with row limit.
+      read_only: true

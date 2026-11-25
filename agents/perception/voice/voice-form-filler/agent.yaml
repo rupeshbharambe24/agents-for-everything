@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: voice/voice-form-filler
+  name: "Voice-to-Form Filler"
+  version: 0.1.0
+  family: perception
+  category: voice
+  tier: composite
+  maturity: prototype
+  priority: P0
+  tags: ["voice", "voice-form-filler"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Listens to natural speech, maps answers to typed form fields, checks gaps, and confirms before submit."
+  purpose: "Lets users complete structured forms hands-free or in local languages by composing STT, structured extraction, verification, TTS prompts, and an approval gate."
+  pattern: plan-and-execute
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["voice", "text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/stt"]
+    optional: ["afe/tts", "afe/browser"]
+  uses_agents: ["voice/speech-to-text", "text/structured-extractor", "orchestration/verifier", "voice/text-to-speech", "orchestration/human-approval-gate"]
+  memory: session
+  safety:
+    level: S2
+    side_effects: ["fills-form-fields"]
+    approval_required_for: ["submit"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en", "hi", "ta", "te", "bn", "mr", "es", "fr"]

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agents-for-everything"
+version = "0.1.0"
+description = "Core runtime, manifest loader, safety guardrails, MCP bridge, and exporters for Agents for Everything (afe/v1)"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+authors = [
+  { name = "rupeshbharambe24", email = "rupeshbharambe2004@gmail.com" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+standard = [
+  "pyyaml>=6.0",
+  "jsonschema>=4.23",
+  "pydantic>=2.9",
+]
+otel = [
+  "opentelemetry-api>=1.27",
+  "opentelemetry-sdk>=1.27",
+]
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

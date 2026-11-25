@@ -1,0 +1,35 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: chat-with-your-docs
+  name: Chat with Your Docs
+  version: 0.1.0
+  maturity: prototype
+  priority: P0
+  tags: [rag, documents, citations, guardrails]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Private document Q&A assistant with PII masking, chunk ingestion, semantic retrieval, and grounding checks.
+  problem: Teams need answers from internal handbooks and policies without leaking PII or accepting unverified claims.
+  solution: Composes pii-redactor, knowledge-ingestor, rag-qa, and hallucination-checker.
+  agents:
+    - guardrails/pii-redactor
+    - memory/knowledge-ingestor
+    - search/semantic-search
+    - search/rag-qa
+    - guardrails/hallucination-checker
+  teams:
+    - document-intake
+  mcp_servers:
+    - afe/documents
+    - afe/vector-store
+  entrypoint: app.py
+  io:
+    input: fixtures/sample_docs.json
+    output: schemas/output.schema.json
+  safety:
+    level: S1
+    approval_required_for: []
+  evals:
+    suite: tests/test_recipe.py

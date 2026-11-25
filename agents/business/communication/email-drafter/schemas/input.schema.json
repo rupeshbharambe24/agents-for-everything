@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "recipient",
+    "intent"
+  ],
+  "properties": {
+    "recipient": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "intent": {
+      "type": "string"
+    },
+    "send": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

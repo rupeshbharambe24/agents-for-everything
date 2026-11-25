@@ -1,0 +1,17 @@
+{
+  "name": "agents-for-everything-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/core-typescript",
+    "packages/adapters"
+  ],
+  "scripts": {
+    "test": "node --test packages/core-typescript/tests/*.test.ts",
+    "typecheck": "node --experimental-strip-types packages/core-typescript/tests/smoke.test.ts"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  }
+}

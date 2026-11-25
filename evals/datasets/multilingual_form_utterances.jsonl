@@ -1,0 +1,6 @@
+{"id":"ds-en-001","locale":"en-IN","utterance":"My name is Aarav Mehta, email aarav.mehta@example.org, city Pune, pincode 411001","expected":{"full_name":"Aarav Mehta","email":"aarav.mehta@example.org","city":"Pune","pincode":"411001"}}
+{"id":"ds-hi-en-002","locale":"hi-IN","utterance":"mera naam Priya Sharma hai, DOB 12 March 1990, PIN 411001, monthly income pachas hazaar","expected":{"full_name":"Priya Sharma","dob":"1990-03-12","pincode":"411001","monthly_income":50000}}
+{"id":"ds-mr-003","locale":"mr-IN","utterance":"maze naav Sneha Kulkarni ahe, city Nashik, pincode 422001","expected":{"full_name":"Sneha Kulkarni","city":"Nashik","pincode":"422001"}}
+{"id":"ds-ta-004","locale":"ta-IN","utterance":"en peyar Karthik Subramanian, city Chennai, pincode 600001","expected":{"full_name":"Karthik Subramanian","city":"Chennai","pincode":"600001"}}
+{"id":"ds-te-005","locale":"te-IN","utterance":"naa peru Divya Reddy, city Hyderabad, pincode 500001","expected":{"full_name":"Divya Reddy","city":"Hyderabad","pincode":"500001"}}
+{"id":"ds-bn-006","locale":"bn-IN","utterance":"amar naam Anirban Sen, city Kolkata, pincode 700001","expected":{"full_name":"Anirban Sen","city":"Kolkata","pincode":"700001"}}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/AudioSource",
+  "title": "AudioSource",
+  "type": "object",
+  "properties": {
+    "uri": { "type": "string" },
+    "format": { "enum": ["wav", "mp3", "ogg", "flac", "pcm16", "webm", "text-simulated"] },
+    "sample_rate_hz": { "type": "integer", "minimum": 8000 },
+    "locale_hint": { "type": "string" },
+    "transcript_hint": { "type": "string" }
+  }
+}

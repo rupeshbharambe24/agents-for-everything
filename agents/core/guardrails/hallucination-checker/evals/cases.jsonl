@@ -1,0 +1,10 @@
+{"id": "hal-01", "input": {"answer": "Python 3.14 is installed locally.", "sources": ["System check confirmed Python 3.14 is installed locally."]}, "expected": {"grounded": true, "unsupported_claims": 0}}
+{"id": "hal-02", "input": {"answer": "Mars colonies launched yesterday with 5000 ships.", "sources": ["Python 3.14 was released with performance improvements."]}, "expected": {"grounded": false}}
+{"id": "hal-03", "input": {"answer": "Apache-2.0 allows commercial reuse.", "sources": ["This repository uses the Apache-2.0 license allowing commercial reuse."]}, "expected": {"grounded": true}}
+{"id": "hal-04", "input": {"answer": "MCP connects agents to external tools.", "sources": ["Model Context Protocol (MCP) connects AI agents to external tools and data."]}, "expected": {"grounded": true}}
+{"id": "hal-05", "input": {"answer": "Revenue doubled to 99 billion dollars overnight.", "sources": ["Q1 revenue grew 4 percent year over year."]}, "expected": {"grounded": false}}
+{"id": "hal-06", "input": {"answer": "Pune PIN code is 411001.", "sources": ["Address verified: Pune, Maharashtra, PIN code 411001."]}, "expected": {"grounded": true}}
+{"id": "hal-07", "input": {"answer": "A2A handles agent-to-agent discovery.", "sources": ["A2A protocol standardizes agent-to-agent discovery via Agent Cards."]}, "expected": {"grounded": true}}
+{"id": "hal-08", "input": {"answer": "All employees receive free helicopters.", "sources": ["Employee handbook covers health insurance and remote stipend."]}, "expected": {"grounded": false}}
+{"id": "hal-09", "input": {"answer": "S4 agents require mandatory human approval.", "sources": ["Safety policy mandates human approval for S4 agents."]}, "expected": {"grounded": true}}
+{"id": "hal-10", "input": {"answer": "Water boils at 100 degrees Celsius at sea level.", "sources": ["At standard sea-level pressure, water boils at 100 degrees Celsius."]}, "expected": {"grounded": true}}

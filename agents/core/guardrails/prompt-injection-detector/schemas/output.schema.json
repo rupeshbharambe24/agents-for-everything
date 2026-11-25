@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://guardrails/prompt-injection-detector/output",
+  "type": "object",
+  "required": [
+    "is_safe",
+    "risk_score",
+    "spans"
+  ],
+  "properties": {
+    "is_safe": {
+      "type": "boolean"
+    },
+    "risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

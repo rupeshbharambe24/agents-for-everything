@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "form",
+    "audio"
+  ],
+  "properties": {
+    "form": {
+      "$ref": "afe://types/FormSchema"
+    },
+    "audio": {
+      "$ref": "afe://types/AudioSource"
+    },
+    "locale": {
+      "type": "string",
+      "default": "en-IN"
+    },
+    "prefill": {
+      "type": "object"
+    },
+    "confirm_submit": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

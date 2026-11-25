@@ -1,0 +1,3 @@
+Apache-2.0
+
+All synthetic datasets in `evals/datasets/` were created specifically for `agents-for-everything` evaluation and contain no third-party copyrighted corpora or real personal data.

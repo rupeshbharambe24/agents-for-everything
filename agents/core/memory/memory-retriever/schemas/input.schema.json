@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://memory/memory-retriever/input",
+  "type": "object",
+  "required": [
+    "query",
+    "memories"
+  ],
+  "properties": {
+    "query": {
+      "type": "string"
+    },
+    "memories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "top_k": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 5
+    }
+  }
+}

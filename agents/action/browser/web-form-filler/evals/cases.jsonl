@@ -1,0 +1,10 @@
+{"id": "wff-01", "input": {"url": "https://example.org/f1", "fields": {"full_name": "User 1"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
+{"id": "wff-02", "input": {"url": "https://example.org/f2", "fields": {"full_name": "User 2"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
+{"id": "wff-03", "input": {"url": "https://example.org/f3", "fields": {"full_name": "User 3"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
+{"id": "wff-04", "input": {"url": "https://example.org/f4", "fields": {"full_name": "User 4"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
+{"id": "wff-05", "input": {"url": "https://example.org/f5", "fields": {"full_name": "User 5"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
+{"id": "wff-06", "input": {"url": "https://example.org/f6", "fields": {"full_name": "User 6"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
+{"id": "wff-07", "input": {"url": "https://example.org/f7", "fields": {"full_name": "User 7"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
+{"id": "wff-08", "input": {"url": "https://example.org/f8", "fields": {"full_name": "User 8"}}, "expected": {"submitted": false, "status": "awaiting_confirmation"}}
+{"id": "wff-09", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "expect_error": "ApprovalRequiredError"}
+{"id": "wff-10", "input": {"url": "https://example.org/f", "fields": {"name": "A"}, "submit": true}, "auto_approve": true, "expected": {"submitted": true, "status": "submitted"}}

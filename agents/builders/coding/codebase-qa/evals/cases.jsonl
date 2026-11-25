@@ -1,0 +1,10 @@
+{"id": "cqa-01", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 1."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-02", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 2."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-03", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 3."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-04", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 4."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-05", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 5."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-06", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 6."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-07", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 7."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-08", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 8."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-09", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 9."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}
+{"id": "cqa-10", "input": {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 10."}]}, "expected": {}, "expect_non_empty": ["files_referenced"]}

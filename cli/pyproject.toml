@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agents-for-everything-cli"
+version = "0.1.0"
+description = "CLI (`agents-for-everything` / `afe`) for searching, adding, validating, testing, and exporting afe/v1 agents"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+  "agents-for-everything",
+]
+
+[project.scripts]
+agents-for-everything = "afe_cli.main:main"
+afe = "afe_cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

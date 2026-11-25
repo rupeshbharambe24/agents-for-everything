@@ -1,0 +1,2 @@
+metrics: [schema_valid, exact_match]
+pass_threshold: 0.9

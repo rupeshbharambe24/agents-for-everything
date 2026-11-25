@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "test_code",
+    "test_count"
+  ],
+  "properties": {
+    "test_code": {
+      "type": "string"
+    },
+    "test_count": {
+      "type": "integer"
+    }
+  }
+}

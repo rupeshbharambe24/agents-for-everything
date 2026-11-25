@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/human-approval-gate/input",
+  "type": "object",
+  "required": [
+    "action",
+    "summary"
+  ],
+  "properties": {
+    "action": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "safety_level": {
+      "enum": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "default": "S2"
+    },
+    "user_response": {
+      "enum": [
+        "yes",
+        "approve",
+        "no",
+        "reject",
+        "edit"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://spec/tools.schema.json",
+  "title": "Agents for Everything Tools and MCP Server Schema",
+  "type": "object",
+  "required": ["apiVersion", "kind"],
+  "properties": {
+    "apiVersion": { "const": "afe/v1" },
+    "kind": { "enum": ["Tools", "MCPServer"] },
+    "servers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "required", "permissions"],
+        "properties": {
+          "id": { "type": "string" },
+          "required": { "type": "boolean" },
+          "permissions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "scope": { "type": "string" }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "license": { "type": "string" }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "properties": {
+        "summary": { "type": "string" },
+        "transport": { "enum": ["stdio", "streamable-http", "sse", "in-process"] },
+        "upstream": { "type": "string" },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "description"],
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "read_only": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/email
+  name: Email Draft & Read MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Read inbox threads, apply labels, and create drafts without sending autonomously.
+  transport: stdio
+  upstream: gmail / imap-smtp MCP server
+  tools:
+    - name: list_threads
+      description: Search and read inbox threads.
+      read_only: true
+    - name: save_draft
+      description: Save reply or new email draft for human review.
+      read_only: false

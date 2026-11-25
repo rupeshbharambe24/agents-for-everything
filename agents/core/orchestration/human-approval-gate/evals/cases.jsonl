@@ -1,0 +1,10 @@
+{"id": "gate-01", "input": {"action": "submit_form", "summary": "Submit loan app", "user_response": "yes"}, "expected": {"decision": "approved"}}
+{"id": "gate-02", "input": {"action": "submit_form", "summary": "Submit loan app", "user_response": "no"}, "expected": {"decision": "rejected"}}
+{"id": "gate-03", "input": {"action": "submit_form", "summary": "Submit loan app", "user_response": "edit"}, "expected": {"decision": "needs_edit"}}
+{"id": "gate-04", "input": {"action": "send_email", "summary": "Send invoice reply", "user_response": "approve"}, "expected": {"decision": "approved"}}
+{"id": "gate-05", "input": {"action": "delete_files", "summary": "Delete archive"}, "expect_error": "ApprovalRequiredError"}
+{"id": "gate-06", "input": {"action": "send_email", "summary": "Send reply"}, "auto_approve": true, "expected": {"decision": "approved"}}
+{"id": "gate-07", "input": {"action": "pay_bill", "summary": "Pay vendor", "safety_level": "S4", "user_response": "reject"}, "expected": {"decision": "rejected"}}
+{"id": "gate-08", "input": {"action": "run_shell", "summary": "Run cleanup", "safety_level": "S3", "user_response": "yes"}, "expected": {"decision": "approved"}}
+{"id": "gate-09", "input": {"action": "post_social", "summary": "Publish post", "user_response": "edit"}, "expected": {"decision": "needs_edit"}}
+{"id": "gate-10", "input": {"action": "approve_action", "summary": "Auto test"}, "auto_approve": true, "expected": {"decision": "approved"}}

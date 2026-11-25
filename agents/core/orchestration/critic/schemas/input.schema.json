@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/critic/input",
+  "type": "object",
+  "required": [
+    "output",
+    "rubric"
+  ],
+  "properties": {
+    "output": {},
+    "rubric": {
+      "type": "string"
+    }
+  }
+}

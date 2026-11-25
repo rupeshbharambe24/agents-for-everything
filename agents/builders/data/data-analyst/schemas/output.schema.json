@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "count",
+    "mean",
+    "min",
+    "max",
+    "insight"
+  ],
+  "properties": {
+    "count": {
+      "type": "integer"
+    },
+    "mean": {
+      "type": "number"
+    },
+    "min": {
+      "type": "number"
+    },
+    "max": {
+      "type": "number"
+    },
+    "insight": {
+      "type": "string"
+    }
+  }
+}

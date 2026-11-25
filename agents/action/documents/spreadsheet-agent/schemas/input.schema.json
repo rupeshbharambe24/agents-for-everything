@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "rows",
+    "column"
+  ],
+  "properties": {
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "column": {
+      "type": "string"
+    },
+    "operation": {
+      "enum": [
+        "sum",
+        "avg",
+        "count",
+        "max"
+      ],
+      "default": "sum"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+name: Agent Request
+description: Propose a new atomic or composite agent for the catalog
+title: "[Agent Request]: "
+labels: ["agent-request"]
+body:
+  - type: input
+    id: category
+    attributes:
+      label: Target Category
+      description: e.g. voice, text, browser, finance, coding
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Single-Purpose Task
+      description: What one job does this agent perform?
+    validations:
+      required: true
+  - type: textarea
+    id: io
+    attributes:
+      label: Inputs & Outputs
+      description: Describe the expected JSON input and output fields.
+    validations:
+      required: true
+  - type: dropdown
+    id: safety
+    attributes:
+      label: Proposed Safety Level
+      options:
+        - S0 (Pure computation)
+        - S1 (Read-only external/private data)
+        - S2 (Reversible local writes/drafts)
+        - S3 (External side effects, approval by default)
+        - S4 (High stakes: money, legal, health, identity, irreversible delete)
+    validations:
+      required: true

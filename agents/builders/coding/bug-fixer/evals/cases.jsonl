@@ -1,0 +1,10 @@
+{"id": "bf-01", "input": {"issue": "Null edge case #1", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-02", "input": {"issue": "Null edge case #2", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-03", "input": {"issue": "Null edge case #3", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-04", "input": {"issue": "Null edge case #4", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-05", "input": {"issue": "Null edge case #5", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-06", "input": {"issue": "Null edge case #6", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-07", "input": {"issue": "Null edge case #7", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-08", "input": {"issue": "Null edge case #8", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-09", "input": {"issue": "Null edge case #9", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}
+{"id": "bf-10", "input": {"issue": "Null edge case #10", "code": "def f(x):\n    return x"}, "expected": {"review_passed": true}, "expect_non_empty": ["root_cause", "patch"]}

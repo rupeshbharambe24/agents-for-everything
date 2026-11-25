@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://spec/agent.schema.json",
+  "title": "Agents for Everything Agent Manifest",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "additionalProperties": false,
+  "properties": {
+    "apiVersion": { "const": "afe/v1" },
+    "kind": { "const": "Agent" },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "version",
+        "family",
+        "category",
+        "tier",
+        "maturity",
+        "priority",
+        "license"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"
+        },
+        "name": { "type": "string", "minLength": 2 },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[a-zA-Z0-9.-]+)?$"
+        },
+        "family": {
+          "enum": [
+            "core",
+            "perception",
+            "information",
+            "action",
+            "builders",
+            "business",
+            "life",
+            "industries"
+          ]
+        },
+        "category": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "tier": { "enum": ["atomic", "composite"] },
+        "maturity": {
+          "enum": ["spec", "prototype", "beta", "stable", "deprecated"]
+        },
+        "priority": { "enum": ["P0", "P1", "P2"] },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "maintainers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "license": { "type": "string" }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "required": [
+        "summary",
+        "purpose",
+        "pattern",
+        "autonomy",
+        "io",
+        "model",
+        "safety",
+        "limits",
+        "evals"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "summary": { "type": "string", "minLength": 5 },
+        "purpose": { "type": "string", "minLength": 5 },
+        "pattern": {
+          "enum": [
+            "augmented-llm",
+            "prompt-chaining",
+            "routing",
+            "parallelization",
+            "orchestrator-workers",
+            "evaluator-optimizer",
+            "react",
+            "plan-and-execute",
+            "reflection",
+            "hierarchical",
+            "handoff",
+            "debate",
+            "blackboard",
+            "human-in-the-loop"
+          ]
+        },
+        "autonomy": { "enum": ["L0", "L1", "L2", "L3", "L4"] },
+        "classic_type": {
+          "enum": [
+            "simple-reflex",
+            "model-based",
+            "goal-based",
+            "utility-based",
+            "learning"
+          ]
+        },
+        "modality": {
+          "type": "array",
+          "items": {
+            "enum": ["text", "voice", "vision", "video", "gui", "api", "physical"]
+          }
+        },
+        "runtime": {
+          "enum": ["interactive", "background", "scheduled", "event-driven", "streaming"]
+        },
+        "environment": {
+          "enum": ["digital-api", "browser", "desktop", "mobile", "physical"]
+        },
+        "audience": {
+          "type": "array",
+          "items": {
+            "enum": ["consumer", "professional", "enterprise", "developer", "industry"]
+          }
+        },
+        "io": {
+          "type": "object",
+          "required": ["input", "output"],
+          "additionalProperties": false,
+          "properties": {
+            "input": { "type": "string" },
+            "output": { "type": "string" }
+          }
+        },
+        "model": {
+          "type": "object",
+          "required": ["capabilities"],
+          "additionalProperties": false,
+          "properties": {
+            "capabilities": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "optional_capabilities": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "min_context_tokens": { "type": "integer", "minimum": 1000 },
+            "tested_with": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "tools": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "required": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "optional": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "uses_agents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"
+          }
+        },
+        "memory": { "enum": ["none", "session", "long-term"] },
+        "safety": {
+          "type": "object",
+          "required": ["level"],
+          "additionalProperties": false,
+          "properties": {
+            "level": { "enum": ["S0", "S1", "S2", "S3", "S4"] },
+            "side_effects": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "approval_required_for": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "handles_pii": { "type": "boolean" },
+            "data_retention": {
+              "enum": ["none", "session", "ephemeral", "configurable"]
+            }
+          }
+        },
+        "limits": {
+          "type": "object",
+          "required": ["max_steps", "timeout_seconds", "max_cost_usd"],
+          "additionalProperties": false,
+          "properties": {
+            "max_steps": { "type": "integer", "minimum": 1 },
+            "timeout_seconds": { "type": "number", "minimum": 1 },
+            "max_cost_usd": { "type": "number", "minimum": 0 }
+          }
+        },
+        "evals": {
+          "type": "object",
+          "required": ["suite"],
+          "additionalProperties": false,
+          "properties": {
+            "suite": { "type": "string" },
+            "targets": {
+              "type": "object",
+              "additionalProperties": { "type": "number" }
+            }
+          }
+        },
+        "exports": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "python",
+              "typescript",
+              "mcp-server",
+              "a2a-card",
+              "agent-skill",
+              "subagent"
+            ]
+          }
+        },
+        "locales": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

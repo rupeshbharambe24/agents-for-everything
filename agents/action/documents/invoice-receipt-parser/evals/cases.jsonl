@@ -1,0 +1,10 @@
+{"id": "inv-01", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #101\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}
+{"id": "inv-02", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #102\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}
+{"id": "inv-03", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #103\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}
+{"id": "inv-04", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #104\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}
+{"id": "inv-05", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #105\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1500"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": false}}
+{"id": "inv-06", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #106\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}
+{"id": "inv-07", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #107\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}
+{"id": "inv-08", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #108\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}
+{"id": "inv-09", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #109\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}
+{"id": "inv-10", "input": {"text": "Vendor: Acme Pvt Ltd\nInvoice #110\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}, "expected": {"vendor": "Acme Pvt Ltd", "math_valid": true}}

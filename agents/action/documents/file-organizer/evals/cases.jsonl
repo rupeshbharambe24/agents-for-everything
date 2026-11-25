@@ -1,0 +1,10 @@
+{"id": "fo-01", "input": {"files": ["report_1.pdf", "photo_1.png", "data_1.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-02", "input": {"files": ["report_2.pdf", "photo_2.png", "data_2.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-03", "input": {"files": ["report_3.pdf", "photo_3.png", "data_3.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-04", "input": {"files": ["report_4.pdf", "photo_4.png", "data_4.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-05", "input": {"files": ["report_5.pdf", "photo_5.png", "data_5.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-06", "input": {"files": ["report_6.pdf", "photo_6.png", "data_6.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-07", "input": {"files": ["report_7.pdf", "photo_7.png", "data_7.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-08", "input": {"files": ["report_8.pdf", "photo_8.png", "data_8.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-09", "input": {"files": ["report_9.pdf", "photo_9.png", "data_9.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}
+{"id": "fo-10", "input": {"files": ["report_10.pdf", "photo_10.png", "data_10.csv"]}, "expected": {"dry_run": true}, "expect_non_empty": ["plan"]}

@@ -1,0 +1,10 @@
+{"id": "vqa-01", "input": {"image": {"alt_text": "Diagram 1"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-02", "input": {"image": {"alt_text": "Diagram 2"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-03", "input": {"image": {"alt_text": "Diagram 3"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-04", "input": {"image": {"alt_text": "Diagram 4"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-05", "input": {"image": {"alt_text": "Diagram 5"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-06", "input": {"image": {"alt_text": "Diagram 6"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-07", "input": {"image": {"alt_text": "Diagram 7"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-08", "input": {"image": {"alt_text": "Diagram 8"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-09", "input": {"image": {"alt_text": "Diagram 9"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-10", "input": {"image": {"alt_text": "Diagram 10"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}

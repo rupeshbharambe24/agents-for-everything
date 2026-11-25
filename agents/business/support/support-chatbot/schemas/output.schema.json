@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "answer",
+    "handoff_needed"
+  ],
+  "properties": {
+    "answer": {
+      "type": "string"
+    },
+    "handoff_needed": {
+      "type": "boolean"
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

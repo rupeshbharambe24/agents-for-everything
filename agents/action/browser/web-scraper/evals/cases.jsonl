@@ -1,0 +1,10 @@
+{"id": "wsr-01", "input": {"url": "https://example.org/list/1", "html_rows": [{"item": "Item 1", "price": 10}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-02", "input": {"url": "https://example.org/list/2", "html_rows": [{"item": "Item 2", "price": 20}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-03", "input": {"url": "https://example.org/list/3", "html_rows": [{"item": "Item 3", "price": 30}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-04", "input": {"url": "https://example.org/list/4", "html_rows": [{"item": "Item 4", "price": 40}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-05", "input": {"url": "https://example.org/list/5", "html_rows": [{"item": "Item 5", "price": 50}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-06", "input": {"url": "https://example.org/list/6", "html_rows": [{"item": "Item 6", "price": 60}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-07", "input": {"url": "https://example.org/list/7", "html_rows": [{"item": "Item 7", "price": 70}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-08", "input": {"url": "https://example.org/list/8", "html_rows": [{"item": "Item 8", "price": 80}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-09", "input": {"url": "https://example.org/list/9", "html_rows": [{"item": "Item 9", "price": 90}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}
+{"id": "wsr-10", "input": {"url": "https://example.org/list/10", "html_rows": [{"item": "Item 10", "price": 100}]}, "expected": {"count": 1}, "expect_non_empty": ["records"]}

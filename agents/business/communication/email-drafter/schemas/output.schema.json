@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "subject",
+    "body",
+    "status"
+  ],
+  "properties": {
+    "subject": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft_saved",
+        "sent"
+      ]
+    }
+  }
+}

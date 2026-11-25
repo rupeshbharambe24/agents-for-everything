@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "title",
+    "attendees",
+    "candidate_slots"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "attendees": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "candidate_slots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confirm": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

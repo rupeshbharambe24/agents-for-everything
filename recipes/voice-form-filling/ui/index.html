@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Voice Form Filling — Agents for Everything</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #111; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 1.25rem; margin-bottom: 1rem; }
+    label { display: block; font-weight: 600; margin-top: 0.75rem; }
+    input, textarea { width: 100%; padding: 0.5rem; margin-top: 0.25rem; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+    button { margin-top: 0.75rem; padding: 0.6rem 1rem; border: 0; border-radius: 6px; background: #111; color: #fff; cursor: pointer; }
+    button.secondary { background: #555; margin-left: 0.5rem; }
+    .status { font-size: 0.9rem; color: #0a5; margin-top: 0.5rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Voice-Powered Form Filling</h1>
+  <p>Powered by <code>agents-for-everything</code>: <code>speech-to-text</code> &rarr; <code>structured-extractor</code> &rarr; <code>verifier</code> &rarr; <code>web-form-filler</code> &rarr; <code>human-approval-gate</code>.</p>
+  <div class="card">
+    <label for="utterance">Speak or enter voice utterance (English / Hinglish):</label>
+    <textarea id="utterance" rows="2">mera naam Priya Sharma hai, DOB 12 March 1990, PIN 411001, monthly income pachas hazaar</textarea>
+    <button id="micBtn" class="secondary" type="button">Use Browser Mic</button>
+    <button id="fillBtn" type="button">Extract & Fill Fields</button>
+    <div id="promptBack" class="status"></div>
+  </div>
+  <form class="card" id="loanForm">
+    <label>Full Name <input id="full_name" /></label>
+    <label>Date of Birth <input id="dob" /></label>
+    <label>PIN Code <input id="pincode" /></label>
+    <label>Monthly Income (INR) <input id="monthly_income" /></label>
+    <label>Mobile Number <input id="mobile_number" /></label>
+    <label>Email Address <input id="email" /></label>
+    <button id="submitBtn" type="button">Confirm & Submit</button>
+  </form>
+  <script>
+    let currentState = {};
+    async function sendUtterance(confirmSubmit = false) {
+      const res = await fetch("/api/fill", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          utterance: document.getElementById("utterance").value,
+          prefill: currentState,
+          confirm_submit: confirmSubmit
+        })
+      });
+      const data = await res.json();
+      currentState = data.values || {};
+      for (const [k, v] of Object.entries(currentState)) {
+        const el = document.getElementById(k);
+        if (el) el.value = v;
+      }
+      document.getElementById("promptBack").textContent = `[${data.status}] ${data.prompt_back || ""}`;
+    }
+    document.getElementById("fillBtn").onclick = () => sendUtterance(false);
+    document.getElementById("submitBtn").onclick = () => sendUtterance(true);
+    document.getElementById("micBtn").onclick = () => {
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) { alert("Browser SpeechRecognition unavailable; type in the box."); return; }
+      const rec = new SR();
+      rec.lang = "en-IN";
+      rec.onresult = (e) => {
+        document.getElementById("utterance").value = e.results[0][0].transcript;
+        sendUtterance(false);
+      };
+      rec.start();
+    };
+  </script>
+</body>
+</html>

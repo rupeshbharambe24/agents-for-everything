@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/task-planner/input",
+  "type": "object",
+  "required": [
+    "goal"
+  ],
+  "properties": {
+    "goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "context": {
+      "type": "object"
+    },
+    "available_agents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{"id": "api-01", "input": {"method": "GET", "url": "https://api.example.org/v1/items/1"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
+{"id": "api-02", "input": {"method": "GET", "url": "https://api.example.org/v1/items/2"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
+{"id": "api-03", "input": {"method": "GET", "url": "https://api.example.org/v1/items/3"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
+{"id": "api-04", "input": {"method": "GET", "url": "https://api.example.org/v1/items/4"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
+{"id": "api-05", "input": {"method": "GET", "url": "https://api.example.org/v1/items/5"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
+{"id": "api-06", "input": {"method": "GET", "url": "https://api.example.org/v1/items/6"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
+{"id": "api-07", "input": {"method": "GET", "url": "https://api.example.org/v1/items/7"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
+{"id": "api-08", "input": {"method": "GET", "url": "https://api.example.org/v1/items/8"}, "auto_approve": true, "expected": {"status_code": 200, "method": "GET"}}
+{"id": "api-09", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "expect_error": "ApprovalRequiredError"}
+{"id": "api-10", "input": {"method": "POST", "url": "https://api.example.org/v1/orders"}, "auto_approve": true, "expected": {"status_code": 200, "method": "POST"}}

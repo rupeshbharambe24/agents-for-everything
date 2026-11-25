@@ -1,0 +1,10 @@
+{"id": "ext-01", "locale": "hi-IN", "input": {"text": "mera naam Priya Sharma hai, DOB 12 March 1990, PIN 411001, monthly income pachas hazaar", "fields": ["full_name", "dob", "pincode", "monthly_income"]}, "expected": {"extracted": {"full_name": "Priya Sharma", "dob": "1990-03-12", "pincode": "411001", "monthly_income": 50000}}}
+{"id": "ext-02", "input": {"text": "My name is Aarav Mehta, email aarav@example.org", "fields": ["full_name", "email"]}, "expected": {"extracted": {"full_name": "Aarav Mehta", "email": "aarav@example.org"}}}
+{"id": "ext-03", "input": {"text": "city Pune PIN 411001", "fields": ["city", "pincode"]}, "expected": {"extracted": {"city": "Pune", "pincode": "411001"}}}
+{"id": "ext-04", "input": {"text": "my mobile number is 9876543210", "fields": ["mobile_number"]}, "expected": {"extracted": {"mobile_number": "9876543210"}}}
+{"id": "ext-05", "locale": "hi-IN", "input": {"text": "monthly income ek lakh", "fields": ["monthly_income"]}, "expected": {"extracted": {"monthly_income": 100000}}}
+{"id": "ext-06", "input": {"text": "DOB 05 May 1995", "fields": ["dob"]}, "expected": {"extracted": {"dob": "1995-05-05"}}}
+{"id": "ext-07", "locale": "mr-IN", "input": {"text": "maze naav Sneha Kulkarni ahe", "fields": ["full_name"]}, "expected": {"extracted": {"full_name": "Sneha Kulkarni"}}}
+{"id": "ext-08", "input": {"text": "No relevant info", "fields": ["email"]}, "expected": {"extracted": {}}}
+{"id": "ext-09", "input": {"text": "income is 75000", "fields": ["monthly_income"]}, "expected": {"extracted": {"monthly_income": 75000}}}
+{"id": "ext-10", "input": {"text": "city Mumbai", "fields": ["city"]}, "expected": {"extracted": {"city": "Mumbai"}}}

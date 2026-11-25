@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/verifier/output",
+  "type": "object",
+  "required": [
+    "valid",
+    "missing",
+    "invalid",
+    "reasons"
+  ],
+  "properties": {
+    "valid": {
+      "type": "boolean"
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "invalid": {
+      "type": "array",
+      "items": {
+        "$ref": "afe://types/ValidationError"
+      }
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/browser
+  name: Browser Automation MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Playwright-based browser navigation, accessibility-tree reading, and safe form filling.
+  transport: stdio
+  upstream: microsoft/playwright-mcp
+  tools:
+    - name: navigate
+      description: Open URL and inspect accessibility tree.
+      read_only: true
+    - name: fill_form
+      description: Populate form fields without clicking final submit.
+      read_only: false

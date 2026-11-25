@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://guardrails/pii-redactor/output",
+  "type": "object",
+  "required": [
+    "redacted_text",
+    "redaction_map",
+    "pii_found"
+  ],
+  "properties": {
+    "redacted_text": {
+      "type": "string"
+    },
+    "redaction_map": {
+      "type": "object"
+    },
+    "pii_found": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

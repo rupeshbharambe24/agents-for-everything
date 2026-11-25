@@ -1,0 +1,39 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: voice-form-filling
+  name: Voice-Powered Form Filling
+  version: 0.1.0
+  maturity: prototype
+  priority: P0
+  tags: [voice, forms, accessibility, multilingual, browser]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Speak naturally in any language to populate typed form fields, validate gaps, and confirm before submit.
+  problem: Long loan, intake, and government forms are slow on mobile and inaccessible for hands-free or local-language users.
+  solution: Composes speech-to-text, pii-redactor, structured-extractor, verifier, text-to-speech, web-form-filler, and human-approval-gate.
+  agents:
+    - voice/speech-to-text
+    - voice/text-to-speech
+    - voice/voice-form-filler
+    - text/structured-extractor
+    - orchestration/verifier
+    - orchestration/human-approval-gate
+    - guardrails/pii-redactor
+    - guardrails/prompt-injection-detector
+    - browser/web-form-filler
+  teams: []
+  mcp_servers:
+    - afe/stt
+    - afe/tts
+    - afe/browser
+  entrypoint: app.py
+  io:
+    input: fixtures/loan_basic.json
+    output: schemas/output.schema.json
+  safety:
+    level: S2
+    approval_required_for: [submit]
+  evals:
+    suite: tests/test_recipe.py

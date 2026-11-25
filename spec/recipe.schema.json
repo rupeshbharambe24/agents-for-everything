@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://spec/recipe.schema.json",
+  "title": "Agents for Everything Recipe Manifest",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "additionalProperties": false,
+  "properties": {
+    "apiVersion": { "const": "afe/v1" },
+    "kind": { "const": "Recipe" },
+    "metadata": {
+      "type": "object",
+      "required": ["id", "name", "version", "maturity", "priority", "license"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string", "minLength": 2 },
+        "version": { "type": "string" },
+        "maturity": { "enum": ["spec", "prototype", "beta", "stable", "deprecated"] },
+        "priority": { "enum": ["P0", "P1", "P2"] },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "maintainers": { "type": "array", "items": { "type": "string" } },
+        "license": { "type": "string" }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "required": ["summary", "problem", "solution", "agents", "entrypoint"],
+      "additionalProperties": false,
+      "properties": {
+        "summary": { "type": "string" },
+        "problem": { "type": "string" },
+        "solution": { "type": "string" },
+        "agents": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9-]+/[a-z0-9-]+$" }
+        },
+        "teams": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "mcp_servers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "entrypoint": { "type": "string" },
+        "io": {
+          "type": "object",
+          "properties": {
+            "input": { "type": "string" },
+            "output": { "type": "string" }
+          }
+        },
+        "safety": {
+          "type": "object",
+          "properties": {
+            "level": { "enum": ["S0", "S1", "S2", "S3", "S4"] },
+            "approval_required_for": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "evals": {
+          "type": "object",
+          "properties": {
+            "suite": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

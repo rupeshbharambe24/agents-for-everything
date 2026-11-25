@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "command",
+    "risk",
+    "status"
+  ],
+  "properties": {
+    "command": {
+      "type": "string"
+    },
+    "risk": {
+      "enum": [
+        "read-only",
+        "write",
+        "destructive"
+      ]
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

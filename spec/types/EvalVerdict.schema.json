@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/EvalVerdict",
+  "title": "EvalVerdict",
+  "type": "object",
+  "required": ["passed", "score"],
+  "properties": {
+    "passed": { "type": "boolean" },
+    "score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "reason": { "type": "string" },
+    "breakdown": { "type": "object" }
+  }
+}

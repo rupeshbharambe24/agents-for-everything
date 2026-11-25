@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/human-approval-gate/output",
+  "type": "object",
+  "required": [
+    "decision",
+    "audit_entry",
+    "notes"
+  ],
+  "properties": {
+    "decision": {
+      "enum": [
+        "approved",
+        "rejected",
+        "needs_edit"
+      ]
+    },
+    "audit_entry": {
+      "$ref": "afe://types/AuditEvent"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

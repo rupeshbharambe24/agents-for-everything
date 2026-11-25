@@ -1,0 +1,30 @@
+name: Safety Review Gate
+
+on:
+  pull_request:
+    paths:
+      - "agents/**"
+      - "SECURITY.md"
+
+jobs:
+  safety-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify S3/S4 safety metadata & approval gates
+        run: |
+          PYTHONPATH=.:packages/core-python/src:cli/src python3 -c '
+          from pathlib import Path
+          from agents_for_everything import discover_agents
+          agents = discover_agents(Path("."))
+          errs = []
+          for aid, m in agents.items():
+              if m.safety_level in {"S3", "S4"} and not m.approval_required_for:
+                  errs.append(f"{aid}: {m.safety_level} agent must declare approval_required_for")
+          if errs:
+              raise SystemExit("\n".join(errs))
+          print(f"Safety metadata verified across {len(agents)} agents.")
+          '

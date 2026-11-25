@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/stt
+  name: Speech-to-Text MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Streaming and batch speech transcription with multilingual code-switching support.
+  transport: stdio
+  upstream: faster-whisper / Deepgram / WhisperLiveKit MCP wrapper
+  tools:
+    - name: transcribe
+      description: Transcribe audio stream or file into Transcript JSON.
+      read_only: true

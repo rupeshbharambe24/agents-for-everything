@@ -1,0 +1,36 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: deep-research-app
+  name: Deep Research App
+  version: 0.1.0
+  maturity: prototype
+  priority: P0
+  tags: [research, citations, reports]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Cited deep-research application running planning, web search, reading, fact-checking, and grounding verification.
+  problem: Manual multi-source investigation is slow and error-prone without source tracking and claim verification.
+  solution: Composes research-team, deep-researcher, answer-engine, and hallucination-checker.
+  agents:
+    - orchestration/task-planner
+    - search/web-search
+    - search/answer-engine
+    - research/source-reader
+    - research/fact-checker
+    - research/report-writer
+    - research/deep-researcher
+    - guardrails/hallucination-checker
+  teams:
+    - research-team
+  mcp_servers:
+    - afe/web-search
+    - afe/http
+    - afe/documents
+  entrypoint: app.py
+  safety:
+    level: S1
+    approval_required_for: []
+  evals:
+    suite: tests/test_recipe.py

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "answer",
+    "citations",
+    "supported"
+  ],
+  "properties": {
+    "answer": {
+      "type": "string"
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "$ref": "afe://types/Citation"
+      }
+    },
+    "supported": {
+      "type": "boolean"
+    }
+  }
+}

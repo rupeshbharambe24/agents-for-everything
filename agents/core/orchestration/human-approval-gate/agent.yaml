@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: orchestration/human-approval-gate
+  name: "Human-in-the-Loop Gate"
+  version: 0.1.0
+  family: core
+  category: orchestration
+  tier: atomic
+  maturity: prototype
+  priority: P0
+  tags: ["orchestration", "human-approval-gate"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Pauses a workflow before risky steps, displays a clear summary/diff, and records approve/reject decisions."
+  purpose: "Enforces explicit human confirmation and emits an audit log entry prior to external or high-stakes actions."
+  pattern: human-in-the-loop
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/chat"]
+    optional: []
+  uses_agents: []
+  memory: none
+  safety:
+    level: S1
+    side_effects: []
+    approval_required_for: ["approve_action"]
+    handles_pii: false
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.02
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]

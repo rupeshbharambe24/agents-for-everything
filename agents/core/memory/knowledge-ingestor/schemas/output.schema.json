@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://memory/knowledge-ingestor/output",
+  "type": "object",
+  "required": [
+    "chunks",
+    "count"
+  ],
+  "properties": {
+    "chunks": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

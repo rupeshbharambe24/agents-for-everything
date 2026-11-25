@@ -1,0 +1,10 @@
+{"id": "tr-01", "input": {"text": "Hello", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-02", "input": {"text": "Thank you", "target_language": "hi"}, "expected": {"target_language": "hi"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-03", "input": {"text": "Hello", "target_language": "es"}, "expected": {"target_language": "es"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-04", "input": {"text": "Hello", "target_language": "fr"}, "expected": {"target_language": "fr"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-05", "input": {"text": "Confirm submission", "target_language": "mr"}, "expected": {"target_language": "mr"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-06", "input": {"text": "Enter mobile number", "target_language": "ta"}, "expected": {"target_language": "ta"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-07", "input": {"text": "Check status", "target_language": "te"}, "expected": {"target_language": "te"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-08", "input": {"text": "Download receipt", "target_language": "bn"}, "expected": {"target_language": "bn"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-09", "input": {"text": "Open dashboard", "target_language": "de"}, "expected": {"target_language": "de"}, "expect_non_empty": ["translated_text"]}
+{"id": "tr-10", "input": {"text": "Save draft", "target_language": "ja"}, "expected": {"target_language": "ja"}, "expect_non_empty": ["translated_text"]}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/ImageSource",
+  "title": "ImageSource",
+  "type": "object",
+  "properties": {
+    "uri": { "type": "string" },
+    "mime_type": { "type": "string" },
+    "base64": { "type": "string" },
+    "alt_text": { "type": "string" },
+    "text_hint": { "type": "string" }
+  }
+}

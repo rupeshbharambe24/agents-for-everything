@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://memory/memory-writer/input",
+  "type": "object",
+  "required": [
+    "interaction"
+  ],
+  "properties": {
+    "interaction": {
+      "type": "string"
+    },
+    "existing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

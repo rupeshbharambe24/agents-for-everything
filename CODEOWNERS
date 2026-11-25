@@ -1,0 +1,9 @@
+# Global default maintainer
+* @rupeshbharambe24
+
+# Spec, core runtimes, CLI, and security policy require core maintainer review
+/spec/ @rupeshbharambe24
+/packages/ @rupeshbharambe24
+/cli/ @rupeshbharambe24
+/SECURITY.md @rupeshbharambe24
+/.github/ @rupeshbharambe24

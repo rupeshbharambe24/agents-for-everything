@@ -1,0 +1,10 @@
+{"id": "ed-01", "input": {"recipient": "Priya", "intent": "Confirm meeting #1"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
+{"id": "ed-02", "input": {"recipient": "Priya", "intent": "Confirm meeting #2"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
+{"id": "ed-03", "input": {"recipient": "Priya", "intent": "Confirm meeting #3"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
+{"id": "ed-04", "input": {"recipient": "Priya", "intent": "Confirm meeting #4"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
+{"id": "ed-05", "input": {"recipient": "Priya", "intent": "Confirm meeting #5"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
+{"id": "ed-06", "input": {"recipient": "Priya", "intent": "Confirm meeting #6"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
+{"id": "ed-07", "input": {"recipient": "Priya", "intent": "Confirm meeting #7"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
+{"id": "ed-08", "input": {"recipient": "Priya", "intent": "Confirm meeting #8"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
+{"id": "ed-09", "input": {"recipient": "Priya", "intent": "Send now", "send": true}, "expect_error": "ApprovalRequiredError"}
+{"id": "ed-10", "input": {"recipient": "Priya", "intent": "Send now", "send": true}, "auto_approve": true, "expected": {"status": "sent"}}

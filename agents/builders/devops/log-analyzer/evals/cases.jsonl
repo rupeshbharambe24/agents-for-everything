@@ -1,0 +1,10 @@
+{"id": "log-01", "input": {"logs": "INFO ok\nERROR timeout db #1\nERROR timeout db #1\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-02", "input": {"logs": "INFO ok\nERROR timeout db #2\nERROR timeout db #2\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-03", "input": {"logs": "INFO ok\nERROR timeout db #3\nERROR timeout db #3\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-04", "input": {"logs": "INFO ok\nERROR timeout db #4\nERROR timeout db #4\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-05", "input": {"logs": "INFO ok\nERROR timeout db #5\nERROR timeout db #5\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-06", "input": {"logs": "INFO ok\nERROR timeout db #6\nERROR timeout db #6\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-07", "input": {"logs": "INFO ok\nERROR timeout db #7\nERROR timeout db #7\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-08", "input": {"logs": "INFO ok\nERROR timeout db #8\nERROR timeout db #8\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-09", "input": {"logs": "INFO ok\nERROR timeout db #9\nERROR timeout db #9\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}
+{"id": "log-10", "input": {"logs": "INFO ok\nERROR timeout db #10\nERROR timeout db #10\n"}, "expected": {"error_count": 2}, "expect_non_empty": ["clusters"]}

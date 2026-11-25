@@ -1,0 +1,10 @@
+{"id": "te-01", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 1 | 1 | 100 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-02", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 2 | 2 | 200 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-03", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 3 | 3 | 300 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-04", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 4 | 4 | 400 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-05", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 5 | 5 | 500 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-06", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 6 | 6 | 600 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-07", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 7 | 7 | 700 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-08", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 8 | 8 | 800 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-09", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 9 | 9 | 900 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}
+{"id": "te-10", "input": {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 10 | 10 | 1000 |"}, "expected": {"headers": ["Item", "Qty", "Price"]}, "expect_non_empty": ["rows"]}

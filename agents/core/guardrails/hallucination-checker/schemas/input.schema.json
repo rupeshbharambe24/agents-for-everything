@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://guardrails/hallucination-checker/input",
+  "type": "object",
+  "required": [
+    "answer",
+    "sources"
+  ],
+  "properties": {
+    "answer": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

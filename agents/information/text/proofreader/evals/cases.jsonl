@@ -1,0 +1,10 @@
+{"id": "pr-01", "input": {"text": "We recieve teh package."}, "expected": {"clean_text": "We receive the package."}}
+{"id": "pr-02", "input": {"text": "Two   spaces  here."}, "expected": {"clean_text": "Two spaces here."}}
+{"id": "pr-03", "input": {"text": "It occured in seperate files."}, "expected": {"clean_text": "It occurred in separate files."}}
+{"id": "pr-04", "input": {"text": "Already clean sentence."}, "expected": {"clean_text": "Already clean sentence.", "corrections": []}}
+{"id": "pr-05", "input": {"text": "teh quick brown fox"}, "expected": {"clean_text": "the quick brown fox"}}
+{"id": "pr-06", "input": {"text": "Please recieve receipt."}, "expected": {"clean_text": "Please receive receipt."}}
+{"id": "pr-07", "input": {"text": "  Trim ends  "}, "expected": {"clean_text": "Trim ends"}}
+{"id": "pr-08", "input": {"text": "Keep   clean   logs."}, "expected": {"clean_text": "Keep clean logs."}}
+{"id": "pr-09", "input": {"text": "No typos here."}, "expected": {"corrections": []}}
+{"id": "pr-10", "input": {"text": "seperate teh items"}, "expected": {"clean_text": "separate the items"}}

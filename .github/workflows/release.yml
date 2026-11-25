@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  export-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Export A2A cards and Agent Skills
+        run: |
+          PYTHONPATH=.:packages/core-python/src:cli/src python3 -c '
+          from pathlib import Path
+          from agents_for_everything import discover_agents, export_agent
+          for aid, m in discover_agents(Path(".")).items():
+              slug = aid.split("/", 1)[1]
+              export_agent(m.directory, "a2a", Path("dist/a2a"))
+              export_agent(m.directory, "skill", Path("dist/skills"))
+          '
+      - uses: actions/upload-artifact@v4
+        with:
+          name: afe-exports
+          path: dist/

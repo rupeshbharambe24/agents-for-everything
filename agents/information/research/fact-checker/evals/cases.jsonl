@@ -1,0 +1,10 @@
+{"id": "fc-01", "input": {"claims": ["Claim #1: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-02", "input": {"claims": ["Claim #2: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-03", "input": {"claims": ["Claim #3: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-04", "input": {"claims": ["Claim #4: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-05", "input": {"claims": ["Claim #5: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-06", "input": {"claims": ["Claim #6: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-07", "input": {"claims": ["Claim #7: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-08", "input": {"claims": ["Claim #8: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-09", "input": {"claims": ["Claim #9: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}
+{"id": "fc-10", "input": {"claims": ["Claim #10: Open protocols enable multi-agent reuse."]}, "expected": {}, "expect_non_empty": ["verdicts"]}

@@ -1,0 +1,10 @@
+{"id": "rva-01", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 1 question"}, "barge_in": false}, "expected": {"interrupted": false}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-02", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 2 question"}, "barge_in": false}, "expected": {"interrupted": false}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-03", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 3 question"}, "barge_in": true}, "expected": {"interrupted": true}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-04", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 4 question"}, "barge_in": false}, "expected": {"interrupted": false}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-05", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 5 question"}, "barge_in": false}, "expected": {"interrupted": false}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-06", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 6 question"}, "barge_in": true}, "expected": {"interrupted": true}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-07", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 7 question"}, "barge_in": false}, "expected": {"interrupted": false}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-08", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 8 question"}, "barge_in": false}, "expected": {"interrupted": false}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-09", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 9 question"}, "barge_in": true}, "expected": {"interrupted": true}, "expect_non_empty": ["reply_text", "audio_uri"]}
+{"id": "rva-10", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Turn 10 question"}, "barge_in": false}, "expected": {"interrupted": false}, "expect_non_empty": ["reply_text", "audio_uri"]}

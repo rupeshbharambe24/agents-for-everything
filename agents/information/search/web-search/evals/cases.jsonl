@@ -1,0 +1,10 @@
+{"id": "ws-01", "input": {"query": "MCP specification v1"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-02", "input": {"query": "MCP specification v2"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-03", "input": {"query": "MCP specification v3"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-04", "input": {"query": "MCP specification v4"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-05", "input": {"query": "MCP specification v5"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-06", "input": {"query": "MCP specification v6"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-07", "input": {"query": "MCP specification v7"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-08", "input": {"query": "MCP specification v8"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-09", "input": {"query": "MCP specification v9"}, "expected": {}, "expect_non_empty": ["results"]}
+{"id": "ws-10", "input": {"query": "MCP specification v10"}, "expected": {}, "expect_non_empty": ["results"]}

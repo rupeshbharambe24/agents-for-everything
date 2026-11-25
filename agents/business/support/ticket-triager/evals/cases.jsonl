@@ -1,0 +1,10 @@
+{"id": "tt-01", "input": {"ticket_text": "Double charged on invoice"}, "expected": {"category": "billing", "priority": "medium"}}
+{"id": "tt-02", "input": {"ticket_text": "Urgent production outage 500 error"}, "expected": {"category": "technical", "priority": "urgent"}}
+{"id": "tt-03", "input": {"ticket_text": "App crash on startup"}, "expected": {"category": "technical", "priority": "medium"}}
+{"id": "tt-04", "input": {"ticket_text": "Urgent fraud charge refund needed"}, "expected": {"category": "billing", "priority": "urgent"}}
+{"id": "tt-05", "input": {"ticket_text": "How do I update my profile?"}, "expected": {"category": "general", "priority": "medium"}}
+{"id": "tt-06", "input": {"ticket_text": "Login error 500"}, "expected": {"category": "technical", "priority": "medium"}}
+{"id": "tt-07", "input": {"ticket_text": "Refund status inquiry"}, "expected": {"category": "billing", "priority": "medium"}}
+{"id": "tt-08", "input": {"ticket_text": "Service down urgent help"}, "expected": {"category": "general", "priority": "urgent"}}
+{"id": "tt-09", "input": {"ticket_text": "Invoice PDF missing"}, "expected": {"category": "billing", "priority": "medium"}}
+{"id": "tt-10", "input": {"ticket_text": "General feature question"}, "expected": {"category": "general", "priority": "medium"}}

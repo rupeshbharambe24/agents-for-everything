@@ -1,0 +1,13 @@
+{
+  "id": "loan_basic",
+  "title": "Basic Personal Loan Application",
+  "locale": "hi-IN",
+  "fields": [
+    { "id": "full_name", "label": "Full Name", "type": "string", "required": true },
+    { "id": "dob", "label": "Date of Birth", "type": "date", "required": true },
+    { "id": "pincode", "label": "PIN Code", "type": "string", "required": true },
+    { "id": "monthly_income", "label": "Monthly Income (INR)", "type": "number", "required": true },
+    { "id": "mobile_number", "label": "Mobile Number", "type": "phone", "required": true },
+    { "id": "email", "label": "Email Address", "type": "email", "required": false }
+  ]
+}

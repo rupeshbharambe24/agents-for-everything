@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: support-desk
+  name: Support Desk Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P0
+  tags: [support, triage, kb]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Triages customer tickets, retrieves KB answers, drafts replies, and gates risky escalations.
+  pattern: routing
+  entry: support/ticket-triager
+  members:
+    - support/ticket-triager
+    - support/support-chatbot
+    - support/reply-drafter
+    - orchestration/human-approval-gate
+  graph:
+    - [ticket-triager, support-chatbot]
+    - [support-chatbot, reply-drafter]
+    - [reply-drafter, human-approval-gate]
+  approvals: [human-approval-gate]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S2
+  evals:
+    suite: evals/eval.yaml

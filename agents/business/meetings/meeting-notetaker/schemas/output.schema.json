@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "summary",
+    "key_points",
+    "transcript"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "key_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "transcript": {
+      "$ref": "afe://types/Transcript"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[tool.uv.workspace]
+members = [
+  "packages/core-python",
+  "cli",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+  "packages/core-python/tests",
+  "cli/tests",
+]
+pythonpath = [
+  ".",
+  "packages/core-python/src",
+  "cli/src",
+]

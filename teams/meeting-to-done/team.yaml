@@ -1,0 +1,30 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: meeting-to-done
+  name: Meeting-to-Done Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P0
+  tags: [meetings, tasks, notes]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Converts meeting audio into structured notes, extracted action items, and prioritized tasks.
+  pattern: prompt-chaining
+  entry: meetings/meeting-notetaker
+  members:
+    - meetings/meeting-notetaker
+    - meetings/action-item-extractor
+    - productivity/task-manager
+  graph:
+    - [meeting-notetaker, action-item-extractor]
+    - [action-item-extractor, task-manager]
+  approvals: []
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S2
+  evals:
+    suite: evals/eval.yaml

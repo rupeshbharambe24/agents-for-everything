@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://evaluation/llm-judge/output",
+  "$ref": "afe://types/EvalVerdict"
+}

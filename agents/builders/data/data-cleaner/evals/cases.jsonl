@@ -1,0 +1,10 @@
+{"id": "dc-01", "input": {"rows": [{"name": "  Alice 1 "}, {"name": "Alice 1"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-02", "input": {"rows": [{"name": "  Alice 2 "}, {"name": "Alice 2"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-03", "input": {"rows": [{"name": "  Alice 3 "}, {"name": "Alice 3"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-04", "input": {"rows": [{"name": "  Alice 4 "}, {"name": "Alice 4"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-05", "input": {"rows": [{"name": "  Alice 5 "}, {"name": "Alice 5"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-06", "input": {"rows": [{"name": "  Alice 6 "}, {"name": "Alice 6"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-07", "input": {"rows": [{"name": "  Alice 7 "}, {"name": "Alice 7"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-08", "input": {"rows": [{"name": "  Alice 8 "}, {"name": "Alice 8"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-09", "input": {"rows": [{"name": "  Alice 9 "}, {"name": "Alice 9"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}
+{"id": "dc-10", "input": {"rows": [{"name": "  Alice 10 "}, {"name": "Alice 10"}]}, "expected": {"removed_duplicates": 1}, "expect_non_empty": ["cleaned_rows"]}

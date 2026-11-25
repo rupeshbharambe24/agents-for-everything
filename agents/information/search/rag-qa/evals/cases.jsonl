@@ -1,0 +1,10 @@
+{"id": "rag-01", "input": {"question": "What is the refund window?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": true}}
+{"id": "rag-02", "input": {"question": "What is the refund window?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": true}}
+{"id": "rag-03", "input": {"question": "What is the refund window?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": true}}
+{"id": "rag-04", "input": {"question": "What is the refund window?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": true}}
+{"id": "rag-05", "input": {"question": "What is the refund window?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": true}}
+{"id": "rag-06", "input": {"question": "What is the refund window?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": true}}
+{"id": "rag-07", "input": {"question": "What is the refund window?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": true}}
+{"id": "rag-08", "input": {"question": "What is the refund window?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": true}}
+{"id": "rag-09", "input": {"question": "What is Mars gravity?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": false}}
+{"id": "rag-10", "input": {"question": "What is Mars gravity?", "documents": [{"title": "FAQ", "content": "Our refund window is 30 days from purchase."}]}, "expected": {"supported": false}}

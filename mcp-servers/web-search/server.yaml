@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/web-search
+  name: Web Search MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Search web indexes and return ranked snippets and URLs.
+  transport: stdio
+  upstream: modelcontextprotocol/servers (brave-search / tavily / searxng)
+  tools:
+    - name: search_web
+      description: Query search engines with locale and freshness options.
+      read_only: true

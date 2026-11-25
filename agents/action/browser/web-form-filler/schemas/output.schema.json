@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "filled_fields",
+    "submitted",
+    "status"
+  ],
+  "properties": {
+    "filled_fields": {
+      "type": "object"
+    },
+    "submitted": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

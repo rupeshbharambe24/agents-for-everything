@@ -1,0 +1,10 @@
+{"id": "aie-01", "input": {"text": "Priya will finalize spec #1 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-02", "input": {"text": "Priya will finalize spec #2 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-03", "input": {"text": "Priya will finalize spec #3 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-04", "input": {"text": "Priya will finalize spec #4 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-05", "input": {"text": "Priya will finalize spec #5 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-06", "input": {"text": "Priya will finalize spec #6 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-07", "input": {"text": "Priya will finalize spec #7 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-08", "input": {"text": "Priya will finalize spec #8 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-09", "input": {"text": "Priya will finalize spec #9 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}
+{"id": "aie-10", "input": {"text": "Priya will finalize spec #10 by Friday. TODO: run evals."}, "expected": {}, "expect_non_empty": ["tasks"]}

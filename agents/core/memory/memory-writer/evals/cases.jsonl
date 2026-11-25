@@ -1,0 +1,10 @@
+{"id": "mw-01", "input": {"interaction": "I prefer concise bullet summaries."}, "expected": {}, "expect_non_empty": ["records"]}
+{"id": "mw-02", "input": {"interaction": "I prefer Hindi voice output.", "existing": ["i prefer hindi voice output"]}, "expected": {"skipped_duplicates": 1}}
+{"id": "mw-03", "input": {"interaction": "Always format dates as YYYY-MM-DD."}, "expected": {}, "expect_non_empty": ["records"]}
+{"id": "mw-04", "input": {"interaction": "Project uses Apache-2.0 license."}, "expected": {}, "expect_non_empty": ["records"]}
+{"id": "mw-05", "input": {"interaction": "ok"}, "expected": {"records": [], "skipped_duplicates": 0}}
+{"id": "mw-06", "input": {"interaction": "My city is Pune. Always confirm before submit."}, "expected": {}, "expect_non_empty": ["records"]}
+{"id": "mw-07", "input": {"interaction": "Default currency is INR."}, "expected": {}, "expect_non_empty": ["records"]}
+{"id": "mw-08", "input": {"interaction": "Default currency is INR.", "existing": ["default currency is inr"]}, "expected": {"skipped_duplicates": 1}}
+{"id": "mw-09", "input": {"interaction": "Team meets every Tuesday at 10 AM IST."}, "expected": {}, "expect_non_empty": ["records"]}
+{"id": "mw-10", "input": {"interaction": "Use dark mode charts; prefer tabular exports."}, "expected": {}, "expect_non_empty": ["records"]}

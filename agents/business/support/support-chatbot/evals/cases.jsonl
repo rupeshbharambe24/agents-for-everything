@@ -1,0 +1,10 @@
+{"id": "sc-01", "input": {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": false}}
+{"id": "sc-02", "input": {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": false}}
+{"id": "sc-03", "input": {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": false}}
+{"id": "sc-04", "input": {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": false}}
+{"id": "sc-05", "input": {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": false}}
+{"id": "sc-06", "input": {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": false}}
+{"id": "sc-07", "input": {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": false}}
+{"id": "sc-08", "input": {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": false}}
+{"id": "sc-09", "input": {"question": "Custom enterprise tax audit?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": true}}
+{"id": "sc-10", "input": {"question": "Custom enterprise tax audit?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}, "expected": {"handoff_needed": true}}

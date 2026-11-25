@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "markdown",
+    "sections",
+    "char_count"
+  ],
+  "properties": {
+    "markdown": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "char_count": {
+      "type": "integer"
+    }
+  }
+}

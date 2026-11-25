@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: documents/invoice-receipt-parser
+  name: "Invoice & Receipt Parser"
+  version: 0.1.0
+  family: action
+  category: documents
+  tier: atomic
+  maturity: prototype
+  priority: P0
+  tags: ["documents", "invoice-receipt-parser"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Extracts vendor, date, line items, GST/VAT tax, and total from invoices and verifies the math."
+  purpose: "Parses messy invoice/receipt text into validated financial records with arithmetic verification."
+  pattern: augmented-llm
+  autonomy: L1
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/documents", "afe/ocr"]
+    optional: []
+  uses_agents: []
+  memory: none
+  safety:
+    level: S1
+    side_effects: []
+    approval_required_for: []
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]

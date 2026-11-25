@@ -1,0 +1,10 @@
+{"id": "ent-01", "input": {"text": "Contact Priya Sharma at priya@example.org regarding INR 50,000."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-02", "input": {"text": "Acme Corp paid USD 1200 yesterday."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-03", "input": {"text": "Aarav Mehta lives in Pune."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-04", "input": {"text": "Email rupesh@example.com for details."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-05", "input": {"text": "Invoice amount INR 1180."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-06", "input": {"text": "Meeting with Sneha Kulkarni tomorrow."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-07", "input": {"text": "Total $299.00 due Friday."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-08", "input": {"text": "Plain lowercase text without entities."}, "expected": {}, "expect_non_empty": []}
+{"id": "ent-09", "input": {"text": "Anirban Sen sent a message."}, "expected": {}, "expect_non_empty": ["entities"]}
+{"id": "ent-10", "input": {"text": "Contact support@example.org for INR 999 refund."}, "expected": {}, "expect_non_empty": ["entities"]}

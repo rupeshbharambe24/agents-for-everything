@@ -1,0 +1,10 @@
+{"id": "mn-01", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 1. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-02", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 2. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-03", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 3. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-04", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 4. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-05", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 5. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-06", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 6. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-07", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 7. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-08", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 8. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-09", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 9. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "mn-10", "input": {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 10. Priya will ship tests by Friday."}}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}

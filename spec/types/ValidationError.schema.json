@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/ValidationError",
+  "title": "ValidationError",
+  "type": "object",
+  "required": ["field", "message"],
+  "properties": {
+    "field": { "type": "string" },
+    "code": { "type": "string" },
+    "message": { "type": "string" },
+    "value": {}
+  }
+}

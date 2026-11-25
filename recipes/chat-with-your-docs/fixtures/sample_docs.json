@@ -1,0 +1,12 @@
+[
+  {
+    "id": "policy-1",
+    "title": "Refund Policy",
+    "content": "Customers can request a full refund within 30 days of purchase. Support contact is support@example.org."
+  },
+  {
+    "id": "policy-2",
+    "title": "Security Policy",
+    "content": "S4 agents require mandatory human approval and full audit logs before moving money or deleting records."
+  }
+]

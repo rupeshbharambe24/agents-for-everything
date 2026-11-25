@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/SearchResult",
+  "title": "SearchResult",
+  "type": "object",
+  "required": ["title", "url"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "url": { "type": "string" },
+    "snippet": { "type": "string" },
+    "score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "published_at": { "type": "string" }
+  }
+}

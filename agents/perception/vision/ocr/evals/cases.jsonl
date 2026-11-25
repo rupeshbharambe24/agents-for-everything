@@ -1,0 +1,10 @@
+{"id": "ocr-01", "input": {"image": {"text_hint": "Invoice #101\nTotal INR 500"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-02", "input": {"image": {"text_hint": "Invoice #102\nTotal INR 1000"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-03", "input": {"image": {"text_hint": "Invoice #103\nTotal INR 1500"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-04", "input": {"image": {"text_hint": "Invoice #104\nTotal INR 2000"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-05", "input": {"image": {"text_hint": "Invoice #105\nTotal INR 2500"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-06", "input": {"image": {"text_hint": "Invoice #106\nTotal INR 3000"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-07", "input": {"image": {"text_hint": "Invoice #107\nTotal INR 3500"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-08", "input": {"image": {"text_hint": "Invoice #108\nTotal INR 4000"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-09", "input": {"image": {"text_hint": "Invoice #109\nTotal INR 4500"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}
+{"id": "ocr-10", "input": {"image": {"text_hint": "Invoice #110\nTotal INR 5000"}}, "expected": {}, "expect_non_empty": ["text", "blocks"]}

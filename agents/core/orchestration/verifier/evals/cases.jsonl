@@ -1,0 +1,10 @@
+{"id": "ver-01", "input": {"data": {"full_name": "Priya", "pincode": "411001"}, "required_fields": ["full_name", "pincode"]}, "expected": {"valid": true, "missing": []}}
+{"id": "ver-02", "input": {"data": {"full_name": "Priya"}, "required_fields": ["full_name", "mobile_number"]}, "expected": {"valid": false, "missing": ["mobile_number"]}}
+{"id": "ver-03", "input": {"data": {"pincode": "4110"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"]}
+{"id": "ver-04", "input": {"data": {"email": "not-an-email"}}, "expected": {"valid": false}, "expect_non_empty": ["invalid"]}
+{"id": "ver-05", "input": {"data": {"email": "rupesh@example.com"}}, "expected": {"valid": true}}
+{"id": "ver-06", "input": {"data": {"ifsc": "HDFC0001234"}}, "expected": {"valid": true}}
+{"id": "ver-07", "input": {"data": {"ifsc": "BADCODE"}}, "expected": {"valid": false}}
+{"id": "ver-08", "input": {"data": {"dob": "1990-03-12"}}, "expected": {"valid": true}}
+{"id": "ver-09", "input": {"data": {"dob": "12/03/1990"}}, "expected": {"valid": false}}
+{"id": "ver-10", "input": {"data": {"amount": -5}, "rules": {"amount": {"min": 1}}}, "expected": {"valid": false}}

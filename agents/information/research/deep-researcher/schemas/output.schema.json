@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "report_markdown",
+    "citations",
+    "verified_claims"
+  ],
+  "properties": {
+    "report_markdown": {
+      "type": "string"
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "$ref": "afe://types/Citation"
+      }
+    },
+    "verified_claims": {
+      "type": "integer"
+    }
+  }
+}

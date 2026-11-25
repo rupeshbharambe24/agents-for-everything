@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/vector-store
+  name: Hybrid Vector Store MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Hybrid keyword + semantic indexing and retrieval with metadata ACL filters.
+  transport: stdio
+  upstream: qdrant / chroma / pgvector MCP server
+  tools:
+    - name: ingest
+      description: Index chunked documents with metadata.
+      read_only: false
+    - name: query
+      description: Retrieve ranked chunks matching query and filters.
+      read_only: true

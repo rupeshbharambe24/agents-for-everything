@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/Contact",
+  "title": "Contact",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "email": { "type": "string" },
+    "phone": { "type": "string" },
+    "organization": { "type": "string" },
+    "role": { "type": "string" }
+  }
+}

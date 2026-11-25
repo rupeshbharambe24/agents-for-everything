@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/web-search
+    required: true
+    permissions: ["read"]
+    scope: declared
+  - id: afe/http
+    required: true
+    permissions: ["read"]
+    scope: declared
+  - id: afe/documents
+    required: true
+    permissions: ["read"]
+    scope: declared

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "goal",
+    "start_url"
+  ],
+  "properties": {
+    "goal": {
+      "type": "string"
+    },
+    "start_url": {
+      "type": "string"
+    },
+    "page_text": {
+      "type": "string"
+    }
+  }
+}

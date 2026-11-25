@@ -1,0 +1,10 @@
+{"id": "sql-01", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
+{"id": "sql-02", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
+{"id": "sql-03", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
+{"id": "sql-04", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
+{"id": "sql-05", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
+{"id": "sql-06", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
+{"id": "sql-07", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
+{"id": "sql-08", "input": {"question": "How many orders were placed?", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT COUNT"}}
+{"id": "sql-09", "input": {"question": "Show orders", "tables": {"orders": ["id", "amount"]}}, "expected": {"read_only": true}, "expect_contains": {"sql": "SELECT id, amount"}}
+{"id": "sql-10", "input": {"question": "Drop table orders now", "tables": {"orders": ["id"]}}, "expect_error": "ValueError"}

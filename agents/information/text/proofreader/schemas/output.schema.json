@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "clean_text",
+    "corrections"
+  ],
+  "properties": {
+    "clean_text": {
+      "type": "string"
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

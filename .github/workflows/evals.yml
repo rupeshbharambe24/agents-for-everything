@@ -1,0 +1,22 @@
+name: Evals
+
+on:
+  pull_request:
+    paths:
+      - "agents/**"
+      - "teams/**"
+      - "recipes/**"
+      - "evals/**"
+  schedule:
+    - cron: "0 2 * * *"
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run deterministic offline agent eval suite
+        run: PYTHONPATH=.:packages/core-python/src:cli/src python3 -m afe_cli test --all

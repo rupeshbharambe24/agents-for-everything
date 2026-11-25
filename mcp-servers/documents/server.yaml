@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/documents
+  name: Documents MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Parse PDF, DOCX, PPTX, HTML, and spreadsheets into structured Markdown/tables.
+  transport: stdio
+  upstream: docling / pypdf / openpyxl MCP adapters
+  tools:
+    - name: parse_document
+      description: Convert binary or rich document into Markdown and table blocks.
+      read_only: true

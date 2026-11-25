@@ -1,0 +1,10 @@
+{"id": "plan-01", "input": {"goal": "Research AI safety benchmarks and write a cited report"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-02", "input": {"goal": "Fill a loan form by voice"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-03", "input": {"goal": "Summarize weekly engineering updates"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-04", "input": {"goal": "Parse incoming PDF invoices into ledger entries"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-05", "input": {"goal": "Triage urgent support tickets and draft replies"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-06", "input": {"goal": "Audit repository code for security issues"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-07", "input": {"goal": "Translate product documentation to Spanish and Hindi"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-08", "input": {"goal": "Analyze Q3 revenue drops using SQL"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-09", "input": {"goal": "Plan a 3-step onboarding checklist"}, "expected": {}, "expect_non_empty": ["steps"]}
+{"id": "plan-10", "input": {"goal": "Evaluate output quality of summarizer agent"}, "expected": {}, "expect_non_empty": ["steps"]}

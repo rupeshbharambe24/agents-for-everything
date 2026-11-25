@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://guardrails/hallucination-checker/output",
+  "type": "object",
+  "required": [
+    "grounded",
+    "unsupported_claims",
+    "claim_verdicts"
+  ],
+  "properties": {
+    "grounded": {
+      "type": "boolean"
+    },
+    "unsupported_claims": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "claim_verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

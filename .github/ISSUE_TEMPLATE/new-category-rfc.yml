@@ -1,0 +1,18 @@
+name: New Category RFC
+description: Propose a new category or industry pack in agents/
+title: "[New Category RFC]: "
+labels: ["rfc"]
+body:
+  - type: input
+    id: family
+    attributes:
+      label: Parent Family
+      placeholder: e.g. industries, business, life
+    validations:
+      required: true
+  - type: textarea
+    id: agents_list
+    attributes:
+      label: Initial Proposed Agents (minimum 4)
+    validations:
+      required: true

@@ -1,0 +1,10 @@
+{"id": "tw-01", "input": {"code": "def compute_1(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-02", "input": {"code": "def compute_2(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-03", "input": {"code": "def compute_3(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-04", "input": {"code": "def compute_4(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-05", "input": {"code": "def compute_5(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-06", "input": {"code": "def compute_6(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-07", "input": {"code": "def compute_7(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-08", "input": {"code": "def compute_8(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-09", "input": {"code": "def compute_9(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}
+{"id": "tw-10", "input": {"code": "def compute_10(x):\n    return x + 1\n"}, "expected": {"test_count": 1}, "expect_non_empty": ["test_code"]}

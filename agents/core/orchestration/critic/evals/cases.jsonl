@@ -1,0 +1,10 @@
+{"id": "crit-01", "input": {"output": "Detailed overview backed by [Source 1].", "rubric": "Include citations"}, "expected": {"passed": true}}
+{"id": "crit-02", "input": {"output": "Short", "rubric": "Provide detailed response"}, "expected": {"passed": false}}
+{"id": "crit-03", "input": {"output": "No links here at all, just text.", "rubric": "Must include citation"}, "expected": {"passed": false}}
+{"id": "crit-04", "input": {"output": "{\"status\":\"ok\",\"count\":5}", "rubric": "Output valid JSON"}, "expected": {"passed": true}}
+{"id": "crit-05", "input": {"output": "Plain text summary", "rubric": "Must return JSON"}, "expected": {"passed": false}}
+{"id": "crit-06", "input": {"output": "Clear explanation of rate limiting with examples.", "rubric": "Clarity"}, "expected": {"passed": true}}
+{"id": "crit-07", "input": {"output": "", "rubric": "Non-empty output"}, "expected": {"passed": false}}
+{"id": "crit-08", "input": {"output": "Verified against https://example.org", "rubric": "Include citation"}, "expected": {"passed": true}}
+{"id": "crit-09", "input": {"output": "Action items: 1) Ship fix, 2) Run tests.", "rubric": "Concise"}, "expected": {"passed": true}}
+{"id": "crit-10", "input": {"output": "ok", "rubric": "Comprehensive"}, "expected": {"passed": false}}

@@ -1,0 +1,10 @@
+{"id": "ms-01", "input": {"title": "Sync #1", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"]}, "expected": {"status": "slots_proposed"}}
+{"id": "ms-02", "input": {"title": "Sync #2", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"]}, "expected": {"status": "slots_proposed"}}
+{"id": "ms-03", "input": {"title": "Sync #3", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"]}, "expected": {"status": "slots_proposed"}}
+{"id": "ms-04", "input": {"title": "Sync #4", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"]}, "expected": {"status": "slots_proposed"}}
+{"id": "ms-05", "input": {"title": "Sync #5", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"]}, "expected": {"status": "slots_proposed"}}
+{"id": "ms-06", "input": {"title": "Sync #6", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"]}, "expected": {"status": "slots_proposed"}}
+{"id": "ms-07", "input": {"title": "Sync #7", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"]}, "expected": {"status": "slots_proposed"}}
+{"id": "ms-08", "input": {"title": "Sync #8", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"]}, "expected": {"status": "slots_proposed"}}
+{"id": "ms-09", "input": {"title": "Sync", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"], "confirm": true}, "expect_error": "ApprovalRequiredError"}
+{"id": "ms-10", "input": {"title": "Sync", "attendees": ["a@example.org"], "candidate_slots": ["2026-11-26T10:00Z"], "confirm": true}, "auto_approve": true, "expected": {"status": "invite_sent"}}

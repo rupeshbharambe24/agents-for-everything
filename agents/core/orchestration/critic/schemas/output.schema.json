@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://orchestration/critic/output",
+  "type": "object",
+  "required": [
+    "score",
+    "critique",
+    "fixes",
+    "passed"
+  ],
+  "properties": {
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "critique": {
+      "type": "string"
+    },
+    "fixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "passed": {
+      "type": "boolean"
+    }
+  }
+}

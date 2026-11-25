@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["values", "status", "safe_log"],
+  "properties": {
+    "values": { "type": "object" },
+    "missing": { "type": "array", "items": { "type": "string" } },
+    "status": { "type": "string" },
+    "prompt_back": { "type": "string" },
+    "safe_log": { "type": "string" },
+    "browser_fill": { "type": "object" }
+  }
+}

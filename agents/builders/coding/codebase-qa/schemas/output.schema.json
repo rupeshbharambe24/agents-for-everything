@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "answer",
+    "files_referenced"
+  ],
+  "properties": {
+    "answer": {
+      "type": "string"
+    },
+    "files_referenced": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

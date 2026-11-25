@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/calendar
+  name: Calendar Scheduling MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Query free/busy slots across time zones and propose meeting invites with confirmation.
+  transport: stdio
+  upstream: google-calendar / caldav MCP server
+  tools:
+    - name: find_free_slots
+      description: Compute overlapping availability windows.
+      read_only: true
+    - name: create_event_draft
+      description: Prepare calendar invite awaiting approval.
+      read_only: false

@@ -1,0 +1,10 @@
+{"id": "cg-01", "input": {"spec": "Add handler #1"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-02", "input": {"spec": "Add handler #2"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-03", "input": {"spec": "Add handler #3"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-04", "input": {"spec": "Add handler #4"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-05", "input": {"spec": "Add handler #5"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-06", "input": {"spec": "Add handler #6"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-07", "input": {"spec": "Add handler #7"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-08", "input": {"spec": "Add handler #8"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-09", "input": {"spec": "Add handler #9"}, "expected": {}, "expect_non_empty": ["code", "tests"]}
+{"id": "cg-10", "input": {"spec": "Add handler #10"}, "expected": {}, "expect_non_empty": ["code", "tests"]}

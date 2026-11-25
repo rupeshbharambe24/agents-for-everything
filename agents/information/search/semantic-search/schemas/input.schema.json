@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "query",
+    "documents"
+  ],
+  "properties": {
+    "query": {
+      "type": "string"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "top_k": {
+      "type": "integer",
+      "default": 5
+    }
+  }
+}

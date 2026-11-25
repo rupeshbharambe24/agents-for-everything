@@ -1,0 +1,28 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: "{{slug}}"
+  name: "{{name}}"
+  version: 0.1.0
+  maturity: spec
+  priority: P1
+  tags: ["team"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "{{summary}}"
+  pattern: prompt-chaining
+  entry: "orchestration/router"
+  members:
+    - orchestration/router
+    - orchestration/verifier
+  graph:
+    - [router, verifier]
+  approvals: []
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S1
+  evals:
+    suite: evals/eval.yaml

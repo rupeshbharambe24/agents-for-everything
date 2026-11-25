@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: browser/web-form-filler
+  name: "Web Form Filler"
+  version: 0.1.0
+  family: action
+  category: browser
+  tier: atomic
+  maturity: prototype
+  priority: P0
+  tags: ["browser", "web-form-filler"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Populates web form fields from validated JSON and always stops before final submit for confirmation."
+  purpose: "Bridges extracted field dictionaries into target browser DOM forms safely."
+  pattern: augmented-llm
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["gui", "text"]
+  runtime: interactive
+  environment: browser
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/browser"]
+    optional: []
+  uses_agents: []
+  memory: none
+  safety:
+    level: S2
+    side_effects: ["fills-web-inputs"]
+    approval_required_for: ["submit"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]

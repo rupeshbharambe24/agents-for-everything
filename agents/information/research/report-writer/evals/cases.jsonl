@@ -1,0 +1,10 @@
+{"id": "rep-01", "input": {"topic": "Research Topic 1", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-02", "input": {"topic": "Research Topic 2", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-03", "input": {"topic": "Research Topic 3", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-04", "input": {"topic": "Research Topic 4", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-05", "input": {"topic": "Research Topic 5", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-06", "input": {"topic": "Research Topic 6", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-07", "input": {"topic": "Research Topic 7", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-08", "input": {"topic": "Research Topic 8", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-09", "input": {"topic": "Research Topic 9", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}
+{"id": "rep-10", "input": {"topic": "Research Topic 10", "findings": ["Point A", "Point B"]}, "expected": {"section_count": 3}, "expect_non_empty": ["report_markdown"]}

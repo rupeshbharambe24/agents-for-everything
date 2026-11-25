@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://memory/memory-writer/output",
+  "type": "object",
+  "required": [
+    "records",
+    "skipped_duplicates"
+  ],
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "skipped_duplicates": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

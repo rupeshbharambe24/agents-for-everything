@@ -1,0 +1,10 @@
+{"id": "dr-01", "input": {"topic": "Agentic AI Architecture Trend 1", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-02", "input": {"topic": "Agentic AI Architecture Trend 2", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-03", "input": {"topic": "Agentic AI Architecture Trend 3", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-04", "input": {"topic": "Agentic AI Architecture Trend 4", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-05", "input": {"topic": "Agentic AI Architecture Trend 5", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-06", "input": {"topic": "Agentic AI Architecture Trend 6", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-07", "input": {"topic": "Agentic AI Architecture Trend 7", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-08", "input": {"topic": "Agentic AI Architecture Trend 8", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-09", "input": {"topic": "Agentic AI Architecture Trend 9", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}
+{"id": "dr-10", "input": {"topic": "Agentic AI Architecture Trend 10", "depth": "standard"}, "expected": {}, "expect_non_empty": ["report_markdown", "citations"]}

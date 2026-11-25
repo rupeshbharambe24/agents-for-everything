@@ -1,0 +1,10 @@
+{"id": "ss-01", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 1: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-02", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 2: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-03", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 3: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-04", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 4: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-05", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 5: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-06", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 6: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-07", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 7: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-08", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 8: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-09", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 9: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}
+{"id": "ss-10", "input": {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 10: eligible within 30 days."}]}, "expected": {}, "expect_non_empty": ["matches"]}

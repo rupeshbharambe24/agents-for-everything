@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://types/Money",
+  "title": "Money",
+  "type": "object",
+  "required": ["amount", "currency"],
+  "properties": {
+    "amount": { "type": "number" },
+    "currency": { "type": "string", "minLength": 3, "maxLength": 3 }
+  }
+}

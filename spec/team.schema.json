@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://spec/team.schema.json",
+  "title": "Agents for Everything Team Manifest",
+  "type": "object",
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "additionalProperties": false,
+  "properties": {
+    "apiVersion": { "const": "afe/v1" },
+    "kind": { "const": "Team" },
+    "metadata": {
+      "type": "object",
+      "required": ["id", "name", "version", "maturity", "priority", "license"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string", "minLength": 2 },
+        "version": { "type": "string" },
+        "maturity": { "enum": ["spec", "prototype", "beta", "stable", "deprecated"] },
+        "priority": { "enum": ["P0", "P1", "P2"] },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "maintainers": { "type": "array", "items": { "type": "string" } },
+        "license": { "type": "string" }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "required": ["summary", "pattern", "entry", "members", "graph", "io"],
+      "additionalProperties": false,
+      "properties": {
+        "summary": { "type": "string" },
+        "pattern": { "type": "string" },
+        "entry": { "type": "string", "pattern": "^[a-z0-9-]+/[a-z0-9-]+$" },
+        "members": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "string", "pattern": "^[a-z0-9-]+/[a-z0-9-]+$" }
+        },
+        "graph": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 2
+          }
+        },
+        "approvals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "io": {
+          "type": "object",
+          "required": ["input", "output"],
+          "properties": {
+            "input": { "type": "string" },
+            "output": { "type": "string" }
+          }
+        },
+        "safety": {
+          "type": "object",
+          "properties": {
+            "level": { "enum": ["S0", "S1", "S2", "S3", "S4"] }
+          }
+        },
+        "evals": {
+          "type": "object",
+          "properties": {
+            "suite": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

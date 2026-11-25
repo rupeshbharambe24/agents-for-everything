@@ -1,0 +1,10 @@
+{"id": "sum-01", "input": {"text": "Sentence one about topic 1. Sentence two adds metrics. Sentence three concludes.", "style": "tldr"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-02", "input": {"text": "Sentence one about topic 2. Sentence two adds metrics. Sentence three concludes.", "style": "bullets"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-03", "input": {"text": "Sentence one about topic 3. Sentence two adds metrics. Sentence three concludes.", "style": "executive"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-04", "input": {"text": "Sentence one about topic 4. Sentence two adds metrics. Sentence three concludes.", "style": "bullets"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-05", "input": {"text": "Sentence one about topic 5. Sentence two adds metrics. Sentence three concludes.", "style": "tldr"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-06", "input": {"text": "Sentence one about topic 6. Sentence two adds metrics. Sentence three concludes.", "style": "executive"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-07", "input": {"text": "Sentence one about topic 7. Sentence two adds metrics. Sentence three concludes.", "style": "bullets"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-08", "input": {"text": "Sentence one about topic 8. Sentence two adds metrics. Sentence three concludes.", "style": "tldr"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-09", "input": {"text": "Sentence one about topic 9. Sentence two adds metrics. Sentence three concludes.", "style": "bullets"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
+{"id": "sum-10", "input": {"text": "Sentence one about topic 10. Sentence two adds metrics. Sentence three concludes.", "style": "executive"}, "expected": {}, "expect_non_empty": ["summary", "key_points"]}
