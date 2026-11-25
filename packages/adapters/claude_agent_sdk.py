@@ -5,19 +5,25 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from agents_for_everything import discover_agents, find_repo_root
+from agents_for_everything import AgentRunner, RunContext, discover_agents, find_repo_root
 
 
-def as_claude_subagent(agent_id: str, repo_root: Path | None = None) -> dict[str, Any]:
-    """Return a Claude Agent SDK `AgentDefinition`-compatible dictionary."""
+def as_claude_subagent(
+    agent_id: str,
+    repo_root: Path | None = None,
+    context: RunContext | None = None,
+) -> dict[str, Any]:
+    """Return a Claude Agent SDK `AgentDefinition`-compatible dictionary with runner hook."""
     root = repo_root or find_repo_root()
     manifest = discover_agents(root)[agent_id]
     assert manifest.directory is not None
     prompt = (manifest.directory / "prompts" / "system.md").read_text(encoding="utf-8")
+    runner = AgentRunner(repo_root=root)
     return {
         "name": manifest.id.split("/", 1)[-1],
         "description": manifest.summary,
         "prompt": prompt,
         "tools": manifest.required_tools,
         "safety_level": manifest.safety_level,
+        "run": lambda payload: runner.run(agent_id, payload, context=context).output,
     }
