@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/payments
+  name: Payments & Billing Ledger MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Inspect payment transactions, subscriptions, and chargeback evidence without moving funds.
+  transport: stdio
+  upstream: stripe / billing read-only adapter
+  tools:
+    - name: lookup_transaction
+      description: Fetch settled transaction metadata and dispute timestamps.
+      read_only: true
+    - name: assemble_dispute_pack
+      description: Gather delivery and auth evidence into a draft representment file.
+      read_only: true

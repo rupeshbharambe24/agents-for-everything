@@ -61,6 +61,12 @@ class LocalMCPRegistry:
         self.register("afe/telephony", self._handle_telephony)
         self.register("afe/media", self._handle_media)
         self.register("afe/policy-engine", self._handle_policy_engine)
+        self.register("afe/git", self._handle_git)
+        self.register("afe/erp", self._handle_erp)
+        self.register("afe/payments", self._handle_payments)
+        self.register("afe/medical-kb", self._handle_medical_kb)
+        self.register("afe/logistics", self._handle_logistics)
+        self.register("afe/compliance-reg", self._handle_compliance_reg)
 
     def _handle_stt(self, payload: dict[str, Any]) -> dict[str, Any]:
         audio = payload.get("audio") or payload
@@ -237,3 +243,27 @@ class LocalMCPRegistry:
         deny_tokens = ("drop", "delete_all", "exfiltrate", "bypass")
         decision = "deny" if any(t in action for t in deny_tokens) else "allow"
         return {"action": action, "decision": decision}
+
+    def _handle_git(self, payload: dict[str, Any]) -> dict[str, Any]:
+        op = str(payload.get("op", "status"))
+        return {"status": "clean", "op": op, "branch": "main", "commits": []}
+
+    def _handle_erp(self, payload: dict[str, Any]) -> dict[str, Any]:
+        op = str(payload.get("op", "read_inventory"))
+        return {"status": "ok", "op": op, "items": payload.get("items", []), "draft_po": None}
+
+    def _handle_payments(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "read_only", "transactions": payload.get("transactions", []), "dispute_pack": {}}
+
+    def _handle_medical_kb(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {
+            "status": "advisory_only",
+            "interactions": payload.get("interactions", []),
+            "crisis_resources": ["Local emergency services (e.g., 112 / 911)", "Verified regional helpline"],
+        }
+
+    def _handle_logistics(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "in_transit", "tracking_id": payload.get("tracking_id", ""), "events": []}
+
+    def _handle_compliance_reg(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "screened_for_review", "matches": [], "scheme_matches": payload.get("schemes", [])}

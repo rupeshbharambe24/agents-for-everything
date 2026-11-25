@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/logistics
+  name: Logistics, Carrier & Customs MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Track multi-carrier shipments, delivery exception codes, and HS tariff lookups.
+  transport: stdio
+  upstream: multi-carrier tracking & HS lookup adapter
+  tools:
+    - name: track_shipment
+      description: Fetch milestone scan events and delay alerts for a waybill.
+      read_only: true
+    - name: lookup_hs_code
+      description: Look up harmonized tariff code candidates for a goods description.
+      read_only: true

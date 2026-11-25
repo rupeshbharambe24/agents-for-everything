@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/compliance-reg
+  name: Regulatory, Sanctions & Public Schemes MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Screen entities against published watchlists and inspect public statutory scheme eligibility rules.
+  transport: stdio
+  upstream: open-sanctions / official-gazette index adapter
+  tools:
+    - name: screen_watchlist
+      description: Perform explained transliteration-aware watchlist name matching.
+      read_only: true
+    - name: check_scheme_rules
+      description: Evaluate deterministic statutory eligibility criteria.
+      read_only: true

@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/erp
+  name: ERP & Procurement Ledger MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Read purchase requisitions and inventory levels, and stage draft POs for human approval.
+  transport: stdio
+  upstream: open-erp-mcp adapter
+  tools:
+    - name: read_inventory
+      description: Query stock levels, reorder points, and lead times.
+      read_only: true
+    - name: stage_purchase_order
+      description: Prepare a draft purchase order awaiting human sign-off.
+      read_only: false

@@ -1,0 +1,21 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/git
+  name: Git & Repository Inspector MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Inspect git diffs, branches, commits, and repository metadata safely.
+  transport: stdio
+  upstream: modelcontextprotocol/server-git
+  tools:
+    - name: git_status
+      description: Read modified files and active branch state.
+      read_only: true
+    - name: git_diff
+      description: Inspect unified diff for a commit or ref range.
+      read_only: true
+    - name: git_log
+      description: List commit history messages and changed paths.
+      read_only: true
