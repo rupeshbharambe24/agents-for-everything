@@ -1,0 +1,36 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: hiring-pipeline
+  name: Hiring Pipeline
+  version: 0.1.0
+  maturity: prototype
+  priority: P2
+  tags: ["hr", "recruiting", "fairness", "hitl"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Role specification to shortlisted candidates with bias auditing, interview kits, and mandatory human hiring decision gates."
+  pattern: prompt-chaining
+  entry: hr/jd-writer
+  members:
+    - hr/jd-writer
+    - hr/candidate-sourcer
+    - hr/resume-screener
+    - guardrails/bias-auditor
+    - hr/interview-kit-builder
+    - orchestration/human-approval-gate
+  graph:
+    - [jd-writer, candidate-sourcer]
+    - [candidate-sourcer, resume-screener]
+    - [resume-screener, bias-auditor]
+    - [bias-auditor, interview-kit-builder]
+    - [interview-kit-builder, human-approval-gate]
+  approvals: ["resume-screener", "human-approval-gate"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S4
+  evals:
+    suite: evals/eval.yaml
