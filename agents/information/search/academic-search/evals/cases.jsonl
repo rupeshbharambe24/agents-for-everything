@@ -1,0 +1,10 @@
+{"id": "acad-01", "input": {"input": "Sample academic-search request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-02", "input": {"input": "Sample academic-search request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-03", "input": {"input": "Sample academic-search request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-04", "input": {"input": "Sample academic-search request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-05", "input": {"input": "Sample academic-search request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-06", "input": {"input": "Sample academic-search request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-07", "input": {"input": "Sample academic-search request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-08", "input": {"input": "Sample academic-search request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-09", "input": {"input": "Sample academic-search request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "acad-10", "input": {"input": "Sample academic-search request #10"}, "expected": {}, "expect_non_empty": ["result"]}

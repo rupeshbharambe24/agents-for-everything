@@ -1,0 +1,10 @@
+{"id": "rera-01", "input": {"input": "Sample reranker request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-02", "input": {"input": "Sample reranker request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-03", "input": {"input": "Sample reranker request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-04", "input": {"input": "Sample reranker request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-05", "input": {"input": "Sample reranker request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-06", "input": {"input": "Sample reranker request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-07", "input": {"input": "Sample reranker request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-08", "input": {"input": "Sample reranker request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-09", "input": {"input": "Sample reranker request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rera-10", "input": {"input": "Sample reranker request #10"}, "expected": {}, "expect_non_empty": ["result"]}

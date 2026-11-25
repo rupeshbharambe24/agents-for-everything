@@ -1,0 +1,10 @@
+{"id": "quer-01", "input": {"input": "Sample query-rewriter request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-02", "input": {"input": "Sample query-rewriter request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-03", "input": {"input": "Sample query-rewriter request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-04", "input": {"input": "Sample query-rewriter request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-05", "input": {"input": "Sample query-rewriter request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-06", "input": {"input": "Sample query-rewriter request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-07", "input": {"input": "Sample query-rewriter request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-08", "input": {"input": "Sample query-rewriter request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-09", "input": {"input": "Sample query-rewriter request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "quer-10", "input": {"input": "Sample query-rewriter request #10"}, "expected": {}, "expect_non_empty": ["result"]}

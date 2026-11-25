@@ -1,0 +1,10 @@
+{"id": "sour-01", "input": {"input": "Sample source-credibility request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-02", "input": {"input": "Sample source-credibility request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-03", "input": {"input": "Sample source-credibility request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-04", "input": {"input": "Sample source-credibility request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-05", "input": {"input": "Sample source-credibility request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-06", "input": {"input": "Sample source-credibility request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-07", "input": {"input": "Sample source-credibility request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-08", "input": {"input": "Sample source-credibility request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-09", "input": {"input": "Sample source-credibility request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "sour-10", "input": {"input": "Sample source-credibility request #10"}, "expected": {}, "expect_non_empty": ["result"]}
