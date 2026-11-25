@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://guardrails/bias-auditor/input",
+  "type": "object",
+  "required": [
+    "input"
+  ],
+  "properties": {
+    "input": {
+      "type": "string",
+      "description": "Primary task payload (agent + test set \u2192 bias report)"
+    },
+    "locale": {
+      "type": "string",
+      "default": "en"
+    },
+    "context": {
+      "type": "object"
+    },
+    "execute": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
