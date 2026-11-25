@@ -8,3 +8,43 @@
 {"id": "tm-08", "input": {"notes": "TODO: Ship phase 8 tests. Priya will review PR by 5pm."}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"]}
 {"id": "tm-09", "input": {"notes": "TODO: Ship phase 9 tests. Priya will review PR by 5pm."}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"]}
 {"id": "tm-10", "input": {"notes": "TODO: Ship phase 10 tests. Priya will review PR by 5pm."}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"]}
+{"id": "tm-01-b1", "input": {"notes": "TODO: Ship phase 1 tests. Priya will review PR by 5pm. (v1)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "hi-IN"}
+{"id": "tm-02-b2", "input": {"notes": "TODO: Ship phase 2 tests. Priya will review PR by 5pm. (v2)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "mr-IN"}
+{"id": "tm-03-b3", "input": {"notes": "TODO: Ship phase 3 tests. Priya will review PR by 5pm. (v3)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "ta-IN"}
+{"id": "tm-04-b4", "input": {"notes": "TODO: Ship phase 4 tests. Priya will review PR by 5pm. (v4)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "te-IN"}
+{"id": "tm-05-b5", "input": {"notes": "TODO: Ship phase 5 tests. Priya will review PR by 5pm. (v5)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "bn-IN"}
+{"id": "tm-06-b6", "input": {"notes": "TODO: Ship phase 6 tests. Priya will review PR by 5pm. (v6)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "es"}
+{"id": "tm-07-b7", "input": {"notes": "TODO: Ship phase 7 tests. Priya will review PR by 5pm. (v7)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "fr"}
+{"id": "tm-08-b8", "input": {"notes": "TODO: Ship phase 8 tests. Priya will review PR by 5pm. (v8)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "en"}
+{"id": "tm-09-b9", "input": {"notes": "TODO: Ship phase 9 tests. Priya will review PR by 5pm. (v9)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "hi-IN"}
+{"id": "tm-10-b10", "input": {"notes": "TODO: Ship phase 10 tests. Priya will review PR by 5pm. (v10)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "mr-IN"}
+{"id": "tm-01-b11", "input": {"notes": "TODO: Ship phase 1 tests. Priya will review PR by 5pm. (v11)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "ta-IN"}
+{"id": "tm-02-b12", "input": {"notes": "TODO: Ship phase 2 tests. Priya will review PR by 5pm. (v12)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "te-IN"}
+{"id": "tm-03-b13", "input": {"notes": "TODO: Ship phase 3 tests. Priya will review PR by 5pm. (v13)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "bn-IN"}
+{"id": "tm-04-b14", "input": {"notes": "TODO: Ship phase 4 tests. Priya will review PR by 5pm. (v14)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "es"}
+{"id": "tm-05-b15", "input": {"notes": "TODO: Ship phase 5 tests. Priya will review PR by 5pm. (v15)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "fr"}
+{"id": "tm-06-b16", "input": {"notes": "TODO: Ship phase 6 tests. Priya will review PR by 5pm. (v16)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "en"}
+{"id": "tm-07-b17", "input": {"notes": "TODO: Ship phase 7 tests. Priya will review PR by 5pm. (v17)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "hi-IN"}
+{"id": "tm-08-b18", "input": {"notes": "TODO: Ship phase 8 tests. Priya will review PR by 5pm. (v18)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "mr-IN"}
+{"id": "tm-09-b19", "input": {"notes": "TODO: Ship phase 9 tests. Priya will review PR by 5pm. (v19)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "ta-IN"}
+{"id": "tm-10-b20", "input": {"notes": "TODO: Ship phase 10 tests. Priya will review PR by 5pm. (v20)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "te-IN"}
+{"id": "tm-01-b21", "input": {"notes": "TODO: Ship phase 1 tests. Priya will review PR by 5pm. (v21)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "bn-IN"}
+{"id": "tm-02-b22", "input": {"notes": "TODO: Ship phase 2 tests. Priya will review PR by 5pm. (v22)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "es"}
+{"id": "tm-03-b23", "input": {"notes": "TODO: Ship phase 3 tests. Priya will review PR by 5pm. (v23)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "fr"}
+{"id": "tm-04-b24", "input": {"notes": "TODO: Ship phase 4 tests. Priya will review PR by 5pm. (v24)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "en"}
+{"id": "tm-05-b25", "input": {"notes": "TODO: Ship phase 5 tests. Priya will review PR by 5pm. (v25)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "hi-IN"}
+{"id": "tm-06-b26", "input": {"notes": "TODO: Ship phase 6 tests. Priya will review PR by 5pm. (v26)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "mr-IN"}
+{"id": "tm-07-b27", "input": {"notes": "TODO: Ship phase 7 tests. Priya will review PR by 5pm. (v27)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "ta-IN"}
+{"id": "tm-08-b28", "input": {"notes": "TODO: Ship phase 8 tests. Priya will review PR by 5pm. (v28)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "te-IN"}
+{"id": "tm-09-b29", "input": {"notes": "TODO: Ship phase 9 tests. Priya will review PR by 5pm. (v29)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "bn-IN"}
+{"id": "tm-10-b30", "input": {"notes": "TODO: Ship phase 10 tests. Priya will review PR by 5pm. (v30)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "es"}
+{"id": "tm-01-b31", "input": {"notes": "TODO: Ship phase 1 tests. Priya will review PR by 5pm. (v31)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "fr"}
+{"id": "tm-02-b32", "input": {"notes": "TODO: Ship phase 2 tests. Priya will review PR by 5pm. (v32)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "en"}
+{"id": "tm-03-b33", "input": {"notes": "TODO: Ship phase 3 tests. Priya will review PR by 5pm. (v33)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "hi-IN"}
+{"id": "tm-04-b34", "input": {"notes": "TODO: Ship phase 4 tests. Priya will review PR by 5pm. (v34)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "mr-IN"}
+{"id": "tm-05-b35", "input": {"notes": "TODO: Ship phase 5 tests. Priya will review PR by 5pm. (v35)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "ta-IN"}
+{"id": "tm-06-b36", "input": {"notes": "TODO: Ship phase 6 tests. Priya will review PR by 5pm. (v36)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "te-IN"}
+{"id": "tm-07-b37", "input": {"notes": "TODO: Ship phase 7 tests. Priya will review PR by 5pm. (v37)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "bn-IN"}
+{"id": "tm-08-b38", "input": {"notes": "TODO: Ship phase 8 tests. Priya will review PR by 5pm. (v38)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "es"}
+{"id": "tm-09-b39", "input": {"notes": "TODO: Ship phase 9 tests. Priya will review PR by 5pm. (v39)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "fr"}
+{"id": "tm-10-b40", "input": {"notes": "TODO: Ship phase 10 tests. Priya will review PR by 5pm. (v40)"}, "expected": {}, "expect_non_empty": ["tasks", "top_focus"], "locale": "en"}

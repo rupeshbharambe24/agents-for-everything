@@ -1,6 +1,6 @@
 # Task Manager `productivity/task-manager`
 
-prototype · P0 · composite · safety S2 · autonomy L1
+beta · P0 · composite · safety S2 · autonomy L1
 
 ## What it does
 Composes action-item-extractor to prioritize tasks into actionable daily focus lists.
