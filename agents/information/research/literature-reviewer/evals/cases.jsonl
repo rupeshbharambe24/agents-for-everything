@@ -1,0 +1,10 @@
+{"id": "lite-01", "input": {"input": "Sample literature-reviewer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-02", "input": {"input": "Sample literature-reviewer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-03", "input": {"input": "Sample literature-reviewer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-04", "input": {"input": "Sample literature-reviewer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-05", "input": {"input": "Sample literature-reviewer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-06", "input": {"input": "Sample literature-reviewer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-07", "input": {"input": "Sample literature-reviewer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-08", "input": {"input": "Sample literature-reviewer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-09", "input": {"input": "Sample literature-reviewer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "lite-10", "input": {"input": "Sample literature-reviewer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

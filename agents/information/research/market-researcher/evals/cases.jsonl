@@ -1,0 +1,10 @@
+{"id": "mark-01", "input": {"input": "Sample market-researcher request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-02", "input": {"input": "Sample market-researcher request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-03", "input": {"input": "Sample market-researcher request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-04", "input": {"input": "Sample market-researcher request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-05", "input": {"input": "Sample market-researcher request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-06", "input": {"input": "Sample market-researcher request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-07", "input": {"input": "Sample market-researcher request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-08", "input": {"input": "Sample market-researcher request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-09", "input": {"input": "Sample market-researcher request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "mark-10", "input": {"input": "Sample market-researcher request #10"}, "expected": {}, "expect_non_empty": ["result"]}
