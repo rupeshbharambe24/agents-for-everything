@@ -1,0 +1,7 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/cloud
+    required: true
+    permissions: ["read"]
+    scope: declared

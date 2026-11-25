@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://devops/cloud-cost-optimizer/output",
+  "type": "object",
+  "required": [
+    "recommendations",
+    "estimated_monthly_savings_usd"
+  ],
+  "properties": {
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "estimated_monthly_savings_usd": {
+      "type": "number"
+    }
+  }
+}

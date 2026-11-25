@@ -1,0 +1,10 @@
+{"id": "cco-01", "input": {"resources": [{"id": "vm-1", "avg_cpu_pct": 3, "monthly_usd": 100}]}, "expected": {"estimated_monthly_savings_usd": 50.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-02", "input": {"resources": [{"id": "vm-2", "avg_cpu_pct": 3, "monthly_usd": 200}]}, "expected": {"estimated_monthly_savings_usd": 100.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-03", "input": {"resources": [{"id": "vm-3", "avg_cpu_pct": 3, "monthly_usd": 300}]}, "expected": {"estimated_monthly_savings_usd": 150.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-04", "input": {"resources": [{"id": "vm-4", "avg_cpu_pct": 3, "monthly_usd": 400}]}, "expected": {"estimated_monthly_savings_usd": 200.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-05", "input": {"resources": [{"id": "vm-5", "avg_cpu_pct": 3, "monthly_usd": 500}]}, "expected": {"estimated_monthly_savings_usd": 250.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-06", "input": {"resources": [{"id": "vm-6", "avg_cpu_pct": 3, "monthly_usd": 600}]}, "expected": {"estimated_monthly_savings_usd": 300.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-07", "input": {"resources": [{"id": "vm-7", "avg_cpu_pct": 3, "monthly_usd": 700}]}, "expected": {"estimated_monthly_savings_usd": 350.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-08", "input": {"resources": [{"id": "vm-8", "avg_cpu_pct": 3, "monthly_usd": 800}]}, "expected": {"estimated_monthly_savings_usd": 400.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-09", "input": {"resources": [{"id": "vm-9", "avg_cpu_pct": 3, "monthly_usd": 900}]}, "expected": {"estimated_monthly_savings_usd": 450.0}, "expect_non_empty": ["recommendations"]}
+{"id": "cco-10", "input": {"resources": [{"id": "vm-10", "avg_cpu_pct": 3, "monthly_usd": 1000}]}, "expected": {"estimated_monthly_savings_usd": 500.0}, "expect_non_empty": ["recommendations"]}
