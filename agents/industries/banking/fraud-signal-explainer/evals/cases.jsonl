@@ -1,0 +1,10 @@
+{"id": "frau-01", "input": {"input": "Sample fraud-signal-explainer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "frau-02", "input": {"input": "Sample fraud-signal-explainer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "frau-03", "input": {"input": "Sample fraud-signal-explainer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "frau-04", "input": {"input": "Sample fraud-signal-explainer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "frau-05", "input": {"input": "Sample fraud-signal-explainer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "frau-06", "input": {"input": "Sample fraud-signal-explainer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "frau-07", "input": {"input": "Sample fraud-signal-explainer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "frau-08", "input": {"input": "Sample fraud-signal-explainer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "frau-09", "input": {"input": "Sample fraud-signal-explainer request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "frau-10", "input": {"input": "Sample fraud-signal-explainer request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}

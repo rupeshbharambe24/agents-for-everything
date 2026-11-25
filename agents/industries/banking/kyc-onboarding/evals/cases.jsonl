@@ -1,0 +1,10 @@
+{"id": "kyc--01", "input": {"input": "Sample kyc-onboarding request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "kyc--02", "input": {"input": "Sample kyc-onboarding request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "kyc--03", "input": {"input": "Sample kyc-onboarding request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "kyc--04", "input": {"input": "Sample kyc-onboarding request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "kyc--05", "input": {"input": "Sample kyc-onboarding request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "kyc--06", "input": {"input": "Sample kyc-onboarding request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "kyc--07", "input": {"input": "Sample kyc-onboarding request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "kyc--08", "input": {"input": "Sample kyc-onboarding request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "kyc--09", "input": {"input": "Sample kyc-onboarding request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "kyc--10", "input": {"input": "Sample kyc-onboarding request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}

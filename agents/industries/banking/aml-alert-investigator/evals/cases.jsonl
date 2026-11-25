@@ -1,0 +1,10 @@
+{"id": "aml--01", "input": {"input": "Sample aml-alert-investigator request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "aml--02", "input": {"input": "Sample aml-alert-investigator request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "aml--03", "input": {"input": "Sample aml-alert-investigator request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "aml--04", "input": {"input": "Sample aml-alert-investigator request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "aml--05", "input": {"input": "Sample aml-alert-investigator request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "aml--06", "input": {"input": "Sample aml-alert-investigator request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "aml--07", "input": {"input": "Sample aml-alert-investigator request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "aml--08", "input": {"input": "Sample aml-alert-investigator request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "aml--09", "input": {"input": "Sample aml-alert-investigator request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "aml--10", "input": {"input": "Sample aml-alert-investigator request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}

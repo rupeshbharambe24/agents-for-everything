@@ -1,0 +1,10 @@
+{"id": "regu-01", "input": {"input": "Sample regulatory-circular-tracker request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-02", "input": {"input": "Sample regulatory-circular-tracker request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-03", "input": {"input": "Sample regulatory-circular-tracker request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-04", "input": {"input": "Sample regulatory-circular-tracker request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-05", "input": {"input": "Sample regulatory-circular-tracker request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-06", "input": {"input": "Sample regulatory-circular-tracker request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-07", "input": {"input": "Sample regulatory-circular-tracker request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-08", "input": {"input": "Sample regulatory-circular-tracker request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-09", "input": {"input": "Sample regulatory-circular-tracker request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regu-10", "input": {"input": "Sample regulatory-circular-tracker request #10"}, "expected": {}, "expect_non_empty": ["result"]}

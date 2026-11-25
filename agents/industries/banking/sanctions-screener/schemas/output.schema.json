@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://banking/sanctions-screener/output",
+  "type": "object",
+  "required": [
+    "hit",
+    "matched_entries",
+    "explanation"
+  ],
+  "properties": {
+    "hit": {
+      "type": "boolean"
+    },
+    "matched_entries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "explanation": {
+      "type": "string"
+    }
+  }
+}

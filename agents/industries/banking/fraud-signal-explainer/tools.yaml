@@ -1,0 +1,7 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/policy-engine
+    required: true
+    permissions: ["read"]
+    scope: declared

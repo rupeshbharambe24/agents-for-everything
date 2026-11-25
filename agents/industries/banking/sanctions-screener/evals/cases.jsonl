@@ -1,0 +1,10 @@
+{"id": "san-01", "input": {"name": "Mohammad Ali", "watchlist": ["Muhammad Ali", "John Doe"]}, "expected": {"hit": true}}
+{"id": "san-02", "input": {"name": "Mohammad Ali", "watchlist": ["Muhammad Ali", "John Doe"]}, "expected": {"hit": true}}
+{"id": "san-03", "input": {"name": "Mohammad Ali", "watchlist": ["Muhammad Ali", "John Doe"]}, "expected": {"hit": true}}
+{"id": "san-04", "input": {"name": "Mohammad Ali", "watchlist": ["Muhammad Ali", "John Doe"]}, "expected": {"hit": true}}
+{"id": "san-05", "input": {"name": "Priya Sharma", "watchlist": ["Muhammad Ali", "John Doe"]}, "expected": {"hit": false}}
+{"id": "san-06", "input": {"name": "Priya Sharma", "watchlist": ["Muhammad Ali", "John Doe"]}, "expected": {"hit": false}}
+{"id": "san-07", "input": {"name": "Priya Sharma", "watchlist": ["Muhammad Ali", "John Doe"]}, "expected": {"hit": false}}
+{"id": "san-08", "input": {"name": "Priya Sharma", "watchlist": ["Muhammad Ali", "John Doe"]}, "expected": {"hit": false}}
+{"id": "san-09", "input": {"name": "Priya Sharma", "watchlist": ["John Doe"], "confirm": true}, "expect_error": "ApprovalRequiredError"}
+{"id": "san-10", "input": {"name": "Priya Sharma", "watchlist": ["John Doe"], "confirm": true}, "auto_approve": true, "expected": {"hit": false}}
