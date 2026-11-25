@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: accounts-payable-team
+  name: Accounts Payable Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["accounts", "payable", "team"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Parses vendor invoices, matches against POs, audits expenses, and routes to human finance sign-off."
+  pattern: prompt-chaining
+  entry: documents/invoice-receipt-parser
+  members:
+    - documents/invoice-receipt-parser
+    - finance/accounts-payable
+    - finance/expense-auditor
+    - orchestration/human-approval-gate
+  graph:
+    - [invoice-receipt-parser, accounts-payable]
+    - [accounts-payable, expense-auditor]
+    - [expense-auditor, human-approval-gate]
+  approvals: ["accounts-payable", "human-approval-gate"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S4
+  evals:
+    suite: evals/eval.yaml
