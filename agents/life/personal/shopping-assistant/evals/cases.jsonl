@@ -1,0 +1,10 @@
+{"id": "shop-01", "input": {"input": "Sample shopping-assistant request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-02", "input": {"input": "Sample shopping-assistant request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-03", "input": {"input": "Sample shopping-assistant request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-04", "input": {"input": "Sample shopping-assistant request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-05", "input": {"input": "Sample shopping-assistant request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-06", "input": {"input": "Sample shopping-assistant request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-07", "input": {"input": "Sample shopping-assistant request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-08", "input": {"input": "Sample shopping-assistant request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-09", "input": {"input": "Sample shopping-assistant request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "shop-10", "input": {"input": "Sample shopping-assistant request #10"}, "expected": {}, "expect_non_empty": ["result"]}

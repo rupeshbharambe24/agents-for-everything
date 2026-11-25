@@ -1,0 +1,10 @@
+{"id": "bill-01", "input": {"input": "Sample bill-subscription-manager request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-02", "input": {"input": "Sample bill-subscription-manager request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-03", "input": {"input": "Sample bill-subscription-manager request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-04", "input": {"input": "Sample bill-subscription-manager request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-05", "input": {"input": "Sample bill-subscription-manager request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-06", "input": {"input": "Sample bill-subscription-manager request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-07", "input": {"input": "Sample bill-subscription-manager request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-08", "input": {"input": "Sample bill-subscription-manager request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-09", "input": {"input": "Sample bill-subscription-manager request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "bill-10", "input": {"input": "Sample bill-subscription-manager request #10"}, "expected": {}, "expect_non_empty": ["result"]}

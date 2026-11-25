@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: personal/bill-subscription-manager
+  name: "Bills & Subscriptions Manager"
+  version: 0.1.0
+  family: life
+  category: personal
+  tier: atomic
+  maturity: prototype
+  priority: P1
+  tags: ["personal", "bill-subscription-manager"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Tracks recurring bills and subscriptions, flags due dates, and guides cancellation steps."
+  purpose: "Tracks recurring bills and subscriptions, flags due dates, and guides cancellation steps."
+  pattern: augmented-llm
+  autonomy: L1
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/email"]
+    optional: []
+  uses_agents: []
+  memory: none
+  safety:
+    level: S1
+    side_effects: []
+    approval_required_for: []
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]
