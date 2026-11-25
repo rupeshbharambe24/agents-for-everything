@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: banking/collections-assistant
+  name: "Fair Collections Assistant"
+  version: 0.1.0
+  family: industries
+  category: banking
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["banking", "collections", "industries", "on-prem", "regulated"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Compliant, respectful repayment reminders within regulator fair-practice rules."
+  purpose: "Compliant, respectful repayment reminders within regulator fair-practice rules."
+  pattern: orchestrator-workers
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: scheduled
+  environment: digital-api
+  audience: ["industry", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b", "open-weights-70b", "local-onprem"]
+  tools:
+    required: ["afe/chat"]
+    optional: []
+  uses_agents: ["documents/document-parser", "guardrails/pii-redactor"]
+  memory: session
+  safety:
+    level: S3
+    side_effects: ["external-action-requires-approval"]
+    approval_required_for: ["approve_external_action"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en", "hi", "ta", "te", "bn", "mr"]

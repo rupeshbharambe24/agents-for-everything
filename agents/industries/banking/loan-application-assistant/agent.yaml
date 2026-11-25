@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: banking/loan-application-assistant
+  name: "Loan Application Assistant"
+  version: 0.1.0
+  family: industries
+  category: banking
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["banking", "industries", "loan", "on-prem", "regulated"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Guides applicants in their language, checks completeness and explains products and charges."
+  purpose: "Guides applicants in their language, checks completeness and explains products and charges."
+  pattern: orchestrator-workers
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["voice", "text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["industry", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b", "open-weights-70b", "local-onprem"]
+  tools:
+    required: ["afe/compliance-reg"]
+    optional: []
+  uses_agents: ["voice/voice-form-filler", "documents/document-parser"]
+  memory: session
+  safety:
+    level: S3
+    side_effects: ["external-action-requires-approval"]
+    approval_required_for: ["approve_external_action"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en", "hi", "ta", "te", "bn", "mr"]
