@@ -1,0 +1,10 @@
+{"id": "crm--01", "input": {"input": "Sample crm-updater request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "crm--02", "input": {"input": "Sample crm-updater request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "crm--03", "input": {"input": "Sample crm-updater request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "crm--04", "input": {"input": "Sample crm-updater request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "crm--05", "input": {"input": "Sample crm-updater request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "crm--06", "input": {"input": "Sample crm-updater request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "crm--07", "input": {"input": "Sample crm-updater request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "crm--08", "input": {"input": "Sample crm-updater request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "crm--09", "input": {"input": "Sample crm-updater request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "crm--10", "input": {"input": "Sample crm-updater request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}

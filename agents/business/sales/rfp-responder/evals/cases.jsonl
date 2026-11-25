@@ -1,0 +1,10 @@
+{"id": "rfp--01", "input": {"input": "Sample rfp-responder request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--02", "input": {"input": "Sample rfp-responder request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--03", "input": {"input": "Sample rfp-responder request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--04", "input": {"input": "Sample rfp-responder request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--05", "input": {"input": "Sample rfp-responder request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--06", "input": {"input": "Sample rfp-responder request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--07", "input": {"input": "Sample rfp-responder request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--08", "input": {"input": "Sample rfp-responder request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--09", "input": {"input": "Sample rfp-responder request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "rfp--10", "input": {"input": "Sample rfp-responder request #10"}, "expected": {}, "expect_non_empty": ["result"]}
