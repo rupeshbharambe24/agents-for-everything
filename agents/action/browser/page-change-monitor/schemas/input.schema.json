@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://browser/page-change-monitor/input",
+  "type": "object",
+  "required": [
+    "url",
+    "previous_text",
+    "current_text"
+  ],
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "previous_text": {
+      "type": "string"
+    },
+    "current_text": {
+      "type": "string"
+    }
+  }
+}

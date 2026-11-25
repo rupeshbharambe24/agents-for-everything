@@ -1,0 +1,10 @@
+{"id": "web--01", "input": {"input": "Sample web-tester request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--02", "input": {"input": "Sample web-tester request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--03", "input": {"input": "Sample web-tester request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--04", "input": {"input": "Sample web-tester request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--05", "input": {"input": "Sample web-tester request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--06", "input": {"input": "Sample web-tester request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--07", "input": {"input": "Sample web-tester request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--08", "input": {"input": "Sample web-tester request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--09", "input": {"input": "Sample web-tester request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "web--10", "input": {"input": "Sample web-tester request #10"}, "expected": {}, "expect_non_empty": ["result"]}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://browser/page-change-monitor/output",
+  "type": "object",
+  "required": [
+    "changed",
+    "summary"
+  ],
+  "properties": {
+    "changed": {
+      "type": "boolean"
+    },
+    "summary": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{"id": "pcm-01", "input": {"url": "https://example.org/p/1", "previous_text": "Price $50", "current_text": "Price $40"}, "expected": {"changed": true}}
+{"id": "pcm-02", "input": {"url": "https://example.org/p/2", "previous_text": "Price $50", "current_text": "Price $40"}, "expected": {"changed": true}}
+{"id": "pcm-03", "input": {"url": "https://example.org/p/3", "previous_text": "Price $50", "current_text": "Price $40"}, "expected": {"changed": true}}
+{"id": "pcm-04", "input": {"url": "https://example.org/p/4", "previous_text": "Price $50", "current_text": "Price $40"}, "expected": {"changed": true}}
+{"id": "pcm-05", "input": {"url": "https://example.org/p/5", "previous_text": "Price $50", "current_text": "Price $40"}, "expected": {"changed": true}}
+{"id": "pcm-06", "input": {"url": "https://example.org/p/6", "previous_text": "Price $50", "current_text": "Price $50"}, "expected": {"changed": false}}
+{"id": "pcm-07", "input": {"url": "https://example.org/p/7", "previous_text": "Price $50", "current_text": "Price $50"}, "expected": {"changed": false}}
+{"id": "pcm-08", "input": {"url": "https://example.org/p/8", "previous_text": "Price $50", "current_text": "Price $50"}, "expected": {"changed": false}}
+{"id": "pcm-09", "input": {"url": "https://example.org/p/9", "previous_text": "Price $50", "current_text": "Price $50"}, "expected": {"changed": false}}
+{"id": "pcm-10", "input": {"url": "https://example.org/p/10", "previous_text": "Price $50", "current_text": "Price $50"}, "expected": {"changed": false}}
