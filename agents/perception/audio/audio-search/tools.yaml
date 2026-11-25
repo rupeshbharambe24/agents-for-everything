@@ -1,0 +1,11 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/stt
+    required: true
+    permissions: ["read"]
+    scope: declared
+  - id: afe/vector-store
+    required: true
+    permissions: ["read"]
+    scope: declared
