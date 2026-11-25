@@ -1,6 +1,6 @@
 # Narrator `voice/text-to-speech`
 
-prototype · P0 · atomic · safety S0 · autonomy L1
+beta · P0 · atomic · safety S0 · autonomy L1
 
 ## What it does
 Synthesizes spoken responses, read-backs, and multilingual confirmations from text.

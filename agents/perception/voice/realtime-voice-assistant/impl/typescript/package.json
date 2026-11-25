@@ -1,0 +1,7 @@
+{
+  "name": "@afe-agents/voice-realtime-voice-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./agent.ts"
+}

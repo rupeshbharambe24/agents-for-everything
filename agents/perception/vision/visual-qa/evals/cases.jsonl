@@ -8,3 +8,43 @@
 {"id": "vqa-08", "input": {"image": {"alt_text": "Diagram 8"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
 {"id": "vqa-09", "input": {"image": {"alt_text": "Diagram 9"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
 {"id": "vqa-10", "input": {"image": {"alt_text": "Diagram 10"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"]}
+{"id": "vqa-01-b1", "input": {"image": {"alt_text": "Diagram 1"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "hi-IN"}
+{"id": "vqa-02-b2", "input": {"image": {"alt_text": "Diagram 2"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "mr-IN"}
+{"id": "vqa-03-b3", "input": {"image": {"alt_text": "Diagram 3"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "ta-IN"}
+{"id": "vqa-04-b4", "input": {"image": {"alt_text": "Diagram 4"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "te-IN"}
+{"id": "vqa-05-b5", "input": {"image": {"alt_text": "Diagram 5"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "bn-IN"}
+{"id": "vqa-06-b6", "input": {"image": {"alt_text": "Diagram 6"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "es"}
+{"id": "vqa-07-b7", "input": {"image": {"alt_text": "Diagram 7"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "fr"}
+{"id": "vqa-08-b8", "input": {"image": {"alt_text": "Diagram 8"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "en"}
+{"id": "vqa-09-b9", "input": {"image": {"alt_text": "Diagram 9"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "hi-IN"}
+{"id": "vqa-10-b10", "input": {"image": {"alt_text": "Diagram 10"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "mr-IN"}
+{"id": "vqa-01-b11", "input": {"image": {"alt_text": "Diagram 1"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "ta-IN"}
+{"id": "vqa-02-b12", "input": {"image": {"alt_text": "Diagram 2"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "te-IN"}
+{"id": "vqa-03-b13", "input": {"image": {"alt_text": "Diagram 3"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "bn-IN"}
+{"id": "vqa-04-b14", "input": {"image": {"alt_text": "Diagram 4"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "es"}
+{"id": "vqa-05-b15", "input": {"image": {"alt_text": "Diagram 5"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "fr"}
+{"id": "vqa-06-b16", "input": {"image": {"alt_text": "Diagram 6"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "en"}
+{"id": "vqa-07-b17", "input": {"image": {"alt_text": "Diagram 7"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "hi-IN"}
+{"id": "vqa-08-b18", "input": {"image": {"alt_text": "Diagram 8"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "mr-IN"}
+{"id": "vqa-09-b19", "input": {"image": {"alt_text": "Diagram 9"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "ta-IN"}
+{"id": "vqa-10-b20", "input": {"image": {"alt_text": "Diagram 10"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "te-IN"}
+{"id": "vqa-01-b21", "input": {"image": {"alt_text": "Diagram 1"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "bn-IN"}
+{"id": "vqa-02-b22", "input": {"image": {"alt_text": "Diagram 2"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "es"}
+{"id": "vqa-03-b23", "input": {"image": {"alt_text": "Diagram 3"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "fr"}
+{"id": "vqa-04-b24", "input": {"image": {"alt_text": "Diagram 4"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "en"}
+{"id": "vqa-05-b25", "input": {"image": {"alt_text": "Diagram 5"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "hi-IN"}
+{"id": "vqa-06-b26", "input": {"image": {"alt_text": "Diagram 6"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "mr-IN"}
+{"id": "vqa-07-b27", "input": {"image": {"alt_text": "Diagram 7"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "ta-IN"}
+{"id": "vqa-08-b28", "input": {"image": {"alt_text": "Diagram 8"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "te-IN"}
+{"id": "vqa-09-b29", "input": {"image": {"alt_text": "Diagram 9"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "bn-IN"}
+{"id": "vqa-10-b30", "input": {"image": {"alt_text": "Diagram 10"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "es"}
+{"id": "vqa-01-b31", "input": {"image": {"alt_text": "Diagram 1"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "fr"}
+{"id": "vqa-02-b32", "input": {"image": {"alt_text": "Diagram 2"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "en"}
+{"id": "vqa-03-b33", "input": {"image": {"alt_text": "Diagram 3"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "hi-IN"}
+{"id": "vqa-04-b34", "input": {"image": {"alt_text": "Diagram 4"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "mr-IN"}
+{"id": "vqa-05-b35", "input": {"image": {"alt_text": "Diagram 5"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "ta-IN"}
+{"id": "vqa-06-b36", "input": {"image": {"alt_text": "Diagram 6"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "te-IN"}
+{"id": "vqa-07-b37", "input": {"image": {"alt_text": "Diagram 7"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "bn-IN"}
+{"id": "vqa-08-b38", "input": {"image": {"alt_text": "Diagram 8"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "es"}
+{"id": "vqa-09-b39", "input": {"image": {"alt_text": "Diagram 9"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "fr"}
+{"id": "vqa-10-b40", "input": {"image": {"alt_text": "Diagram 10"}, "question": "What does the chart show?"}, "expected": {}, "expect_non_empty": ["answer"], "locale": "en"}

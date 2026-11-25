@@ -1,6 +1,6 @@
 # Text Extractor (OCR) `vision/ocr`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Converts document images and scanned receipts into clean text and structured layout lines.

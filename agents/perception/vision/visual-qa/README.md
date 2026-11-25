@@ -1,6 +1,6 @@
 # Visual Q&A `vision/visual-qa`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Inspects an image and answers factual visual questions without inventing unseen details.

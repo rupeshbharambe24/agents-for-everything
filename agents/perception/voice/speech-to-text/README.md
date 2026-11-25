@@ -1,6 +1,6 @@
 # Transcriber `voice/speech-to-text`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Converts audio streams or files into clean Transcript JSON across English and Indic/global languages.

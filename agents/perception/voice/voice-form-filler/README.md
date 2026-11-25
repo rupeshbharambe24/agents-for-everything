@@ -1,6 +1,6 @@
 # Voice-to-Form Filler `voice/voice-form-filler`
 
-prototype · P0 · composite · safety S2 · autonomy L2
+beta · P0 · composite · safety S2 · autonomy L2
 
 ## What it does
 Lets users complete structured forms hands-free or in local languages by composing STT, structured extraction, verification, TTS prompts, and an approval gate.

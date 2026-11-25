@@ -7,7 +7,7 @@ metadata:
   family: perception
   category: voice
   tier: composite
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["voice", "realtime-voice-assistant"]
   maintainers: ["@rupeshbharambe24"]

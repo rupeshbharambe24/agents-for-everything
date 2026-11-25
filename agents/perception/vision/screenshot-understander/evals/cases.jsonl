@@ -8,3 +8,43 @@
 {"id": "scr-08", "input": {"image": {"text_hint": "Name, Email, Submit 8"}}, "expected": {}, "expect_non_empty": ["elements"]}
 {"id": "scr-09", "input": {"image": {"text_hint": "Name, Email, Submit 9"}}, "expected": {}, "expect_non_empty": ["elements"]}
 {"id": "scr-10", "input": {"image": {"text_hint": "Name, Email, Submit 10"}}, "expected": {}, "expect_non_empty": ["elements"]}
+{"id": "scr-01-b1", "input": {"image": {"text_hint": "Name, Email, Submit 1"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "hi-IN"}
+{"id": "scr-02-b2", "input": {"image": {"text_hint": "Name, Email, Submit 2"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "mr-IN"}
+{"id": "scr-03-b3", "input": {"image": {"text_hint": "Name, Email, Submit 3"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "ta-IN"}
+{"id": "scr-04-b4", "input": {"image": {"text_hint": "Name, Email, Submit 4"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "te-IN"}
+{"id": "scr-05-b5", "input": {"image": {"text_hint": "Name, Email, Submit 5"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "bn-IN"}
+{"id": "scr-06-b6", "input": {"image": {"text_hint": "Name, Email, Submit 6"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "es"}
+{"id": "scr-07-b7", "input": {"image": {"text_hint": "Name, Email, Submit 7"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "fr"}
+{"id": "scr-08-b8", "input": {"image": {"text_hint": "Name, Email, Submit 8"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "en"}
+{"id": "scr-09-b9", "input": {"image": {"text_hint": "Name, Email, Submit 9"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "hi-IN"}
+{"id": "scr-10-b10", "input": {"image": {"text_hint": "Name, Email, Submit 10"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "mr-IN"}
+{"id": "scr-01-b11", "input": {"image": {"text_hint": "Name, Email, Submit 1"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "ta-IN"}
+{"id": "scr-02-b12", "input": {"image": {"text_hint": "Name, Email, Submit 2"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "te-IN"}
+{"id": "scr-03-b13", "input": {"image": {"text_hint": "Name, Email, Submit 3"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "bn-IN"}
+{"id": "scr-04-b14", "input": {"image": {"text_hint": "Name, Email, Submit 4"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "es"}
+{"id": "scr-05-b15", "input": {"image": {"text_hint": "Name, Email, Submit 5"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "fr"}
+{"id": "scr-06-b16", "input": {"image": {"text_hint": "Name, Email, Submit 6"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "en"}
+{"id": "scr-07-b17", "input": {"image": {"text_hint": "Name, Email, Submit 7"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "hi-IN"}
+{"id": "scr-08-b18", "input": {"image": {"text_hint": "Name, Email, Submit 8"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "mr-IN"}
+{"id": "scr-09-b19", "input": {"image": {"text_hint": "Name, Email, Submit 9"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "ta-IN"}
+{"id": "scr-10-b20", "input": {"image": {"text_hint": "Name, Email, Submit 10"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "te-IN"}
+{"id": "scr-01-b21", "input": {"image": {"text_hint": "Name, Email, Submit 1"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "bn-IN"}
+{"id": "scr-02-b22", "input": {"image": {"text_hint": "Name, Email, Submit 2"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "es"}
+{"id": "scr-03-b23", "input": {"image": {"text_hint": "Name, Email, Submit 3"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "fr"}
+{"id": "scr-04-b24", "input": {"image": {"text_hint": "Name, Email, Submit 4"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "en"}
+{"id": "scr-05-b25", "input": {"image": {"text_hint": "Name, Email, Submit 5"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "hi-IN"}
+{"id": "scr-06-b26", "input": {"image": {"text_hint": "Name, Email, Submit 6"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "mr-IN"}
+{"id": "scr-07-b27", "input": {"image": {"text_hint": "Name, Email, Submit 7"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "ta-IN"}
+{"id": "scr-08-b28", "input": {"image": {"text_hint": "Name, Email, Submit 8"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "te-IN"}
+{"id": "scr-09-b29", "input": {"image": {"text_hint": "Name, Email, Submit 9"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "bn-IN"}
+{"id": "scr-10-b30", "input": {"image": {"text_hint": "Name, Email, Submit 10"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "es"}
+{"id": "scr-01-b31", "input": {"image": {"text_hint": "Name, Email, Submit 1"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "fr"}
+{"id": "scr-02-b32", "input": {"image": {"text_hint": "Name, Email, Submit 2"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "en"}
+{"id": "scr-03-b33", "input": {"image": {"text_hint": "Name, Email, Submit 3"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "hi-IN"}
+{"id": "scr-04-b34", "input": {"image": {"text_hint": "Name, Email, Submit 4"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "mr-IN"}
+{"id": "scr-05-b35", "input": {"image": {"text_hint": "Name, Email, Submit 5"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "ta-IN"}
+{"id": "scr-06-b36", "input": {"image": {"text_hint": "Name, Email, Submit 6"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "te-IN"}
+{"id": "scr-07-b37", "input": {"image": {"text_hint": "Name, Email, Submit 7"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "bn-IN"}
+{"id": "scr-08-b38", "input": {"image": {"text_hint": "Name, Email, Submit 8"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "es"}
+{"id": "scr-09-b39", "input": {"image": {"text_hint": "Name, Email, Submit 9"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "fr"}
+{"id": "scr-10-b40", "input": {"image": {"text_hint": "Name, Email, Submit 10"}}, "expected": {}, "expect_non_empty": ["elements"], "locale": "en"}

@@ -7,7 +7,7 @@ metadata:
   family: perception
   category: vision
   tier: atomic
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["vision", "screenshot-understander"]
   maintainers: ["@rupeshbharambe24"]

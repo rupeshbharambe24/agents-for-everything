@@ -1,6 +1,6 @@
 # Voice Command Interpreter `voice/voice-command`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Interprets short natural spoken commands against an allowlisted set of application actions.

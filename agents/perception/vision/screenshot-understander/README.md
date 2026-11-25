@@ -1,6 +1,6 @@
 # Screen Parser `vision/screenshot-understander`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Gives desktop and browser agents a structured element map from screen pixels.

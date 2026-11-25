@@ -1,6 +1,6 @@
 # Real-time Voice Assistant `voice/realtime-voice-assistant`
 
-prototype · P0 · composite · safety S1 · autonomy L2
+beta · P0 · composite · safety S1 · autonomy L2
 
 ## What it does
 Coordinates STT, command parsing, and TTS output in interactive voice sessions.
