@@ -1,0 +1,10 @@
+{"id": "smar-01", "input": {"input": "Sample smart-home-controller request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "smar-02", "input": {"input": "Sample smart-home-controller request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "smar-03", "input": {"input": "Sample smart-home-controller request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "smar-04", "input": {"input": "Sample smart-home-controller request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "smar-05", "input": {"input": "Sample smart-home-controller request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "smar-06", "input": {"input": "Sample smart-home-controller request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "smar-07", "input": {"input": "Sample smart-home-controller request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "smar-08", "input": {"input": "Sample smart-home-controller request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "smar-09", "input": {"input": "Sample smart-home-controller request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "smar-10", "input": {"input": "Sample smart-home-controller request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}
