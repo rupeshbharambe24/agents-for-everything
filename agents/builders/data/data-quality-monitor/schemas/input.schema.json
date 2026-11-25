@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://data/data-quality-monitor/input",
+  "type": "object",
+  "required": [
+    "input"
+  ],
+  "properties": {
+    "input": {
+      "type": "string",
+      "description": "Primary task payload (tables \u2192 quality report)"
+    },
+    "locale": {
+      "type": "string",
+      "default": "en"
+    },
+    "context": {
+      "type": "object"
+    },
+    "execute": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
