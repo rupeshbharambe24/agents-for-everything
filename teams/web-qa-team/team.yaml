@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: web-qa-team
+  name: Web QA Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["web", "qa", "team"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Navigates staging web apps, runs E2E tests, audits WCAG accessibility, and drafts issue reports."
+  pattern: orchestrator-workers
+  entry: browser/web-navigator
+  members:
+    - browser/web-navigator
+    - browser/web-tester
+    - accessibility/accessibility-auditor
+    - coding/issue-triager
+  graph:
+    - [web-navigator, web-tester]
+    - [web-tester, accessibility-auditor]
+    - [accessibility-auditor, issue-triager]
+  approvals: ["web-navigator", "issue-triager"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S3
+  evals:
+    suite: evals/eval.yaml
