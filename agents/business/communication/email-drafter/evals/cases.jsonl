@@ -8,3 +8,43 @@
 {"id": "ed-08", "input": {"recipient": "Priya", "intent": "Confirm meeting #8"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"]}
 {"id": "ed-09", "input": {"recipient": "Priya", "intent": "Send now", "send": true}, "expect_error": "ApprovalRequiredError"}
 {"id": "ed-10", "input": {"recipient": "Priya", "intent": "Send now", "send": true}, "auto_approve": true, "expected": {"status": "sent"}}
+{"id": "ed-01-b1", "input": {"recipient": "Priya", "intent": "Confirm meeting #1 (ref #1)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "hi-IN"}
+{"id": "ed-02-b2", "input": {"recipient": "Priya", "intent": "Confirm meeting #2 (ref #2)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "mr-IN"}
+{"id": "ed-03-b3", "input": {"recipient": "Priya", "intent": "Confirm meeting #3 (ref #3)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "ta-IN"}
+{"id": "ed-04-b4", "input": {"recipient": "Priya", "intent": "Confirm meeting #4 (ref #4)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "te-IN"}
+{"id": "ed-05-b5", "input": {"recipient": "Priya", "intent": "Confirm meeting #5 (ref #5)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "bn-IN"}
+{"id": "ed-06-b6", "input": {"recipient": "Priya", "intent": "Confirm meeting #6 (ref #6)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "es"}
+{"id": "ed-07-b7", "input": {"recipient": "Priya", "intent": "Confirm meeting #7 (ref #7)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "fr"}
+{"id": "ed-08-b8", "input": {"recipient": "Priya", "intent": "Confirm meeting #8 (ref #8)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "en"}
+{"id": "ed-09-b9", "input": {"recipient": "Priya", "intent": "Send now (ref #9)", "send": true}, "expect_error": "ApprovalRequiredError", "locale": "hi-IN"}
+{"id": "ed-10-b10", "input": {"recipient": "Priya", "intent": "Send now (ref #10)", "send": true}, "auto_approve": true, "expected": {"status": "sent"}, "locale": "mr-IN"}
+{"id": "ed-01-b11", "input": {"recipient": "Priya", "intent": "Confirm meeting #1 (ref #11)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "ta-IN"}
+{"id": "ed-02-b12", "input": {"recipient": "Priya", "intent": "Confirm meeting #2 (ref #12)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "te-IN"}
+{"id": "ed-03-b13", "input": {"recipient": "Priya", "intent": "Confirm meeting #3 (ref #13)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "bn-IN"}
+{"id": "ed-04-b14", "input": {"recipient": "Priya", "intent": "Confirm meeting #4 (ref #14)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "es"}
+{"id": "ed-05-b15", "input": {"recipient": "Priya", "intent": "Confirm meeting #5 (ref #15)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "fr"}
+{"id": "ed-06-b16", "input": {"recipient": "Priya", "intent": "Confirm meeting #6 (ref #16)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "en"}
+{"id": "ed-07-b17", "input": {"recipient": "Priya", "intent": "Confirm meeting #7 (ref #17)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "hi-IN"}
+{"id": "ed-08-b18", "input": {"recipient": "Priya", "intent": "Confirm meeting #8 (ref #18)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "mr-IN"}
+{"id": "ed-09-b19", "input": {"recipient": "Priya", "intent": "Send now (ref #19)", "send": true}, "expect_error": "ApprovalRequiredError", "locale": "ta-IN"}
+{"id": "ed-10-b20", "input": {"recipient": "Priya", "intent": "Send now (ref #20)", "send": true}, "auto_approve": true, "expected": {"status": "sent"}, "locale": "te-IN"}
+{"id": "ed-01-b21", "input": {"recipient": "Priya", "intent": "Confirm meeting #1 (ref #21)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "bn-IN"}
+{"id": "ed-02-b22", "input": {"recipient": "Priya", "intent": "Confirm meeting #2 (ref #22)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "es"}
+{"id": "ed-03-b23", "input": {"recipient": "Priya", "intent": "Confirm meeting #3 (ref #23)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "fr"}
+{"id": "ed-04-b24", "input": {"recipient": "Priya", "intent": "Confirm meeting #4 (ref #24)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "en"}
+{"id": "ed-05-b25", "input": {"recipient": "Priya", "intent": "Confirm meeting #5 (ref #25)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "hi-IN"}
+{"id": "ed-06-b26", "input": {"recipient": "Priya", "intent": "Confirm meeting #6 (ref #26)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "mr-IN"}
+{"id": "ed-07-b27", "input": {"recipient": "Priya", "intent": "Confirm meeting #7 (ref #27)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "ta-IN"}
+{"id": "ed-08-b28", "input": {"recipient": "Priya", "intent": "Confirm meeting #8 (ref #28)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "te-IN"}
+{"id": "ed-09-b29", "input": {"recipient": "Priya", "intent": "Send now (ref #29)", "send": true}, "expect_error": "ApprovalRequiredError", "locale": "bn-IN"}
+{"id": "ed-10-b30", "input": {"recipient": "Priya", "intent": "Send now (ref #30)", "send": true}, "auto_approve": true, "expected": {"status": "sent"}, "locale": "es"}
+{"id": "ed-01-b31", "input": {"recipient": "Priya", "intent": "Confirm meeting #1 (ref #31)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "fr"}
+{"id": "ed-02-b32", "input": {"recipient": "Priya", "intent": "Confirm meeting #2 (ref #32)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "en"}
+{"id": "ed-03-b33", "input": {"recipient": "Priya", "intent": "Confirm meeting #3 (ref #33)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "hi-IN"}
+{"id": "ed-04-b34", "input": {"recipient": "Priya", "intent": "Confirm meeting #4 (ref #34)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "mr-IN"}
+{"id": "ed-05-b35", "input": {"recipient": "Priya", "intent": "Confirm meeting #5 (ref #35)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "ta-IN"}
+{"id": "ed-06-b36", "input": {"recipient": "Priya", "intent": "Confirm meeting #6 (ref #36)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "te-IN"}
+{"id": "ed-07-b37", "input": {"recipient": "Priya", "intent": "Confirm meeting #7 (ref #37)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "bn-IN"}
+{"id": "ed-08-b38", "input": {"recipient": "Priya", "intent": "Confirm meeting #8 (ref #38)"}, "expected": {"status": "draft_saved"}, "expect_non_empty": ["body"], "locale": "es"}
+{"id": "ed-09-b39", "input": {"recipient": "Priya", "intent": "Send now (ref #39)", "send": true}, "expect_error": "ApprovalRequiredError", "locale": "fr"}
+{"id": "ed-10-b40", "input": {"recipient": "Priya", "intent": "Send now (ref #40)", "send": true}, "auto_approve": true, "expected": {"status": "sent"}, "locale": "en"}

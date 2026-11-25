@@ -1,6 +1,6 @@
 # Chat Summarizer `communication/chat-summarizer`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Extracts key decisions, open questions, and highlights from noisy chat logs.

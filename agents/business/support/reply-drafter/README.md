@@ -1,6 +1,6 @@
 # Reply Drafter `support/reply-drafter`
 
-prototype · P0 · composite · safety S2 · autonomy L1
+beta · P0 · composite · safety S2 · autonomy L1
 
 ## What it does
 Uses RAG Q&A over help docs to assemble polite, accurate draft replies.

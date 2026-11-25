@@ -1,6 +1,6 @@
 # Ticket Triager `support/ticket-triager`
 
-prototype · P0 · atomic · safety S2 · autonomy L1
+beta · P0 · atomic · safety S2 · autonomy L1
 
 ## What it does
 Routes tickets to billing, technical, shipping, or escalation queues with priority levels.

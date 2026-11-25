@@ -1,6 +1,6 @@
 # Meeting Notetaker `meetings/meeting-notetaker`
 
-prototype · P0 · composite · safety S1 · autonomy L1
+beta · P0 · composite · safety S1 · autonomy L1
 
 ## What it does
 Composes speech-to-text and summarization to capture clean meeting records.

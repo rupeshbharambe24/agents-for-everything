@@ -1,6 +1,6 @@
 # Email Drafter `communication/email-drafter`
 
-prototype · P0 · atomic · safety S2 · autonomy L2
+beta · P0 · atomic · safety S2 · autonomy L2
 
 ## What it does
 Generates clean email drafts matching requested intent while gating any send action.

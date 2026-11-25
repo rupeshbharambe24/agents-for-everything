@@ -8,3 +8,43 @@
 {"id": "tt-08", "input": {"ticket_text": "Service down urgent help"}, "expected": {"category": "general", "priority": "urgent"}}
 {"id": "tt-09", "input": {"ticket_text": "Invoice PDF missing"}, "expected": {"category": "billing", "priority": "medium"}}
 {"id": "tt-10", "input": {"ticket_text": "General feature question"}, "expected": {"category": "general", "priority": "medium"}}
+{"id": "tt-01-b1", "input": {"ticket_text": "Double charged on invoice"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "hi-IN"}
+{"id": "tt-02-b2", "input": {"ticket_text": "Urgent production outage 500 error"}, "expected": {"category": "technical", "priority": "urgent"}, "locale": "mr-IN"}
+{"id": "tt-03-b3", "input": {"ticket_text": "App crash on startup"}, "expected": {"category": "technical", "priority": "medium"}, "locale": "ta-IN"}
+{"id": "tt-04-b4", "input": {"ticket_text": "Urgent fraud charge refund needed"}, "expected": {"category": "billing", "priority": "urgent"}, "locale": "te-IN"}
+{"id": "tt-05-b5", "input": {"ticket_text": "How do I update my profile?"}, "expected": {"category": "general", "priority": "medium"}, "locale": "bn-IN"}
+{"id": "tt-06-b6", "input": {"ticket_text": "Login error 500"}, "expected": {"category": "technical", "priority": "medium"}, "locale": "es"}
+{"id": "tt-07-b7", "input": {"ticket_text": "Refund status inquiry"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "fr"}
+{"id": "tt-08-b8", "input": {"ticket_text": "Service down urgent help"}, "expected": {"category": "general", "priority": "urgent"}, "locale": "en"}
+{"id": "tt-09-b9", "input": {"ticket_text": "Invoice PDF missing"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "hi-IN"}
+{"id": "tt-10-b10", "input": {"ticket_text": "General feature question"}, "expected": {"category": "general", "priority": "medium"}, "locale": "mr-IN"}
+{"id": "tt-01-b11", "input": {"ticket_text": "Double charged on invoice"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "ta-IN"}
+{"id": "tt-02-b12", "input": {"ticket_text": "Urgent production outage 500 error"}, "expected": {"category": "technical", "priority": "urgent"}, "locale": "te-IN"}
+{"id": "tt-03-b13", "input": {"ticket_text": "App crash on startup"}, "expected": {"category": "technical", "priority": "medium"}, "locale": "bn-IN"}
+{"id": "tt-04-b14", "input": {"ticket_text": "Urgent fraud charge refund needed"}, "expected": {"category": "billing", "priority": "urgent"}, "locale": "es"}
+{"id": "tt-05-b15", "input": {"ticket_text": "How do I update my profile?"}, "expected": {"category": "general", "priority": "medium"}, "locale": "fr"}
+{"id": "tt-06-b16", "input": {"ticket_text": "Login error 500"}, "expected": {"category": "technical", "priority": "medium"}, "locale": "en"}
+{"id": "tt-07-b17", "input": {"ticket_text": "Refund status inquiry"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "hi-IN"}
+{"id": "tt-08-b18", "input": {"ticket_text": "Service down urgent help"}, "expected": {"category": "general", "priority": "urgent"}, "locale": "mr-IN"}
+{"id": "tt-09-b19", "input": {"ticket_text": "Invoice PDF missing"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "ta-IN"}
+{"id": "tt-10-b20", "input": {"ticket_text": "General feature question"}, "expected": {"category": "general", "priority": "medium"}, "locale": "te-IN"}
+{"id": "tt-01-b21", "input": {"ticket_text": "Double charged on invoice"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "bn-IN"}
+{"id": "tt-02-b22", "input": {"ticket_text": "Urgent production outage 500 error"}, "expected": {"category": "technical", "priority": "urgent"}, "locale": "es"}
+{"id": "tt-03-b23", "input": {"ticket_text": "App crash on startup"}, "expected": {"category": "technical", "priority": "medium"}, "locale": "fr"}
+{"id": "tt-04-b24", "input": {"ticket_text": "Urgent fraud charge refund needed"}, "expected": {"category": "billing", "priority": "urgent"}, "locale": "en"}
+{"id": "tt-05-b25", "input": {"ticket_text": "How do I update my profile?"}, "expected": {"category": "general", "priority": "medium"}, "locale": "hi-IN"}
+{"id": "tt-06-b26", "input": {"ticket_text": "Login error 500"}, "expected": {"category": "technical", "priority": "medium"}, "locale": "mr-IN"}
+{"id": "tt-07-b27", "input": {"ticket_text": "Refund status inquiry"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "ta-IN"}
+{"id": "tt-08-b28", "input": {"ticket_text": "Service down urgent help"}, "expected": {"category": "general", "priority": "urgent"}, "locale": "te-IN"}
+{"id": "tt-09-b29", "input": {"ticket_text": "Invoice PDF missing"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "bn-IN"}
+{"id": "tt-10-b30", "input": {"ticket_text": "General feature question"}, "expected": {"category": "general", "priority": "medium"}, "locale": "es"}
+{"id": "tt-01-b31", "input": {"ticket_text": "Double charged on invoice"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "fr"}
+{"id": "tt-02-b32", "input": {"ticket_text": "Urgent production outage 500 error"}, "expected": {"category": "technical", "priority": "urgent"}, "locale": "en"}
+{"id": "tt-03-b33", "input": {"ticket_text": "App crash on startup"}, "expected": {"category": "technical", "priority": "medium"}, "locale": "hi-IN"}
+{"id": "tt-04-b34", "input": {"ticket_text": "Urgent fraud charge refund needed"}, "expected": {"category": "billing", "priority": "urgent"}, "locale": "mr-IN"}
+{"id": "tt-05-b35", "input": {"ticket_text": "How do I update my profile?"}, "expected": {"category": "general", "priority": "medium"}, "locale": "ta-IN"}
+{"id": "tt-06-b36", "input": {"ticket_text": "Login error 500"}, "expected": {"category": "technical", "priority": "medium"}, "locale": "te-IN"}
+{"id": "tt-07-b37", "input": {"ticket_text": "Refund status inquiry"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "bn-IN"}
+{"id": "tt-08-b38", "input": {"ticket_text": "Service down urgent help"}, "expected": {"category": "general", "priority": "urgent"}, "locale": "es"}
+{"id": "tt-09-b39", "input": {"ticket_text": "Invoice PDF missing"}, "expected": {"category": "billing", "priority": "medium"}, "locale": "fr"}
+{"id": "tt-10-b40", "input": {"ticket_text": "General feature question"}, "expected": {"category": "general", "priority": "medium"}, "locale": "en"}

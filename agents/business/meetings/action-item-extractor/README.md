@@ -1,6 +1,6 @@
 # Action Item Extractor `meetings/action-item-extractor`
 
-prototype · P0 · atomic · safety S2 · autonomy L1
+beta · P0 · atomic · safety S2 · autonomy L1
 
 ## What it does
 Transforms unstructured notes into schema-valid Task arrays.

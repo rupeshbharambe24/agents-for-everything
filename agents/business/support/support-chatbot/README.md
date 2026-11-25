@@ -1,6 +1,6 @@
 # Support Assistant `support/support-chatbot`
 
-prototype · P0 · composite · safety S1 · autonomy L1
+beta · P0 · composite · safety S1 · autonomy L1
 
 ## What it does
 Composes RAG Q&A to resolve tier-1 support inquiries accurately without hallucinating policies.

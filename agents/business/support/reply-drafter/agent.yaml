@@ -7,7 +7,7 @@ metadata:
   family: business
   category: support
   tier: composite
-  maturity: prototype
+  maturity: beta
   priority: P0
   tags: ["support", "reply-drafter"]
   maintainers: ["@rupeshbharambe24"]

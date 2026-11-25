@@ -1,6 +1,6 @@
 # Inbox Triager `communication/inbox-triager`
 
-prototype · P0 · atomic · safety S1 · autonomy L1
+beta · P0 · atomic · safety S1 · autonomy L1
 
 ## What it does
 Triage incoming email batches by urgency and actionability without sending replies.

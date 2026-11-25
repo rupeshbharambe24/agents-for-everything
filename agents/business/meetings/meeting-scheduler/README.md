@@ -1,6 +1,6 @@
 # Meeting Scheduler `meetings/meeting-scheduler`
 
-prototype · P0 · composite · safety S3 · autonomy L2
+beta · P0 · composite · safety S3 · autonomy L2
 
 ## What it does
 Coordinates free/busy windows across participants and drafts calendar invites safely.
