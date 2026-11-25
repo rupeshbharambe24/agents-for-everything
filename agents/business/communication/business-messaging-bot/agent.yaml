@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: communication/business-messaging-bot
+  name: "WhatsApp/SMS Business Agent"
+  version: 0.1.0
+  family: business
+  category: communication
+  tier: composite
+  maturity: prototype
+  priority: P1
+  tags: ["communication", "business-messaging-bot"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Handles opted-in customer messaging over WhatsApp/SMS with templates and human handoff."
+  purpose: "Handles opted-in customer messaging over WhatsApp/SMS with templates and human handoff."
+  pattern: augmented-llm
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/chat"]
+    optional: []
+  uses_agents: ["support/support-chatbot"]
+  memory: none
+  safety:
+    level: S3
+    side_effects: ["communication-action"]
+    approval_required_for: ["send_customer_message"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]

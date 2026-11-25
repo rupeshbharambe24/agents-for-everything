@@ -1,0 +1,10 @@
+{"id": "busi-01", "input": {"input": "Sample business-messaging-bot request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "busi-02", "input": {"input": "Sample business-messaging-bot request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "busi-03", "input": {"input": "Sample business-messaging-bot request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "busi-04", "input": {"input": "Sample business-messaging-bot request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "busi-05", "input": {"input": "Sample business-messaging-bot request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "busi-06", "input": {"input": "Sample business-messaging-bot request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "busi-07", "input": {"input": "Sample business-messaging-bot request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "busi-08", "input": {"input": "Sample business-messaging-bot request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "busi-09", "input": {"input": "Sample business-messaging-bot request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "busi-10", "input": {"input": "Sample business-messaging-bot request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}
