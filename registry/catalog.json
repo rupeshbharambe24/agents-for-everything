@@ -1,12 +1,71 @@
 {
   "apiVersion": "afe/v1",
   "counts": {
-    "agents": 66,
-    "teams": 6,
-    "recipes": 3,
-    "mcp_servers": 15
+    "agents": 236,
+    "teams": 19,
+    "recipes": 8,
+    "mcp_servers": 30
   },
   "agents": [
+    {
+      "id": "browser/page-change-monitor",
+      "name": "Page Change Monitor",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "browser",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Compares page snapshots for price, stock, or policy changes and emits concise diffs.",
+      "tools": {
+        "required": [
+          "afe/http",
+          "afe/browser"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "browser",
+        "page-change-monitor"
+      ],
+      "path": "agents/action/browser/page-change-monitor"
+    },
+    {
+      "id": "browser/site-crawler",
+      "name": "Site Crawler",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "browser",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Crawls allowed paths on a site respecting robots.txt to build a clean sitemap and page index.",
+      "tools": {
+        "required": [
+          "afe/http"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "browser",
+        "site-crawler"
+      ],
+      "path": "agents/action/browser/site-crawler"
+    },
     {
       "id": "browser/web-form-filler",
       "name": "Web Form Filler",
@@ -14,7 +73,7 @@
       "family": "action",
       "category": "browser",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L2",
@@ -43,7 +102,7 @@
       "family": "action",
       "category": "browser",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "react",
       "autonomy": "L2",
@@ -75,7 +134,7 @@
       "family": "action",
       "category": "browser",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -99,13 +158,104 @@
       "path": "agents/action/browser/web-scraper"
     },
     {
+      "id": "browser/web-tester",
+      "name": "Web App Tester",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "browser",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Walks through staging web flows, generates Playwright checks, and captures bug reports.",
+      "tools": {
+        "required": [
+          "afe/browser"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "browser/web-navigator"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "browser",
+        "web-tester"
+      ],
+      "path": "agents/action/browser/web-tester"
+    },
+    {
+      "id": "computer-use/app-automator",
+      "name": "App Automator",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "computer-use",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Automates desktop apps cleanly using OS accessibility APIs (AppleScript, UI Automation, AT-SPI).",
+      "tools": {
+        "required": [
+          "afe/shell-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "computer-use",
+        "app-automator"
+      ],
+      "path": "agents/action/computer-use/app-automator"
+    },
+    {
+      "id": "computer-use/desktop-operator",
+      "name": "Desktop Operator",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "computer-use",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Operates native desktop apps via screenshots, mouse, and keyboard with approval gates.",
+      "tools": {
+        "required": [
+          "afe/browser"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "vision/screenshot-understander"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "computer-use",
+        "desktop-operator"
+      ],
+      "path": "agents/action/computer-use/desktop-operator"
+    },
+    {
       "id": "computer-use/shell-operator",
       "name": "Shell Operator",
       "version": "0.1.0",
       "family": "action",
       "category": "computer-use",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L2",
@@ -128,13 +278,131 @@
       "path": "agents/action/computer-use/shell-operator"
     },
     {
+      "id": "documents/doc-classifier",
+      "name": "Document Classifier",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Identifies document type (invoice, contract, ID, bank statement, resume) for routing.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "doc-classifier"
+      ],
+      "path": "agents/action/documents/doc-classifier"
+    },
+    {
+      "id": "documents/doc-comparer",
+      "name": "Document Comparer",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Generates redline diffs and plain-language summaries between two document versions.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "doc-comparer"
+      ],
+      "path": "agents/action/documents/doc-comparer"
+    },
+    {
+      "id": "documents/doc-generator",
+      "name": "Document Generator",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Populates document templates with validated structured data into clean Markdown/DOCX.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "doc-generator"
+      ],
+      "path": "agents/action/documents/doc-generator"
+    },
+    {
+      "id": "documents/doc-redactor",
+      "name": "Document Redactor",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Permanently removes sensitive PII spans from documents prior to external sharing.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "guardrails/pii-redactor"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "doc-redactor"
+      ],
+      "path": "agents/action/documents/doc-redactor"
+    },
+    {
       "id": "documents/document-parser",
       "name": "Document Parser",
       "version": "0.1.0",
       "family": "action",
       "category": "documents",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -158,13 +426,43 @@
       "path": "agents/action/documents/document-parser"
     },
     {
+      "id": "documents/file-finder",
+      "name": "File Finder",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Finds local or indexed files from natural descriptions, timestamps, and keywords.",
+      "tools": {
+        "required": [
+          "afe/filesystem",
+          "afe/vector-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "file-finder"
+      ],
+      "path": "agents/action/documents/file-finder"
+    },
+    {
       "id": "documents/file-organizer",
       "name": "File Organizer",
       "version": "0.1.0",
       "family": "action",
       "category": "documents",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L2",
@@ -187,13 +485,42 @@
       "path": "agents/action/documents/file-organizer"
     },
     {
+      "id": "documents/format-converter",
+      "name": "Format Converter",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Plans and converts files across Markdown, CSV, JSON, DOCX, and PDF safely.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "format-converter"
+      ],
+      "path": "agents/action/documents/format-converter"
+    },
+    {
       "id": "documents/invoice-receipt-parser",
       "name": "Invoice & Receipt Parser",
       "version": "0.1.0",
       "family": "action",
       "category": "documents",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -217,13 +544,105 @@
       "path": "agents/action/documents/invoice-receipt-parser"
     },
     {
+      "id": "documents/long-doc-navigator",
+      "name": "Long Document Navigator",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Navigates lengthy manuals, regulations, or annual reports with page-level Q&A.",
+      "tools": {
+        "required": [
+          "afe/documents",
+          "afe/vector-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/rag-qa"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "long-doc-navigator"
+      ],
+      "path": "agents/action/documents/long-doc-navigator"
+    },
+    {
+      "id": "documents/pdf-form-filler",
+      "name": "PDF Form Filler",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Populates fillable PDF form fields from validated JSON without submitting autonomously.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "pdf-form-filler"
+      ],
+      "path": "agents/action/documents/pdf-form-filler"
+    },
+    {
+      "id": "documents/slide-deck-builder",
+      "name": "Slide Deck Builder",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "documents",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Transforms outlines or reports into structured presentation slides and speaker notes.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "text/summarizer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "documents",
+        "slide-deck-builder"
+      ],
+      "path": "agents/action/documents/slide-deck-builder"
+    },
+    {
       "id": "documents/spreadsheet-agent",
       "name": "Spreadsheet Agent",
       "version": "0.1.0",
       "family": "action",
       "category": "documents",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -252,7 +671,7 @@
       "family": "action",
       "category": "documents",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -282,7 +701,7 @@
       "family": "action",
       "category": "integration",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L2",
@@ -305,13 +724,250 @@
       "path": "agents/action/integration/api-caller"
     },
     {
+      "id": "integration/mcp-server-generator",
+      "name": "MCP Server Generator",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "integration",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Scaffolds a typed afe/v1 MCP server wrapper from an OpenAPI spec or CLI.",
+      "tools": {
+        "required": [
+          "afe/python-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "integration",
+        "mcp-server-generator"
+      ],
+      "path": "agents/action/integration/mcp-server-generator"
+    },
+    {
+      "id": "integration/notification-dispatcher",
+      "name": "Notification Dispatcher",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "integration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Routes alerts to email, chat, or SMS respecting quiet hours and user approval.",
+      "tools": {
+        "required": [
+          "afe/email",
+          "afe/chat"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "integration",
+        "notification-dispatcher"
+      ],
+      "path": "agents/action/integration/notification-dispatcher"
+    },
+    {
+      "id": "integration/webhook-handler",
+      "name": "Event Handler",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "integration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Classifies incoming webhooks and dispatches the appropriate downstream agent.",
+      "tools": {
+        "required": [
+          "afe/observability"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "integration",
+        "webhook-handler"
+      ],
+      "path": "agents/action/integration/webhook-handler"
+    },
+    {
+      "id": "integration/workflow-builder",
+      "name": "Workflow Builder",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "integration",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Converts plain-language automation goals into structured afe/v1 team or DAG specs.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [
+        "orchestration/task-planner"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "integration",
+        "workflow-builder"
+      ],
+      "path": "agents/action/integration/workflow-builder"
+    },
+    {
+      "id": "physical/smart-home-controller",
+      "name": "Smart Home Controller",
+      "version": "0.1.0",
+      "family": "action",
+      "category": "physical",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Controls lights, climate, and locks via Home Assistant/Matter with confirmation on security devices.",
+      "tools": {
+        "required": [
+          "afe/home-automation"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "physical",
+        "smart-home-controller"
+      ],
+      "path": "agents/action/physical/smart-home-controller"
+    },
+    {
+      "id": "ai-engineering/prompt-engineer",
+      "name": "Prompt Engineer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "ai-engineering",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Drafts and refines structured system prompts measured against eval fixtures.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "ai-engineering",
+        "prompt-engineer"
+      ],
+      "path": "agents/builders/ai-engineering/prompt-engineer"
+    },
+    {
+      "id": "ai-engineering/rag-builder",
+      "name": "RAG Builder",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "ai-engineering",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Configures chunking, hybrid retrieval, and reranking parameters tuned against eval recall.",
+      "tools": {
+        "required": [
+          "afe/vector-store",
+          "afe/python-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "memory/knowledge-ingestor",
+        "search/semantic-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "ai-engineering",
+        "rag-builder"
+      ],
+      "path": "agents/builders/ai-engineering/rag-builder"
+    },
+    {
+      "id": "coding/app-builder",
+      "name": "App Prototyper",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Scaffolds and wires a working full-stack prototype from a product spec.",
+      "tools": {
+        "required": [
+          "afe/shell-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "coding/code-generator"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "app-builder"
+      ],
+      "path": "agents/builders/coding/app-builder"
+    },
+    {
       "id": "coding/bug-fixer",
       "name": "Bug Fixer",
       "version": "0.1.0",
       "family": "builders",
       "category": "coding",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -338,13 +994,72 @@
       "path": "agents/builders/coding/bug-fixer"
     },
     {
+      "id": "coding/ci-fixer",
+      "name": "CI Fixer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Diagnoses failing CI workflow logs and proposes minimal patches.",
+      "tools": {
+        "required": [
+          "afe/observability",
+          "afe/filesystem"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "devops/log-analyzer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "ci-fixer"
+      ],
+      "path": "agents/builders/coding/ci-fixer"
+    },
+    {
+      "id": "coding/code-explainer",
+      "name": "Code Explainer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Explains source files line-by-line or at system-architecture level for newcomers.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "code-explainer"
+      ],
+      "path": "agents/builders/coding/code-explainer"
+    },
+    {
       "id": "coding/code-generator",
       "name": "Feature Implementer",
       "version": "0.1.0",
       "family": "builders",
       "category": "coding",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -376,7 +1091,7 @@
       "family": "builders",
       "category": "coding",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -405,7 +1120,7 @@
       "family": "builders",
       "category": "coding",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -430,13 +1145,221 @@
       "path": "agents/builders/coding/codebase-qa"
     },
     {
+      "id": "coding/dependency-updater",
+      "name": "Dependency Updater",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Upgrades dependencies safely, summarizes changelogs, and fixes breaking API changes.",
+      "tools": {
+        "required": [
+          "afe/filesystem",
+          "afe/shell-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "coding/test-writer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "dependency-updater"
+      ],
+      "path": "agents/builders/coding/dependency-updater"
+    },
+    {
+      "id": "coding/doc-writer",
+      "name": "Code Documentation Writer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Generates docstrings, READMEs, and API reference docs directly from source code.",
+      "tools": {
+        "required": [
+          "afe/filesystem"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "doc-writer"
+      ],
+      "path": "agents/builders/coding/doc-writer"
+    },
+    {
+      "id": "coding/frontend-builder",
+      "name": "Frontend Builder",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Builds accessible UI components and pages from specs or design tokens.",
+      "tools": {
+        "required": [
+          "afe/filesystem",
+          "afe/browser"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "coding/test-writer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "frontend-builder"
+      ],
+      "path": "agents/builders/coding/frontend-builder"
+    },
+    {
+      "id": "coding/issue-triager",
+      "name": "Issue Triager",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Labels, deduplicates, and prioritizes repository issues and asks for missing repro steps.",
+      "tools": {
+        "required": [
+          "afe/issue-tracker"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "issue-triager"
+      ],
+      "path": "agents/builders/coding/issue-triager"
+    },
+    {
+      "id": "coding/pr-describer",
+      "name": "PR & Commit Writer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Generates structured PR summaries, conventional commit messages, and changelog bullets from diffs.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "pr-describer"
+      ],
+      "path": "agents/builders/coding/pr-describer"
+    },
+    {
+      "id": "coding/refactorer",
+      "name": "Refactorer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Performs behaviour-preserving code refactors verified by existing tests.",
+      "tools": {
+        "required": [
+          "afe/filesystem",
+          "afe/shell-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "refactorer"
+      ],
+      "path": "agents/builders/coding/refactorer"
+    },
+    {
+      "id": "coding/scaffolder",
+      "name": "Project Scaffolder",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "coding",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Generates new project boilerplate, CI configs, and linting setups cleanly.",
+      "tools": {
+        "required": [
+          "afe/shell-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "coding",
+        "scaffolder"
+      ],
+      "path": "agents/builders/coding/scaffolder"
+    },
+    {
       "id": "coding/test-writer",
       "name": "Test Writer",
       "version": "0.1.0",
       "family": "builders",
       "category": "coding",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -460,13 +1383,69 @@
       "path": "agents/builders/coding/test-writer"
     },
     {
+      "id": "data/anomaly-detector",
+      "name": "Anomaly Detector",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "data",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Detects statistical outliers in numeric time series using mean and standard deviation.",
+      "tools": {
+        "required": [
+          "afe/python-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "data",
+        "anomaly-detector"
+      ],
+      "path": "agents/builders/data/anomaly-detector"
+    },
+    {
+      "id": "data/chart-maker",
+      "name": "Chart Maker",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "data",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Selects appropriate chart encodings and emits Vega-Lite/chart specs with captions.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "data",
+        "chart-maker"
+      ],
+      "path": "agents/builders/data/chart-maker"
+    },
+    {
       "id": "data/data-analyst",
       "name": "Data Analyst",
       "version": "0.1.0",
       "family": "builders",
       "category": "data",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -497,7 +1476,7 @@
       "family": "builders",
       "category": "data",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -520,13 +1499,129 @@
       "path": "agents/builders/data/data-cleaner"
     },
     {
+      "id": "data/data-labeler",
+      "name": "Data Labeler",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "data",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Labels datasets against guidelines and routes low-confidence rows for human review.",
+      "tools": {
+        "required": [
+          "afe/ticketing"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "data",
+        "data-labeler"
+      ],
+      "path": "agents/builders/data/data-labeler"
+    },
+    {
+      "id": "data/forecaster",
+      "name": "Forecaster",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "data",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Generates baseline time-series forecasts with confidence bands and assumptions.",
+      "tools": {
+        "required": [
+          "afe/python-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "data",
+        "forecaster"
+      ],
+      "path": "agents/builders/data/forecaster"
+    },
+    {
+      "id": "data/metric-explainer",
+      "name": "Metric Explainer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "data",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Drills into dimension slices to explain why a KPI moved week-over-week.",
+      "tools": {
+        "required": [
+          "afe/sql"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "data/text-to-sql"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "data",
+        "metric-explainer"
+      ],
+      "path": "agents/builders/data/metric-explainer"
+    },
+    {
+      "id": "data/schema-mapper",
+      "name": "Schema Mapper",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "data",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Maps source table columns to target schemas with explicit transformation rules.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "data",
+        "schema-mapper"
+      ],
+      "path": "agents/builders/data/schema-mapper"
+    },
+    {
       "id": "data/text-to-sql",
       "name": "Text-to-SQL",
       "version": "0.1.0",
       "family": "builders",
       "category": "data",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -549,13 +1644,132 @@
       "path": "agents/builders/data/text-to-sql"
     },
     {
+      "id": "devops/alert-triager",
+      "name": "Alert Triager",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "devops",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Deduplicates and prioritizes noisy alerts by blast radius and SLO burn.",
+      "tools": {
+        "required": [
+          "afe/observability"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "devops",
+        "alert-triager"
+      ],
+      "path": "agents/builders/devops/alert-triager"
+    },
+    {
+      "id": "devops/cloud-cost-optimizer",
+      "name": "Cloud Cost Optimizer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "devops",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Identifies idle or oversized cloud resources and calculates monthly savings.",
+      "tools": {
+        "required": [
+          "afe/cloud"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "devops",
+        "cloud-cost-optimizer"
+      ],
+      "path": "agents/builders/devops/cloud-cost-optimizer"
+    },
+    {
+      "id": "devops/iac-generator",
+      "name": "Infrastructure-as-Code Writer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "devops",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Generates Terraform, Pulumi, or Kubernetes manifests with least-privilege checks.",
+      "tools": {
+        "required": [
+          "afe/shell-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "devops",
+        "iac-generator"
+      ],
+      "path": "agents/builders/devops/iac-generator"
+    },
+    {
+      "id": "devops/incident-responder",
+      "name": "Incident Responder",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "devops",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Correlates alerts, metrics, and recent deploys; suggests mitigations and runs approved runbooks.",
+      "tools": {
+        "required": [
+          "afe/observability",
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "devops/log-analyzer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "devops",
+        "incident-responder"
+      ],
+      "path": "agents/builders/devops/incident-responder"
+    },
+    {
       "id": "devops/log-analyzer",
       "name": "Log Analyzer",
       "version": "0.1.0",
       "family": "builders",
       "category": "devops",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -578,13 +1792,225 @@
       "path": "agents/builders/devops/log-analyzer"
     },
     {
+      "id": "devops/postmortem-writer",
+      "name": "Postmortem Writer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "devops",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Drafts blameless incident postmortems with timelines, root causes, and preventive tasks.",
+      "tools": {
+        "required": [
+          "afe/chat",
+          "afe/observability"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "devops",
+        "postmortem-writer"
+      ],
+      "path": "agents/builders/devops/postmortem-writer"
+    },
+    {
+      "id": "it-support/helpdesk-agent",
+      "name": "IT Helpdesk Agent",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "it-support",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Troubleshoots first-line IT requests using KB docs and creates structured tickets when stuck.",
+      "tools": {
+        "required": [
+          "afe/vector-store",
+          "afe/ticketing"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/rag-qa"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "it-support",
+        "helpdesk-agent"
+      ],
+      "path": "agents/builders/it-support/helpdesk-agent"
+    },
+    {
+      "id": "security/phishing-analyzer",
+      "name": "Phishing Analyzer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "security",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Analyzes suspicious email headers, links, and urgency lures for phishing indicators.",
+      "tools": {
+        "required": [
+          "afe/python-sandbox",
+          "afe/threat-intel"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "security",
+        "phishing-analyzer"
+      ],
+      "path": "agents/builders/security/phishing-analyzer"
+    },
+    {
+      "id": "security/secret-scanner",
+      "name": "Secret Scanner",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "security",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Scans repository text for leaked API keys, tokens, and private keys and guides rotation.",
+      "tools": {
+        "required": [
+          "afe/filesystem",
+          "afe/threat-intel"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "security",
+        "secret-scanner"
+      ],
+      "path": "agents/builders/security/secret-scanner"
+    },
+    {
+      "id": "security/secure-code-reviewer",
+      "name": "Secure Code Reviewer",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "security",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Identifies security flaws (injection, hardcoded creds, insecure deserialization) in code diffs.",
+      "tools": {
+        "required": [
+          "afe/filesystem"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "security",
+        "secure-code-reviewer"
+      ],
+      "path": "agents/builders/security/secure-code-reviewer"
+    },
+    {
+      "id": "security/vuln-triager",
+      "name": "Vulnerability Triager",
+      "version": "0.1.0",
+      "family": "builders",
+      "category": "security",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Prioritizes scanner CVEs by reachability, exploitability, and asset exposure.",
+      "tools": {
+        "required": [
+          "afe/threat-intel",
+          "afe/filesystem"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "security",
+        "vuln-triager"
+      ],
+      "path": "agents/builders/security/vuln-triager"
+    },
+    {
+      "id": "communication/business-messaging-bot",
+      "name": "WhatsApp/SMS Business Agent",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "communication",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Handles opted-in customer messaging over WhatsApp/SMS with templates and human handoff.",
+      "tools": {
+        "required": [
+          "afe/chat"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "support/support-chatbot"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "communication",
+        "business-messaging-bot"
+      ],
+      "path": "agents/business/communication/business-messaging-bot"
+    },
+    {
       "id": "communication/chat-summarizer",
       "name": "Chat Summarizer",
       "version": "0.1.0",
       "family": "business",
       "category": "communication",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -613,7 +2039,7 @@
       "family": "business",
       "category": "communication",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L2",
@@ -636,13 +2062,42 @@
       "path": "agents/business/communication/email-drafter"
     },
     {
+      "id": "communication/follow-up-tracker",
+      "name": "Follow-up Tracker",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "communication",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Tracks sent email threads awaiting replies and prepares polite follow-up drafts.",
+      "tools": {
+        "required": [
+          "afe/email"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "communication",
+        "follow-up-tracker"
+      ],
+      "path": "agents/business/communication/follow-up-tracker"
+    },
+    {
       "id": "communication/inbox-triager",
       "name": "Inbox Triager",
       "version": "0.1.0",
       "family": "business",
       "category": "communication",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -665,13 +2120,804 @@
       "path": "agents/business/communication/inbox-triager"
     },
     {
+      "id": "communication/newsletter-digest",
+      "name": "Newsletter Digest",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "communication",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Merges multiple incoming newsletters into one structured daily or weekly digest.",
+      "tools": {
+        "required": [
+          "afe/email"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "text/summarizer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "communication",
+        "newsletter-digest"
+      ],
+      "path": "agents/business/communication/newsletter-digest"
+    },
+    {
+      "id": "content/blog-writer",
+      "name": "Blog Writer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "content",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Researches, outlines, and drafts source-backed articles tuned for readability.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/web-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "content",
+        "blog-writer"
+      ],
+      "path": "agents/business/content/blog-writer"
+    },
+    {
+      "id": "content/content-repurposer",
+      "name": "Content Repurposer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "content",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Transforms one source asset into blog posts, newsletter snippets, and social threads.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [
+        "text/summarizer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "content",
+        "content-repurposer"
+      ],
+      "path": "agents/business/content/content-repurposer"
+    },
+    {
+      "id": "content/copywriter",
+      "name": "Copywriter",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "content",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Writes landing-page, product, and campaign copy in multiple clear variants.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "content",
+        "copywriter"
+      ],
+      "path": "agents/business/content/copywriter"
+    },
+    {
+      "id": "content/editor",
+      "name": "Editor",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "content",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Performs structural and clarity editing with tracked suggestions and rationale.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "content",
+        "editor"
+      ],
+      "path": "agents/business/content/editor"
+    },
+    {
+      "id": "content/seo-optimizer",
+      "name": "On-page SEO Optimizer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "content",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Improves headings, keyword coverage, metadata, and internal linking structure.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "content",
+        "seo-optimizer"
+      ],
+      "path": "agents/business/content/seo-optimizer"
+    },
+    {
+      "id": "content/social-post-writer",
+      "name": "Social Post Writer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "content",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Adapts topics or articles into platform-ready posts and threads.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "content",
+        "social-post-writer"
+      ],
+      "path": "agents/business/content/social-post-writer"
+    },
+    {
+      "id": "content/technical-writer",
+      "name": "Technical Writer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "content",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Writes user guides, tutorials, runbooks, and how-to docs from product specs.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "content",
+        "technical-writer"
+      ],
+      "path": "agents/business/content/technical-writer"
+    },
+    {
+      "id": "finance/accounts-payable",
+      "name": "Accounts Payable Agent",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "finance",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S4",
+      "summary": "Matches parsed invoices against PO/receipt totals and prepares an approval queue (no autonomous payment).",
+      "tools": {
+        "required": [
+          "afe/accounting"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "documents/invoice-receipt-parser"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "finance",
+        "accounts-payable"
+      ],
+      "path": "agents/business/finance/accounts-payable"
+    },
+    {
+      "id": "finance/bank-reconciler",
+      "name": "Bank Reconciler",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "finance",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Matches bank statement lines to accounting ledger entries and surfaces unmatched exceptions.",
+      "tools": {
+        "required": [
+          "afe/accounting"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "finance",
+        "bank-reconciler"
+      ],
+      "path": "agents/business/finance/bank-reconciler"
+    },
+    {
+      "id": "finance/expense-auditor",
+      "name": "Expense Auditor",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "finance",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Audits expense claims for duplicate receipts, policy cap breaches, and missing fields.",
+      "tools": {
+        "required": [
+          "afe/accounting"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "finance",
+        "expense-auditor"
+      ],
+      "path": "agents/business/finance/expense-auditor"
+    },
+    {
+      "id": "finance/financial-statement-analyzer",
+      "name": "Financial Statement Analyzer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "finance",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Computes key profitability, liquidity, and leverage ratios from financial statements.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "documents/document-parser"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "finance",
+        "financial-statement-analyzer"
+      ],
+      "path": "agents/business/finance/financial-statement-analyzer"
+    },
+    {
+      "id": "finance/transaction-categorizer",
+      "name": "Transaction Categorizer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "finance",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Classifies bank/card transactions into chart-of-accounts categories with confidence.",
+      "tools": {
+        "required": [
+          "afe/accounting"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "finance",
+        "transaction-categorizer"
+      ],
+      "path": "agents/business/finance/transaction-categorizer"
+    },
+    {
+      "id": "hr/hr-policy-qa",
+      "name": "HR Policy Assistant",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "hr",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Answers employee policy questions (leave, benefits, travel) with citations to official handbooks.",
+      "tools": {
+        "required": [
+          "afe/vector-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/rag-qa"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "hr",
+        "hr-policy-qa"
+      ],
+      "path": "agents/business/hr/hr-policy-qa"
+    },
+    {
+      "id": "hr/jd-writer",
+      "name": "Job Description Writer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "hr",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Writes clear, structured, inclusive job descriptions from role requirements.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "hr",
+        "jd-writer"
+      ],
+      "path": "agents/business/hr/jd-writer"
+    },
+    {
+      "id": "hr/onboarding-buddy",
+      "name": "Onboarding Buddy",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "hr",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Guides new hires through 30-60-90 checklists, tools setup, and internal FAQs.",
+      "tools": {
+        "required": [
+          "afe/hris",
+          "afe/vector-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/rag-qa"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "hr",
+        "onboarding-buddy"
+      ],
+      "path": "agents/business/hr/onboarding-buddy"
+    },
+    {
+      "id": "hr/resume-screener",
+      "name": "Resume Screener",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "hr",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S4",
+      "summary": "Scores candidate summaries transparently against explicit rubric criteria for human review.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "hr",
+        "resume-screener"
+      ],
+      "path": "agents/business/hr/resume-screener"
+    },
+    {
+      "id": "legal/compliance-monitor",
+      "name": "Regulatory Change Monitor",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "legal",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Tracks regulatory notices across jurisdictions and maps updates to internal obligations.",
+      "tools": {
+        "required": [
+          "afe/news-api"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/news-monitor"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "legal",
+        "compliance-monitor"
+      ],
+      "path": "agents/business/legal/compliance-monitor"
+    },
+    {
+      "id": "legal/contract-analyzer",
+      "name": "Contract Analyzer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "legal",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Extracts key clauses (indemnity, auto-renewal, IP, liability cap) and flags deviations from a playbook.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "documents/document-parser"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "legal",
+        "contract-analyzer"
+      ],
+      "path": "agents/business/legal/contract-analyzer"
+    },
+    {
+      "id": "legal/nda-reviewer",
+      "name": "NDA Reviewer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "legal",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Triages incoming NDAs against standard mutual confidentiality playbooks (accept/redline/escalate).",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "legal",
+        "nda-reviewer"
+      ],
+      "path": "agents/business/legal/nda-reviewer"
+    },
+    {
+      "id": "legal/terms-simplifier",
+      "name": "Terms Simplifier",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "legal",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Translates dense terms of service and privacy policies into plain-language risk bullets.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "legal",
+        "terms-simplifier"
+      ],
+      "path": "agents/business/legal/terms-simplifier"
+    },
+    {
+      "id": "marketing/ad-creative-generator",
+      "name": "Ad Creative Generator",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "marketing",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Produces platform-sized ad copy variants and image prompt briefs.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [
+        "vision/image-generator"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "marketing",
+        "ad-creative-generator"
+      ],
+      "path": "agents/business/marketing/ad-creative-generator"
+    },
+    {
+      "id": "marketing/brand-monitor",
+      "name": "Brand Monitor",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "marketing",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Tracks brand mentions and sentiment trends across public web and news sources.",
+      "tools": {
+        "required": [
+          "afe/news-api",
+          "afe/chat"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/news-monitor",
+        "text/sentiment-analyzer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "marketing",
+        "brand-monitor"
+      ],
+      "path": "agents/business/marketing/brand-monitor"
+    },
+    {
+      "id": "marketing/campaign-planner",
+      "name": "Campaign Planner",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "marketing",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Turns marketing goals and budgets into channel plans, messaging, and schedules.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "marketing",
+        "campaign-planner"
+      ],
+      "path": "agents/business/marketing/campaign-planner"
+    },
+    {
+      "id": "marketing/keyword-researcher",
+      "name": "Keyword Researcher",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "marketing",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Clusters target keywords by search intent, relevance, and content opportunity.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "marketing",
+        "keyword-researcher"
+      ],
+      "path": "agents/business/marketing/keyword-researcher"
+    },
+    {
+      "id": "marketing/review-responder",
+      "name": "Review Responder",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "marketing",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Drafts empathetic brand-voice replies to customer reviews and escalates severe complaints.",
+      "tools": {
+        "required": [
+          "afe/http"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "marketing",
+        "review-responder"
+      ],
+      "path": "agents/business/marketing/review-responder"
+    },
+    {
+      "id": "marketing/seo-auditor",
+      "name": "SEO Auditor",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "marketing",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Audits crawled site structure for metadata, broken links, and prioritized technical SEO fixes.",
+      "tools": {
+        "required": [
+          "afe/browser",
+          "afe/http"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "browser/site-crawler"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "marketing",
+        "seo-auditor"
+      ],
+      "path": "agents/business/marketing/seo-auditor"
+    },
+    {
       "id": "meetings/action-item-extractor",
       "name": "Action Item Extractor",
       "version": "0.1.0",
       "family": "business",
       "category": "meetings",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -694,13 +2940,42 @@
       "path": "agents/business/meetings/action-item-extractor"
     },
     {
+      "id": "meetings/meeting-follow-up",
+      "name": "Meeting Follow-up",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "meetings",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Drafts post-meeting recap emails and tracks assigned commitments.",
+      "tools": {
+        "required": [
+          "afe/email"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "meetings",
+        "meeting-follow-up"
+      ],
+      "path": "agents/business/meetings/meeting-follow-up"
+    },
+    {
       "id": "meetings/meeting-notetaker",
       "name": "Meeting Notetaker",
       "version": "0.1.0",
       "family": "business",
       "category": "meetings",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -726,13 +3001,45 @@
       "path": "agents/business/meetings/meeting-notetaker"
     },
     {
+      "id": "meetings/meeting-prep",
+      "name": "Meeting Prep Brief",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "meetings",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Compiles pre-meeting briefs on attendees, prior threads, open items, and suggested agenda.",
+      "tools": {
+        "required": [
+          "afe/calendar",
+          "afe/email"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "text/summarizer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "meetings",
+        "meeting-prep"
+      ],
+      "path": "agents/business/meetings/meeting-prep"
+    },
+    {
       "id": "meetings/meeting-scheduler",
       "name": "Meeting Scheduler",
       "version": "0.1.0",
       "family": "business",
       "category": "meetings",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L2",
@@ -758,13 +3065,453 @@
       "path": "agents/business/meetings/meeting-scheduler"
     },
     {
+      "id": "operations/project-manager",
+      "name": "Project Manager",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "operations",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Builds milestone plans, tracks task progress, and surfaces schedule slippage risks.",
+      "tools": {
+        "required": [
+          "afe/issue-tracker"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "orchestration/task-planner"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "operations",
+        "project-manager"
+      ],
+      "path": "agents/business/operations/project-manager"
+    },
+    {
+      "id": "operations/requirements-analyst",
+      "name": "Requirements Analyst",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "operations",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Transforms stakeholder notes into PRDs, user stories, and testable acceptance criteria.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "operations",
+        "requirements-analyst"
+      ],
+      "path": "agents/business/operations/requirements-analyst"
+    },
+    {
+      "id": "operations/sop-writer",
+      "name": "SOP Writer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "operations",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Converts process recordings, transcripts, or notes into clear step-by-step SOPs.",
+      "tools": {
+        "required": [
+          "afe/stt"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "operations",
+        "sop-writer"
+      ],
+      "path": "agents/business/operations/sop-writer"
+    },
+    {
+      "id": "operations/status-reporter",
+      "name": "Status Reporter",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "operations",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Compiles weekly executive status digests across issue trackers, repos, and team chat.",
+      "tools": {
+        "required": [
+          "afe/issue-tracker",
+          "afe/filesystem",
+          "afe/chat"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "text/summarizer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "operations",
+        "status-reporter"
+      ],
+      "path": "agents/business/operations/status-reporter"
+    },
+    {
+      "id": "sales/account-researcher",
+      "name": "Account Researcher",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "sales",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Builds pre-call briefs summarizing company priorities, leadership, and recent news.",
+      "tools": {
+        "required": [
+          "afe/web-search",
+          "afe/crm"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/web-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "sales",
+        "account-researcher"
+      ],
+      "path": "agents/business/sales/account-researcher"
+    },
+    {
+      "id": "sales/crm-updater",
+      "name": "CRM Updater",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "sales",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Extracts call/meeting takeaways into structured CRM field updates gated by approval.",
+      "tools": {
+        "required": [
+          "afe/crm"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "sales",
+        "crm-updater"
+      ],
+      "path": "agents/business/sales/crm-updater"
+    },
+    {
+      "id": "sales/lead-enricher",
+      "name": "Lead Enricher",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "sales",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Adds public firmographics, industry, and recent news to lead records.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "sales",
+        "lead-enricher"
+      ],
+      "path": "agents/business/sales/lead-enricher"
+    },
+    {
+      "id": "sales/lead-finder",
+      "name": "Lead Finder",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "sales",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Identifies target companies matching an ideal customer profile from public sources.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/web-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "sales",
+        "lead-finder"
+      ],
+      "path": "agents/business/sales/lead-finder"
+    },
+    {
+      "id": "sales/lead-scorer",
+      "name": "Lead Scorer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "sales",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Scores leads transparently by ICP fit and intent signals with reasons.",
+      "tools": {
+        "required": [
+          "afe/crm"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "sales",
+        "lead-scorer"
+      ],
+      "path": "agents/business/sales/lead-scorer"
+    },
+    {
+      "id": "sales/outreach-personalizer",
+      "name": "Outreach Personalizer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "sales",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Drafts tailored outreach email sequences grounded in verified account research (draft only).",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "sales",
+        "outreach-personalizer"
+      ],
+      "path": "agents/business/sales/outreach-personalizer"
+    },
+    {
+      "id": "sales/proposal-generator",
+      "name": "Proposal Generator",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "sales",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Assembles tailored proposals and statements of work from templates and discovery notes.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "sales",
+        "proposal-generator"
+      ],
+      "path": "agents/business/sales/proposal-generator"
+    },
+    {
+      "id": "sales/rfp-responder",
+      "name": "RFP & Questionnaire Responder",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "sales",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Drafts answers to RFPs and security questionnaires from an approved KB, flagging gaps.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/rag-qa"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "sales",
+        "rfp-responder"
+      ],
+      "path": "agents/business/sales/rfp-responder"
+    },
+    {
+      "id": "support/escalation-detector",
+      "name": "Escalation Detector",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "support",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Detects customer frustration, churn signals, legal threats, or safety issues for escalation.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "support",
+        "escalation-detector"
+      ],
+      "path": "agents/business/support/escalation-detector"
+    },
+    {
+      "id": "support/kb-writer",
+      "name": "Knowledge Base Writer",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "support",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Converts resolved support tickets into clean KB articles and highlights missing docs.",
+      "tools": {
+        "required": [
+          "afe/vector-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "support",
+        "kb-writer"
+      ],
+      "path": "agents/business/support/kb-writer"
+    },
+    {
+      "id": "support/order-status-agent",
+      "name": "Order Status Agent",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "support",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Queries order and shipment tracking APIs and explains status clearly to customers.",
+      "tools": {
+        "required": [
+          "afe/http"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "support",
+        "order-status-agent"
+      ],
+      "path": "agents/business/support/order-status-agent"
+    },
+    {
       "id": "support/reply-drafter",
       "name": "Reply Drafter",
       "version": "0.1.0",
       "family": "business",
       "category": "support",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -795,7 +3542,7 @@
       "family": "business",
       "category": "support",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -826,7 +3573,7 @@
       "family": "business",
       "category": "support",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -849,13 +3596,42 @@
       "path": "agents/business/support/ticket-triager"
     },
     {
+      "id": "support/voice-of-customer",
+      "name": "Voice of Customer Analyst",
+      "version": "0.1.0",
+      "family": "business",
+      "category": "support",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Clusters themes across support tickets, reviews, and calls with quantified counts.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [
+        "text/sentiment-analyzer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "support",
+        "voice-of-customer"
+      ],
+      "path": "agents/business/support/voice-of-customer"
+    },
+    {
       "id": "evaluation/llm-judge",
       "name": "LLM Judge",
       "version": "0.1.0",
       "family": "core",
       "category": "evaluation",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "evaluator-optimizer",
       "autonomy": "L1",
@@ -876,13 +3652,100 @@
       "path": "agents/core/evaluation/llm-judge"
     },
     {
+      "id": "evaluation/regression-runner",
+      "name": "Regression Runner",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "evaluation",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Runs eval suites across code or prompt edits and compares pass rates against baselines.",
+      "tools": {
+        "required": [
+          "afe/python-sandbox"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "evaluation/llm-judge"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "evaluation",
+        "regression-runner"
+      ],
+      "path": "agents/core/evaluation/regression-runner"
+    },
+    {
+      "id": "evaluation/test-case-generator",
+      "name": "Test Case Generator",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "evaluation",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Synthesizes normal, edge, and adversarial JSONL eval cases from an agent manifest and schemas.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "evaluation",
+        "test-case-generator"
+      ],
+      "path": "agents/core/evaluation/test-case-generator"
+    },
+    {
+      "id": "guardrails/audit-logger",
+      "name": "Audit Logger",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "guardrails",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Records structured, PII-safe audit trail entries for agent actions and approvals.",
+      "tools": {
+        "required": [
+          "afe/observability"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "guardrails",
+        "audit-logger"
+      ],
+      "path": "agents/core/guardrails/audit-logger"
+    },
+    {
       "id": "guardrails/content-moderator",
       "name": "Content Moderator",
       "version": "0.1.0",
       "family": "core",
       "category": "guardrails",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -909,7 +3772,7 @@
       "family": "core",
       "category": "guardrails",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "reflection",
       "autonomy": "L1",
@@ -936,7 +3799,7 @@
       "family": "core",
       "category": "guardrails",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -957,13 +3820,40 @@
       "path": "agents/core/guardrails/pii-redactor"
     },
     {
+      "id": "guardrails/policy-enforcer",
+      "name": "Action Policy Enforcer",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "guardrails",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Evaluates proposed tool actions against allow/deny/approve rules before execution.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "guardrails",
+        "policy-enforcer"
+      ],
+      "path": "agents/core/guardrails/policy-enforcer"
+    },
+    {
       "id": "guardrails/prompt-injection-detector",
       "name": "Injection Detector",
       "version": "0.1.0",
       "family": "core",
       "category": "guardrails",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -984,13 +3874,100 @@
       "path": "agents/core/guardrails/prompt-injection-detector"
     },
     {
+      "id": "guardrails/red-teamer",
+      "name": "Red Teamer",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "guardrails",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Probes target agents with adversarial prompt-injection and jailbreak test cases.",
+      "tools": {
+        "required": [
+          "afe/threat-intel"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "guardrails/prompt-injection-detector"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "guardrails",
+        "red-teamer"
+      ],
+      "path": "agents/core/guardrails/red-teamer"
+    },
+    {
+      "id": "guardrails/secrets-guard",
+      "name": "Secrets Guard",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "guardrails",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Detects and masks API keys, private keys, and tokens before they enter prompts or logs.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "guardrails",
+        "secrets-guard"
+      ],
+      "path": "agents/core/guardrails/secrets-guard"
+    },
+    {
+      "id": "memory/knowledge-graph-builder",
+      "name": "Knowledge Graph Builder",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "memory",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Extracts entities and typed relationships from documents into structured graph nodes and edges.",
+      "tools": {
+        "required": [
+          "afe/memory-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "memory",
+        "knowledge-graph-builder"
+      ],
+      "path": "agents/core/memory/knowledge-graph-builder"
+    },
+    {
       "id": "memory/knowledge-ingestor",
       "name": "Knowledge Ingestor",
       "version": "0.1.0",
       "family": "core",
       "category": "memory",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "prompt-chaining",
       "autonomy": "L2",
@@ -1020,7 +3997,7 @@
       "family": "core",
       "category": "memory",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1049,7 +4026,7 @@
       "family": "core",
       "category": "memory",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L2",
@@ -1070,13 +4047,154 @@
       "path": "agents/core/memory/memory-writer"
     },
     {
+      "id": "memory/session-summarizer",
+      "name": "Session Summarizer",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "memory",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Writes end-of-session summaries and open follow-up items so the next session resumes cleanly.",
+      "tools": {
+        "required": [
+          "afe/memory-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "memory",
+        "session-summarizer"
+      ],
+      "path": "agents/core/memory/session-summarizer"
+    },
+    {
+      "id": "orchestration/agent-builder",
+      "name": "Agent Factory",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "orchestration",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Generates spec-compliant afe/v1 agent scaffolds from plain-language descriptions.",
+      "tools": {
+        "required": [
+          "afe/filesystem"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "orchestration/task-planner"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "orchestration",
+        "agent-builder"
+      ],
+      "path": "agents/core/orchestration/agent-builder"
+    },
+    {
+      "id": "orchestration/budget-guard",
+      "name": "Cost & Rate Guard",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "orchestration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Tracks tokens, spend, and execution limits; returns allow, throttle, or stop.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "orchestration",
+        "budget-guard"
+      ],
+      "path": "agents/core/orchestration/budget-guard"
+    },
+    {
+      "id": "orchestration/clarifier",
+      "name": "Clarifier",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "orchestration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Detects ambiguous or under-specified requests and asks the fewest clarifying questions.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "orchestration",
+        "clarifier"
+      ],
+      "path": "agents/core/orchestration/clarifier"
+    },
+    {
+      "id": "orchestration/context-manager",
+      "name": "Context Compressor",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "orchestration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Summarizes and prunes long conversation histories to fit token budgets cleanly.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "orchestration",
+        "context-manager"
+      ],
+      "path": "agents/core/orchestration/context-manager"
+    },
+    {
       "id": "orchestration/critic",
       "name": "Critic / Reflector",
       "version": "0.1.0",
       "family": "core",
       "category": "orchestration",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "reflection",
       "autonomy": "L1",
@@ -1097,13 +4215,67 @@
       "path": "agents/core/orchestration/critic"
     },
     {
+      "id": "orchestration/error-recovery",
+      "name": "Retry & Recovery",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "orchestration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Diagnoses transient tool timeouts or schema failures and recommends safe recovery actions.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "orchestration",
+        "error-recovery"
+      ],
+      "path": "agents/core/orchestration/error-recovery"
+    },
+    {
+      "id": "orchestration/handoff-coordinator",
+      "name": "Handoff Coordinator",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "orchestration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Transfers conversation state cleanly between specialist agents with structured context packets.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "orchestration",
+        "handoff-coordinator"
+      ],
+      "path": "agents/core/orchestration/handoff-coordinator"
+    },
+    {
       "id": "orchestration/human-approval-gate",
       "name": "Human-in-the-Loop Gate",
       "version": "0.1.0",
       "family": "core",
       "category": "orchestration",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "human-in-the-loop",
       "autonomy": "L2",
@@ -1132,7 +4304,7 @@
       "family": "core",
       "category": "orchestration",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "routing",
       "autonomy": "L1",
@@ -1153,13 +4325,42 @@
       "path": "agents/core/orchestration/router"
     },
     {
+      "id": "orchestration/scheduler",
+      "name": "Job Scheduler",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "orchestration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Schedules recurring cron or event-driven agent runs with retry policies.",
+      "tools": {
+        "required": [
+          "afe/observability"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "orchestration",
+        "scheduler"
+      ],
+      "path": "agents/core/orchestration/scheduler"
+    },
+    {
       "id": "orchestration/supervisor",
       "name": "Supervisor / Orchestrator",
       "version": "0.1.0",
       "family": "core",
       "category": "orchestration",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "orchestrator-workers",
       "autonomy": "L3",
@@ -1190,7 +4391,7 @@
       "family": "core",
       "category": "orchestration",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "plan-and-execute",
       "autonomy": "L1",
@@ -1211,13 +4412,40 @@
       "path": "agents/core/orchestration/task-planner"
     },
     {
+      "id": "orchestration/tool-selector",
+      "name": "Tool Selector",
+      "version": "0.1.0",
+      "family": "core",
+      "category": "orchestration",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Selects the minimal set of MCP servers needed for a task from the registry.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "orchestration",
+        "tool-selector"
+      ],
+      "path": "agents/core/orchestration/tool-selector"
+    },
+    {
       "id": "orchestration/verifier",
       "name": "Output Verifier",
       "version": "0.1.0",
       "family": "core",
       "category": "orchestration",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "evaluator-optimizer",
       "autonomy": "L1",
@@ -1238,13 +4466,333 @@
       "path": "agents/core/orchestration/verifier"
     },
     {
+      "id": "banking/aml-alert-investigator",
+      "name": "AML Alert Investigator",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "banking",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S4",
+      "summary": "Investigates transaction-monitoring alerts, compiles context, and drafts narrative summaries for AML analysts.",
+      "tools": {
+        "required": [
+          "afe/accounting"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "banking",
+        "aml-alert-investigator"
+      ],
+      "path": "agents/industries/banking/aml-alert-investigator"
+    },
+    {
+      "id": "banking/bank-statement-analyzer",
+      "name": "Bank Statement Analyzer",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "banking",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Parses statement lines into income, recurring expenses, EMIs, and cheque/NACH bounces.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "banking",
+        "bank-statement-analyzer"
+      ],
+      "path": "agents/industries/banking/bank-statement-analyzer"
+    },
+    {
+      "id": "banking/fraud-signal-explainer",
+      "name": "Fraud Signal Explainer",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "banking",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S4",
+      "summary": "Explains transaction risk signals and flags mule/scam indicators for human fraud analysts.",
+      "tools": {
+        "required": [
+          "afe/policy-engine"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "banking",
+        "fraud-signal-explainer"
+      ],
+      "path": "agents/industries/banking/fraud-signal-explainer"
+    },
+    {
+      "id": "banking/kyc-onboarding",
+      "name": "KYC Onboarding Agent",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "banking",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S4",
+      "summary": "Extracts and cross-checks KYC applicant records and flags mismatches for a human compliance officer.",
+      "tools": {
+        "required": [
+          "afe/http"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "vision/id-document-reader"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "banking",
+        "kyc-onboarding"
+      ],
+      "path": "agents/industries/banking/kyc-onboarding"
+    },
+    {
+      "id": "banking/regulatory-circular-tracker",
+      "name": "Regulatory Circular Tracker",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "banking",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Tracks central bank circulars and regulatory notices and maps impacted internal processes.",
+      "tools": {
+        "required": [
+          "afe/news-api",
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/news-monitor"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "banking",
+        "regulatory-circular-tracker"
+      ],
+      "path": "agents/industries/banking/regulatory-circular-tracker"
+    },
+    {
+      "id": "banking/sanctions-screener",
+      "name": "Sanctions & PEP Screener",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "banking",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S4",
+      "summary": "Transliteration-aware fuzzy name screening against sanctions/PEP lists with explained matches for officer review.",
+      "tools": {
+        "required": [
+          "afe/policy-engine"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "banking",
+        "sanctions-screener"
+      ],
+      "path": "agents/industries/banking/sanctions-screener"
+    },
+    {
+      "id": "ecommerce/catalog-enricher",
+      "name": "Catalog Enricher",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "ecommerce",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Fills missing SKU attributes from specs/images and normalizes catalog taxonomy.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "ecommerce",
+        "catalog-enricher"
+      ],
+      "path": "agents/industries/ecommerce/catalog-enricher"
+    },
+    {
+      "id": "ecommerce/product-listing-writer",
+      "name": "Product Listing Writer",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "ecommerce",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Generates structured marketplace titles, bullet points, descriptions, and attributes from product specs.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "ecommerce",
+        "product-listing-writer"
+      ],
+      "path": "agents/industries/ecommerce/product-listing-writer"
+    },
+    {
+      "id": "science/paper-reader",
+      "name": "Paper Reader",
+      "version": "0.1.0",
+      "family": "industries",
+      "category": "science",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Extracts hypotheses, experimental methods, metrics, and limitations from scientific papers.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "science",
+        "paper-reader"
+      ],
+      "path": "agents/industries/science/paper-reader"
+    },
+    {
+      "id": "research/comparison-analyst",
+      "name": "Comparison Analyst",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "research",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Scores options X vs Y vs Z against weighted criteria with transparent trade-offs.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "research",
+        "comparison-analyst"
+      ],
+      "path": "agents/information/research/comparison-analyst"
+    },
+    {
+      "id": "research/competitive-analyst",
+      "name": "Competitive Analyst",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "research",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Builds competitor profiles and pricing/feature comparison matrices.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/web-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "research",
+        "competitive-analyst"
+      ],
+      "path": "agents/information/research/competitive-analyst"
+    },
+    {
       "id": "research/deep-researcher",
       "name": "Deep Researcher",
       "version": "0.1.0",
       "family": "information",
       "category": "research",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "orchestrator-workers",
       "autonomy": "L2",
@@ -1280,7 +4828,7 @@
       "family": "information",
       "category": "research",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1305,13 +4853,103 @@
       "path": "agents/information/research/fact-checker"
     },
     {
+      "id": "research/interview-synthesizer",
+      "name": "User Research Synthesizer",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "research",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Synthesizes user interview transcripts into insights, pain points, and quotes.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "research",
+        "interview-synthesizer"
+      ],
+      "path": "agents/information/research/interview-synthesizer"
+    },
+    {
+      "id": "research/literature-reviewer",
+      "name": "Literature Reviewer",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "research",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Conducts structured PRISMA-style screening, extraction, and synthesis across academic papers.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/academic-search",
+        "research/source-reader"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "research",
+        "literature-reviewer"
+      ],
+      "path": "agents/information/research/literature-reviewer"
+    },
+    {
+      "id": "research/market-researcher",
+      "name": "Market Researcher",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "research",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Synthesizes market sizing, segments, trends, and explicit assumptions with sources.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/web-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "research",
+        "market-researcher"
+      ],
+      "path": "agents/information/research/market-researcher"
+    },
+    {
       "id": "research/report-writer",
       "name": "Report Writer",
       "version": "0.1.0",
       "family": "information",
       "category": "research",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1340,7 +4978,7 @@
       "family": "information",
       "category": "research",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1364,13 +5002,69 @@
       "path": "agents/information/research/source-reader"
     },
     {
+      "id": "research/survey-analyst",
+      "name": "Survey Analyst",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "research",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Codes open-ended survey answers into themes with counts and representative quotes.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "research",
+        "survey-analyst"
+      ],
+      "path": "agents/information/research/survey-analyst"
+    },
+    {
+      "id": "search/academic-search",
+      "name": "Academic Searcher",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "search",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Queries arXiv, PubMed, Semantic Scholar, and OpenAlex for papers and citations.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "search",
+        "academic-search"
+      ],
+      "path": "agents/information/search/academic-search"
+    },
+    {
       "id": "search/answer-engine",
       "name": "Answer Engine",
       "version": "0.1.0",
       "family": "information",
       "category": "search",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1397,13 +5091,101 @@
       "path": "agents/information/search/answer-engine"
     },
     {
+      "id": "search/enterprise-search",
+      "name": "Enterprise Search",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "search",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Federated search across Drive, email, chat, and wiki respecting per-user ACLs.",
+      "tools": {
+        "required": [
+          "afe/http",
+          "afe/vector-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/semantic-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "search",
+        "enterprise-search"
+      ],
+      "path": "agents/information/search/enterprise-search"
+    },
+    {
+      "id": "search/news-monitor",
+      "name": "News Monitor",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "search",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Tracks watchlist topics across news wires and compiles change alerts.",
+      "tools": {
+        "required": [
+          "afe/news-api"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "search",
+        "news-monitor"
+      ],
+      "path": "agents/information/search/news-monitor"
+    },
+    {
+      "id": "search/query-rewriter",
+      "name": "Query Rewriter",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "search",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Expands, decomposes, and translates queries to maximize search recall.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "search",
+        "query-rewriter"
+      ],
+      "path": "agents/information/search/query-rewriter"
+    },
+    {
       "id": "search/rag-qa",
       "name": "Document Q&A",
       "version": "0.1.0",
       "family": "information",
       "category": "search",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1428,13 +5210,40 @@
       "path": "agents/information/search/rag-qa"
     },
     {
+      "id": "search/reranker",
+      "name": "Reranker",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "search",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Reorders candidate search passages by true semantic relevance to the query.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "search",
+        "reranker"
+      ],
+      "path": "agents/information/search/reranker"
+    },
+    {
       "id": "search/semantic-search",
       "name": "Hybrid Searcher",
       "version": "0.1.0",
       "family": "information",
       "category": "search",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1457,13 +5266,42 @@
       "path": "agents/information/search/semantic-search"
     },
     {
+      "id": "search/source-credibility",
+      "name": "Source Credibility Scorer",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "search",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Evaluates URLs for primary-source authority, freshness, and bias signals.",
+      "tools": {
+        "required": [
+          "afe/web-search"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "search",
+        "source-credibility"
+      ],
+      "path": "agents/information/search/source-credibility"
+    },
+    {
       "id": "search/web-search",
       "name": "Web Searcher",
       "version": "0.1.0",
       "family": "information",
       "category": "search",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1492,7 +5330,7 @@
       "family": "information",
       "category": "text",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1519,7 +5357,7 @@
       "family": "information",
       "category": "text",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1540,13 +5378,40 @@
       "path": "agents/information/text/entity-extractor"
     },
     {
+      "id": "text/explainer",
+      "name": "Concept Explainer",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "text",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Explains technical or domain concepts at a target reading level with examples.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "text",
+        "explainer"
+      ],
+      "path": "agents/information/text/explainer"
+    },
+    {
       "id": "text/proofreader",
       "name": "Proofreader",
       "version": "0.1.0",
       "family": "information",
       "category": "text",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1573,7 +5438,7 @@
       "family": "information",
       "category": "text",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1594,13 +5459,40 @@
       "path": "agents/information/text/rewriter"
     },
     {
+      "id": "text/sentiment-analyzer",
+      "name": "Sentiment Analyzer",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "text",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Scores sentiment polarity, emotion, and aspect-level opinions in text.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "text",
+        "sentiment-analyzer"
+      ],
+      "path": "agents/information/text/sentiment-analyzer"
+    },
+    {
       "id": "text/structured-extractor",
       "name": "Structured Extractor",
       "version": "0.1.0",
       "family": "information",
       "category": "text",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1632,7 +5524,7 @@
       "family": "information",
       "category": "text",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1656,13 +5548,67 @@
       "path": "agents/information/text/summarizer"
     },
     {
+      "id": "text/text-comparer",
+      "name": "Semantic Diff",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "text",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Compares two text versions and explains concrete changes in meaning.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "text",
+        "text-comparer"
+      ],
+      "path": "agents/information/text/text-comparer"
+    },
+    {
+      "id": "text/topic-tagger",
+      "name": "Keyword & Topic Tagger",
+      "version": "0.1.0",
+      "family": "information",
+      "category": "text",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Extracts top keywords, domain topics, and tags from any document.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "text",
+        "topic-tagger"
+      ],
+      "path": "agents/information/text/topic-tagger"
+    },
+    {
       "id": "text/translator",
       "name": "Translator",
       "version": "0.1.0",
       "family": "information",
       "category": "text",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1691,13 +5637,305 @@
       "path": "agents/information/text/translator"
     },
     {
+      "id": "education/flashcard-maker",
+      "name": "Flashcard Maker",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "education",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Extracts atomic concepts into Anki-ready spaced-repetition question/answer flashcards.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "education",
+        "flashcard-maker"
+      ],
+      "path": "agents/life/education/flashcard-maker"
+    },
+    {
+      "id": "education/quiz-generator",
+      "name": "Quiz Generator",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "education",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Builds diagnostic multiple-choice and short-answer quizzes with answer keys from study material.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "education",
+        "quiz-generator"
+      ],
+      "path": "agents/life/education/quiz-generator"
+    },
+    {
+      "id": "education/tutor",
+      "name": "Socratic Tutor",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "education",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Guides learners with progressive Socratic questions and hints without spoiling final answers.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "education",
+        "tutor"
+      ],
+      "path": "agents/life/education/tutor"
+    },
+    {
+      "id": "personal/bill-subscription-manager",
+      "name": "Bills & Subscriptions Manager",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "personal",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Tracks recurring bills and subscriptions, flags due dates, and guides cancellation steps.",
+      "tools": {
+        "required": [
+          "afe/email"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "personal",
+        "bill-subscription-manager"
+      ],
+      "path": "agents/life/personal/bill-subscription-manager"
+    },
+    {
+      "id": "personal/personal-finance-tracker",
+      "name": "Personal Finance Tracker",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "personal",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Categorizes personal statements into monthly spending and budget insights (no investment advice).",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "personal",
+        "personal-finance-tracker"
+      ],
+      "path": "agents/life/personal/personal-finance-tracker"
+    },
+    {
+      "id": "personal/shopping-assistant",
+      "name": "Shopping Assistant",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "personal",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Researches and compares products against criteria and stops strictly before checkout.",
+      "tools": {
+        "required": [
+          "afe/web-search",
+          "afe/browser"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/web-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "personal",
+        "shopping-assistant"
+      ],
+      "path": "agents/life/personal/shopping-assistant"
+    },
+    {
+      "id": "productivity/daily-briefer",
+      "name": "Daily Briefer",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "productivity",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Assembles a morning brief from calendar events, top tasks, urgent mail, and weather.",
+      "tools": {
+        "required": [
+          "afe/calendar",
+          "afe/email"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "communication/inbox-triager"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "productivity",
+        "daily-briefer"
+      ],
+      "path": "agents/life/productivity/daily-briefer"
+    },
+    {
+      "id": "productivity/note-organizer",
+      "name": "Second Brain Organizer",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "productivity",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Automatically tags, links, and files Markdown/Obsidian/Notion notes.",
+      "tools": {
+        "required": [
+          "afe/documents"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "productivity",
+        "note-organizer"
+      ],
+      "path": "agents/life/productivity/note-organizer"
+    },
+    {
+      "id": "productivity/personal-knowledge-qa",
+      "name": "Personal Knowledge Q&A",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "productivity",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Answers questions across personal notes, mail, and saved files with citations.",
+      "tools": {
+        "required": [
+          "afe/vector-store"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/rag-qa"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "productivity",
+        "personal-knowledge-qa"
+      ],
+      "path": "agents/life/productivity/personal-knowledge-qa"
+    },
+    {
+      "id": "productivity/reminder-agent",
+      "name": "Reminder Agent",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "productivity",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Parses natural-language time, place, and context reminders into structured schedules.",
+      "tools": {
+        "required": [
+          "afe/calendar"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "productivity",
+        "reminder-agent"
+      ],
+      "path": "agents/life/productivity/reminder-agent"
+    },
+    {
       "id": "productivity/task-manager",
       "name": "Task Manager",
       "version": "0.1.0",
       "family": "life",
       "category": "productivity",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1722,13 +5960,540 @@
       "path": "agents/life/productivity/task-manager"
     },
     {
+      "id": "travel/trip-planner",
+      "name": "Trip Planner",
+      "version": "0.1.0",
+      "family": "life",
+      "category": "travel",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Builds day-by-day travel itineraries aligned with budget, pace, transit time, and interests.",
+      "tools": {
+        "required": [
+          "afe/web-search",
+          "afe/maps"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "search/web-search"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "travel",
+        "trip-planner"
+      ],
+      "path": "agents/life/travel/trip-planner"
+    },
+    {
+      "id": "accessibility/accessibility-auditor",
+      "name": "Accessibility Auditor",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "accessibility",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Checks HTML/UI attributes against WCAG contrast, alt-text, and landmark rules.",
+      "tools": {
+        "required": [
+          "afe/browser"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "vision/screenshot-understander"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "accessibility",
+        "accessibility-auditor"
+      ],
+      "path": "agents/perception/accessibility/accessibility-auditor"
+    },
+    {
+      "id": "accessibility/alt-text-writer",
+      "name": "Alt-Text Writer",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "accessibility",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Writes concise, context-aware alt text for images on websites and documents.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "accessibility",
+        "alt-text-writer"
+      ],
+      "path": "agents/perception/accessibility/alt-text-writer"
+    },
+    {
+      "id": "accessibility/easy-read-simplifier",
+      "name": "Easy-Read Simplifier",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "accessibility",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Rewrites dense text into short plain-language sentences for cognitive accessibility.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "accessibility",
+        "easy-read-simplifier"
+      ],
+      "path": "agents/perception/accessibility/easy-read-simplifier"
+    },
+    {
+      "id": "accessibility/live-captioner",
+      "name": "Live Captioner",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "accessibility",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Streams low-latency live captions for meetings, lectures, and events.",
+      "tools": {
+        "required": [
+          "afe/stt"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "accessibility",
+        "live-captioner"
+      ],
+      "path": "agents/perception/accessibility/live-captioner"
+    },
+    {
+      "id": "accessibility/screen-narrator",
+      "name": "Screen Narrator",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "accessibility",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S2",
+      "summary": "Describes active UI screens aloud for blind and low-vision navigation.",
+      "tools": {
+        "required": [
+          "afe/tts"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "vision/screenshot-understander",
+        "voice/text-to-speech"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "accessibility",
+        "screen-narrator"
+      ],
+      "path": "agents/perception/accessibility/screen-narrator"
+    },
+    {
+      "id": "audio/audio-cleaner",
+      "name": "Audio Cleaner",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "audio",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Prepares noise-reduction, echo-cancellation, and loudness-normalization DSP plans.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "audio",
+        "audio-cleaner"
+      ],
+      "path": "agents/perception/audio/audio-cleaner"
+    },
+    {
+      "id": "audio/podcast-producer",
+      "name": "Podcast Producer",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "audio",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Produces transcripts, chapters, silence cuts, and show notes from raw podcast audio.",
+      "tools": {
+        "required": [
+          "afe/stt",
+          "afe/media"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text",
+        "text/summarizer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "audio",
+        "podcast-producer"
+      ],
+      "path": "agents/perception/audio/podcast-producer"
+    },
+    {
+      "id": "video/clip-generator",
+      "name": "Short Clip Generator",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "video",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Selects high-engagement highlight segments and timestamps for short-form clips.",
+      "tools": {
+        "required": [
+          "afe/stt",
+          "afe/media"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "video",
+        "clip-generator"
+      ],
+      "path": "agents/perception/video/clip-generator"
+    },
+    {
+      "id": "video/video-captioner",
+      "name": "Subtitle Generator",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "video",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Generates and translates timed SRT/VTT subtitle tracks for videos.",
+      "tools": {
+        "required": [
+          "afe/stt"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text",
+        "text/translator"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "video",
+        "video-captioner"
+      ],
+      "path": "agents/perception/video/video-captioner"
+    },
+    {
+      "id": "video/video-summarizer",
+      "name": "Video Summarizer",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "video",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Summarizes long videos into timestamped chapters and key takeaways.",
+      "tools": {
+        "required": [
+          "afe/stt"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text",
+        "text/summarizer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "video",
+        "video-summarizer"
+      ],
+      "path": "agents/perception/video/video-summarizer"
+    },
+    {
+      "id": "vision/chart-reader",
+      "name": "Chart Reader",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "vision",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Extracts tabular data series from bar, line, and pie chart images.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "vision",
+        "chart-reader"
+      ],
+      "path": "agents/perception/vision/chart-reader"
+    },
+    {
+      "id": "vision/face-plate-anonymizer",
+      "name": "Face & Plate Anonymizer",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "vision",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Identifies faces, license plates, and screens to blur for privacy compliance.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "vision",
+        "face-plate-anonymizer"
+      ],
+      "path": "agents/perception/vision/face-plate-anonymizer"
+    },
+    {
+      "id": "vision/id-document-reader",
+      "name": "ID Document Reader",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "vision",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S4",
+      "summary": "Extracts identity card fields for consented KYC workflows with quality checks.",
+      "tools": {
+        "required": [
+          "afe/ocr"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "vision",
+        "id-document-reader"
+      ],
+      "path": "agents/perception/vision/id-document-reader"
+    },
+    {
+      "id": "vision/image-captioner",
+      "name": "Image Captioner",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "vision",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Generates concise accessibility and editorial captions for images.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "vision",
+        "image-captioner"
+      ],
+      "path": "agents/perception/vision/image-captioner"
+    },
+    {
+      "id": "vision/image-editor",
+      "name": "Image Editor",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "vision",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Performs scoped image edits (background removal, crop, inpaint) from instructions.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "vision",
+        "image-editor"
+      ],
+      "path": "agents/perception/vision/image-editor"
+    },
+    {
+      "id": "vision/image-generator",
+      "name": "Image Generator",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "vision",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Builds art-directed text-to-image briefs and invokes image generation MCP servers.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "vision",
+        "image-generator"
+      ],
+      "path": "agents/perception/vision/image-generator"
+    },
+    {
+      "id": "vision/object-detector",
+      "name": "Object Detector & Counter",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "vision",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Detects and counts target object classes with bounding box metadata.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "vision",
+        "object-detector"
+      ],
+      "path": "agents/perception/vision/object-detector"
+    },
+    {
       "id": "vision/ocr",
       "name": "Text Extractor (OCR)",
       "version": "0.1.0",
       "family": "perception",
       "category": "vision",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1757,7 +6522,7 @@
       "family": "perception",
       "category": "vision",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1778,13 +6543,40 @@
       "path": "agents/perception/vision/screenshot-understander"
     },
     {
+      "id": "vision/ui-to-code",
+      "name": "Design to Code",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "vision",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Converts UI screenshots or wireframes into accessible HTML/React components.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "vision",
+        "ui-to-code"
+      ],
+      "path": "agents/perception/vision/ui-to-code"
+    },
+    {
       "id": "vision/visual-qa",
       "name": "Visual Q&A",
       "version": "0.1.0",
       "family": "perception",
       "category": "vision",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1807,13 +6599,115 @@
       "path": "agents/perception/vision/visual-qa"
     },
     {
+      "id": "voice/dictation-editor",
+      "name": "Smart Dictation",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "voice",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S0",
+      "summary": "Supports hands-free dictation with inline editing commands like 'delete last sentence'.",
+      "tools": {
+        "required": [],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "voice",
+        "dictation-editor"
+      ],
+      "path": "agents/perception/voice/dictation-editor"
+    },
+    {
+      "id": "voice/live-interpreter",
+      "name": "Live Interpreter",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "voice",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Two-way real-time speech translation across languages.",
+      "tools": {
+        "required": [
+          "afe/stt",
+          "afe/tts"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text",
+        "text/translator",
+        "voice/text-to-speech"
+      ],
+      "locales": [
+        "en",
+        "hi",
+        "ta",
+        "te",
+        "bn",
+        "mr",
+        "es",
+        "fr"
+      ],
+      "tags": [
+        "voice",
+        "live-interpreter"
+      ],
+      "path": "agents/perception/voice/live-interpreter"
+    },
+    {
+      "id": "voice/phone-call-agent",
+      "name": "Phone Call Agent",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "voice",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L2",
+      "safety_level": "S3",
+      "summary": "Inbound/outbound telephony assistant for bookings and reminders with mandatory AI disclosure.",
+      "tools": {
+        "required": [
+          "afe/telephony",
+          "afe/stt",
+          "afe/tts"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text",
+        "voice/text-to-speech"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "voice",
+        "phone-call-agent"
+      ],
+      "path": "agents/perception/voice/phone-call-agent"
+    },
+    {
       "id": "voice/realtime-voice-assistant",
       "name": "Real-time Voice Assistant",
       "version": "0.1.0",
       "family": "perception",
       "category": "voice",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "handoff",
       "autonomy": "L2",
@@ -1841,13 +6735,42 @@
       "path": "agents/perception/voice/realtime-voice-assistant"
     },
     {
+      "id": "voice/speaker-diarizer",
+      "name": "Speaker Diarizer",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "voice",
+      "tier": "atomic",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Labels speaker turns and timestamps in multi-speaker audio transcripts.",
+      "tools": {
+        "required": [
+          "afe/stt"
+        ],
+        "optional": []
+      },
+      "uses_agents": [],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "voice",
+        "speaker-diarizer"
+      ],
+      "path": "agents/perception/voice/speaker-diarizer"
+    },
+    {
       "id": "voice/speech-to-text",
       "name": "Transcriber",
       "version": "0.1.0",
       "family": "perception",
       "category": "voice",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1884,7 +6807,7 @@
       "family": "perception",
       "category": "voice",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1920,7 +6843,7 @@
       "family": "perception",
       "category": "voice",
       "tier": "atomic",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "augmented-llm",
       "autonomy": "L1",
@@ -1949,7 +6872,7 @@
       "family": "perception",
       "category": "voice",
       "tier": "composite",
-      "maturity": "prototype",
+      "maturity": "beta",
       "priority": "P0",
       "pattern": "plan-and-execute",
       "autonomy": "L2",
@@ -1986,9 +6909,185 @@
         "voice-form-filler"
       ],
       "path": "agents/perception/voice/voice-form-filler"
+    },
+    {
+      "id": "voice/voice-note-summarizer",
+      "name": "Voice Note Processor",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "voice",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Converts voice memos into structured notes, tasks, and follow-up reminders.",
+      "tools": {
+        "required": [
+          "afe/stt"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text",
+        "text/summarizer"
+      ],
+      "locales": [
+        "en"
+      ],
+      "tags": [
+        "voice",
+        "voice-note-summarizer"
+      ],
+      "path": "agents/perception/voice/voice-note-summarizer"
+    },
+    {
+      "id": "voice/voice-search",
+      "name": "Voice Search",
+      "version": "0.1.0",
+      "family": "perception",
+      "category": "voice",
+      "tier": "composite",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "augmented-llm",
+      "autonomy": "L1",
+      "safety_level": "S1",
+      "summary": "Converts spoken questions into search queries and speaks concise cited answers.",
+      "tools": {
+        "required": [
+          "afe/stt",
+          "afe/web-search",
+          "afe/tts"
+        ],
+        "optional": []
+      },
+      "uses_agents": [
+        "voice/speech-to-text",
+        "search/web-search",
+        "voice/text-to-speech"
+      ],
+      "locales": [
+        "en",
+        "hi",
+        "ta",
+        "te",
+        "bn",
+        "mr"
+      ],
+      "tags": [
+        "voice",
+        "voice-search"
+      ],
+      "path": "agents/perception/voice/voice-search"
     }
   ],
   "teams": [
+    {
+      "id": "accounts-payable-team",
+      "name": "Accounts Payable Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "prompt-chaining",
+      "members": [
+        "documents/invoice-receipt-parser",
+        "finance/accounts-payable",
+        "finance/expense-auditor",
+        "orchestration/human-approval-gate"
+      ],
+      "summary": "Parses vendor invoices, matches against POs, audits expenses, and routes to human finance sign-off."
+    },
+    {
+      "id": "agent-factory",
+      "name": "Agent Factory Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "evaluator-optimizer",
+      "members": [
+        "orchestration/agent-builder",
+        "evaluation/test-case-generator",
+        "evaluation/regression-runner",
+        "guardrails/red-teamer",
+        "evaluation/llm-judge"
+      ],
+      "summary": "Scaffolds new agents, generates eval suites, runs regressions, red-teams prompts, and grades quality."
+    },
+    {
+      "id": "bug-squash",
+      "name": "Bug Squash Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "orchestrator-workers",
+      "members": [
+        "coding/issue-triager",
+        "coding/bug-fixer",
+        "coding/test-writer",
+        "coding/code-reviewer"
+      ],
+      "summary": "Triages reported issues, isolates root cause, writes fix and regression tests, and reviews the diff."
+    },
+    {
+      "id": "chief-of-staff",
+      "name": "Chief of Staff Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "hierarchical",
+      "members": [
+        "orchestration/supervisor",
+        "productivity/daily-briefer",
+        "communication/inbox-triager",
+        "meetings/meeting-prep",
+        "productivity/task-manager",
+        "memory/memory-retriever"
+      ],
+      "summary": "Coordinates daily briefing, inbox triage, meeting prep, task planning, and memory recall."
+    },
+    {
+      "id": "content-studio",
+      "name": "Content Studio Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "prompt-chaining",
+      "members": [
+        "marketing/keyword-researcher",
+        "content/blog-writer",
+        "content/editor",
+        "content/seo-optimizer",
+        "content/content-repurposer",
+        "content/social-post-writer"
+      ],
+      "summary": "Turns a target topic into keyword-researched, edited, SEO-checked, multi-channel content."
+    },
+    {
+      "id": "contract-desk",
+      "name": "Contract Desk Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "prompt-chaining",
+      "members": [
+        "documents/doc-classifier",
+        "legal/contract-analyzer",
+        "legal/nda-reviewer",
+        "orchestration/human-approval-gate"
+      ],
+      "summary": "Classifies incoming legal agreements, analyzes clauses, reviews NDAs, and escalates to human counsel."
+    },
+    {
+      "id": "data-insights",
+      "name": "Data Insights Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "plan-and-execute",
+      "members": [
+        "orchestration/clarifier",
+        "data/text-to-sql",
+        "data/data-analyst",
+        "data/chart-maker",
+        "research/report-writer"
+      ],
+      "summary": "Clarifies a business question, writes read-only SQL, analyzes results, specs a chart, and reports."
+    },
     {
       "id": "document-intake",
       "name": "Document Intake Team",
@@ -2004,6 +7103,21 @@
       "summary": "Turns incoming raw documents into validated, human-approved structured records."
     },
     {
+      "id": "ecosystem-radar",
+      "name": "Ecosystem Radar Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "orchestrator-workers",
+      "members": [
+        "search/news-monitor",
+        "search/academic-search",
+        "search/web-search",
+        "research/source-reader",
+        "research/report-writer"
+      ],
+      "summary": "Tracks protocol/paper/web updates, reads primary notes, and compiles the monthly ecosystem radar digest."
+    },
+    {
       "id": "inbox-zero",
       "name": "Inbox Zero Team",
       "maturity": "prototype",
@@ -2016,6 +7130,36 @@
         "orchestration/human-approval-gate"
       ],
       "summary": "Triages inbox emails, drafts replies, extracts action items, and waits for human approval."
+    },
+    {
+      "id": "incident-war-room",
+      "name": "Incident War Room Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "orchestrator-workers",
+      "members": [
+        "devops/alert-triager",
+        "devops/log-analyzer",
+        "devops/incident-responder",
+        "orchestration/human-approval-gate",
+        "devops/postmortem-writer"
+      ],
+      "summary": "Triages alerts, correlates logs, prepares runbook mitigations behind approval, and drafts postmortem."
+    },
+    {
+      "id": "kyc-pipeline",
+      "name": "KYC Onboarding Pipeline",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "prompt-chaining",
+      "members": [
+        "vision/id-document-reader",
+        "banking/kyc-onboarding",
+        "banking/sanctions-screener",
+        "orchestration/human-approval-gate",
+        "guardrails/audit-logger"
+      ],
+      "summary": "Consented ID extraction, KYC checks, sanctions/PEP screening, officer approval, and audit logging."
     },
     {
       "id": "meeting-to-done",
@@ -2047,6 +7191,37 @@
       "summary": "Produces a cited, grounding-verified research report on any topic."
     },
     {
+      "id": "sdr-team",
+      "name": "SDR Prospecting Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "prompt-chaining",
+      "members": [
+        "sales/lead-finder",
+        "sales/lead-enricher",
+        "sales/lead-scorer",
+        "sales/account-researcher",
+        "sales/outreach-personalizer",
+        "sales/crm-updater"
+      ],
+      "summary": "Finds ICP leads, enriches and scores accounts, drafts tailored outreach, and stages CRM updates."
+    },
+    {
+      "id": "software-squad",
+      "name": "Software Squad",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "evaluator-optimizer",
+      "members": [
+        "operations/requirements-analyst",
+        "coding/code-generator",
+        "coding/test-writer",
+        "coding/code-reviewer",
+        "coding/pr-describer"
+      ],
+      "summary": "Ships a feature from requirements through code generation, tests, review, and PR description."
+    },
+    {
       "id": "support-desk",
       "name": "Support Desk Team",
       "maturity": "prototype",
@@ -2073,9 +7248,55 @@
         "voice/text-to-speech"
       ],
       "summary": "Voice in, intent routing and action execution, and spoken response out."
+    },
+    {
+      "id": "web-qa-team",
+      "name": "Web QA Team",
+      "maturity": "prototype",
+      "priority": "P1",
+      "pattern": "orchestrator-workers",
+      "members": [
+        "browser/web-navigator",
+        "browser/web-tester",
+        "accessibility/accessibility-auditor",
+        "coding/issue-triager"
+      ],
+      "summary": "Navigates staging web apps, runs E2E tests, audits WCAG accessibility, and drafts issue reports."
     }
   ],
   "recipes": [
+    {
+      "id": "ai-qa-engineer",
+      "name": "AI QA Engineer",
+      "maturity": "prototype",
+      "priority": "P1",
+      "agents": [
+        "browser/web-navigator",
+        "browser/web-tester",
+        "accessibility/accessibility-auditor",
+        "coding/issue-triager"
+      ],
+      "teams": [
+        "web-qa-team"
+      ],
+      "summary": "Inspects a staging URL, screens pages for prompt injection, checks accessibility, and drafts bug issues."
+    },
+    {
+      "id": "ai-receptionist",
+      "name": "AI Receptionist",
+      "maturity": "prototype",
+      "priority": "P1",
+      "agents": [
+        "voice/phone-call-agent",
+        "communication/business-messaging-bot",
+        "search/rag-qa",
+        "meetings/meeting-scheduler"
+      ],
+      "teams": [
+        "voice-concierge"
+      ],
+      "summary": "Phone and messaging receptionist that answers FAQs from KB and proposes appointment slots."
+    },
     {
       "id": "chat-with-your-docs",
       "name": "Chat with Your Docs",
@@ -2092,6 +7313,23 @@
         "document-intake"
       ],
       "summary": "Private document Q&A assistant with PII masking, chunk ingestion, semantic retrieval, and grounding checks."
+    },
+    {
+      "id": "content-engine",
+      "name": "Content Engine",
+      "maturity": "prototype",
+      "priority": "P1",
+      "agents": [
+        "audio/podcast-producer",
+        "content/blog-writer",
+        "content/editor",
+        "content/social-post-writer",
+        "video/clip-generator"
+      ],
+      "teams": [
+        "content-studio"
+      ],
+      "summary": "Turns one raw recording into a podcast package, edited blog post, social posts, and short clip suggestions."
     },
     {
       "id": "deep-research-app",
@@ -2112,6 +7350,39 @@
         "research-team"
       ],
       "summary": "Cited deep-research application running planning, web search, reading, fact-checking, and grounding verification."
+    },
+    {
+      "id": "invoice-automation",
+      "name": "Invoice Automation",
+      "maturity": "prototype",
+      "priority": "P1",
+      "agents": [
+        "communication/inbox-triager",
+        "documents/invoice-receipt-parser",
+        "finance/accounts-payable",
+        "orchestration/human-approval-gate"
+      ],
+      "teams": [
+        "accounts-payable-team"
+      ],
+      "summary": "Email inbox to extracted invoices, PO matching, and human-approved payment queue."
+    },
+    {
+      "id": "personal-chief-of-staff",
+      "name": "Personal Chief of Staff",
+      "maturity": "prototype",
+      "priority": "P1",
+      "agents": [
+        "productivity/daily-briefer",
+        "communication/inbox-triager",
+        "meetings/meeting-prep",
+        "productivity/task-manager",
+        "memory/memory-retriever"
+      ],
+      "teams": [
+        "chief-of-staff"
+      ],
+      "summary": "Generates a daily briefing across urgent email, meeting prep, prioritized tasks, and memory recall."
     },
     {
       "id": "voice-form-filling",
@@ -2135,6 +7406,12 @@
   ],
   "mcp_servers": [
     {
+      "id": "afe/accounting",
+      "name": "Accounting & ERP Ledger MCP Server",
+      "transport": "stdio",
+      "summary": "Read-only ledger inspection, reconciliation matching, and staged AP/expense drafts."
+    },
+    {
       "id": "afe/browser",
       "name": "Browser Automation MCP Server",
       "transport": "stdio",
@@ -2151,6 +7428,18 @@
       "name": "Team Chat MCP Server",
       "transport": "stdio",
       "summary": "Read channels/threads and draft replies across Slack, Teams, Discord, or WhatsApp."
+    },
+    {
+      "id": "afe/cloud",
+      "name": "Cloud Infrastructure & FinOps MCP Server",
+      "transport": "stdio",
+      "summary": "Read-only cloud resource inventory, utilization, and billing metrics."
+    },
+    {
+      "id": "afe/crm",
+      "name": "CRM Operations MCP Server",
+      "transport": "stdio",
+      "summary": "Read account records and prepare CRM updates with approval gates."
     },
     {
       "id": "afe/documents",
@@ -2171,16 +7460,70 @@
       "summary": "Workspace-scoped file discovery, read, diff preview, and safe move/organize operations."
     },
     {
+      "id": "afe/home-automation",
+      "name": "Smart Home & Matter MCP Server",
+      "transport": "stdio",
+      "summary": "Query device states and trigger Home Assistant / Matter actions with lock confirmation."
+    },
+    {
+      "id": "afe/hris",
+      "name": "HRIS & Onboarding MCP Server",
+      "transport": "stdio",
+      "summary": "Access approved HR policies, onboarding checklists, and rubric templates."
+    },
+    {
       "id": "afe/http",
       "name": "HTTP Fetch MCP Server",
       "transport": "stdio",
       "summary": "Fetch URLs and REST/GraphQL endpoints with robots.txt and rate-limit awareness."
     },
     {
+      "id": "afe/issue-tracker",
+      "name": "Issue Tracker MCP Server",
+      "transport": "stdio",
+      "summary": "Read, label, deduplicate, and draft issues/PRs across GitHub, Jira, or Linear."
+    },
+    {
+      "id": "afe/maps",
+      "name": "Maps & Places MCP Server",
+      "transport": "stdio",
+      "summary": "Geocoding, local place search, travel times, and route checks."
+    },
+    {
+      "id": "afe/media",
+      "name": "Audio, Image & Video Media MCP Server",
+      "transport": "stdio",
+      "summary": "Audio DSP cleaning, ffmpeg subtitle/clip processing, and image generation/editing briefs."
+    },
+    {
+      "id": "afe/memory-store",
+      "name": "Long-Term Memory Store MCP Server",
+      "transport": "stdio",
+      "summary": "Persist and query episodic memories and knowledge graph triples with consent controls."
+    },
+    {
+      "id": "afe/news-api",
+      "name": "News & Regulatory Feed MCP Server",
+      "transport": "stdio",
+      "summary": "Query RSS, news wires, and public regulatory circular feeds."
+    },
+    {
+      "id": "afe/observability",
+      "name": "Observability & SIEM MCP Server",
+      "transport": "stdio",
+      "summary": "Query logs, metrics, traces, and active alerts across observability backends."
+    },
+    {
       "id": "afe/ocr",
       "name": "OCR MCP Server",
       "transport": "stdio",
       "summary": "Printed and handwritten text extraction with layout bounding boxes."
+    },
+    {
+      "id": "afe/policy-engine",
+      "name": "Action Policy & Audit Engine MCP Server",
+      "transport": "stdio",
+      "summary": "Evaluate proposed tool calls against OPA-style allow/deny rules and append audit logs."
     },
     {
       "id": "afe/python-sandbox",
@@ -2205,6 +7548,24 @@
       "name": "Speech-to-Text MCP Server",
       "transport": "stdio",
       "summary": "Streaming and batch speech transcription with multilingual code-switching support."
+    },
+    {
+      "id": "afe/telephony",
+      "name": "Telephony & SIP Voice MCP Server",
+      "transport": "stdio",
+      "summary": "Inbound/outbound SIP and WebRTC voice call bridge with mandatory AI disclosure."
+    },
+    {
+      "id": "afe/threat-intel",
+      "name": "Defensive Threat Intel & Scanner MCP Server",
+      "transport": "stdio",
+      "summary": "Query CVE advisories, dependency vulnerability scanners, and secret regex scanners."
+    },
+    {
+      "id": "afe/ticketing",
+      "name": "Helpdesk & Support Ticketing MCP Server",
+      "transport": "stdio",
+      "summary": "Read, classify, and prepare ticket updates across Zendesk, Jira Service Management, or Freshdesk."
     },
     {
       "id": "afe/tts",

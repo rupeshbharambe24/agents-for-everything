@@ -17,12 +17,32 @@
       "reason": "matched required fields: code"
     },
     {
+      "from": "coding/code-generator",
+      "to": "security/secure-code-reviewer",
+      "reason": "matched required fields: code"
+    },
+    {
+      "from": "guardrails/content-moderator",
+      "to": "guardrails/policy-enforcer",
+      "reason": "matched required fields: action"
+    },
+    {
       "from": "orchestration/human-approval-gate",
       "to": "productivity/task-manager",
       "reason": "matched required fields: notes"
     },
     {
       "from": "vision/ocr",
+      "to": "documents/doc-classifier",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
+      "to": "documents/doc-redactor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
       "to": "documents/invoice-receipt-parser",
       "reason": "matched required fields: text"
     },
@@ -43,6 +63,11 @@
     },
     {
       "from": "vision/ocr",
+      "to": "guardrails/secrets-guard",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
       "to": "text/entity-extractor",
       "reason": "matched required fields: text"
     },
@@ -53,12 +78,87 @@
     },
     {
       "from": "vision/ocr",
+      "to": "text/sentiment-analyzer",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "vision/ocr",
       "to": "text/summarizer",
       "reason": "matched required fields: text"
     },
     {
       "from": "vision/ocr",
       "to": "voice/text-to-speech",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "documents/doc-classifier",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "documents/doc-redactor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "documents/invoice-receipt-parser",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "documents/table-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "meetings/action-item-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "guardrails/pii-redactor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "guardrails/secrets-guard",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "text/entity-extractor",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "text/proofreader",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "text/sentiment-analyzer",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "text/summarizer",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/dictation-editor",
+      "to": "voice/text-to-speech",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "documents/doc-classifier",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "documents/doc-redactor",
       "reason": "matched required fields: text"
     },
     {
@@ -83,12 +183,22 @@
     },
     {
       "from": "voice/speech-to-text",
+      "to": "guardrails/secrets-guard",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
       "to": "text/entity-extractor",
       "reason": "matched required fields: text"
     },
     {
       "from": "voice/speech-to-text",
       "to": "text/proofreader",
+      "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/speech-to-text",
+      "to": "text/sentiment-analyzer",
       "reason": "matched required fields: text"
     },
     {
@@ -100,6 +210,11 @@
       "from": "voice/speech-to-text",
       "to": "voice/text-to-speech",
       "reason": "matched required fields: text"
+    },
+    {
+      "from": "voice/voice-command",
+      "to": "guardrails/policy-enforcer",
+      "reason": "matched required fields: action"
     }
   ]
 }
