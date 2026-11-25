@@ -1,0 +1,34 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: software-squad
+  name: Software Squad
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["software", "squad"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Ships a feature from requirements through code generation, tests, review, and PR description."
+  pattern: evaluator-optimizer
+  entry: operations/requirements-analyst
+  members:
+    - operations/requirements-analyst
+    - coding/code-generator
+    - coding/test-writer
+    - coding/code-reviewer
+    - coding/pr-describer
+  graph:
+    - [requirements-analyst, code-generator]
+    - [code-generator, test-writer]
+    - [test-writer, code-reviewer]
+    - [code-reviewer, pr-describer]
+  approvals: []
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S2
+  evals:
+    suite: evals/eval.yaml
