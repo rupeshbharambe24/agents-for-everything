@@ -1,0 +1,33 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: personal-chief-of-staff
+  name: Personal Chief of Staff
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: [productivity, brief, inbox, calendar, memory]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Generates a daily briefing across urgent email, meeting prep, prioritized tasks, and memory recall.
+  problem: Professionals start mornings juggling fragmented email threads, meeting notes, and tasks.
+  solution: Composes daily-briefer, inbox-triager, meeting-prep, task-manager, and memory-retriever.
+  agents:
+    - productivity/daily-briefer
+    - communication/inbox-triager
+    - meetings/meeting-prep
+    - productivity/task-manager
+    - memory/memory-retriever
+  teams:
+    - chief-of-staff
+  mcp_servers:
+    - afe/calendar
+    - afe/email
+    - afe/memory-store
+  entrypoint: app.py
+  safety:
+    level: S2
+    approval_required_for: []
+  evals:
+    suite: tests/test_recipe.py
