@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: vernacular-banking-helpline
+  name: Vernacular Banking Helpline
+  version: 0.1.0
+  maturity: prototype
+  priority: P2
+  tags: [banking, voice, multilingual, indic, scam-detection, grievance]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Local-language voice helpline for banking FAQs, suspicious SMS/UPI scam verification, and grievance filing with human escalation.
+  problem: Regional-language banking customers struggle with English-only IVR menus, scam verification, and formal complaint filing.
+  solution: Composes realtime-voice-assistant, banking-voice-assistant, scam-message-checker, and grievance-redressal under S4 audit & approval gates.
+  agents:
+    - voice/realtime-voice-assistant
+    - banking/banking-voice-assistant
+    - banking/scam-message-checker
+    - banking/grievance-redressal
+  teams: []
+  mcp_servers:
+    - afe/telephony
+    - afe/stt
+    - afe/tts
+    - afe/compliance-reg
+  entrypoint: app.py
+  safety:
+    level: S4
+    approval_required_for: [human_officer_signoff, approve_external_action]
+  evals:
+    suite: tests/test_recipe.py
