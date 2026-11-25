@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: bug-squash
+  name: Bug Squash Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["bug", "squash"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Triages reported issues, isolates root cause, writes fix and regression tests, and reviews the diff."
+  pattern: orchestrator-workers
+  entry: coding/issue-triager
+  members:
+    - coding/issue-triager
+    - coding/bug-fixer
+    - coding/test-writer
+    - coding/code-reviewer
+  graph:
+    - [issue-triager, bug-fixer]
+    - [bug-fixer, test-writer]
+    - [test-writer, code-reviewer]
+  approvals: ["issue-triager"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S3
+  evals:
+    suite: evals/eval.yaml
