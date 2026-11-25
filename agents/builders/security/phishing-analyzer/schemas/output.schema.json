@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://security/phishing-analyzer/output",
+  "type": "object",
+  "required": [
+    "verdict",
+    "indicators"
+  ],
+  "properties": {
+    "verdict": {
+      "enum": [
+        "safe",
+        "suspicious",
+        "phishing"
+      ]
+    },
+    "indicators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{"id": "pa-01", "input": {"email_text": "Account suspended! Verify your password immediately at http://bad.example/login"}, "expected": {"verdict": "phishing"}}
+{"id": "pa-02", "input": {"email_text": "Account suspended! Verify your password immediately at http://bad.example/login"}, "expected": {"verdict": "phishing"}}
+{"id": "pa-03", "input": {"email_text": "Account suspended! Verify your password immediately at http://bad.example/login"}, "expected": {"verdict": "phishing"}}
+{"id": "pa-04", "input": {"email_text": "Account suspended! Verify your password immediately at http://bad.example/login"}, "expected": {"verdict": "phishing"}}
+{"id": "pa-05", "input": {"email_text": "Account suspended! Verify your password immediately at http://bad.example/login"}, "expected": {"verdict": "phishing"}}
+{"id": "pa-06", "input": {"email_text": "Team sync agenda attached."}, "expected": {"verdict": "safe"}}
+{"id": "pa-07", "input": {"email_text": "Team sync agenda attached."}, "expected": {"verdict": "safe"}}
+{"id": "pa-08", "input": {"email_text": "Team sync agenda attached."}, "expected": {"verdict": "safe"}}
+{"id": "pa-09", "input": {"email_text": "Team sync agenda attached."}, "expected": {"verdict": "safe"}}
+{"id": "pa-10", "input": {"email_text": "Team sync agenda attached."}, "expected": {"verdict": "safe"}}

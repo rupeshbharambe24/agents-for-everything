@@ -1,0 +1,10 @@
+{"id": "vuln-01", "input": {"input": "Sample vuln-triager request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-02", "input": {"input": "Sample vuln-triager request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-03", "input": {"input": "Sample vuln-triager request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-04", "input": {"input": "Sample vuln-triager request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-05", "input": {"input": "Sample vuln-triager request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-06", "input": {"input": "Sample vuln-triager request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-07", "input": {"input": "Sample vuln-triager request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-08", "input": {"input": "Sample vuln-triager request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-09", "input": {"input": "Sample vuln-triager request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "vuln-10", "input": {"input": "Sample vuln-triager request #10"}, "expected": {}, "expect_non_empty": ["result"]}

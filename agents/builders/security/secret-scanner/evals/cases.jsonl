@@ -1,0 +1,10 @@
+{"id": "ss-01", "input": {"content": "TOKEN=ghp_1234567890abcdef1234"}, "expected": {"leaked": true}}
+{"id": "ss-02", "input": {"content": "TOKEN=ghp_1234567890abcdef1234"}, "expected": {"leaked": true}}
+{"id": "ss-03", "input": {"content": "TOKEN=ghp_1234567890abcdef1234"}, "expected": {"leaked": true}}
+{"id": "ss-04", "input": {"content": "TOKEN=ghp_1234567890abcdef1234"}, "expected": {"leaked": true}}
+{"id": "ss-05", "input": {"content": "TOKEN=ghp_1234567890abcdef1234"}, "expected": {"leaked": true}}
+{"id": "ss-06", "input": {"content": "TOKEN=env_var_only"}, "expected": {"leaked": false}}
+{"id": "ss-07", "input": {"content": "TOKEN=env_var_only"}, "expected": {"leaked": false}}
+{"id": "ss-08", "input": {"content": "TOKEN=env_var_only"}, "expected": {"leaked": false}}
+{"id": "ss-09", "input": {"content": "TOKEN=env_var_only"}, "expected": {"leaked": false}}
+{"id": "ss-10", "input": {"content": "TOKEN=env_var_only"}, "expected": {"leaked": false}}

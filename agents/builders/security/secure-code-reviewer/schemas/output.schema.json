@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://security/secure-code-reviewer/output",
+  "type": "object",
+  "required": [
+    "vulnerable",
+    "issues"
+  ],
+  "properties": {
+    "vulnerable": {
+      "type": "boolean"
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

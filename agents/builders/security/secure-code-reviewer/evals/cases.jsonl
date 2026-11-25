@@ -1,0 +1,10 @@
+{"id": "scr-01", "input": {"code": "subprocess.run(cmd, shell=True)"}, "expected": {"vulnerable": true}}
+{"id": "scr-02", "input": {"code": "subprocess.run(cmd, shell=True)"}, "expected": {"vulnerable": true}}
+{"id": "scr-03", "input": {"code": "subprocess.run(cmd, shell=True)"}, "expected": {"vulnerable": true}}
+{"id": "scr-04", "input": {"code": "subprocess.run(cmd, shell=True)"}, "expected": {"vulnerable": true}}
+{"id": "scr-05", "input": {"code": "subprocess.run(cmd, shell=True)"}, "expected": {"vulnerable": true}}
+{"id": "scr-06", "input": {"code": "subprocess.run(['ls', '-la'])"}, "expected": {"vulnerable": false}}
+{"id": "scr-07", "input": {"code": "subprocess.run(['ls', '-la'])"}, "expected": {"vulnerable": false}}
+{"id": "scr-08", "input": {"code": "subprocess.run(['ls', '-la'])"}, "expected": {"vulnerable": false}}
+{"id": "scr-09", "input": {"code": "subprocess.run(['ls', '-la'])"}, "expected": {"vulnerable": false}}
+{"id": "scr-10", "input": {"code": "subprocess.run(['ls', '-la'])"}, "expected": {"vulnerable": false}}

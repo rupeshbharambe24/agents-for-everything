@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://security/phishing-analyzer/input",
+  "type": "object",
+  "required": [
+    "email_text"
+  ],
+  "properties": {
+    "email_text": {
+      "type": "string"
+    }
+  }
+}

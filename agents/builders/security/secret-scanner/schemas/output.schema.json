@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://security/secret-scanner/output",
+  "type": "object",
+  "required": [
+    "leaked",
+    "matches"
+  ],
+  "properties": {
+    "leaked": {
+      "type": "boolean"
+    },
+    "matches": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
