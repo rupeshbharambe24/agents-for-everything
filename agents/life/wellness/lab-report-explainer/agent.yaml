@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: wellness/lab-report-explainer
+  name: "Lab Report Explainer"
+  version: 0.1.0
+  family: life
+  category: wellness
+  tier: atomic
+  maturity: prototype
+  priority: P2
+  tags: ["lab", "life", "on-prem", "regulated", "wellness"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Explains lab results in plain language and suggests questions for the doctor."
+  purpose: "Explains lab results in plain language and suggests questions for the doctor."
+  pattern: human-in-the-loop
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["consumer", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b", "open-weights-70b", "local-onprem"]
+  tools:
+    required: ["afe/documents"]
+    optional: []
+  memory: none
+  safety:
+    level: S4
+    side_effects: ["high-stakes-action-requires-human-signoff"]
+    approval_required_for: ["human_officer_signoff"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]
