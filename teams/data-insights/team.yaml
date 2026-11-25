@@ -1,0 +1,34 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: data-insights
+  name: Data Insights Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["data", "insights"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Clarifies a business question, writes read-only SQL, analyzes results, specs a chart, and reports."
+  pattern: plan-and-execute
+  entry: orchestration/clarifier
+  members:
+    - orchestration/clarifier
+    - data/text-to-sql
+    - data/data-analyst
+    - data/chart-maker
+    - research/report-writer
+  graph:
+    - [clarifier, text-to-sql]
+    - [text-to-sql, data-analyst]
+    - [data-analyst, chart-maker]
+    - [chart-maker, report-writer]
+  approvals: []
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S1
+  evals:
+    suite: evals/eval.yaml
