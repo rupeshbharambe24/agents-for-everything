@@ -1,0 +1,31 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: regulatory-intelligence
+  name: Regulatory Intelligence Digest
+  version: 0.1.0
+  maturity: prototype
+  priority: P2
+  tags: [compliance, regulatory, banking, legal, digests]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Daily regulator circular monitoring mapped to internal compliance policies, impacted owners, and briefing reports.
+  problem: Compliance officers manually read central bank circulars and legislative bulletins to spot obligation changes.
+  solution: Composes the regulatory-watch team across regulatory-circular-tracker, compliance-monitor, policy-analyst, and report-writer.
+  agents:
+    - banking/regulatory-circular-tracker
+    - legal/compliance-monitor
+    - research/policy-analyst
+    - research/report-writer
+  teams:
+    - regulatory-watch
+  mcp_servers:
+    - afe/news-api
+    - afe/documents
+    - afe/compliance-reg
+  entrypoint: app.py
+  safety:
+    level: S1
+  evals:
+    suite: tests/test_recipe.py
