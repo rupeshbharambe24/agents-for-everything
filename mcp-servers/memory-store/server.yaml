@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/memory-store
+  name: Long-Term Memory Store MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Persist and query episodic memories and knowledge graph triples with consent controls.
+  transport: stdio
+  upstream: modelcontextprotocol/servers (memory)
+  tools:
+    - name: read_memories
+      description: Query stored user/session memories.
+      read_only: true
+    - name: write_memory
+      description: Store deduplicated memory record.
+      read_only: false

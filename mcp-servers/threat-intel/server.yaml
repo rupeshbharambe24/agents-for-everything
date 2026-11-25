@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/threat-intel
+  name: Defensive Threat Intel & Scanner MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Query CVE advisories, dependency vulnerability scanners, and secret regex scanners.
+  transport: stdio
+  upstream: osv / trivy / gitleaks MCP wrapper
+  tools:
+    - name: check_advisories
+      description: Check package or indicator against defensive vulnerability feeds.
+      read_only: true

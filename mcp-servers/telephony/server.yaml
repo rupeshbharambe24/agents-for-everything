@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/telephony
+  name: Telephony & SIP Voice MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Inbound/outbound SIP and WebRTC voice call bridge with mandatory AI disclosure.
+  transport: stdio
+  upstream: twilio / livekit / asterisk MCP adapter
+  tools:
+    - name: handle_call
+      description: Manage call turn state and disclose AI identity.
+      read_only: false

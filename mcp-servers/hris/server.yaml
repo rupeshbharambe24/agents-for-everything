@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/hris
+  name: HRIS & Onboarding MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Access approved HR policies, onboarding checklists, and rubric templates.
+  transport: stdio
+  upstream: workday / bamboohr / internal-hris MCP adapter
+  tools:
+    - name: get_policy
+      description: Retrieve official HR policy docs.
+      read_only: true

@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/ticketing
+  name: Helpdesk & Support Ticketing MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Read, classify, and prepare ticket updates across Zendesk, Jira Service Management, or Freshdesk.
+  transport: stdio
+  upstream: zendesk / freshdesk / jira-sm MCP adapter
+  tools:
+    - name: list_tickets
+      description: Fetch incoming tickets.
+      read_only: true
+    - name: draft_ticket_update
+      description: Prepare ticket routing or reply draft.
+      read_only: false

@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/maps
+  name: Maps & Places MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Geocoding, local place search, travel times, and route checks.
+  transport: stdio
+  upstream: openstreetmap / google-maps MCP server
+  tools:
+    - name: search_places
+      description: Look up places, hours, and transit distances.
+      read_only: true

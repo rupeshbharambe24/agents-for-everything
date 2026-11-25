@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/cloud
+  name: Cloud Infrastructure & FinOps MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Read-only cloud resource inventory, utilization, and billing metrics.
+  transport: stdio
+  upstream: aws / gcp / azure / kubernetes MCP adapter
+  tools:
+    - name: list_resources
+      description: Inspect compute, storage, and billing utilization.
+      read_only: true

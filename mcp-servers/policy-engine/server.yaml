@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/policy-engine
+  name: Action Policy & Audit Engine MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Evaluate proposed tool calls against OPA-style allow/deny rules and append audit logs.
+  transport: stdio
+  upstream: opa / cedar policy MCP server
+  tools:
+    - name: evaluate_policy
+      description: Return allow, deny, or require_approval for an action.
+      read_only: true

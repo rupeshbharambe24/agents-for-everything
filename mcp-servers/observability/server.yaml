@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/observability
+  name: Observability & SIEM MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Query logs, metrics, traces, and active alerts across observability backends.
+  transport: stdio
+  upstream: prometheus / grafana / otel MCP adapter
+  tools:
+    - name: query_alerts
+      description: Fetch active alerts and recent metrics anomalies.
+      read_only: true

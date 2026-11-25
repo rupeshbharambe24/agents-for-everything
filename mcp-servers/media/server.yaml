@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/media
+  name: Audio, Image & Video Media MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Audio DSP cleaning, ffmpeg subtitle/clip processing, and image generation/editing briefs.
+  transport: stdio
+  upstream: ffmpeg / pillow / image-gen MCP wrapper
+  tools:
+    - name: process_media
+      description: Transform audio, image, or video metadata/timelines.
+      read_only: false

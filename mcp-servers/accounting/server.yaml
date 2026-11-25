@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/accounting
+  name: Accounting & ERP Ledger MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Read-only ledger inspection, reconciliation matching, and staged AP/expense drafts.
+  transport: stdio
+  upstream: quickbooks / xero / erpnext MCP adapter
+  tools:
+    - name: read_ledger
+      description: Query ledger lines and open bills.
+      read_only: true

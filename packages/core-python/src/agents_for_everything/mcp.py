@@ -45,6 +45,21 @@ class LocalMCPRegistry:
         self.register("afe/email", self._handle_email)
         self.register("afe/calendar", self._handle_calendar)
         self.register("afe/chat", self._handle_chat)
+        self.register("afe/memory-store", self._handle_memory_store)
+        self.register("afe/news-api", self._handle_news_api)
+        self.register("afe/maps", self._handle_maps)
+        self.register("afe/issue-tracker", self._handle_issue_tracker)
+        self.register("afe/crm", self._handle_crm)
+        self.register("afe/accounting", self._handle_accounting)
+        self.register("afe/hris", self._handle_hris)
+        self.register("afe/observability", self._handle_observability)
+        self.register("afe/cloud", self._handle_cloud)
+        self.register("afe/threat-intel", self._handle_threat_intel)
+        self.register("afe/ticketing", self._handle_ticketing)
+        self.register("afe/home-automation", self._handle_home_automation)
+        self.register("afe/telephony", self._handle_telephony)
+        self.register("afe/media", self._handle_media)
+        self.register("afe/policy-engine", self._handle_policy_engine)
 
     def _handle_stt(self, payload: dict[str, Any]) -> dict[str, Any]:
         audio = payload.get("audio") or payload
@@ -170,3 +185,53 @@ class LocalMCPRegistry:
 
     def _handle_chat(self, payload: dict[str, Any]) -> dict[str, Any]:
         return {"status": "draft_message", "message": payload}
+
+    def _handle_memory_store(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "ok", "records": payload.get("records", []), "nodes": payload.get("nodes", [])}
+
+    def _handle_news_api(self, payload: dict[str, Any]) -> dict[str, Any]:
+        query = str(payload.get("query", "")).strip()
+        return {"query": query, "results": payload.get("fixtures") or [{"title": f"News: {query}", "source": "wire", "url": "https://example.org/news"}]}
+
+    def _handle_maps(self, payload: dict[str, Any]) -> dict[str, Any]:
+        query = str(payload.get("query", "")).strip()
+        return {"query": query, "places": [{"name": f"{query} Center", "rating": 4.6, "open_now": True}]}
+
+    def _handle_issue_tracker(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "ok", "issues": payload.get("issues", []), "op": payload.get("op", "list")}
+
+    def _handle_crm(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "draft_update", "records": payload.get("records", [])}
+
+    def _handle_accounting(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "read_only", "entries": payload.get("entries", [])}
+
+    def _handle_hris(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "ok", "policies": payload.get("policies", [])}
+
+    def _handle_observability(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"service": payload.get("service", "core"), "alerts": payload.get("alerts", []), "status": "healthy"}
+
+    def _handle_cloud(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"op": payload.get("op", "inventory"), "resources": payload.get("resources", [])}
+
+    def _handle_threat_intel(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"indicators": payload.get("indicators", []), "risk": "low"}
+
+    def _handle_ticketing(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "ok", "tickets": payload.get("tickets", [])}
+
+    def _handle_home_automation(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "awaiting_confirmation", "device": payload.get("device", "light"), "action": payload.get("action", "toggle")}
+
+    def _handle_telephony(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "disclosed_ai_call", "call_id": payload.get("call_id", "sim-1")}
+
+    def _handle_media(self, payload: dict[str, Any]) -> dict[str, Any]:
+        return {"status": "ok", "artifact_uri": "afe://media/output.bin", "metadata": payload}
+
+    def _handle_policy_engine(self, payload: dict[str, Any]) -> dict[str, Any]:
+        action = str(payload.get("action", "")).lower()
+        deny_tokens = ("drop", "delete_all", "exfiltrate", "bypass")
+        decision = "deny" if any(t in action for t in deny_tokens) else "allow"
+        return {"action": action, "decision": decision}

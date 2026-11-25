@@ -1,0 +1,18 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/home-automation
+  name: Smart Home & Matter MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Query device states and trigger Home Assistant / Matter actions with lock confirmation.
+  transport: stdio
+  upstream: home-assistant / matter MCP server
+  tools:
+    - name: get_states
+      description: Read sensor and device states.
+      read_only: true
+    - name: control_device
+      description: Adjust lights, climate, or locks with safety gates.
+      read_only: false

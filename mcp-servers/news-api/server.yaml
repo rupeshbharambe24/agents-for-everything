@@ -1,0 +1,15 @@
+apiVersion: afe/v1
+kind: MCPServer
+metadata:
+  id: afe/news-api
+  name: News & Regulatory Feed MCP Server
+  version: 0.1.0
+  license: Apache-2.0
+spec:
+  summary: Query RSS, news wires, and public regulatory circular feeds.
+  transport: stdio
+  upstream: rss / news-api MCP wrapper
+  tools:
+    - name: fetch_feeds
+      description: Fetch recent articles matching watchlist topics.
+      read_only: true
