@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Team
+metadata:
+  id: contract-desk
+  name: Contract Desk Team
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: ["contract", "desk"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Classifies incoming legal agreements, analyzes clauses, reviews NDAs, and escalates to human counsel."
+  pattern: prompt-chaining
+  entry: documents/doc-classifier
+  members:
+    - documents/doc-classifier
+    - legal/contract-analyzer
+    - legal/nda-reviewer
+    - orchestration/human-approval-gate
+  graph:
+    - [doc-classifier, contract-analyzer]
+    - [contract-analyzer, nda-reviewer]
+    - [nda-reviewer, human-approval-gate]
+  approvals: ["human-approval-gate"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  safety:
+    level: S1
+  evals:
+    suite: evals/eval.yaml
