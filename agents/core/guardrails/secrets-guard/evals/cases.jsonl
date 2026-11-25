@@ -1,0 +1,10 @@
+{"id": "sec-01", "input": {"text": "token sk-1234567890abcdef"}, "expected": {"has_secrets": true}}
+{"id": "sec-02", "input": {"text": "token sk-1234567890abcdef"}, "expected": {"has_secrets": true}}
+{"id": "sec-03", "input": {"text": "token sk-1234567890abcdef"}, "expected": {"has_secrets": true}}
+{"id": "sec-04", "input": {"text": "token sk-1234567890abcdef"}, "expected": {"has_secrets": true}}
+{"id": "sec-05", "input": {"text": "token sk-1234567890abcdef"}, "expected": {"has_secrets": true}}
+{"id": "sec-06", "input": {"text": "normal log line"}, "expected": {"has_secrets": false}}
+{"id": "sec-07", "input": {"text": "normal log line"}, "expected": {"has_secrets": false}}
+{"id": "sec-08", "input": {"text": "normal log line"}, "expected": {"has_secrets": false}}
+{"id": "sec-09", "input": {"text": "normal log line"}, "expected": {"has_secrets": false}}
+{"id": "sec-10", "input": {"text": "normal log line"}, "expected": {"has_secrets": false}}

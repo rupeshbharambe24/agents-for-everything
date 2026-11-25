@@ -1,0 +1,10 @@
+{"id": "audi-01", "input": {"input": "Sample audit-logger request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-02", "input": {"input": "Sample audit-logger request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-03", "input": {"input": "Sample audit-logger request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-04", "input": {"input": "Sample audit-logger request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-05", "input": {"input": "Sample audit-logger request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-06", "input": {"input": "Sample audit-logger request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-07", "input": {"input": "Sample audit-logger request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-08", "input": {"input": "Sample audit-logger request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-09", "input": {"input": "Sample audit-logger request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "audi-10", "input": {"input": "Sample audit-logger request #10"}, "expected": {}, "expect_non_empty": ["result"]}

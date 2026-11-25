@@ -1,0 +1,10 @@
+{"id": "pol-01", "input": {"action": "read_docs"}, "expected": {"decision": "allow"}}
+{"id": "pol-02", "input": {"action": "drop_db"}, "expected": {"decision": "deny"}}
+{"id": "pol-03", "input": {"action": "send_email"}, "expected": {"decision": "approve"}}
+{"id": "pol-04", "input": {"action": "exfiltrate_keys"}, "expected": {"decision": "deny"}}
+{"id": "pol-05", "input": {"action": "submit_form"}, "expected": {"decision": "approve"}}
+{"id": "pol-06", "input": {"action": "list_files"}, "expected": {"decision": "allow"}}
+{"id": "pol-07", "input": {"action": "pay_invoice"}, "expected": {"decision": "approve"}}
+{"id": "pol-08", "input": {"action": "rm_rf_root"}, "expected": {"decision": "deny"}}
+{"id": "pol-09", "input": {"action": "search_kb"}, "expected": {"decision": "allow"}}
+{"id": "pol-10", "input": {"action": "delete_user"}, "expected": {"decision": "approve"}}

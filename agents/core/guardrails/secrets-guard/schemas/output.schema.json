@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://guardrails/secrets-guard/output",
+  "type": "object",
+  "required": [
+    "has_secrets",
+    "masked_text",
+    "findings"
+  ],
+  "properties": {
+    "has_secrets": {
+      "type": "boolean"
+    },
+    "masked_text": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
