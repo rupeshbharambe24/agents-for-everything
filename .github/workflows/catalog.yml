@@ -12,7 +12,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Verify generated catalog is up to date
+      - name: Verify generated catalog and READMEs are up to date
         run: |
           python3 scripts/build_catalog.py
-          git diff --exit-code CATALOG.md registry/
+          python3 scripts/build_readmes.py
+          python3 scripts/build_category_readmes.py
+          git diff --exit-code CATALOG.md registry/ agents/ teams/ recipes/ mcp-servers/
