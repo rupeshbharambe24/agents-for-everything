@@ -1,0 +1,51 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: real-estate/maintenance-request-agent
+  name: "Maintenance Request Agent"
+  version: 0.1.0
+  family: industries
+  category: real-estate
+  tier: composite
+  maturity: prototype
+  priority: P2
+  tags: ["industries", "maintenance", "real-estate"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Triage of tenant requests with photos and dispatch to vendors."
+  purpose: "Triage of tenant requests with photos and dispatch to vendors."
+  pattern: orchestrator-workers
+  autonomy: L2
+  classic_type: goal-based
+  modality: ["vision", "text"]
+  runtime: interactive
+  environment: digital-api
+  audience: ["industry", "professional"]
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output", "tool_use", "vision"]
+    min_context_tokens: 8000
+    tested_with: ["frontier-large", "frontier-small", "open-weights-8b"]
+  tools:
+    required: ["afe/ticketing"]
+    optional: []
+  uses_agents: ["documents/document-parser", "vision/ocr"]
+  memory: session
+  safety:
+    level: S3
+    side_effects: ["external-action-requires-approval"]
+    approval_required_for: ["approve_external_action"]
+    handles_pii: true
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]
