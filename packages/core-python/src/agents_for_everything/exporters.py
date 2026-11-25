@@ -92,6 +92,19 @@ def build_subagent_md(manifest: AgentManifest, system_prompt: str) -> str:
     )
 
 
+def build_codex_subagent_toml(manifest: AgentManifest, system_prompt: str) -> str:
+    """Generate a Codex-compatible `.toml` subagent definition."""
+    slug = manifest.id.split("/", 1)[-1]
+    escaped_prompt = system_prompt.strip().replace('"""', '\\"\\"\\"')
+    return (
+        f'name = "{slug}"\n'
+        f'id = "{manifest.id}"\n'
+        f'description = {json.dumps(manifest.summary)}\n'
+        f'safety_level = "{manifest.safety_level}"\n'
+        f'instructions = """\n{escaped_prompt}\n"""\n'
+    )
+
+
 def build_langgraph_stub_py(manifest: AgentManifest) -> str:
     """Generate a LangGraph node wrapper calling `agents_for_everything.AgentRunner`."""
     fn_name = manifest.id.replace("/", "_").replace("-", "_")
@@ -137,6 +150,9 @@ def export_agent(agent_dir: Path, target: str, out_dir: Path) -> list[Path]:
         dest = out_dir / f"{slug}.md"
         dest.write_text(build_subagent_md(manifest, system_prompt), encoding="utf-8")
         written.append(dest)
+        toml_dest = out_dir / f"{slug}.toml"
+        toml_dest.write_text(build_codex_subagent_toml(manifest, system_prompt), encoding="utf-8")
+        written.append(toml_dest)
     elif normalized == "langgraph":
         dest = out_dir / f"{slug}_langgraph.py"
         dest.write_text(build_langgraph_stub_py(manifest), encoding="utf-8")

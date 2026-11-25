@@ -234,12 +234,22 @@ def _cmd_new(args: argparse.Namespace) -> int:
 def _cmd_export(args: argparse.Namespace) -> int:
     root = _resolve_root(args.repo_root)
     agents = discover_agents(root)
+    out_base = Path(args.out).resolve()
+    if args.all or not args.agent_id:
+        count = 0
+        for aid, manifest in sorted(agents.items()):
+            assert manifest.directory is not None
+            cat_out = out_base / manifest.category
+            export_agent(manifest.directory, args.target_format, cat_out)
+            count += 1
+        print(f"Exported {count} agent(s) ({args.target_format}) -> {out_base}")
+        return 0
     if args.agent_id not in agents:
         print(f"Error: unknown agent '{args.agent_id}'", file=sys.stderr)
         return 1
     manifest = agents[args.agent_id]
     assert manifest.directory is not None
-    written = export_agent(manifest.directory, args.target_format, Path(args.out).resolve())
+    written = export_agent(manifest.directory, args.target_format, out_base)
     for p in written:
         print(f"Exported {args.agent_id} ({args.target_format}) -> {p}")
     return 0
@@ -349,7 +359,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_new.set_defaults(func=_cmd_new)
 
     p_export = sub.add_parser("export", help="Export an agent to skill/a2a/mcp/subagent/langgraph")
-    p_export.add_argument("agent_id")
+    p_export.add_argument("agent_id", nargs="?")
+    p_export.add_argument("--all", action="store_true")
     p_export.add_argument("--as", dest="target_format", required=True, choices=["skill", "mcp-server", "a2a", "subagent", "langgraph"])
     p_export.add_argument("--out", default="./exports")
     p_export.set_defaults(func=_cmd_export)

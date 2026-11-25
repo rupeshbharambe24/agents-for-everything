@@ -66,6 +66,22 @@ class CLITests(unittest.TestCase):
             self.assertEqual(rc_export, 0)
             self.assertTrue((root / "out" / "demo-cleaner.agent-card.json").exists())
 
+            rc_export_all = main(
+                [
+                    "--repo-root",
+                    str(root),
+                    "export",
+                    "--all",
+                    "--as",
+                    "subagent",
+                    "--out",
+                    str(root / "out_all"),
+                ]
+            )
+            self.assertEqual(rc_export_all, 0)
+            self.assertTrue((root / "out_all" / "text" / "demo-cleaner.md").exists())
+            self.assertTrue((root / "out_all" / "text" / "demo-cleaner.toml").exists())
+
             rc_test = main(["--repo-root", str(root), "test", "text/demo-cleaner"])
             self.assertEqual(rc_test, 0)
 
