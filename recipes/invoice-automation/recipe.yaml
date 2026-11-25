@@ -1,0 +1,32 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: invoice-automation
+  name: Invoice Automation
+  version: 0.1.0
+  maturity: prototype
+  priority: P1
+  tags: [finance, invoices, ap, email]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Email inbox to extracted invoices, PO matching, and human-approved payment queue.
+  problem: Finance teams manually copy invoice emails into ERP bills and verify PO totals.
+  solution: Composes inbox-triager, invoice-receipt-parser, accounts-payable, and human-approval-gate.
+  agents:
+    - communication/inbox-triager
+    - documents/invoice-receipt-parser
+    - finance/accounts-payable
+    - orchestration/human-approval-gate
+  teams:
+    - accounts-payable-team
+  mcp_servers:
+    - afe/email
+    - afe/documents
+    - afe/accounting
+  entrypoint: app.py
+  safety:
+    level: S4
+    approval_required_for: [approve_payment_batch]
+  evals:
+    suite: tests/test_recipe.py
