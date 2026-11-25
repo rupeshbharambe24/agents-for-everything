@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://it-support/account-recovery-guide/input",
+  "type": "object",
+  "required": [
+    "input"
+  ],
+  "properties": {
+    "input": {
+      "type": "string",
+      "description": "Primary task payload (issue \u2192 guided steps)"
+    },
+    "locale": {
+      "type": "string",
+      "default": "en"
+    },
+    "context": {
+      "type": "object"
+    },
+    "execute": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

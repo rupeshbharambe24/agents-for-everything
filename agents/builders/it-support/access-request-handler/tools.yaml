@@ -1,0 +1,7 @@
+apiVersion: afe/v1
+kind: Tools
+servers:
+  - id: afe/ticketing
+    required: true
+    permissions: ["read", "write"]
+    scope: declared
