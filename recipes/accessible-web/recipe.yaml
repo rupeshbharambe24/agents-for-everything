@@ -1,0 +1,30 @@
+apiVersion: afe/v1
+kind: Recipe
+metadata:
+  id: accessible-web
+  name: Accessible Voice Web Companion
+  version: 0.1.0
+  maturity: prototype
+  priority: P2
+  tags: [accessibility, a11y, voice, wcag, forms, narration]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: Browser companion that narrates page state aloud, audits WCAG gaps, and fills web forms hands-free by voice before human submit.
+  problem: Complex web portals and unlabelled forms lock out visually impaired or motor-restricted users.
+  solution: Composes screen-narrator, accessibility-auditor, and voice-form-filler with a strict human confirmation step before submission.
+  agents:
+    - accessibility/screen-narrator
+    - accessibility/accessibility-auditor
+    - voice/voice-form-filler
+  teams: []
+  mcp_servers:
+    - afe/browser
+    - afe/stt
+    - afe/tts
+  entrypoint: app.py
+  safety:
+    level: S2
+    approval_required_for: [submit]
+  evals:
+    suite: tests/test_recipe.py
