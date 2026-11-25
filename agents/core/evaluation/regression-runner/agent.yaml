@@ -1,0 +1,50 @@
+apiVersion: afe/v1
+kind: Agent
+metadata:
+  id: evaluation/regression-runner
+  name: "Regression Runner"
+  version: 0.1.0
+  family: core
+  category: evaluation
+  tier: composite
+  maturity: prototype
+  priority: P1
+  tags: ["evaluation", "regression-runner"]
+  maintainers: ["@rupeshbharambe24"]
+  license: Apache-2.0
+spec:
+  summary: "Runs eval suites across code or prompt edits and compares pass rates against baselines."
+  purpose: "Runs eval suites across code or prompt edits and compares pass rates against baselines."
+  pattern: augmented-llm
+  autonomy: L1
+  classic_type: goal-based
+  modality: ["text"]
+  runtime: interactive
+  environment: digital-api
+  io:
+    input: schemas/input.schema.json
+    output: schemas/output.schema.json
+  model:
+    capabilities: ["structured_output"]
+    min_context_tokens: 8000
+    tested_with: [frontier-large, frontier-small, open-weights-8b]
+  tools:
+    required: ["afe/python-sandbox"]
+    optional: []
+  uses_agents: ["evaluation/llm-judge"]
+  memory: none
+  safety:
+    level: S1
+    side_effects: []
+    approval_required_for: []
+    handles_pii: false
+    data_retention: none
+  limits:
+    max_steps: 10
+    timeout_seconds: 60
+    max_cost_usd: 0.03
+  evals:
+    suite: evals/eval.yaml
+    targets: { pass_rate: 0.9 }
+  exports: [python, typescript, mcp-server, a2a-card, agent-skill, subagent]
+  locales: ["en"]

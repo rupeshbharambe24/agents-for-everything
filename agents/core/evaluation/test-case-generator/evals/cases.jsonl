@@ -1,0 +1,10 @@
+{"id": "test-01", "input": {"input": "Sample test-case-generator request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-02", "input": {"input": "Sample test-case-generator request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-03", "input": {"input": "Sample test-case-generator request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-04", "input": {"input": "Sample test-case-generator request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-05", "input": {"input": "Sample test-case-generator request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-06", "input": {"input": "Sample test-case-generator request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-07", "input": {"input": "Sample test-case-generator request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-08", "input": {"input": "Sample test-case-generator request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-09", "input": {"input": "Sample test-case-generator request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "test-10", "input": {"input": "Sample test-case-generator request #10"}, "expected": {}, "expect_non_empty": ["result"]}

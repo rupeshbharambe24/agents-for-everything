@@ -1,0 +1,10 @@
+{"id": "regr-01", "input": {"input": "Sample regression-runner request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-02", "input": {"input": "Sample regression-runner request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-03", "input": {"input": "Sample regression-runner request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-04", "input": {"input": "Sample regression-runner request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-05", "input": {"input": "Sample regression-runner request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-06", "input": {"input": "Sample regression-runner request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-07", "input": {"input": "Sample regression-runner request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-08", "input": {"input": "Sample regression-runner request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-09", "input": {"input": "Sample regression-runner request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "regr-10", "input": {"input": "Sample regression-runner request #10"}, "expected": {}, "expect_non_empty": ["result"]}
