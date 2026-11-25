@@ -29,7 +29,7 @@ afe test voice/text-to-speech
 orchestration/router, orchestration/verifier
 
 ## Tools required
-afe/tts
+None (pure synthesis / metadata)
 
 ## Safety
 - Safety tier: `S0`

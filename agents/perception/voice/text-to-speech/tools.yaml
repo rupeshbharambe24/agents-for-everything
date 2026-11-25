@@ -1,7 +1,3 @@
 apiVersion: afe/v1
 kind: Tools
-servers:
-  - id: afe/tts
-    required: true
-    permissions: ["read"]
-    scope: declared
+servers: []

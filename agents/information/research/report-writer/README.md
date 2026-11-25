@@ -29,7 +29,7 @@ afe test research/report-writer
 orchestration/router, orchestration/verifier
 
 ## Tools required
-afe/documents
+None (pure formatting / synthesis)
 
 ## Safety
 - Safety tier: `S0`

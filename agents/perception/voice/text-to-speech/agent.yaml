@@ -29,7 +29,7 @@ spec:
     min_context_tokens: 8000
     tested_with: [frontier-large, frontier-small, open-weights-8b]
   tools:
-    required: ["afe/tts"]
+    required: []
     optional: []
   uses_agents: []
   memory: none
