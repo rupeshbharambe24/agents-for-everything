@@ -1,0 +1,10 @@
+{"id": "app--01", "input": {"input": "Sample app-automator request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "app--02", "input": {"input": "Sample app-automator request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "app--03", "input": {"input": "Sample app-automator request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "app--04", "input": {"input": "Sample app-automator request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "app--05", "input": {"input": "Sample app-automator request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "app--06", "input": {"input": "Sample app-automator request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "app--07", "input": {"input": "Sample app-automator request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "app--08", "input": {"input": "Sample app-automator request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "app--09", "input": {"input": "Sample app-automator request #9", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "expect_error": "ApprovalRequiredError"}
+{"id": "app--10", "input": {"input": "Sample app-automator request #10", "execute": true}, "expected": {}, "expect_non_empty": ["result"], "auto_approve": true}

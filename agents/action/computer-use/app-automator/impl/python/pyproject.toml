@@ -1,0 +1,5 @@
+[project]
+name = "afe-agent-computer-use-app-automator"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["agents-for-everything"]
