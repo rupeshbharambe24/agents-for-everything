@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sqlite3
 from pathlib import Path
 from typing import Any, Callable
@@ -146,11 +147,12 @@ class LocalMCPRegistry:
         query = str(payload.get("query", "")).lower()
         docs = payload.get("documents", [])
         ranked: list[dict[str, Any]] = []
-        terms = [t for t in query.split() if len(t) > 2]
+        terms = [t for t in re.findall(r"[a-z0-9]+", query) if len(t) > 2]
         for idx, doc in enumerate(docs):
             text = doc.get("content", "") if isinstance(doc, dict) else str(doc)
             title = doc.get("title", f"Doc {idx + 1}") if isinstance(doc, dict) else f"Doc {idx + 1}"
-            score = sum(1 for t in terms if t in text.lower())
+            doc_tokens = set(re.findall(r"[a-z0-9]+", f"{title} {text}".lower()))
+            score = sum(1 for t in terms if t in doc_tokens)
             ranked.append({"id": str(idx + 1), "title": title, "content": text, "score": score})
         ranked.sort(key=lambda item: item["score"], reverse=True)
         return {"matches": ranked[: int(payload.get("top_k", 5))]}
