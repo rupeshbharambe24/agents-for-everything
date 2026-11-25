@@ -22,7 +22,12 @@ from agents_for_everything import (
     verify_agent_dir,
     verify_repository_agents,
 )
-from evals.harness.runner import evaluate_agent
+try:
+    from evals.harness.runner import evaluate_agent
+except ModuleNotFoundError:
+    # Installed CLI (`uv run afe`, `pip install -e cli`): the eval harness lives in the checkout root.
+    sys.path.insert(0, str(find_repo_root()))
+    from evals.harness.runner import evaluate_agent
 
 from .validator import CATEGORY_TO_FAMILY, validate_repository
 
