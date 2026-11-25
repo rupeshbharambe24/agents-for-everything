@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://finance/accounts-payable/output",
+  "type": "object",
+  "required": [
+    "matched",
+    "variance",
+    "status"
+  ],
+  "properties": {
+    "matched": {
+      "type": "boolean"
+    },
+    "variance": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

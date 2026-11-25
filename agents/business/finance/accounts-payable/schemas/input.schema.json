@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "afe://finance/accounts-payable/input",
+  "type": "object",
+  "required": [
+    "invoice_total",
+    "po_total",
+    "vendor"
+  ],
+  "properties": {
+    "invoice_total": {
+      "type": "number"
+    },
+    "po_total": {
+      "type": "number"
+    },
+    "vendor": {
+      "type": "string"
+    },
+    "approve": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

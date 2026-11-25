@@ -1,0 +1,10 @@
+{"id": "fina-01", "input": {"input": "Sample financial-statement-analyzer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-02", "input": {"input": "Sample financial-statement-analyzer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-03", "input": {"input": "Sample financial-statement-analyzer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-04", "input": {"input": "Sample financial-statement-analyzer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-05", "input": {"input": "Sample financial-statement-analyzer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-06", "input": {"input": "Sample financial-statement-analyzer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-07", "input": {"input": "Sample financial-statement-analyzer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-08", "input": {"input": "Sample financial-statement-analyzer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-09", "input": {"input": "Sample financial-statement-analyzer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "fina-10", "input": {"input": "Sample financial-statement-analyzer request #10"}, "expected": {}, "expect_non_empty": ["result"]}

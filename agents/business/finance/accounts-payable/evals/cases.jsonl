@@ -1,0 +1,10 @@
+{"id": "ap-01", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 1"}, "expected": {"matched": true, "status": "queued_for_review"}}
+{"id": "ap-02", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 2"}, "expected": {"matched": true, "status": "queued_for_review"}}
+{"id": "ap-03", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 3"}, "expected": {"matched": true, "status": "queued_for_review"}}
+{"id": "ap-04", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 4"}, "expected": {"matched": true, "status": "queued_for_review"}}
+{"id": "ap-05", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 5"}, "expected": {"matched": true, "status": "queued_for_review"}}
+{"id": "ap-06", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 6"}, "expected": {"matched": true, "status": "queued_for_review"}}
+{"id": "ap-07", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 7"}, "expected": {"matched": true, "status": "queued_for_review"}}
+{"id": "ap-08", "input": {"invoice_total": 1000, "po_total": 900, "vendor": "Vendor 8"}, "expected": {"matched": false, "status": "queued_for_review"}}
+{"id": "ap-09", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 9", "approve": true}, "expect_error": "ApprovalRequiredError"}
+{"id": "ap-10", "input": {"invoice_total": 1000, "po_total": 1000, "vendor": "Vendor 10", "approve": true}, "auto_approve": true, "expected": {"matched": true, "status": "approved_for_payment"}}

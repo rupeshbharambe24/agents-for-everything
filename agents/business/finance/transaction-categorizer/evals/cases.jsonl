@@ -1,0 +1,10 @@
+{"id": "tran-01", "input": {"input": "Sample transaction-categorizer request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-02", "input": {"input": "Sample transaction-categorizer request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-03", "input": {"input": "Sample transaction-categorizer request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-04", "input": {"input": "Sample transaction-categorizer request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-05", "input": {"input": "Sample transaction-categorizer request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-06", "input": {"input": "Sample transaction-categorizer request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-07", "input": {"input": "Sample transaction-categorizer request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-08", "input": {"input": "Sample transaction-categorizer request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-09", "input": {"input": "Sample transaction-categorizer request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "tran-10", "input": {"input": "Sample transaction-categorizer request #10"}, "expected": {}, "expect_non_empty": ["result"]}
