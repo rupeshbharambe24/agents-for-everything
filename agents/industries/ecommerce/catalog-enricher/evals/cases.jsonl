@@ -1,0 +1,10 @@
+{"id": "cata-01", "input": {"input": "Sample catalog-enricher request #1"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-02", "input": {"input": "Sample catalog-enricher request #2"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-03", "input": {"input": "Sample catalog-enricher request #3"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-04", "input": {"input": "Sample catalog-enricher request #4"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-05", "input": {"input": "Sample catalog-enricher request #5"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-06", "input": {"input": "Sample catalog-enricher request #6"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-07", "input": {"input": "Sample catalog-enricher request #7"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-08", "input": {"input": "Sample catalog-enricher request #8"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-09", "input": {"input": "Sample catalog-enricher request #9"}, "expected": {}, "expect_non_empty": ["result"]}
+{"id": "cata-10", "input": {"input": "Sample catalog-enricher request #10"}, "expected": {}, "expect_non_empty": ["result"]}
