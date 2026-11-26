@@ -73,3 +73,5 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
+          # Re-running after a partial upload must not fail on files PyPI already has.
+          skip-existing: true

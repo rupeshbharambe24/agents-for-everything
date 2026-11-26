@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agents-for-everything-cli"
-version = "0.1.0"
+version = "0.1.1"
 readme = "README.md"
 description = "CLI (`agents-for-everything` / `afe`) for searching, adding, validating, testing, and exporting afe/v1 agents"
 license = "Apache-2.0"

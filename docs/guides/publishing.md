@@ -56,6 +56,10 @@ The [`release.yml`](../../.github/workflows/release.yml) workflow then:
 
 Use a hyphenated tag (for example `v0.2.0-rc.1`) for a pre-release. Bump `version` in `packages/core-python/pyproject.toml` and `cli/pyproject.toml` before each new tag: PyPI rejects re-uploading an existing version.
 
+## Troubleshooting
+
+**`400 Non-user identities cannot create new projects`**: PyPI has no pending publisher for that package name, or the name differs from `name` in its `pyproject.toml`. Check the list at <https://pypi.org/manage/account/publishing/>, add or fix the publisher, then publish again. Already-uploaded files are skipped (`skip-existing: true`), so a re-run only uploads what is missing. Because PyPI never accepts the same version twice, any files that changed need a new version and tag.
+
 ## Check a build locally
 
 ```bash
