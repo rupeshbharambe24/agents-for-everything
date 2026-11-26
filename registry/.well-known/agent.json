@@ -2,7 +2,7 @@
   "name": "Agents for Everything Registry",
   "id": "afe/registry",
   "version": "1.0.0",
-  "description": "Open A2A discovery registry indexing 571 composable agents (571 verified), 22 teams, 12 recipes, and 36 MCP servers.",
+  "description": "Open A2A discovery registry indexing 571 composable agents (571 passing contract checks), 22 teams, 12 recipes, and 36 MCP servers.",
   "capabilities": {
     "streaming": true,
     "stateTransitionHistory": true

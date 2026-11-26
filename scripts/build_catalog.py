@@ -183,7 +183,7 @@ def main() -> int:
                 "name": "Agents for Everything Registry",
                 "id": "afe/registry",
                 "version": "1.0.0",
-                "description": f"Open A2A discovery registry indexing {len(agents)} composable agents ({verified_total} verified), {len(teams)} teams, {len(recipes)} recipes, and {len(servers)} MCP servers.",
+                "description": f"Open A2A discovery registry indexing {len(agents)} composable agents ({verified_total} passing contract checks), {len(teams)} teams, {len(recipes)} recipes, and {len(servers)} MCP servers.",
                 "capabilities": {"streaming": True, "stateTransitionHistory": True},
                 "discovery": {
                     "catalog": "registry/catalog.json",
@@ -238,7 +238,7 @@ def main() -> int:
         "",
         "> Auto-generated from `agent.yaml`, `team.yaml`, `recipe.yaml`, and `server.yaml` manifests via `scripts/build_catalog.py`.",
         "",
-        f"- **Agents:** {len(agents)} ({verified_total} verified)",
+        f"- **Agents:** {len(agents)} ({verified_total} pass contract checks: schemas, offline evals, safety policy, no secrets)",
         f"- **Teams:** {len(teams)}",
         f"- **Recipes:** {len(recipes)}",
         f"- **MCP Servers:** {len(servers)}",
@@ -247,14 +247,14 @@ def main() -> int:
         "",
         "## Agents",
         "",
-        "| ID | Name | Family / Category | Tier | Maturity | Verified | Priority | Safety | Summary |",
+        "| ID | Name | Family / Category | Tier | Maturity | Checks | Priority | Safety | Summary |",
         "|---|---|---|---|---|---|---|---|---|",
     ]
     for m in agents.values():
         rel = m.directory.relative_to(ROOT) if m.directory else ""
         badge = verified_records.get(m.id, {}).get("badge", "unverified")
         lines.append(
-            f"| [`{m.id}`]({rel}/README.md) | {m.name} | `{m.family}/{m.category}` | {m.tier} | `{m.maturity}` | `{badge}` | {m.priority} | {m.safety_level} | {m.summary} |"
+            f"| [`{m.id}`]({rel}/README.md) | {m.name} | `{m.family}/{m.category}` | {m.tier} | `{m.maturity}` | {'✅' if badge == 'verified' else '—'} | {m.priority} | {m.safety_level} | {m.summary} |"
         )
 
     lines.extend([

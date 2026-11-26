@@ -15,7 +15,7 @@
   const statsEl = document.getElementById("stats");
   const counts = data.catalog.counts || {};
   statsEl.innerHTML = [
-    `Agents: ${counts.agents ?? agents.length} (${counts.verified_agents ?? agents.filter((a) => a.verified).length} verified)`,
+    `Agents: ${counts.agents ?? agents.length} (${counts.verified_agents ?? agents.filter((a) => a.verified).length} contract-checked)`,
     `Teams: ${counts.teams ?? teams.length}`,
     `Recipes: ${counts.recipes ?? recipes.length}`,
     `MCP Servers: ${counts.mcp_servers ?? servers.length}`,
@@ -84,7 +84,7 @@
         <span class="badge">${agent.family}/${agent.category}</span>
         <span class="badge">${agent.priority}</span>
         <span class="badge ${agent.maturity}">${agent.maturity}</span>
-        <span class="badge ${agent.verified ? "verified" : "unverified"}">${agent.badge || (agent.verified ? "verified" : "unverified")}</span>
+        <span class="badge ${agent.verified ? "verified" : "unverified"}">${agent.verified ? "contract-checked" : "unchecked"}</span>
         <span class="badge">${agent.safety_level}</span>
         <span class="badge">${agent.autonomy || "L1"}</span>
       </div>
@@ -148,7 +148,7 @@
           <div class="badges">
             <span class="badge">${a.priority}</span>
             <span class="badge ${a.maturity}">${a.maturity}</span>
-            <span class="badge ${a.verified ? "verified" : "unverified"}">${a.badge || (a.verified ? "verified" : "unverified")}</span>
+            <span class="badge ${a.verified ? "verified" : "unverified"}">${a.verified ? "contract-checked" : "unchecked"}</span>
             <span class="badge">${a.safety_level}</span>
             <span class="badge">${a.tier}</span>
           </div>
