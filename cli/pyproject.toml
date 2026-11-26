@@ -5,12 +5,19 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "agents-for-everything-cli"
 version = "0.1.0"
+readme = "README.md"
 description = "CLI (`agents-for-everything` / `afe`) for searching, adding, validating, testing, and exporting afe/v1 agents"
 license = "Apache-2.0"
 requires-python = ">=3.10"
 dependencies = [
   "agents-for-everything",
 ]
+
+[project.urls]
+Homepage = "https://rupeshbharambe24.github.io/agents-for-everything/"
+Repository = "https://github.com/rupeshbharambe24/agents-for-everything"
+Documentation = "https://github.com/rupeshbharambe24/agents-for-everything#readme"
+Issues = "https://github.com/rupeshbharambe24/agents-for-everything/issues"
 
 [project.scripts]
 agents-for-everything = "afe_cli.main:main"

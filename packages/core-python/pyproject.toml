@@ -14,6 +14,12 @@ authors = [
 ]
 dependencies = []
 
+[project.urls]
+Homepage = "https://rupeshbharambe24.github.io/agents-for-everything/"
+Repository = "https://github.com/rupeshbharambe24/agents-for-everything"
+Documentation = "https://github.com/rupeshbharambe24/agents-for-everything#readme"
+Issues = "https://github.com/rupeshbharambe24/agents-for-everything/issues"
+
 [project.optional-dependencies]
 standard = [
   "pyyaml>=6.0",

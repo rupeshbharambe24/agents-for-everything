@@ -1,13 +1,22 @@
 name: Release
 
+# Push a tag like v0.1.0 to:
+#   1. export A2A cards and Agent Skills for every agent,
+#   2. build the Python packages,
+#   3. create a GitHub Release with those files attached,
+#   4. publish the packages to PyPI via Trusted Publishing (no API token needed;
+#      see docs/guides/publishing.md for the one-time PyPI setup).
+
 on:
   push:
     tags:
       - "v*"
 
 jobs:
-  export-artifacts:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,11 +28,48 @@ jobs:
           from pathlib import Path
           from agents_for_everything import discover_agents, export_agent
           for aid, m in discover_agents(Path(".")).items():
-              slug = aid.split("/", 1)[1]
               export_agent(m.directory, "a2a", Path("dist/a2a"))
               export_agent(m.directory, "skill", Path("dist/skills"))
           '
+      - name: Build Python packages
+        run: |
+          pip install build
+          python -m build packages/core-python --outdir dist/python
+          python -m build cli --outdir dist/python
+      - name: Package release assets
+        run: |
+          cd dist
+          zip -qr afe-a2a-cards.zip a2a
+          zip -qr afe-agent-skills.zip skills
+          cp ../registry/catalog.json ../registry/a2a-index.json .
       - uses: actions/upload-artifact@v4
         with:
-          name: afe-exports
+          name: python-dist
+          path: dist/python/
+      - name: Create GitHub Release with assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PRE=""
+          if [[ "${GITHUB_REF_NAME}" == *-* ]]; then PRE="--prerelease"; fi
+          gh release create "${GITHUB_REF_NAME}" \
+            --title "Agents for Everything ${GITHUB_REF_NAME}" \
+            --generate-notes $PRE \
+            dist/afe-a2a-cards.zip dist/afe-agent-skills.zip dist/catalog.json dist/a2a-index.json dist/python/*
+
+  publish-pypi:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/agents-for-everything/
+    permissions:
+      id-token: write   # required for PyPI Trusted Publishing
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: python-dist
           path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/
