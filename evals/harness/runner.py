@@ -84,6 +84,10 @@ def evaluate_agent(
     passed = 0
     failures: list[dict[str, Any]] = []
 
+    if provider_name == "mock":
+        # Cases marked "live_only": true need a real model (e.g. new languages the offline mode can't parse).
+        cases = [c for c in cases if not c.raw.get("live_only")]
+
     for case in cases:
         expect_error = case.raw.get("expect_error")
         auto_approve = bool(case.raw.get("auto_approve", False))
