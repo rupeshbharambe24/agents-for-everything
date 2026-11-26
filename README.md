@@ -15,7 +15,7 @@ plus **22 multi-agent teams**, **12 runnable product recipes** and **36 MCP tool
 
 [![Validate](https://img.shields.io/github/actions/workflow/status/rupeshbharambe24/agents-for-everything/validate.yml?branch=main&label=validate&style=flat-square)](https://github.com/rupeshbharambe24/agents-for-everything/actions/workflows/validate.yml)
 [![Evals](https://img.shields.io/github/actions/workflow/status/rupeshbharambe24/agents-for-everything/evals.yml?branch=main&label=evals&style=flat-square)](https://github.com/rupeshbharambe24/agents-for-everything/actions/workflows/evals.yml)
-[![Offline evals](https://img.shields.io/badge/offline_evals-8%2C350_passing-16a34a?style=flat-square)](evals/leaderboard.md)
+[![Offline evals](https://img.shields.io/badge/offline_eval_cases-6%2C492_unique%2C_all_passing-16a34a?style=flat-square)](evals/leaderboard.md)
 [![Spec](https://img.shields.io/badge/spec-afe%2Fv1_%2B_v2-475569?style=flat-square)](spec/SPEC.md)
 [![License](https://img.shields.io/badge/license-Apache--2.0-f59e0b?style=flat-square)](LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4?style=flat-square)](CONTRIBUTING.md)
@@ -40,7 +40,7 @@ Building an AI product usually means writing the same agents again and again: a 
 | 🧱 **One agent, one job** | Every agent does a single task well: `speech-to-text`, `pii-redactor`, `invoice-receipt-parser`, `web-form-filler`… |
 | 🔌 **Typed contracts** | Every agent declares JSON Schema input and output, so agents snap together without glue code. |
 | 🛡️ **Safe by default** | Every agent has a safety level (S0–S4). Anything that sends, pays or deletes needs human approval. |
-| 🧪 **Tested** | Every agent ships with eval cases (10–50 each, 8,350 in total) and a rubric. CI runs them on every change. |
+| 🧪 **Tested** | Every agent ships with eval cases and a rubric (6,492 unique cases in total; more depth is [welcome](CONTRIBUTING.md)). CI runs them on every change. |
 | 🌍 **Model- and framework-agnostic** | Run on any model, including local open-weights models via Ollama. `afe export` produces Agent Skills, A2A cards, MCP servers, LangGraph graphs and coding-assistant subagents; [adapters](packages/adapters/README.md) for the OpenAI Agents SDK, Claude Agent SDK, Google ADK, CrewAI, Microsoft Agent Framework and Mastra are in progress. |
 | 📦 **Take only what you need** | `afe add voice/speech-to-text` copies one agent (and what it depends on) into your project, shadcn/ui-style. |
 
@@ -411,7 +411,7 @@ No. It is a library of agents built on open standards (JSON Schema, MCP, A2A, Ag
 <details>
 <summary><b>Do the agents call a real LLM?</b></summary>
 
-Out of the box, agents run in an **offline, deterministic mode** so you can explore, test and run CI without API keys. Pass a provider and model (for example Ollama with an open-weights model) to run them with a real model. The 8,350 passing evals are offline evals; live-model scores are on the roadmap.
+Out of the box, agents run in an **offline, deterministic mode** so you can explore, test and run CI without API keys. Pass a provider and model (for example Ollama with an open-weights model) to run them with a real model. All offline eval cases pass, but they test contracts, safety gates and workflows, not model quality. Live-model scores are on the roadmap, and you can help produce them.
 
 </details>
 
