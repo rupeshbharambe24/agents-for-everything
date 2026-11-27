@@ -25,13 +25,13 @@ Matches query terms against stored memory records and returns top-k ranked match
 ```bash
 afe add memory/memory-retriever          # copy this agent (and the agents it uses) into ./agents
 afe info memory/memory-retriever         # manifest, tools, safety level
-afe test memory/memory-retriever         # run its 50 eval cases
+afe test memory/memory-retriever         # run its 65 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"query": "What city is set?", "memories": ["User prefers Hindi language", "Default city is Pune", "License is Apache-2.0", "Project uses Python 3.14", "User prefers Hindi language"]}  # from evals/cases.jsonl
+payload = {"query": "Preferred editor", "memories": ["", "   ", "\n\t"]}  # from evals/cases.jsonl
 result = AgentRunner().run("memory/memory-retriever", payload)
 print(result.output)
 ```
@@ -94,7 +94,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **65 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test memory/memory-retriever`
 

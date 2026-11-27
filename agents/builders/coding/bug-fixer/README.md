@@ -25,13 +25,13 @@ Coordinates root-cause diagnosis, test creation, and diff review into a verified
 ```bash
 afe add coding/bug-fixer          # copy this agent (and the agents it uses) into ./agents
 afe info coding/bug-fixer         # manifest, tools, safety level
-afe test coding/bug-fixer         # run its 50 eval cases
+afe test coding/bug-fixer         # run its 61 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"issue": "Null edge case #1", "code": "def f(x):\n    return x"}  # from evals/cases.jsonl
+payload = {"issue": "", "code": "def double(x):\n    return x * 3"}  # from evals/cases.jsonl
 result = AgentRunner().run("coding/bug-fixer", payload)
 print(result.output)
 ```
@@ -98,7 +98,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **61 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test coding/bug-fixer`
 

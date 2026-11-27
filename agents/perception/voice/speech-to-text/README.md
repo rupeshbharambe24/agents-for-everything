@@ -25,13 +25,13 @@ Converts audio streams or files into clean Transcript JSON across English and In
 ```bash
 afe add voice/speech-to-text          # copy this agent (and the agents it uses) into ./agents
 afe info voice/speech-to-text         # manifest, tools, safety level
-afe test voice/speech-to-text         # run its 50 eval cases
+afe test voice/speech-to-text         # run its 62 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"audio": {"format": "text-simulated", "transcript_hint": "en peyar Karthik Chennai", "locale_hint": "ta-IN"}, "locale": "ta-IN"}  # from evals/cases.jsonl
+payload = {"audio": {"format": "text-simulated", "transcript_hint": ""}}  # from evals/cases.jsonl
 result = AgentRunner().run("voice/speech-to-text", payload)
 print(result.output)
 ```
@@ -91,7 +91,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **62 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test voice/speech-to-text`
 

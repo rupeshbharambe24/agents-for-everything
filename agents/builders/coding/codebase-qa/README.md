@@ -25,13 +25,13 @@ Searches source files via semantic search and returns grounded answers citing fi
 ```bash
 afe add coding/codebase-qa          # copy this agent (and the agents it uses) into ./agents
 afe info coding/codebase-qa         # manifest, tools, safety level
-afe test coding/codebase-qa         # run its 50 eval cases
+afe test coding/codebase-qa         # run its 62 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"question": "Where is safety policy enforced?", "files": [{"path": "safety.py", "content": "SafetyPolicy checks safety tier 1."}]}  # from evals/cases.jsonl
+payload = {"question": "Where is the logging level set?", "files": []}  # from evals/cases.jsonl
 result = AgentRunner().run("coding/codebase-qa", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **62 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test coding/codebase-qa`
 

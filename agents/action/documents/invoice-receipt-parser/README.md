@@ -25,13 +25,13 @@ Parses messy invoice/receipt text into validated financial records with arithmet
 ```bash
 afe add documents/invoice-receipt-parser          # copy this agent (and the agents it uses) into ./agents
 afe info documents/invoice-receipt-parser         # manifest, tools, safety level
-afe test documents/invoice-receipt-parser         # run its 50 eval cases
+afe test documents/invoice-receipt-parser         # run its 64 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"text": "Vendor: Acme Pvt Ltd\nInvoice #101\nSubtotal: INR 1000\nGST: INR 180\nTotal: INR 1180"}  # from evals/cases.jsonl
+payload = {"text": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("documents/invoice-receipt-parser", payload)
 print(result.output)
 ```
@@ -99,7 +99,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **64 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test documents/invoice-receipt-parser`
 

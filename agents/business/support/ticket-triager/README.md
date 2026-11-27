@@ -25,13 +25,13 @@ Routes tickets to billing, technical, shipping, or escalation queues with priori
 ```bash
 afe add support/ticket-triager          # copy this agent (and the agents it uses) into ./agents
 afe info support/ticket-triager         # manifest, tools, safety level
-afe test support/ticket-triager         # run its 50 eval cases
+afe test support/ticket-triager         # run its 68 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"ticket_text": "Login error 500"}  # from evals/cases.jsonl
+payload = {"ticket_text": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("support/ticket-triager", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **68 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test support/ticket-triager`
 

@@ -25,13 +25,13 @@ Extracts key decisions, open questions, and highlights from noisy chat logs.
 ```bash
 afe add communication/chat-summarizer          # copy this agent (and the agents it uses) into ./agents
 afe info communication/chat-summarizer         # manifest, tools, safety level
-afe test communication/chat-summarizer         # run its 50 eval cases
+afe test communication/chat-summarizer         # run its 66 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"messages": [{"sender": "A", "text": "Agreed to ship v0.1"}, {"sender": "B", "text": "Can you verify tests?"}]}  # from evals/cases.jsonl
+payload = {"messages": []}  # from evals/cases.jsonl
 result = AgentRunner().run("communication/chat-summarizer", payload)
 print(result.output)
 ```
@@ -92,7 +92,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **66 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test communication/chat-summarizer`
 

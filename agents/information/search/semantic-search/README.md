@@ -25,13 +25,13 @@ Retrieves the highest-scoring document chunks matching a user query.
 ```bash
 afe add search/semantic-search          # copy this agent (and the agents it uses) into ./agents
 afe info search/semantic-search         # manifest, tools, safety level
-afe test search/semantic-search         # run its 50 eval cases
+afe test search/semantic-search         # run its 65 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"query": "refund policy", "documents": [{"title": "Policy", "content": "Refund policy case 1: eligible within 30 days."}]}  # from evals/cases.jsonl
+payload = {"query": "anything about refunds", "documents": []}  # from evals/cases.jsonl
 result = AgentRunner().run("search/semantic-search", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **65 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test search/semantic-search`
 

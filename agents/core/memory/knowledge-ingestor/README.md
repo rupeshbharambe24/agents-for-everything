@@ -25,13 +25,13 @@ Splits raw documents into deterministic overlapping chunks with provenance IDs f
 ```bash
 afe add memory/knowledge-ingestor          # copy this agent (and the agents it uses) into ./agents
 afe info memory/knowledge-ingestor         # manifest, tools, safety level
-afe test memory/knowledge-ingestor         # run its 50 eval cases
+afe test memory/knowledge-ingestor         # run its 69 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"documents": [{"id": "d1", "title": "Policy", "content": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}], "chunk_size": 100}  # from evals/cases.jsonl
+payload = {"documents": []}  # from evals/cases.jsonl
 result = AgentRunner().run("memory/knowledge-ingestor", payload)
 print(result.output)
 ```
@@ -95,7 +95,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **69 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test memory/knowledge-ingestor`
 

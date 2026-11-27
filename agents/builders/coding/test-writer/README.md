@@ -25,13 +25,13 @@ Writes clean unit tests verifying happy paths, boundary cases, and error paths.
 ```bash
 afe add coding/test-writer          # copy this agent (and the agents it uses) into ./agents
 afe info coding/test-writer         # manifest, tools, safety level
-afe test coding/test-writer         # run its 50 eval cases
+afe test coding/test-writer         # run its 61 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"code": "def compute_1(x):\n    return x + 1\n"}  # from evals/cases.jsonl
+payload = {"code": "def noop():\n    pass"}  # from evals/cases.jsonl
 result = AgentRunner().run("coding/test-writer", payload)
 print(result.output)
 ```
@@ -95,7 +95,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **61 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test coding/test-writer`
 

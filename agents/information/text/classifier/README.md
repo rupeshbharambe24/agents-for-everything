@@ -25,13 +25,13 @@ Categorizes tickets, emails, clauses, or intents into exact predefined labels.
 ```bash
 afe add text/classifier          # copy this agent (and the agents it uses) into ./agents
 afe info text/classifier         # manifest, tools, safety level
-afe test text/classifier         # run its 50 eval cases
+afe test text/classifier         # run its 63 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"text": "Technical login bug", "labels": ["billing", "technical", "shipping", "legal"]}  # from evals/cases.jsonl
+payload = {"text": "anything at all", "labels": ["general"]}  # from evals/cases.jsonl
 result = AgentRunner().run("text/classifier", payload)
 print(result.output)
 ```
@@ -89,7 +89,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **63 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test text/classifier`
 

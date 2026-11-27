@@ -25,13 +25,13 @@ Converts tabular text inside documents or PDFs into clean JSON row arrays.
 ```bash
 afe add documents/table-extractor          # copy this agent (and the agents it uses) into ./agents
 afe info documents/table-extractor         # manifest, tools, safety level
-afe test documents/table-extractor         # run its 50 eval cases
+afe test documents/table-extractor         # run its 61 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"text": "| Item | Qty | Price |\n|---|---|---|\n| Widget 1 | 1 | 100 |"}  # from evals/cases.jsonl
+payload = {"text": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("documents/table-extractor", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **61 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test documents/table-extractor`
 

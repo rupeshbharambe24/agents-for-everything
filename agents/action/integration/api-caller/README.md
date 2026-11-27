@@ -25,13 +25,13 @@ Translates structured parameters into validated HTTP requests and gates mutating
 ```bash
 afe add integration/api-caller          # copy this agent (and the agents it uses) into ./agents
 afe info integration/api-caller         # manifest, tools, safety level
-afe test integration/api-caller         # run its 50 eval cases
+afe test integration/api-caller         # run its 54 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"method": "GET", "url": "https://api.example.org/v1/items/1"}  # from evals/cases.jsonl
+payload = {"method": "GET", "url": "http://127.0.0.1:5000/status"}  # from evals/cases.jsonl
 result = AgentRunner().run("integration/api-caller", payload)
 print(result.output)
 ```
@@ -97,7 +97,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **54 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test integration/api-caller`
 

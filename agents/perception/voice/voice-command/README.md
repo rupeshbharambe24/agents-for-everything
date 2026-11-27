@@ -25,13 +25,13 @@ Interprets short natural spoken commands against an allowlisted set of applicati
 ```bash
 afe add voice/voice-command          # copy this agent (and the agents it uses) into ./agents
 afe info voice/voice-command         # manifest, tools, safety level
-afe test voice/voice-command         # run its 50 eval cases
+afe test voice/voice-command         # run its 67 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"transcript": "go to next slide", "actions": ["search_web", "open_settings", "next_slide", "pause_audio", "fill_form"]}  # from evals/cases.jsonl
+payload = {"transcript": "take a photo", "actions": ["take_photo", "record_video", "switch_camera", "toggle_flash"]}  # from evals/cases.jsonl
 result = AgentRunner().run("voice/voice-command", payload)
 print(result.output)
 ```
@@ -94,7 +94,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **67 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test voice/voice-command`
 

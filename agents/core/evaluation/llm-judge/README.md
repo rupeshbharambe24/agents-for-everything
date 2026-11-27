@@ -25,7 +25,7 @@ Evaluates agent outputs during CI regressions, prompt optimization, and quality 
 ```bash
 afe add evaluation/llm-judge          # copy this agent (and the agents it uses) into ./agents
 afe info evaluation/llm-judge         # manifest, tools, safety level
-afe test evaluation/llm-judge         # run its 50 eval cases
+afe test evaluation/llm-judge         # run its 62 eval cases
 ```
 
 ```python
@@ -88,7 +88,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **62 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test evaluation/llm-judge`
 

@@ -25,13 +25,13 @@ Checks factual accuracy of claims and attaches supporting citations.
 ```bash
 afe add research/fact-checker          # copy this agent (and the agents it uses) into ./agents
 afe info research/fact-checker         # manifest, tools, safety level
-afe test research/fact-checker         # run its 50 eval cases
+afe test research/fact-checker         # run its 65 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"claims": ["Claim #1: Open protocols enable multi-agent reuse."]}  # from evals/cases.jsonl
+payload = {"claims": [""]}  # from evals/cases.jsonl
 result = AgentRunner().run("research/fact-checker", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **65 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test research/fact-checker`
 

@@ -25,13 +25,13 @@ Detects indirect prompt injection attempts before untrusted data reaches downstr
 ```bash
 afe add guardrails/prompt-injection-detector          # copy this agent (and the agents it uses) into ./agents
 afe info guardrails/prompt-injection-detector         # manifest, tools, safety level
-afe test guardrails/prompt-injection-detector         # run its 50 eval cases
+afe test guardrails/prompt-injection-detector         # run its 63 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"content": "Mera naam Priya Sharma hai, PIN 411001."}  # from evals/cases.jsonl
+payload = {"content": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("guardrails/prompt-injection-detector", payload)
 print(result.output)
 ```
@@ -90,7 +90,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **63 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test guardrails/prompt-injection-detector`
 

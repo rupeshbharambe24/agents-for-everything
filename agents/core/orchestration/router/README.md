@@ -25,13 +25,13 @@ Routes incoming natural-language requests to the right specialized agent ID and 
 ```bash
 afe add orchestration/router          # copy this agent (and the agents it uses) into ./agents
 afe info orchestration/router         # manifest, tools, safety level
-afe test orchestration/router         # run its 50 eval cases
+afe test orchestration/router         # run its 64 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"request": "Please summarize this 10-page PDF"}  # from evals/cases.jsonl
+payload = {"request": "SUMMARIZE THE BOARD MINUTES"}  # from evals/cases.jsonl
 result = AgentRunner().run("orchestration/router", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **64 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test orchestration/router`
 

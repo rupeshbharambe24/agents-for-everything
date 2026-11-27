@@ -25,13 +25,13 @@ Generates schema-verified read-only SQL queries and refuses destructive DDL/DML.
 ```bash
 afe add data/text-to-sql          # copy this agent (and the agents it uses) into ./agents
 afe info data/text-to-sql         # manifest, tools, safety level
-afe test data/text-to-sql         # run its 50 eval cases
+afe test data/text-to-sql         # run its 67 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"question": "Show orders", "tables": {"orders": ["id", "amount"]}}  # from evals/cases.jsonl
+payload = {"question": "List all tags", "tables": {"tags": ["name"]}}  # from evals/cases.jsonl
 result = AgentRunner().run("data/text-to-sql", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **67 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test data/text-to-sql`
 

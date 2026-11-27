@@ -25,13 +25,13 @@ Flags concrete defects like hardcoded secrets, eval/exec, SQL string interpolati
 ```bash
 afe add coding/code-reviewer          # copy this agent (and the agents it uses) into ./agents
 afe info coding/code-reviewer         # manifest, tools, safety level
-afe test coding/code-reviewer         # run its 50 eval cases
+afe test coding/code-reviewer         # run its 66 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"diff": "exec(cmd)"}  # from evals/cases.jsonl
+payload = {"diff": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("coding/code-reviewer", payload)
 print(result.output)
 ```
@@ -92,7 +92,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **66 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test coding/code-reviewer`
 

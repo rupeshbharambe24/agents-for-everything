@@ -25,13 +25,13 @@ Uses RAG Q&A over help docs to assemble polite, accurate draft replies.
 ```bash
 afe add support/reply-drafter          # copy this agent (and the agents it uses) into ./agents
 afe info support/reply-drafter         # manifest, tools, safety level
-afe test support/reply-drafter         # run its 50 eval cases
+afe test support/reply-drafter         # run its 62 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"ticket_text": "What is your refund window?", "kb_docs": [{"title": "Policy", "content": "Policy #1: full refund within 30 days."}]}  # from evals/cases.jsonl
+payload = {"ticket_text": "I need help with my order", "kb_docs": []}  # from evals/cases.jsonl
 result = AgentRunner().run("support/reply-drafter", payload)
 print(result.output)
 ```
@@ -94,7 +94,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **62 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test support/reply-drafter`
 

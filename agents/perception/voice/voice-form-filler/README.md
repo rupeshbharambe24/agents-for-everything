@@ -25,7 +25,7 @@ Lets users complete structured forms hands-free or in local languages by composi
 ```bash
 afe add voice/voice-form-filler          # copy this agent (and the agents it uses) into ./agents
 afe info voice/voice-form-filler         # manifest, tools, safety level
-afe test voice/voice-form-filler         # run its 50 eval cases
+afe test voice/voice-form-filler         # run its 61 eval cases
 ```
 
 ```python
@@ -111,7 +111,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **61 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test voice/voice-form-filler`
 

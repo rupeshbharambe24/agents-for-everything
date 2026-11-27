@@ -25,13 +25,13 @@ Extracts names, ISO dates, PIN codes, emails, phones, and multilingual numbers (
 ```bash
 afe add text/structured-extractor          # copy this agent (and the agents it uses) into ./agents
 afe info text/structured-extractor         # manifest, tools, safety level
-afe test text/structured-extractor         # run its 50 eval cases
+afe test text/structured-extractor         # run its 67 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"text": "city Mumbai", "fields": ["city"]}  # from evals/cases.jsonl
+payload = {"text": "", "fields": ["email"]}  # from evals/cases.jsonl
 result = AgentRunner().run("text/structured-extractor", payload)
 print(result.output)
 ```
@@ -91,7 +91,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **67 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test text/structured-extractor`
 

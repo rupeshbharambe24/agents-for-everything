@@ -26,7 +26,7 @@ class Phase4VerifyAndMigrateTests(unittest.TestCase):
         )
         self.assertTrue(v_rec.verified, v_rec.issues)
         self.assertEqual(v_rec.badge, "verified")
-        self.assertEqual(v_rec.eval_total, 50)
+        self.assertGreaterEqual(v_rec.eval_total, 50)
         self.assertTrue(v_rec.digest.startswith("sha256:"))
 
         kyc_rec = verify_agent_dir(

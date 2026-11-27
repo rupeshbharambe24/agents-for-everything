@@ -25,13 +25,13 @@ Identifies structured entity mentions for indexing, redaction, or CRM enrichment
 ```bash
 afe add text/entity-extractor          # copy this agent (and the agents it uses) into ./agents
 afe info text/entity-extractor         # manifest, tools, safety level
-afe test text/entity-extractor         # run its 50 eval cases
+afe test text/entity-extractor         # run its 65 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"text": "Invoice amount INR 1180."}  # from evals/cases.jsonl
+payload = {"text": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("text/entity-extractor", payload)
 print(result.output)
 ```
@@ -87,7 +87,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **65 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test text/entity-extractor`
 

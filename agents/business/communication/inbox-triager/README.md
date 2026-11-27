@@ -25,13 +25,13 @@ Triage incoming email batches by urgency and actionability without sending repli
 ```bash
 afe add communication/inbox-triager          # copy this agent (and the agents it uses) into ./agents
 afe info communication/inbox-triager         # manifest, tools, safety level
-afe test communication/inbox-triager         # run its 50 eval cases
+afe test communication/inbox-triager         # run its 66 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"emails": [{"id": "1", "subject": "URGENT invoice #1", "body": "Please respond ASAP"}, {"id": "2", "subject": "Weekly digest", "body": "FYI news"}]}  # from evals/cases.jsonl
+payload = {"emails": []}  # from evals/cases.jsonl
 result = AgentRunner().run("communication/inbox-triager", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **66 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test communication/inbox-triager`
 

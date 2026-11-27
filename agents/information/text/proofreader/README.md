@@ -25,13 +25,13 @@ Polishes drafts prior to publication or email sending.
 ```bash
 afe add text/proofreader          # copy this agent (and the agents it uses) into ./agents
 afe info text/proofreader         # manifest, tools, safety level
-afe test text/proofreader         # run its 50 eval cases
+afe test text/proofreader         # run its 64 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"text": "  Trim ends  "}  # from evals/cases.jsonl
+payload = {"text": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("text/proofreader", payload)
 print(result.output)
 ```
@@ -88,7 +88,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **64 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test text/proofreader`
 

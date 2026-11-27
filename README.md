@@ -40,7 +40,7 @@ Building an AI product usually means writing the same agents again and again: a 
 | 🧱 **One agent, one job** | Every agent does a single task well: `speech-to-text`, `pii-redactor`, `invoice-receipt-parser`, `web-form-filler`… |
 | 🔌 **Typed contracts** | Every agent declares JSON Schema input and output, so agents snap together without glue code. |
 | 🛡️ **Safe by default** | Every agent has a safety level (S0–S4). Anything that sends, pays or deletes needs human approval. |
-| 🧪 **Tested** | Every agent ships with eval cases and a rubric (6,492 unique cases in total; more depth is [welcome](CONTRIBUTING.md)). CI runs them on every change. |
+| 🧪 **Tested** | Every agent ships with eval cases and a rubric (8,824 unique cases in total; more depth is [welcome](CONTRIBUTING.md)). CI runs them on every change. |
 | 🌍 **Model- and framework-agnostic** | Run on any model, including local open-weights models via Ollama. `afe export` produces Agent Skills, A2A cards, MCP servers, LangGraph graphs and coding-assistant subagents; [adapters](packages/adapters/README.md) for the OpenAI Agents SDK, Claude Agent SDK, Google ADK, CrewAI, Microsoft Agent Framework and Mastra are in progress. |
 | 📦 **Take only what you need** | `afe add voice/speech-to-text` copies one agent (and what it depends on) into your project, shadcn/ui-style. |
 

@@ -25,13 +25,13 @@ Synthesizes spoken responses, read-backs, and multilingual confirmations from te
 ```bash
 afe add voice/text-to-speech          # copy this agent (and the agents it uses) into ./agents
 afe info voice/text-to-speech         # manifest, tools, safety level
-afe test voice/text-to-speech         # run its 50 eval cases
+afe test voice/text-to-speech         # run its 58 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"text": "Votre demande est prete.", "locale": "fr"}  # from evals/cases.jsonl
+payload = {"text": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("voice/text-to-speech", payload)
 print(result.output)
 ```
@@ -93,7 +93,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **58 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test voice/text-to-speech`
 

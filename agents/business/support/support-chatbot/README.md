@@ -25,13 +25,13 @@ Composes RAG Q&A to resolve tier-1 support inquiries accurately without hallucin
 ```bash
 afe add support/support-chatbot          # copy this agent (and the agents it uses) into ./agents
 afe info support/support-chatbot         # manifest, tools, safety level
-afe test support/support-chatbot         # run its 50 eval cases
+afe test support/support-chatbot         # run its 65 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"question": "How do I reset my password?", "kb_docs": [{"title": "Auth FAQ", "content": "To reset your password, click Forgot Password on login."}]}  # from evals/cases.jsonl
+payload = {"question": "What is your refund policy?", "kb_docs": []}  # from evals/cases.jsonl
 result = AgentRunner().run("support/support-chatbot", payload)
 print(result.output)
 ```
@@ -95,7 +95,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **65 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test support/support-chatbot`
 

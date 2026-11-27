@@ -25,13 +25,13 @@ Inspects an image and answers factual visual questions without inventing unseen 
 ```bash
 afe add vision/visual-qa          # copy this agent (and the agents it uses) into ./agents
 afe info vision/visual-qa         # manifest, tools, safety level
-afe test vision/visual-qa         # run its 50 eval cases
+afe test vision/visual-qa         # run its 60 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"image": {"alt_text": "Diagram 1"}, "question": "What does the chart show?"}  # from evals/cases.jsonl
+payload = {"image": {"alt_text": "Cat"}, "question": "What animal is this?"}  # from evals/cases.jsonl
 result = AgentRunner().run("vision/visual-qa", payload)
 print(result.output)
 ```
@@ -92,7 +92,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **60 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test vision/visual-qa`
 

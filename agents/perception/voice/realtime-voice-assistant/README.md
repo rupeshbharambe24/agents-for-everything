@@ -25,13 +25,13 @@ Coordinates STT, command parsing, and TTS output in interactive voice sessions.
 ```bash
 afe add voice/realtime-voice-assistant          # copy this agent (and the agents it uses) into ./agents
 afe info voice/realtime-voice-assistant         # manifest, tools, safety level
-afe test voice/realtime-voice-assistant         # run its 50 eval cases
+afe test voice/realtime-voice-assistant         # run its 60 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"audio": {"format": "text-simulated", "transcript_hint": "Turn 3 question"}, "barge_in": true}  # from evals/cases.jsonl
+payload = {"audio": {"format": "text-simulated", "transcript_hint": ""}, "barge_in": false}  # from evals/cases.jsonl
 result = AgentRunner().run("voice/realtime-voice-assistant", payload)
 print(result.output)
 ```
@@ -100,7 +100,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **60 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test voice/realtime-voice-assistant`
 

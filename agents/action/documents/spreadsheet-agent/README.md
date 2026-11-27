@@ -25,13 +25,13 @@ Executes safe deterministic aggregations and formula checks on tabular rows.
 ```bash
 afe add documents/spreadsheet-agent          # copy this agent (and the agents it uses) into ./agents
 afe info documents/spreadsheet-agent         # manifest, tools, safety level
-afe test documents/spreadsheet-agent         # run its 50 eval cases
+afe test documents/spreadsheet-agent         # run its 62 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"rows": [{"amount": 10}, {"amount": 20}], "column": "amount", "operation": "sum"}  # from evals/cases.jsonl
+payload = {"rows": [], "column": "amount", "operation": "sum"}  # from evals/cases.jsonl
 result = AgentRunner().run("documents/spreadsheet-agent", payload)
 print(result.output)
 ```
@@ -94,7 +94,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **62 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test documents/spreadsheet-agent`
 

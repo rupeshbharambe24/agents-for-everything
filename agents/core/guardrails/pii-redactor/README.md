@@ -25,13 +25,13 @@ Protects privacy before prompts leave trust boundaries or enter logs/traces.
 ```bash
 afe add guardrails/pii-redactor          # copy this agent (and the agents it uses) into ./agents
 afe info guardrails/pii-redactor         # manifest, tools, safety level
-afe test guardrails/pii-redactor         # run its 50 eval cases
+afe test guardrails/pii-redactor         # run its 64 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"text": "SSN 123-45-6789"}  # from evals/cases.jsonl
+payload = {"text": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("guardrails/pii-redactor", payload)
 print(result.output)
 ```
@@ -90,7 +90,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **64 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test guardrails/pii-redactor`
 

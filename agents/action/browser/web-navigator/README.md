@@ -25,7 +25,7 @@ Navigates web workflows step by step, screens page content for prompt injections
 ```bash
 afe add browser/web-navigator          # copy this agent (and the agents it uses) into ./agents
 afe info browser/web-navigator         # manifest, tools, safety level
-afe test browser/web-navigator         # run its 50 eval cases
+afe test browser/web-navigator         # run its 63 eval cases
 ```
 
 ```python
@@ -101,7 +101,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **63 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test browser/web-navigator`
 

@@ -25,13 +25,13 @@ Measures factual grounding of generated answers or reports against source text.
 ```bash
 afe add guardrails/hallucination-checker          # copy this agent (and the agents it uses) into ./agents
 afe info guardrails/hallucination-checker         # manifest, tools, safety level
-afe test guardrails/hallucination-checker         # run its 50 eval cases
+afe test guardrails/hallucination-checker         # run its 66 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"answer": "Pune PIN code is 411001.", "sources": ["Address verified: Pune, Maharashtra, PIN code 411001."]}  # from evals/cases.jsonl
+payload = {"answer": "   \n  ", "sources": ["Any source text."]}  # from evals/cases.jsonl
 result = AgentRunner().run("guardrails/hallucination-checker", payload)
 print(result.output)
 ```
@@ -92,7 +92,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **66 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test guardrails/hallucination-checker`
 

@@ -25,13 +25,13 @@ Bridges extracted field dictionaries into target browser DOM forms safely.
 ```bash
 afe add browser/web-form-filler          # copy this agent (and the agents it uses) into ./agents
 afe info browser/web-form-filler         # manifest, tools, safety level
-afe test browser/web-form-filler         # run its 50 eval cases
+afe test browser/web-form-filler         # run its 51 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"url": "https://example.org/f1", "fields": {"full_name": "User 1"}}  # from evals/cases.jsonl
+payload = {"url": "https://example.org/empty-form", "fields": {}}  # from evals/cases.jsonl
 result = AgentRunner().run("browser/web-form-filler", payload)
 print(result.output)
 ```
@@ -96,7 +96,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **51 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test browser/web-form-filler`
 

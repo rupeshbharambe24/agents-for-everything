@@ -25,13 +25,13 @@ Composes speech-to-text and summarization to capture clean meeting records.
 ```bash
 afe add meetings/meeting-notetaker          # copy this agent (and the agents it uses) into ./agents
 afe info meetings/meeting-notetaker         # manifest, tools, safety level
-afe test meetings/meeting-notetaker         # run its 50 eval cases
+afe test meetings/meeting-notetaker         # run its 62 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"audio": {"format": "text-simulated", "transcript_hint": "Team decided milestone 1. Priya will ship tests by Friday."}}  # from evals/cases.jsonl
+payload = {"audio": {"format": "text-simulated", "transcript_hint": ""}}  # from evals/cases.jsonl
 result = AgentRunner().run("meetings/meeting-notetaker", payload)
 print(result.output)
 ```
@@ -95,7 +95,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **62 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test meetings/meeting-notetaker`
 

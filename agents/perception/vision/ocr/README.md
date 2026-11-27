@@ -25,13 +25,13 @@ Converts document images and scanned receipts into clean text and structured lay
 ```bash
 afe add vision/ocr          # copy this agent (and the agents it uses) into ./agents
 afe info vision/ocr         # manifest, tools, safety level
-afe test vision/ocr         # run its 50 eval cases
+afe test vision/ocr         # run its 63 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"image": {"text_hint": "Invoice #101\nTotal INR 500"}}  # from evals/cases.jsonl
+payload = {"image": {"text_hint": ""}}  # from evals/cases.jsonl
 result = AgentRunner().run("vision/ocr", payload)
 print(result.output)
 ```
@@ -91,7 +91,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **63 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test vision/ocr`
 

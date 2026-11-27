@@ -25,13 +25,13 @@ Gives desktop and browser agents a structured element map from screen pixels.
 ```bash
 afe add vision/screenshot-understander          # copy this agent (and the agents it uses) into ./agents
 afe info vision/screenshot-understander         # manifest, tools, safety level
-afe test vision/screenshot-understander         # run its 50 eval cases
+afe test vision/screenshot-understander         # run its 62 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"image": {"text_hint": "Name, Email, Submit 1"}}  # from evals/cases.jsonl
+payload = {"image": {"text_hint": "OK"}}  # from evals/cases.jsonl
 result = AgentRunner().run("vision/screenshot-understander", payload)
 print(result.output)
 ```
@@ -87,7 +87,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **62 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test vision/screenshot-understander`
 

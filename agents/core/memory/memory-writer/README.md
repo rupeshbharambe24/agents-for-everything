@@ -25,13 +25,13 @@ Filters ephemeral noise and writes clean deduplicated memory records with consen
 ```bash
 afe add memory/memory-writer          # copy this agent (and the agents it uses) into ./agents
 afe info memory/memory-writer         # manifest, tools, safety level
-afe test memory/memory-writer         # run its 50 eval cases
+afe test memory/memory-writer         # run its 69 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"interaction": "ok"}  # from evals/cases.jsonl
+payload = {"interaction": ""}  # from evals/cases.jsonl
 result = AgentRunner().run("memory/memory-writer", payload)
 print(result.output)
 ```
@@ -89,7 +89,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **69 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test memory/memory-writer`
 

@@ -25,13 +25,13 @@ Normalizes PDF/DOCX/HTML/scan inputs into clean Markdown and structured metadata
 ```bash
 afe add documents/document-parser          # copy this agent (and the agents it uses) into ./agents
 afe info documents/document-parser         # manifest, tools, safety level
-afe test documents/document-parser         # run its 50 eval cases
+afe test documents/document-parser         # run its 62 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"document": {"title": "Doc 1", "content": "# Heading 1\nBody content for document 1."}}  # from evals/cases.jsonl
+payload = {"document": {"content": ""}}  # from evals/cases.jsonl
 result = AgentRunner().run("documents/document-parser", payload)
 print(result.output)
 ```
@@ -95,7 +95,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **62 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test documents/document-parser`
 

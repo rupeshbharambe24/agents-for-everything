@@ -25,13 +25,13 @@ Decomposes complex multi-step goals into an acyclic execution plan (DAG) of atom
 ```bash
 afe add orchestration/task-planner          # copy this agent (and the agents it uses) into ./agents
 afe info orchestration/task-planner         # manifest, tools, safety level
-afe test orchestration/task-planner         # run its 50 eval cases
+afe test orchestration/task-planner         # run its 63 eval cases
 ```
 
 ```python
 from agents_for_everything import AgentRunner
 
-payload = {"goal": "Fill a loan form by voice"}  # from evals/cases.jsonl
+payload = {"goal": "Deploy"}  # from evals/cases.jsonl
 result = AgentRunner().run("orchestration/task-planner", payload)
 print(result.output)
 ```
@@ -92,7 +92,7 @@ Full policy: [SECURITY.md](../../../../SECURITY.md).
 
 ## 📏 Evaluation
 
-- **50 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
+- **63 test cases** in [`evals/cases.jsonl`](evals/cases.jsonl), judged with [`evals/rubric.md`](evals/rubric.md).
 - **Targets:** pass_rate ≥ 0.9 ([`eval.yaml`](evals/eval.yaml)).
 - **Run:** `afe test orchestration/task-planner`
 
